@@ -1,0 +1,27 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Apprentissage automatique (Machine Learning)}{2}
+\contentsline {subsection}{\numberline {1.1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.2}Techniques d'apprentissage automatique}{2}
+\contentsline {subsubsection}{\numberline {1.2.1}Apprentissage}{3}
+\contentsline {subsubsection}{\numberline {1.2.2}Apprentissage non-supervis\IeC {\'e}}{3}
+\contentsline {subsection}{\numberline {1.3}Autres types d'apprentissage}{5}
+\contentsline {subsubsection}{\numberline {1.3.1}Apprentissage semi-supervis\IeC {\'e}}{5}
+\contentsline {subsubsection}{\numberline {1.3.2}Apprentissage par renforcement}{5}
+\contentsline {subsection}{\numberline {1.4}Conclusion}{6}
+\contentsline {section}{\numberline {2}Apprentissage profond (Deep Learning)}{7}
+\contentsline {subsection}{\numberline {2.1}Introduction}{7}
+\contentsline {subsection}{\numberline {2.2}Apprentissage profond}{7}
+\contentsline {subsection}{\numberline {2.3}R\IeC {\'e}seaux de Neurones Artificiels (ANNs)}{8}
+\contentsline {subsubsection}{\numberline {2.3.1}Historique}{8}
+\contentsline {subsubsection}{\numberline {2.3.2}Le neurone biologique}{8}
+\contentsline {subsubsection}{\numberline {2.3.3}D\IeC {\'e}finition}{9}
+\contentsline {section}{\numberline {3}Traitement d\IeC {\textquoteright }Image (Image Processing)}{11}
+\contentsline {subsection}{\numberline {3.1}Introduction}{11}
+\contentsline {subsection}{\numberline {3.2}L\IeC {\textquoteright }image num\IeC {\'e}rique}{11}
+\contentsline {subsection}{\numberline {3.3}L\IeC {\textquoteright }image thermique}{12}
+\contentsline {subsection}{\numberline {3.4}Le traitement d\IeC {\textquoteright }image}{13}
+\contentsline {subsection}{\numberline {3.5}Le but du traitement d'image}{13}
+\contentsline {subsection}{\numberline {3.6}Les m\IeC {\'e}thodes pour le traitement d\IeC {\textquoteright }image}{14}
+\contentsline {subsection}{\numberline {3.7}Les applications existantes}{14}
+\contentsline {subsection}{\numberline {3.8}Les recherches et l\IeC {\textquoteright }avenir}{16}
+\contentsline {subsection}{\numberline {3.9}Conclusion}{16}
