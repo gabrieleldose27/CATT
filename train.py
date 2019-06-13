@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-
+"""
 from tensorflow.contrib.learn.python.learn.estimators._sklearn import train_test_split
 
 from tensorflow.keras import Sequential
@@ -11,7 +11,7 @@ from tensorflow.keras.optimizers import Adam
 from datasets import batch_generator, INPUT_SHAPE
 
 """
-This file contains the model definition, training and compilation.
+#This file contains the model definition, training and compilation.
 """
 
 dataset_dir = "Dataset/"
@@ -22,17 +22,17 @@ samples_per_epoch = 100             # Assuming 10,000 images
 nb_epoch = 25
 test_size = 0.3
 keep_prob = 0.5
-data_df = pd.read_csv(os.path.join(dataset_dir + data,
-                                   'datasets.csv'))
+"""
+data_df = pd.read_csv('datasets.csv')
 
-X = data_df[['center']].values
-y = data_df['tempture'].values
+X = data_df["center"].values
+y = data_df["tempture"].values
 
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=test_size, random_state=0)
 
 # </editor-fold>
 
-
+"""
 class Model():
 
     def __init__(self, INPUT_SHAPE, keep_prob):
@@ -89,10 +89,10 @@ class Model():
                                  mode='auto')
         return checkpoint
 
-
+"""
 if __name__ == '__main__':
-
-    model = Model(INPUT_SHAPE, keep_prob)
-    model.loss_func(learning_rate)
-    checkpoint = model.save()
-    model.train(checkpoint)
+    print data_df
+#    model = Model(INPUT_SHAPE, keep_prob)
+#    model.loss_func(learning_rate)
+#    checkpoint = model.save()
+#    model.train(checkpoint)
