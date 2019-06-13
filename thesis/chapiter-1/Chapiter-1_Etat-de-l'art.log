@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  13 JUN 2019 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  13 JUN 2019 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,6 +405,10 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -497,7 +501,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count102
 \c@MaxMatrixCols=\count103
-\dotsspace@=\muskip10
+\dotsspace@=\muskip11
 \c@parentequation=\count104
 \dspbrk@lvl=\count105
 \tag@help=\toks19
@@ -561,25 +565,25 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (./Chapiter-1_Etat-de-l'art.aux)
 \openout1 = `Chapiter-1_Etat-de-l'art.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 13.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 12.
-LaTeX Info: Redefining \dots on input line 12.
-LaTeX Info: Redefining \up on input line 12.
+LaTeX Info: Redefining \degres on input line 13.
+LaTeX Info: Redefining \dots on input line 13.
+LaTeX Info: Redefining \up on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -727,7 +731,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
@@ -735,47 +739,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 <neurone.png, id=30, 329.23pt x 153.57375pt>
 File: neurone.png Graphic file (type png)
 <use neurone.png>
-Package pdftex.def Info: neurone.png  used on input line 124.
+Package pdftex.def Info: neurone.png  used on input line 125.
 (pdftex.def)             Requested size: 329.22919pt x 153.57336pt.
  [8]
 <shemadenourone.jpg, id=34, 1061.9675pt x 657.45625pt>
 File: shemadenourone.jpg Graphic file (type jpg)
 <use shemadenourone.jpg>
-Package pdftex.def Info: shemadenourone.jpg  used on input line 137.
+Package pdftex.def Info: shemadenourone.jpg  used on input line 138.
 (pdftex.def)             Requested size: 369.8793pt x 284.52649pt.
  [9 <./neurone.png>] [10 <./shemadenourone.jpg>]
 [11]
 File: neurone.png Graphic file (type png)
 <use neurone.png>
-Package pdftex.def Info: neurone.png  used on input line 152.
+Package pdftex.def Info: neurone.png  used on input line 153.
 (pdftex.def)             Requested size: 329.22919pt x 153.57336pt.
  [12]
 <1.png, id=49, 525.965pt x 172.645pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 181.
+Package pdftex.def Info: 1.png  used on input line 182.
 (pdftex.def)             Requested size: 525.9637pt x 172.64456pt.
- [13 <./1.png>] [14] [15] [16] (./Chapiter-1_Etat-de-l'art.bbl)
-[17] (./Chapiter-1_Etat-de-l'art.aux) ) 
+ [13 <./1.png>] [14] [15] [16] (./Chapiter-1_Etat-de-l'art.bbl
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [17] (./Chapiter-1_Etat-de-l'art.aux) ) 
 Here is how much of TeX's memory you used:
- 4792 strings out of 492982
- 64192 string characters out of 6134895
- 136840 words of memory out of 5000000
- 8232 multiletter control sequences out of 15000+600000
- 42520 words of font info for 43 fonts, out of 8000000 for 9000
+ 4905 strings out of 492982
+ 65677 string characters out of 6134895
+ 137930 words of memory out of 5000000
+ 8337 multiletter control sequences out of 15000+600000
+ 42838 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,30p,960b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-
-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fon
-ts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</
-usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Chapiter-1_Etat-de-l'art.pdf (17 pages, 195888 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/
+fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Chapiter-1_Etat-de-l'art.pdf (17 pages, 215780 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

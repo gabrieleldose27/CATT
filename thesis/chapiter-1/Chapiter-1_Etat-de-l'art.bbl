@@ -1,8 +1,11 @@
 \begin{thebibliography}{1}
 
-\bibitem{baudry2009selection}
-J.-P. Baudry and G.~Celeux, ``S{\'e}lection de mod{\`e}le pour la
-  classification en pr{\'e}sence d'une classification externe,'' in {\em
-  41{\`e}mes Journ{\'e}es de Statistique, SFdS, Bordeaux}, 2009.
+\bibitem{Grabmeier}
+J.~.~R. Grabmeier, ``A. data mining and knowledge discovery (2002) 6: 303.''
+  \url{https://doi.org/10.1023/A:1016308404627}.
+
+\bibitem{Govaert}
+G.~Govaert, ``Classification et modèle de mélange. analyse de données,'' in
+  {\em Hermès, Paris, pp.263-292.}, 2003.
 
 \end{thebibliography}
