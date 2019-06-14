@@ -4,9 +4,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{url}
-\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref} % allows for clickable references
+\usepackage{graphicx} % allows import photo
+\usepackage{float} % controle position
 \usepackage{lmodern}
 \usepackage{amsmath}
+\usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage[left=3cm, right=3cm, top=3cm, includefoot]{geometry}
@@ -22,9 +25,23 @@
 \begin{document}
 \tableofcontents
 \thispagestyle{empty}
+\newpage
+
+\pagenumbering{roman}
+
+\listoffigures
+\addcontentsline{toc}{section}{\numberline{}Liste des figures}
 \cleardoublepage
 
+\listoftables
+\addcontentsline{toc}{section}{\numberline{}Liste des tables}
+\cleardoublepage
+
+\pagenumbering{arabic}
 \setcounter{page}{1}
+\section*{\Huge{Chapiter 1}}
+\subsection*{\huge{\' Etat de l'art}}
+\newpage
 \section{Apprentissage automatique (Machine Learning)}
 \subsection{Introduction}
 La faculté d'apprendre est essentielle à l'être humain pour reconnaître une voix, une personne, un objet... On distingue en général deux types d'apprentissage: l'apprentissage «par cœur» qui consiste à mémoriser telles quelles des informations, et l'apprentissage par généralisation où l'on apprend à partir d'exemples un modèle qui nous permettra de reconnaître de nouveaux exemples. Pour les systèmes informatiques, il est facile de mémoriser un grand nombre de données (textes, images, vidéos...), mais difficile de généraliser. Par exemple, il leur est difficile de construire un bon modèle d'un objet et d'être ensuite capable de reconnaître efficacement cet objet dans de nouvelles images.
@@ -47,8 +64,8 @@ Exploration de données «Data Mining» c’est une technique qui considère tou
 \end{itemize}
 
 Il est utilisé dans de nombreux domaines: bases de données, analyse de données, statistiques, classification, programmation logique, visualisation...
-		\subsubsection{Apprentissage supervisé}
-		La classification supervisée (appelée aussi classement ou classification inductive) à pour objectif d'apprendre par l'exemple. Elle cherche a expliquer et prédire l’appartenance de documents a des classes connues apriori. Ainsi c'est l'ensemble des techniques qui visent a deviner l'appartenance d'un individu a une classe en s'aidant uniquement a des valeurs qu'il prend \cite{2}.
+\subsubsection{Apprentissage supervisé}
+La classification supervisée (appelée aussi classement ou classification inductive) à pour objectif d'apprendre par l'exemple. Elle cherche a expliquer et prédire l’appartenance de documents a des classes connues apriori. Ainsi c'est l'ensemble des techniques qui visent a deviner l'appartenance d'un individu a une classe en s'aidant uniquement a des valeurs qu'il prend \cite{2}.
 
 L'apprentissage supervisé suppose qu'un oracle fournit les étiquettes de chaque donnée d'apprentissage l’oracle ici c’est pour chaque xi, fournit une étiquette ui dans U (avec une distribution de probabilité $F(u|x)$ inconnue).
 
@@ -60,8 +77,8 @@ Nous présentons maintenant brièvement trois algorithmes classiques d'apprentis
 	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.
 \end{enumerate}
 
-		\subsubsection{Apprentissage non-supervisé}
-		Contrairement à l'apprentissage supervisé, dans l'apprentissage non-supervisé il n'y a pas d'oracle qui explicite les étiquettes. L'utilisation de ce type d'algorithme permet de trouver des structures, des dépendances entre descripteurs... qui nous sont inconnues (on dit aussi latentes). Dans le cadre de ce travail, nous ne nous intéresserons qu'à la régression. Pour ce problème, les étiquettes sont des valeurs.
+\subsubsection{Apprentissage non-supervisé}
+Contrairement à l'apprentissage supervisé, dans l'apprentissage non-supervisé il n'y a pas d'oracle qui explicite les étiquettes. L'utilisation de ce type d'algorithme permet de trouver des structures, des dépendances entre descripteurs... qui nous sont inconnues (on dit aussi latentes). Dans le cadre de ce travail, nous ne nous intéresserons qu'à la régression. Pour ce problème, les étiquettes sont des valeurs.
 
 Le plus connu des problèmes non-supervisés est la classification non-supervisée ou clustering. Les classes, que nous appellerons clusters, sont formées par regroupement des documents qui ont certaines caractéristiques en commun. Un autre problème non-supervisé est l'estimation de densité. Son objectif est de modéliser la distribution des données. Le modèle doit pouvoir fournir une bonne estimation d'un document de test issu de la même distribution (inconnue) que les données d'apprentissage. Son objectif est de résumer l'information importante, de la dissocier du bruit.
 
@@ -134,7 +151,7 @@ L’unité de calcul principal du système nerveux, le neurone, est constitué d
 Ces courants sont ensuite intégrés de manière complexe et non-linéaire (Koch et al., 1983) dans l’arbre dendritique. Le potentiel du soma va changer et, si il dépasse un certain seuil, un potentiel d’action sera initié et propagé à travers l’axone, ce qui libérera des neurotransmetteurs aux synapses auxquelles il est relié. Les mécanismes de création et de propagation du potentiel d’action sont expliqués par le modèle d’Hodgkin-Huxley (Hodgkin and Huxley, 1952) basé sur un ensemble d’équations différentielles non-linéaires.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{neurone.png}
+\includegraphics[scale=1]{img-Chapiter-1/neurone.png}
 \caption{Schéma d’un neurone biologique}
 \end{figure}
 \subsubsection{Définition}
@@ -147,7 +164,7 @@ Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « conna�
 C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat. Ceci implique deux choses: soit le programmateur du réseau neuronal connaît toutes les connexions possibles internes au réseau, soit il conçoit le réseau de manière si complexe qu'il couvre « toutes » les possibilités \cite{10}.
 \begin{figure}[h]
 \centering
-\includegraphics[ height=10cm, width=13cm]{shemadenourone.jpg}
+\includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.jpg}
 \caption{Schéma d’un réseau artificiel de neurones}
 \end{figure}
 \newpage
@@ -162,7 +179,7 @@ Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée 
 \newpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{neurone.png}
+\includegraphics[scale=1]{img-Chapiter-1/neurone.png}
 \caption{Schéma d’un neurone biologique}
 \end{figure}
 
@@ -191,7 +208,7 @@ Le traitement des images comprend essentiellement les trois étapes suivantes:
 \end{enumerate}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1, width=13cm]{1.png}
+\includegraphics[scale=1, width=13cm]{img-Chapiter-1/1.png}
 \caption{Présentant les étapes d’un traitement d’une image}
 \end{figure}
 
@@ -255,7 +272,276 @@ Nous sommes tous en pleine révolution déclenchés par le développement rapide
 
 Mais avec la sophistication croissante et la puissance de l'informatique moderne, le calcul ira au-delà de l'architecture séquentielle conventionnelle de “Von Neumann” et envisagera également l'exécution optique. Les paradigmes de l'informatique distribuée et parallèle devraient améliorer les réponses pour les résultats du traitement des images.
 \newpage
-\section*{Figures}
+\section*{\Huge{Chapiter 2}}
+\subsection*{\huge{Context et problématique du projet}}
+\newpage
+\section{Contexte et problématique du projet}
+\subsection{Définition e-santé}
+e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication [1].
+
+Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
+Ceux ci comprennent:
+\begin{itemize}
+	\item Les réseaux régionaux et nationaux d'information pour la santé et les systèmes de dossiers électroniques distribués y compris les systèmes d'information pour les professionnels de santé et les hôpitaux, les services en ligne tels que la prescription électronique, les bases de données...
+	\item Les systèmes de télémédecine et les services associés.
+	\item Les outils spécialisés pour les professionnels de santé et les chercheurs (robotique et environnements avancés pour le diagnostic et la chirurgie, outils pour la simulation et la modélisation, grilles pour la santé et outils pour la formation).
+\end{itemize}
+
+La santé connectée consiste en l’utilisation des nouvelles technologies pour améliorer la santé des citoyens. Ces technologies peuvent faciliter collecte, la circulation, l'utilisation efficaces d'informations sur la santé, l’accès aux soins et permettent à leurs utilisateurs une prise en charge personnalisée en matière de prévention ou de soins médicaux.
+
+Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins [2].
+
+\subsection{Domaines d’application}
+Pour présenter les applications de la santé numérique, on peut se baser sur la chronologie du développement et de la prise en charge d’une maladie à savoir les stades de prévention, de diagnostic, puis de prise en charge thérapeutique et d’établissement d’un pronostic.
+
+Les applications sont nombreuses: On peut distinguer les lieux de prise en charge que sont le cabinet médical pour la médecine ambulatoire et l’hôpital lors des hospitalisations. Le maintien à domicile des patients est un enjeu important.
+
+\subsection{La e-santé inclut}
+\begin{enumerate}
+	\item \textbf{La télésanté} qui comprend les actes de prévention et de soins réalisés à distance : information via des portails grand public, sites de promotion de la santé, systèmes d'alerte téléphonique, prescriptions électroniques à distance...
+	\item \textbf{La télémédecine} (actes médicaux réalisés à distance par un médecin) : consultation par vidéoconférence, téléassistance d'un médecin lors d'une intervention, télésurveillance du patient, télé-expertise (échange des avis des médecins)...
+	\item \textbf{La m-santé (mobile santé)} qui comprend les applications numériques pour smartphones ou objets connectés (bracelets...) en lien avec la santé.
+	\item \textbf{Les systèmes de dossiers électroniques de santé.}
+\end{enumerate}
+
+\subsection{L’importance de la e-santé}
+\begin{enumerate}
+	\item Prévoir une population vieillissante avec une prévalence croissante de maladie chronique, qui coûte de plus en plus cher à traiter.
+	\item Améliorer la sécurité des patients et réduire les erreurs.
+	\item Aider les patients à devenir des consommateurs informés qui prennent une rôle actif dans leurs propres soins de santé.
+	\item La transition démographique vers une population vieillissante vivant plus longtemps avec des maladies chroniques signifie que les prestataires de soins de santé doivent trouver les ressources pour prendre soin de ces personnes. Les technologies de l’information et de la communication (sous les divers aspects de la santé en ligne, télésoins, télésanté, etc.) sont considérées comme une réponse à ces attentes. Les solutions Ehealth sont présentées comme des méthodes relativement peu coûteuses de fournir des soins et une assistance à la fois à distance et avec l’automatisation. Cela comprend la surveillance et la consultation à distance dispensées par des praticiens de la santé, ainsi que des outils d'auto-surveillance pour soutenir l'autogestion. L’objectif est de maintenir une vie autonome pour les personnes atteintes de maladie chronique et de réduire le recours aux soins secondaires.
+\end{enumerate}
+
+\subsection{Focus sur le Cancer}
+La prévention et les soins du cancer dépendent d'un accès à des informations exactes et complètes et d'une coordination étendue entre les patients, les soignants et les équipes de soins.
+
+Est un organisme à but non lucratif composé de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. Nous nous engageons à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Nous espérons qu'un jour, le cancer sera une maladie du passé.
+
+\subsection{la santé connectée implique} 
+plusieurs ressources et acteurs telque:
+\begin{itemize}
+	\item \textbf{L’interopérabilité:} Activés par des systèmes IT de santé qui communiquent entre eux, échangent des données et utilisent des informations.
+	\item \textbf{Le personnes:} Habilités à accéder à leurs propres informations sur la santé, à les gérer et à participer activement à leurs soins
+	\item \textbf{Les professionnels de santé:} Appuyés par les programmes fédéraux et les outils IT de la santé pour la prestation de soins de haute qualité axés sur le patient, afin de soutenir la participation de tous les individus et fournisseurs de soins de santé à la santé connectée.
+	\item \textbf{Le partage de données et intégration:} Améliorer les soins, améliorer la surveillance et faire avancer la recherche.
+\end{itemize}
+
+\subsection{Une approche de la santé connectée offre trois niveaux de création de valeur}
+\begin{itemize}
+	\item \textbf{Efficacité clinique}\\
+	Y compris la réduction des activités administratives et des coûts, l’élimination des doublons de tests de laboratoire et de radiologie; améliorer la sécurité des patients grâce à un accès 24 heures sur 24, 7 jours sur 7, à des dossiers médicaux complets et lisibles; et accélérer l'accès aux antécédents médicaux des patients et aux informations vitales.
+	\item \textbf{Savoir partagé}\\
+	Y compris la réduction des erreurs médicales et l'amélioration de la qualité des soins, les alertes d'interaction médicamenteuse, des outils sophistiqués pour améliorer la prise de décision clinique par le biais de protocoles de soins fondés sur des preuves, ainsi que des innovations et de nouvelles capacités en matière de soins de population.
+	\item \textbf{Transformation de soins}\\
+	Incluant des analyses avancées pour éclairer la prise de décision clinique, la gestion de la santé de la population et de nouveaux modèles de prestation de soins.
+\end{itemize}
+\newpage
+\subsection{Les principales fonctions de la santé connectée}
+Les solutions de santé connectée s’articulent autour de 5 fonctions principales :
+\begin{enumerate}
+	\item Capter une information, via un objet (une balance, un tensiomètre, un podomètre…).
+	\item Transmettre automatiquement l’information captée.
+	\item Intégrer l’information dans un système informatique.
+	\item Afficher l’information de manière compréhensible pour l’utilisateur.
+	\item Mettre en relation, en s’affranchissant des problèmes de distance, patients et professionnels de santé.
+\end{enumerate}
+
+\subsection{Les différents champs d’application de la santé connectée}
+Les domaines d’applications pour les solutions de santé connectée sont vastes :
+\begin{itemize}
+	\item Mesure de paramètres vitaux et leur télétransmission à un plateau médical.
+	\item Mise en relation de patients à travers des réseaux sociaux dédiés.
+	\item Services de prévention personnalisée Web.
+	\item Téléconsultation, télémédecine et diagnostic à distance.
+	\item ...\\
+\end{itemize}
+
+L’intérêt de ces outils est directement lié à la manière de les utiliser. La santé connectée constitue une révolution qui permettra de proposer à chacun utilisateur des services de santé efficaces, accessibles et adaptés à ses besoins.
+
+\subsection{Avantages et inconvénients}
+La e-santé à plusieurs avantages telque:
+\begin{itemize}
+	\item Réduit le stress du personnel.
+	\item Fait un dossier patient efficace et accessible.
+	\item Réaliser un gain de temps et réduction des travaux indirects, ce qui conduit à une prestation de soins plus directe.
+	\item Causes de garder le personnel en leur possession et de l'attirer.
+\end{itemize}
+
+Les inconvénients peuvent être:
+\begin{itemize}
+	\item La modification des processus de communication avec le personnel
+	\item La formation du personnel prend beaucoup de temps sur ce type de système.\\
+\end{itemize}
+
+L'étude Accenture [3] montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
+
+\newpage
+\section{Le problème de la prise de température dans le service des enfants cancéreux}
+
+\subsection{Introduction}
+Nous allons dans cette partie, définir les 2 concepts liés à notre projet afin de positionner le problème que l’on va traiter, à savoir la température corporelle chez les personnes et le cancer.
+
+\subsection{Définition: la température corporelle}
+La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37\textdegree{}C, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5\textdegree{C} le soir par rapport au matin. Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre lorsque le corps est infecté. 
+
+Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'augmentation de la température corporelle causée par l'environnement ou l'effort physique, et de l'hypothermie, qui est une diminution et est essentiellement due à une exposition prolongée au froid. 
+
+Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
+
+\subsection{La température chez les enfants}
+La température chez l’enfant doit normalement être comprise entre 36\textdegree{C} et 37, 5\textdegree{C}. On parle de fièvre quand elle atteint ou dépasse les 38\textdegree{C}. On dit alors familièrement que l’enfant a de la température. Entre 37,5\textdegree{C} et 37,9\textdegree{C}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40\textdegree{C} son issue peut être mortelle [4].
+
+\subsection{Les causes de l'élévation de la température chez l’enfant}
+Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
+
+Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
+
+En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température [5].
+
+\subsection{Définition : le Cancer}
+Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
+
+Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade [6].
+
+Il existe un certain nombre de cancers différents, ayant chacun leurs propres symptômes et pouvant toucher diverses parties du corps. Parmi les cancers les plus fréquents, on retrouve :
+\begin{itemize}
+	\item  Le cancer de la peau,
+	\item Le cancer du sein,
+	\item Le cancer du colon,
+	\item Le cancer de la prostate,
+	\item ...
+\end{itemize}
+
+\subsection{Le cancer de l’enfant}
+Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans [7].
+
+Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms [7-8].
+
+La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité [8].
+\newpage
+\begin{figure}[h]
+\centering
+\includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
+\caption{Le cancer chez l’enfant}
+\end{figure}
+
+\subsection{Les cancers les plus fréquents chez l’enfant [9]}
+Les cancers les plus fréquents chez l’enfant sont les suivants :
+\begin{itemize}
+	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) [10].
+	\item les tumeurs au cerveau et dans la moelle épinière (20\%) .
+	\item les lymphomes hodgkiniens et non hodgkiniens (12\%) .
+	\item les tumeurs du système nerveux sympathique (7\%) .
+	\item les cancer des tissus mous (7\%) .
+	\item le cancer du rein (5\%) .
+	\item le cancer des os (4\%) .
+	\item les tumeurs germinales (3\%) .
+	\item les tumeurs oculaires (3\%) .
+\end{itemize}
+
+\newpage
+
+\subsection{Symptômes [9]}
+Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant:
+\begin{itemize}
+	\item un ventre anormalement gonflé, des grosseurs.  
+	\item une fièvre inexpliquée et persistante. 
+	\item une pâleur, de l’apathie, une perte de poids. 
+	\item des douleurs inexpliquées et persistantes dans les articulations et les membres.
+	\item des maux de tête, souvent associés à des vomissements. 
+	\item des hématomes fréquents, des saignements inexpliqués . 
+	\item des sueurs nocturnes. 
+	\item des sautes d’humeur et un changement soudain de comportement. 
+	\item un reflet blanchâtre dans la pupille (« œil de chat »), un strabisme.
+\end{itemize}
+
+\subsection{Le problème de la prise de température dans le service des enfants cancéreux}
+Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
+
+les enfants cancéreux souffrent d’une infection (causée par une bactérie ou un virus), il est normal qu’il fasse de la fièvre, il existe plusieurs moyens de prendre la température qui sont :
+\begin{enumerate}
+	\item par voie rectale (par le rectum ou les fesses),
+	\item par voie buccale (par la bouche),
+	\item par voie axillaire (sous l’aisselle),
+	\item par voie auriculaire (par l’oreille).
+\end{enumerate}
+
+\subsection{Les solutions existantes}
+La méthode choisi dependra de l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur) ce qui pose des problèmes qui sont:
+\begin{enumerate}
+	\item le stress,
+	\item On ne le laisse pas se reposer,
+	\item On ne le laisse pas se reposer,
+	\item ...etc
+\end{enumerate}
+\newpage
+\begin{table}[h]
+	\centering
+	\caption{Choix de la méthode de prise de température suivant l’age de l’enfant}
+	\begin{tabular}{ | l | r | c }
+		\hline
+		\bfseries{Âge} & \bfseries{Techniques recommandées}\\ \hline
+		De la naissance à 2 ans & 1èr choix : Rectum ( pour obtenir une lecture exacte )\\
+		                                      &  2ème choix : Aisselle ( pour vérifier si bébé fait de la fièvre\\
+\hline
+		De 2 à 5 ans & 1èr choix : Rectum\\
+							& 2ème choix : Oreille\\
+							& 3ème choix : Aisselle\\ 
+\hline
+		Plus de 5 ans & 1èr choix : Bouche\\
+							  & 2ème choix : Oreille\\
+							  & 3ème choix : Aisselle\\ 
+\hline 
+	\end{tabular}
+\end{table}
+
+\subsubsection{Le thermomètre}
+est l’un des outils essentiels de la trousse de premiers soins. Il existe différents modèles de thermomètres et différentes méthodes de prise de température corporelle.
+\begin{enumerate}
+	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est, comme son ancêtre, en verre gradué et permet de lire facilement la température [11].
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=6cm,width=9cm]{img-Chapiter-2/galune.jpeg}
+		\caption{Thermomètre à gallium}
+		\label{fig:gallium}
+	\end{figure}
+	\newpage
+	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
+	
+Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale [11].
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
+	\caption{Mesurer la température avec thermomètre électronique}
+\end{figure}
+	\item \textbf{Un thermomètre infrarouge} est un instrument de mesure de la température de surface d'un objet à partir du rayonnement de type corps noir qu'il émet dans l'infrarouge [12].
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/infra.jpg}
+		\caption{Thermomètre infrarouge}
+	\end{figure}
+	\item \textbf{Le thermomètre tétine } peut-être un gadget, mais le thermomètre tétine peut s’avérer pratique si on n’a pas d’autre thermomètre sous la main. 
+
+Une fois encore, chez le bébé, la prise de température par voie rectale est la plus fiable et la plus précise [11].
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6cm,width=9cm]{img-Chapiter-2/tetiiiiiiiiine.jpg}
+	\caption{Thermomètre tétine}
+\end{figure}
+	\item Il existe une autre façon de mesurer la température d'un enfant en plaçant un bracelet sur sa main, dans le cas d'une température élevée, cette dernière émit un son.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=7cm,width=9cm]{img-Chapiter-2/bbracelet.jpg}
+		\caption{Bracelet pour mesurer la température}
+	\end{figure}
+\end{enumerate}
+\newpage
+\section{Description de la solution}
+
+
+
 
 \newpage
 \bibliographystyle{ieeetr}	

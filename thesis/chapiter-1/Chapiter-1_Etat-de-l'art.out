@@ -1,0 +1,52 @@
+\BOOKMARK [1][-]{section*.2}{Liste des figures}{}% 1
+\BOOKMARK [1][-]{section*.3}{Liste des tables}{}% 2
+\BOOKMARK [1][-]{section.1}{Apprentissage automatique \(Machine Learning\)}{}% 3
+\BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.2}{Techniques d'apprentissage automatique}{section.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Apprentissage supervis\351}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Apprentissage non-supervis\351}{subsection.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.3}{Autres types d'apprentissage}{section.1}% 8
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Apprentissage semi-supervis\351}{subsection.1.3}% 9
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Apprentissage par renforcement}{subsection.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.4}{Conclusion}{section.1}% 11
+\BOOKMARK [1][-]{section.2}{Apprentissage profond \(Deep Learning\)}{}% 12
+\BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.2}{Apprentissage profond}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.3}{R\351seaux de Neurones Artificiels \(ANNs\)}{section.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Historique}{subsection.2.3}% 16
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Le neurone biologique}{subsection.2.3}% 17
+\BOOKMARK [3][-]{subsubsection.2.3.3}{D\351finition}{subsection.2.3}% 18
+\BOOKMARK [1][-]{section.3}{Traitement d\220Image \(Image Processing\)}{}% 19
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.2}{L\220image num\351rique}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.3}{L\220image thermique}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.4}{Le traitement d\220image}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.5}{Le but du traitement d'image}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.6}{Les m\351thodes pour le traitement d\220image}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.7}{Les applications existantes}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.8}{Les recherches et l\220avenir}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.9}{Conclusion}{section.3}% 28
+\BOOKMARK [1][-]{section.4}{Contexte et probl\351matique du projet}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{D\351finition e-sant\351}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{Domaines d\220application}{section.4}% 31
+\BOOKMARK [2][-]{subsection.4.3}{La e-sant\351 inclut}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.4}{L\220importance de la e-sant\351}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.5}{Focus sur le Cancer}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.6}{la sant\351 connect\351e implique}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.7}{Une approche de la sant\351 connect\351e offre trois niveaux de cr\351ation de valeur}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.8}{Les principales fonctions de la sant\351 connect\351e}{section.4}% 37
+\BOOKMARK [2][-]{subsection.4.9}{Les diff\351rents champs d\220application de la sant\351 connect\351e}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.10}{Avantages et inconv\351nients}{section.4}% 39
+\BOOKMARK [1][-]{section.5}{Le probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{}% 40
+\BOOKMARK [2][-]{subsection.5.1}{Introduction}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.2}{D\351finition: la temp\351rature corporelle}{section.5}% 42
+\BOOKMARK [2][-]{subsection.5.3}{La temp\351rature chez les enfants}{section.5}% 43
+\BOOKMARK [2][-]{subsection.5.4}{Les causes de l'\351l\351vation de la temp\351rature chez l\220enfant}{section.5}% 44
+\BOOKMARK [2][-]{subsection.5.5}{D\351finition : le Cancer}{section.5}% 45
+\BOOKMARK [2][-]{subsection.5.6}{Le cancer de l\220enfant}{section.5}% 46
+\BOOKMARK [2][-]{subsection.5.7}{Les cancers les plus fr\351quents chez l\220enfant [9]}{section.5}% 47
+\BOOKMARK [2][-]{subsection.5.8}{Sympt\364mes [9]}{section.5}% 48
+\BOOKMARK [2][-]{subsection.5.9}{Le probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{section.5}% 49
+\BOOKMARK [2][-]{subsection.5.10}{Les solutions existantes}{section.5}% 50
+\BOOKMARK [3][-]{subsubsection.5.10.1}{Le thermom\350tre}{subsection.5.10}% 51
+\BOOKMARK [1][-]{section.6}{Description de la solution}{}% 52
