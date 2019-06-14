@@ -124,7 +124,7 @@ Dans cette partie, nous avons décrit quelques techniques d'apprentissage de dif
 \subsection{Introduction}
 Après avoir présenté de manière globale l’apprentissage automatique, nous allons maintenant nous intéresser plus particulièrement à l’apprentissage profond. Pour illustrer la discussion, nous allons d’abord présenter en détail le type de modèle le plus utilisé dans ce contexte: les Réseaux de Neurones Artificiels (ANNs).
 \subsection{Apprentissage profond}
-La notion d’apprentissage profond est tout d’abord une traduction directe du terme anglais « Deep Learning », que certain préfère traduire par la notion d’apprentissage statistique. De même que sa traduction, sa définition varie également, mais principalement au niveau des détails \cite{9}. % adha rahou 10 ref derto bark khater malgitch 9
+La notion d’apprentissage profond est tout d’abord une traduction directe du terme anglais « Deep Learning », que certain préfère traduire par la notion d’apprentissage statistique. De même que sa traduction, sa définition varie également, mais principalement au niveau des détails \cite{10}. % adha rahou 10 ref derto bark khater malgitch 9
 Pour définir cette notion dans les grandes lignes, on pourrait dire que L’apprentissage profond est un algorithme d'abstraction de haut niveau qui permet de modéliser les données à partir de grands ensembles de données apprises.\\
 Précisons quelques termes \cite{10}:
 \begin{itemize}
@@ -277,7 +277,7 @@ Mais avec la sophistication croissante et la puissance de l'informatique moderne
 \newpage
 \section{Contexte et problématique du projet}
 \subsection{Définition e-santé}
-e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication [1].
+e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
 
 Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
 Ceux ci comprennent:
@@ -289,7 +289,7 @@ Ceux ci comprennent:
 
 La santé connectée consiste en l’utilisation des nouvelles technologies pour améliorer la santé des citoyens. Ces technologies peuvent faciliter collecte, la circulation, l'utilisation efficaces d'informations sur la santé, l’accès aux soins et permettent à leurs utilisateurs une prise en charge personnalisée en matière de prévention ou de soins médicaux.
 
-Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins [2].
+Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins \cite{27}.
 
 \subsection{Domaines d’application}
 Pour présenter les applications de la santé numérique, on peut se baser sur la chronologie du développement et de la prise en charge d’une maladie à savoir les stades de prévention, de diagnostic, puis de prise en charge thérapeutique et d’établissement d’un pronostic.
@@ -373,7 +373,7 @@ Les inconvénients peuvent être:
 	\item La formation du personnel prend beaucoup de temps sur ce type de système.\\
 \end{itemize}
 
-L'étude Accenture [3] montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
+L'étude Accenture \cite{28} montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
 
 \newpage
 \section{Le problème de la prise de température dans le service des enfants cancéreux}
@@ -389,19 +389,19 @@ Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'
 Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
 
 \subsection{La température chez les enfants}
-La température chez l’enfant doit normalement être comprise entre 36\textdegree{C} et 37, 5\textdegree{C}. On parle de fièvre quand elle atteint ou dépasse les 38\textdegree{C}. On dit alors familièrement que l’enfant a de la température. Entre 37,5\textdegree{C} et 37,9\textdegree{C}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40\textdegree{C} son issue peut être mortelle [4].
+La température chez l’enfant doit normalement être comprise entre 36\textdegree{C} et 37, 5\textdegree{C}. On parle de fièvre quand elle atteint ou dépasse les 38\textdegree{C}. On dit alors familièrement que l’enfant a de la température. Entre 37,5\textdegree{C} et 37,9\textdegree{C}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40\textdegree{C} son issue peut être mortelle \cite{29}.
 
 \subsection{Les causes de l'élévation de la température chez l’enfant}
 Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
 
 Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
 
-En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température [5].
+En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.
 
 \subsection{Définition : le Cancer}
 Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
 
-Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade [6].
+Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
 
 Il existe un certain nombre de cancers différents, ayant chacun leurs propres symptômes et pouvant toucher diverses parties du corps. Parmi les cancers les plus fréquents, on retrouve :
 \begin{itemize}
@@ -413,11 +413,11 @@ Il existe un certain nombre de cancers différents, ayant chacun leurs propres s
 \end{itemize}
 
 \subsection{Le cancer de l’enfant}
-Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans [7].
+Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
 
-Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms [7-8].
+Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
 
-La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité [8].
+La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
 \newpage
 \begin{figure}[h]
 \centering
@@ -425,10 +425,10 @@ La plupart des cancers de l’enfant peuvent être guéris grâce aux médicamen
 \caption{Le cancer chez l’enfant}
 \end{figure}
 
-\subsection{Les cancers les plus fréquents chez l’enfant [9]}
-Les cancers les plus fréquents chez l’enfant sont les suivants :
+\subsection{Les cancers les plus fréquents chez l’enfant}
+Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 \begin{itemize}
-	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) [10].
+	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) \cite{35}.
 	\item les tumeurs au cerveau et dans la moelle épinière (20\%) .
 	\item les lymphomes hodgkiniens et non hodgkiniens (12\%) .
 	\item les tumeurs du système nerveux sympathique (7\%) .
@@ -441,8 +441,8 @@ Les cancers les plus fréquents chez l’enfant sont les suivants :
 
 \newpage
 
-\subsection{Symptômes [9]}
-Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant:
+\subsection{Symptômes}
+Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
 \begin{itemize}
 	\item un ventre anormalement gonflé, des grosseurs.  
 	\item une fièvre inexpliquée et persistante. 
@@ -498,7 +498,7 @@ La méthode choisi dependra de l’age de l’enfant, il est important que la me
 \subsubsection{Le thermomètre}
 est l’un des outils essentiels de la trousse de premiers soins. Il existe différents modèles de thermomètres et différentes méthodes de prise de température corporelle.
 \begin{enumerate}
-	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est, comme son ancêtre, en verre gradué et permet de lire facilement la température [11].
+	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est, comme son ancêtre, en verre gradué et permet de lire facilement la température \cite{36}.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[height=6cm,width=9cm]{img-Chapiter-2/galune.jpeg}
@@ -508,13 +508,13 @@ est l’un des outils essentiels de la trousse de premiers soins. Il existe diff
 	\newpage
 	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
 	
-Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale [11].
+Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale \cite{36}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
 	\caption{Mesurer la température avec thermomètre électronique}
 \end{figure}
-	\item \textbf{Un thermomètre infrarouge} est un instrument de mesure de la température de surface d'un objet à partir du rayonnement de type corps noir qu'il émet dans l'infrarouge [12].
+	\item \textbf{Un thermomètre infrarouge} est un instrument de mesure de la température de surface d'un objet à partir du rayonnement de type corps noir qu'il émet dans l'infrarouge \cite{37}.
 	\newpage
 	\begin{figure}[h]
 		\centering
@@ -523,7 +523,7 @@ Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il r
 	\end{figure}
 	\item \textbf{Le thermomètre tétine } peut-être un gadget, mais le thermomètre tétine peut s’avérer pratique si on n’a pas d’autre thermomètre sous la main. 
 
-Une fois encore, chez le bébé, la prise de température par voie rectale est la plus fiable et la plus précise [11].
+Une fois encore, chez le bébé, la prise de température par voie rectale est la plus fiable et la plus précise \cite{36}.
 \newpage
 \begin{figure}[h]
 	\centering

@@ -9,7 +9,6 @@ Warning--empty year in 4
 Warning--empty booktitle in 6
 Warning--empty booktitle in 7
 Warning--empty booktitle in 8
-Warning--empty booktitle in 9
 Warning--empty author in 12
 Warning--empty booktitle in 12
 Warning--empty booktitle in 13
@@ -26,36 +25,41 @@ Warning--empty booktitle in 22
 Warning--empty booktitle in 23
 Warning--empty booktitle in 24
 Warning--empty booktitle in 25
-You've used 25 entries,
+Warning--empty booktitle in 32
+Warning--empty booktitle in 33
+Warning--empty year in 33
+Warning--empty booktitle in 35
+Warning--empty year in 35
+You've used 36 entries,
             1876 wiz_defined-function locations,
-            565 strings with 7745 characters,
-and the built_in function-call counts, 3989 in all, are:
-= -- 260
-> -- 186
+            601 strings with 9582 characters,
+and the built_in function-call counts, 5345 in all, are:
+= -- 364
+> -- 232
 < -- 0
-+ -- 74
-- -- 49
-* -- 240
-:= -- 578
-add.period$ -- 24
-call.type$ -- 25
-change.case$ -- 25
++ -- 96
+- -- 60
+* -- 301
+:= -- 745
+add.period$ -- 33
+call.type$ -- 36
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 279
-empty$ -- 545
-format.name$ -- 49
-if$ -- 946
+cite$ -- 63
+duplicate$ -- 339
+empty$ -- 751
+format.name$ -- 60
+if$ -- 1296
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 22
-newline$ -- 78
-num.names$ -- 21
-pop$ -- 216
+int.to.str$ -- 36
+missing$ -- 24
+newline$ -- 111
+num.names$ -- 27
+pop$ -- 287
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 50
+skip$ -- 107
 stack$ -- 0
 substring$ -- 0
 swap$ -- 3
@@ -63,8 +67,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 23
-while$ -- 21
-width$ -- 27
-write$ -- 174
-(There were 23 warnings)
+warning$ -- 27
+while$ -- 27
+width$ -- 38
+write$ -- 245
+(There were 27 warnings)

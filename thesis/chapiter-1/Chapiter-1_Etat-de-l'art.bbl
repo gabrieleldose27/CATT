@@ -34,10 +34,6 @@ lance \&~Williams., G.~N. Lance, and W.~T. Williams, ``A general theory of
 \bibitem{8}
 V.~Vladimir, ``Statistical learning theory, book,'' September 16, 1998.
 
-\bibitem{9}
-S.~Richard, Sutton, and A.~G. Barto, ``Introduction to reinforcement learning
-  (1st ed.). mit press, cambridge, ma, usa,'' 1998.
-
 \bibitem{10}
 ``Apprentissage automatique et deep learning.''
   \url{https://www.stemmer-imaging.com/fr-ch/conseil-techniqu/apprentissage-automatique-et-apprentissage-profond/}
@@ -121,5 +117,63 @@ M.~Osadebey, M.~Pedersen, D.~Arnold, and K.~Wendel-Mitoraj, ``Image quality
   in multi-center clinical trials, in ieee journal of translational engineering
   in health and medicine, vol. 6, pp. 1-15, 2018, art no. 1800915. doi:
   10.1109/jtehm.2018.2855213,'' 2018.
+
+\bibitem{26}
+G.~Eysenbach, ``Articles from journal of medical internet research are provided
+  here courtesy.'' \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1761894/}
+  consulté le 2019/06/09.
+
+\bibitem{27}
+``La santé connectée.''
+  \url{https://www.nmmedical.fr/materiel-de-diagnostic/sante-connectee.html}
+  consulté le 2019/06/09.
+
+\bibitem{28}
+``L'étude accenture.''
+  \url{https://www.accenture.com/us-en/insight-making-case-connected-health}
+  consulté le 2019/06/10.
+
+\bibitem{29}
+D.~M. Consolini, ``Md, assistant professor of pediatrics, sidney kimmel medical
+  college of thomas jefferson university.''
+  \url{https://www.msdmanuals.com/fr/professional/p%C3%A9diatrie/sympt%C3%B4mes-chez-le-nourrisson-et-l-enfant/fi%C3%A8vre-chez-le-nourrisson-et-l-enfant}
+  consulté le 2019/06/09.
+
+\bibitem{30}
+``Les causes de l'élévation de la température, mediresource inc. 1996 –
+  2019.'' \url{https://santecheznous.com/condition/getcondition/fievre }
+  consulté le 2019/06/09.
+
+\bibitem{31}
+M.~Lambert, ``Le cancer, le 17 février 2016 à 12:35.''
+  \url{https://www.maxisciences.com/cancer/cancer-definition-causes-types-qu-est-ce-que-c-est_art35165.html}
+  consulté le 2019/06/09.
+
+\bibitem{32}
+E.~Steliarova-Foucher, M.~Colombet, R.~LAG, and et~al, ``International
+  incidence of childhood cancer, 2001-10: a population-based registry study.
+  lancet oncol. 2017;18(6):719-731,'' 2017.
+
+\bibitem{33}
+S.~Gupta, S.~Howard, S.~Hunger, and et~al, ``Treating childhood cancer in low-
+  and middle-income countries. in: Disease control priorities, volume,''
+
+\bibitem{34}
+``Le cancer chez l’enfant.''
+  \url{https://www.liguecancer.ch/a-propos-du-cancer/les-differents-types-de-cancer/le-cancer-chez-lenfant/}
+  consulté le 2019/06/09.
+
+\bibitem{35}
+C.~Kühni and N.~von~der Weid, ``Registre suisse du cancer de l’enfant.,''
+
+\bibitem{36}
+E.~Perrin, ``Les thermomètres, le 5 août 2016 à 16:03.''
+  \url{https://www.maxisciences.com/thermometre/thermometre-quel-type-de-thermometre-choisir-et-ou-prendre-la-temperature_art38501.html}
+  consulté le 2019/06/09, 2016.
+
+\bibitem{37}
+``Les thermomètres infrarouge.''
+  \url{https://fr.wikipedia.org/wiki/Thermom%C3%A8tre_infrarouge} consulté le
+  2019/06/10.
 
 \end{thebibliography}

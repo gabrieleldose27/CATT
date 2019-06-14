@@ -45,8 +45,8 @@
 \contentsline {subsection}{\numberline {5.4}Les causes de l'\IeC {\'e}l\IeC {\'e}vation de la temp\IeC {\'e}rature chez l\IeC {\textquoteright }enfant}{24}{subsection.5.4}
 \contentsline {subsection}{\numberline {5.5}D\IeC {\'e}finition : le Cancer}{25}{subsection.5.5}
 \contentsline {subsection}{\numberline {5.6}Le cancer de l\IeC {\textquoteright }enfant}{25}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Les cancers les plus fr\IeC {\'e}quents chez l\IeC {\textquoteright }enfant [9]}{26}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Sympt\IeC {\^o}mes [9]}{27}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.7}Les cancers les plus fr\IeC {\'e}quents chez l\IeC {\textquoteright }enfant}{26}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Sympt\IeC {\^o}mes}{27}{subsection.5.8}
 \contentsline {subsection}{\numberline {5.9}Le probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature dans le service des enfants canc\IeC {\'e}reux}{27}{subsection.5.9}
 \contentsline {subsection}{\numberline {5.10}Les solutions existantes}{27}{subsection.5.10}
 \contentsline {subsubsection}{\numberline {5.10.1}Le thermom\IeC {\`e}tre}{28}{subsubsection.5.10.1}
