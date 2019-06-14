@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  14 JUN 2019 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  14 JUN 2019 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -743,161 +743,108 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `1' on page 1 undefined on input line 40.
-
-[1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-
-LaTeX Warning: Citation `2' on page 2 undefined on input line 51.
-
-[2]
-
-LaTeX Warning: Citation `3' on page 3 undefined on input line 68.
-
-
-LaTeX Warning: Citation `4' on page 3 undefined on input line 75.
-
-[3]
-
-LaTeX Warning: Citation `5' on page 4 undefined on input line 84.
-
-
-LaTeX Warning: Citation `6' on page 4 undefined on input line 85.
-
-
-LaTeX Warning: Citation `7' on page 4 undefined on input line 86.
-
-
-LaTeX Warning: Citation `8' on page 4 undefined on input line 99.
-
-[4] [5]
-
-LaTeX Warning: Citation `9' on page 6 undefined on input line 110.
-
-
-LaTeX Warning: Citation `10' on page 6 undefined on input line 112.
-
-[6]
-
-LaTeX Warning: Citation `11' on page 7 undefined on input line 124.
-
-
-LaTeX Warning: Citation `11' on page 7 undefined on input line 128.
-
-[7]
+[2] [3] [4] [5] [6] [7]
 <neurone.png, id=33, 329.23pt x 153.57375pt>
 File: neurone.png Graphic file (type png)
 <use neurone.png>
 Package pdftex.def Info: neurone.png  used on input line 137.
 (pdftex.def)             Requested size: 329.22919pt x 153.57336pt.
-
-
-LaTeX Warning: Citation `10' on page 8 undefined on input line 141.
-
-
-LaTeX Warning: Citation `10' on page 8 undefined on input line 143.
-
-[8 <./neurone.png>]
-
-LaTeX Warning: Citation `10' on page 9 undefined on input line 147.
-
+ [8 <./neurone.png>]
 <shemadenourone.jpg, id=39, 1061.9675pt x 657.45625pt>
 File: shemadenourone.jpg Graphic file (type jpg)
 <use shemadenourone.jpg>
 Package pdftex.def Info: shemadenourone.jpg  used on input line 150.
 (pdftex.def)             Requested size: 369.8793pt x 284.52649pt.
-[9 <./shemadenourone.jpg>]
-
-LaTeX Warning: Citation `12' on page 10 undefined on input line 159.
-
-
-LaTeX Warning: Citation `13' on page 10 undefined on input line 161.
-
-[10]
+ [9 <./shemadenourone.jpg>] [10]
 File: neurone.png Graphic file (type png)
 <use neurone.png>
 Package pdftex.def Info: neurone.png  used on input line 165.
 (pdftex.def)             Requested size: 329.22919pt x 153.57336pt.
- [11]
 
-LaTeX Warning: Citation `14' on page 12 undefined on input line 183.
-
-
-LaTeX Warning: Citation `14' on page 12 undefined on input line 185.
-
+[11]
 <1.png, id=49, 525.965pt x 172.645pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
 Package pdftex.def Info: 1.png  used on input line 194.
 (pdftex.def)             Requested size: 525.9637pt x 172.64456pt.
-[12 <./1.png>]
+ [12 <./1.png>] [13] [14] [15] [16] [17] (./Chapiter-1_Etat-de-l'art.bbl
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
 
-LaTeX Warning: Citation `15' on page 13 undefined on input line 216.
-
-
-LaTeX Warning: Citation `16' on page 13 undefined on input line 217.
-
-
-LaTeX Warning: Citation `17' on page 13 undefined on input line 218.
-
-
-LaTeX Warning: Citation `18' on page 13 undefined on input line 219.
-
-[13]
-
-LaTeX Warning: Citation `19' on page 14 undefined on input line 225.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+[]\T1/lmr/m/n/12 ``Apprentissage au-to-ma-tique et deep lear-ning.'' $\T1/lmtt/
+m/n/12 https :
+ []
 
 
-LaTeX Warning: Citation `20' on page 14 undefined on input line 227.
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+\T1/lmtt/m/n/12 / / www . stemmer-[]imaging . com / fr-[]ch / conseil-[]techniq
+u /
+ []
 
 
-LaTeX Warning: Citation `21' on page 14 undefined on input line 227.
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+\T1/lmtt/m/n/12 apprentissage-[]automatique-[]et-[]apprentissage-[]profond/$ \T
+1/lmr/m/n/12 consulté le
+ []
 
 
-LaTeX Warning: Citation `22' on page 14 undefined on input line 228.
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+[]\T1/lmr/m/n/12 ``Le deep lear-ning (1) : une ten-ta-tive de vul-ga-
+ []
 
 
-LaTeX Warning: Citation `23' on page 14 undefined on input line 228.
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+\T1/lmr/m/n/12 ri-sa-tion.'' $\T1/lmtt/m/n/12 https : / / www . second-[]glance
+ . fr / 2017 / 02 / 06 /
+ []
 
-[14]
 
-LaTeX Warning: Citation `24' on page 15 undefined on input line 229.
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+\T1/lmtt/m/n/12 le-[]deep-[]learning-[]1-[]une-[]tentative-[]de-[]vulgarisation
+/$ \T1/lmr/m/n/12 consulté le
+ []
 
+! Misplaced alignment tab character &.
+l.52 ``International journal of scientific &
+                                             engineering research, volume 4,...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-LaTeX Warning: Citation `25' on page 15 undefined on input line 238.
-
-[15] [16] [17]
-No file Chapiter-1_Etat-de-l'art.bbl.
-(./Chapiter-1_Etat-de-l'art.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[18]) [19] (./Chapiter-1_Etat-de-l'art.aux) ) 
 Here is how much of TeX's memory you used:
- 5011 strings out of 492982
- 66528 string characters out of 6134895
- 140893 words of memory out of 5000000
- 8446 multiletter control sequences out of 15000+600000
- 38258 words of font info for 42 fonts, out of 8000000 for 9000
+ 5059 strings out of 492982
+ 67268 string characters out of 6134895
+ 140984 words of memory out of 5000000
+ 8487 multiletter control sequences out of 15000+600000
+ 42838 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,43p,960b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm
-/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
-12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Chapiter-1_Etat-de-l'art.pdf (18 pages, 181951 bytes).
+{/usr/share/texmf/fonts/enc/dvips/
+lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/tex
+mf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.
+enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Chapiter-1_Etat-de-l'art.pdf (20 pages, 229312 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

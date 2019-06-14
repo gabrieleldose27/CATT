@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Apprentissage automatique (Machine Learning)}{1}
 \contentsline {subsection}{\numberline {1.1}Introduction}{1}
 \contentsline {subsection}{\numberline {1.2}Techniques d'apprentissage automatique}{1}
-\contentsline {subsubsection}{\numberline {1.2.1}Apprentissage}{2}
+\contentsline {subsubsection}{\numberline {1.2.1}Apprentissage supervis\IeC {\'e}}{2}
 \contentsline {subsubsection}{\numberline {1.2.2}Apprentissage non-supervis\IeC {\'e}}{2}
 \contentsline {subsection}{\numberline {1.3}Autres types d'apprentissage}{4}
 \contentsline {subsubsection}{\numberline {1.3.1}Apprentissage semi-supervis\IeC {\'e}}{4}
