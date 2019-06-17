@@ -7,18 +7,20 @@
 \usepackage[hidelinks]{hyperref} % allows for clickable references
 \usepackage{graphicx} % allows import photo
 \usepackage{float} % controle position
+\usepackage[dvipsnames]{xcolor}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
-\usepackage[left=3cm, right=3cm, top=3cm, includefoot]{geometry}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, includefoot]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
+\fancyhf{}
 \fancyfoot{}
 \fancyfoot[R]{ \thepage\ }
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.25 pt}
 \renewcommand{\footrulewidth}{1pt}
 
 
@@ -39,14 +41,16 @@
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\rfoot{Page \thepage}
 \section*{\Huge{Chapiter 1}}
 \subsection*{\huge{\' Etat de l'art}}
 \newpage
+\rhead{Chapite 1 : \' Etat de l'art}
 \section{Apprentissage automatique (Machine Learning)}
 \subsection{Introduction}
 La faculté d'apprendre est essentielle à l'être humain pour reconnaître une voix, une personne, un objet... On distingue en général deux types d'apprentissage: l'apprentissage «par cœur» qui consiste à mémoriser telles quelles des informations, et l'apprentissage par généralisation où l'on apprend à partir d'exemples un modèle qui nous permettra de reconnaître de nouveaux exemples. Pour les systèmes informatiques, il est facile de mémoriser un grand nombre de données (textes, images, vidéos...), mais difficile de généraliser. Par exemple, il leur est difficile de construire un bon modèle d'un objet et d'être ensuite capable de reconnaître efficacement cet objet dans de nouvelles images.
 
-L'apprentissage automatique est une tentative pour comprendre et reproduire cette faculté d'apprentissage dans des systèmes artificiels. Il nous semble donc approprié d'utiliser des techniques issues de ce domaine pour découvrir et modéliser des connaissances liant texte et image.
+L'apprentissage automatique est une tentative pour comprendre et reproduire cette faculté d'apprentissage dans des systèmes artificiels. Il semble donc approprié d'utiliser des techniques issues de ce domaine pour découvrir et modéliser des connaissances liant texte et image.
 
 L'apprentissage automatique se trouve au carrefour de nombreux autres domaines: intelligence artificielle, statistiques, sciences cognitives, théorie des probabilités, de l'optimisation, du signal et de l'information... Il est donc bien difficile de donner une taxonomie des techniques d'apprentissage.
 
@@ -54,20 +58,23 @@ Après avoir donné quelques définitions, nous présentons brièvement dans ce 
 \subsection{Techniques d'apprentissage automatique}
 Dans ce mémoire, nous nous intéressons aux techniques d'apprentissage sur de grande masses d'images. Cependant, avant de pouvoir utiliser les techniques d'apprentissage, il est nécessaire de réaliser quelques pré-traitements sur les données. L'ensemble des techniques utilisées avant, pendant et après l'apprentissage sur de grandes masses de données est souvent regroupé sous le terme de Exploration de données dite «Data Mining».
 
-Exploration de données «Data Mining» c’est une technique qui considère tout le processus d'extraction de connaissances à partir d'un grand nombre de données \cite{1}. Ses principales étapes sont:
-\begin{itemize}
+Exploration de données «Data Mining» c’est une technique qui considère tout le processus d'extraction de connaissances à partir d'un grand nombre de données \cite{1}.\\
+Ses principales étapes sont:
+\begin{enumerate}
   	  \item L'extraction et le stockage des données.
   	  \item L'exploration des données pour la détection de valeurs aberrantes, atypiques, d'incohérences, et pour la sélection et la transformation des données à étudier...
   	\item Le partitionnement aléatoire des données en trois ensembles: apprentissage, validation et test.
   	\item La réalisation d'un apprentissage numérique ou symbolique à partir des données nettoyées avec estimation de la complexité du modèle et optimisation des paramètres sur l'ensemble de validation.
   	\item La comparaison des résultats obtenus à l'aide des modèles optimaux sur l'ensemble de validation avec les résultats obtenus sur l'ensemble de test afin de tester la capacité de généralisation du modèle.\\
-\end{itemize}
+\end{enumerate}
 
 Il est utilisé dans de nombreux domaines: bases de données, analyse de données, statistiques, classification, programmation logique, visualisation...
 \subsubsection{Apprentissage supervisé}
 La classification supervisée (appelée aussi classement ou classification inductive) à pour objectif d'apprendre par l'exemple. Elle cherche a expliquer et prédire l’appartenance de documents a des classes connues apriori. Ainsi c'est l'ensemble des techniques qui visent a deviner l'appartenance d'un individu a une classe en s'aidant uniquement a des valeurs qu'il prend \cite{2}.
 
-L'apprentissage supervisé suppose qu'un oracle fournit les étiquettes de chaque donnée d'apprentissage l’oracle ici c’est pour chaque xi, fournit une étiquette ui dans U (avec une distribution de probabilité $F(u|x)$ inconnue).
+L'apprentissage supervisé suppose qu'un oracle fournit les étiquettes de chaque donnée d'apprentissage.
+
+l’oracle c’est pour chaque $xi$, fournit une étiquette ui dans U (avec une distribution de probabilité $F(u|x)$ inconnue).
 
 On distingue en général trois types de problèmes auxquels l'apprentissage supervisé est appliqué: la classification supervisée, la régression, et les séries temporelles. Ces trois types de problèmes se différencient en fonction du type d'étiquettes fournit par l'oracle.
 Nous présentons maintenant brièvement trois algorithmes classiques d'apprentissage supervisé:
@@ -78,32 +85,34 @@ Nous présentons maintenant brièvement trois algorithmes classiques d'apprentis
 \end{enumerate}
 
 \subsubsection{Apprentissage non-supervisé}
-Contrairement à l'apprentissage supervisé, dans l'apprentissage non-supervisé il n'y a pas d'oracle qui explicite les étiquettes. L'utilisation de ce type d'algorithme permet de trouver des structures, des dépendances entre descripteurs... qui nous sont inconnues (on dit aussi latentes). Dans le cadre de ce travail, nous ne nous intéresserons qu'à la régression. Pour ce problème, les étiquettes sont des valeurs.
+Contrairement à l'apprentissage supervisé, dans l'apprentissage non-supervisé il n'y a pas d'oracle qui explicite les étiquettes. L'utilisation de ce type d'algorithme permet de trouver des structures, des dépendances entre descripteurs, qui sont inconnues (on dit aussi latentes). 
 
-Le plus connu des problèmes non-supervisés est la classification non-supervisée ou clustering. Les classes, que nous appellerons clusters, sont formées par regroupement des documents qui ont certaines caractéristiques en commun. Un autre problème non-supervisé est l'estimation de densité. Son objectif est de modéliser la distribution des données. Le modèle doit pouvoir fournir une bonne estimation d'un document de test issu de la même distribution (inconnue) que les données d'apprentissage. Son objectif est de résumer l'information importante, de la dissocier du bruit.
+Le plus connu des problèmes non-supervisés est la classification non-supervisée ou clustering. Les classes, que nous appellerons clusters, sont formées par regroupement des documents qui ont certaines caractéristiques en commun.
+
+Un autre problème non-supervisé est l'estimation de densité. Son objectif est de modéliser la distribution des données. Le modèle doit pouvoir fournir une bonne estimation d'un document de test issu de la même distribution (inconnue) que les données d'apprentissage. Son objectif est de résumer l'information importante, de la dissocier du bruit.
 
 Le clustering est un outil important pour l'analyse de données. En français, le mot classification est ambigüe, car il s'agit soit de retrouver la classe à laquelle le document appartient (classification supervisée), soit de construire des regroupements de documents (classification non-supervisée). Pour distinguer ces deux cas, nous parlerons de classement pour la première et de clustering pour la seconde. Le clustering vise à trouver les structures intrinsèques des données en les organisant en groupes homogènes et distincts (les clusters). Les objets dans un même cluster doivent être similaires entre eux et différents des objets des autres clusters \cite{3}.\\
 Pour construire un regroupement de ces données, un utilisateur a trois choix méthodologiques à faire :
 \begin{enumerate}
 	\item Choisir une mesure de ressemblance entre les données.
-	\item Choisir le type de structure qu'il veut obtenir: partition, hiérarchie, arbre, pyramide.
+	\item Choisir le type de structure qu'on veut obtenir: partition, hiérarchie, arbre, pyramide.
 	\item Choisir la méthode permettant d'obtenir la structure désirée.
-\end{enumerate}
-On distingue généralement quatre types d'approches du clustering \cite{4}
-\begin{enumerate}
+	
+On distingue généralement quatre types d'approches du clustering \cite{4}:
+	\begin{enumerate}
 	\item Les approches basées sur le partitionnement des données: les points de données sont diviser en k partition, où chaque partition représente un cluster. La partition est faite sur la base de certains objectif fonction. Une de ces fonctions standard est de minimiser le carrée d’erreur.
 	\item Densités: sont définies comme des zones de densité supérieure au reste de l’ensemble de données. Les objets rares dans ces zones - qui sont nécessaires pour séparer les clusters - sont généralement considérés comme du bruit et des points frontières.	
 	\item L'espace (grid): utilise une structure de données de grille multi-résolution. Il quantifie l'espace objet en un nombre fini de cellules qui forment une structure de grille sur laquelle toutes les opérations de clustering sont effectuées.
 	\item Les approches hiérarchiques: les plus petites cluster sont fusionnées en plus grandes, ou les plus grandes cluster sont découpés en plus petites cluster . Le résultat de l'algorithme est un arbre de cluster, appelé dendrogramme, qui montre la relation entre les cluster.
-\end{enumerate}
+	
 Nous présentons trois algorithmes classiques d'apprentissage non-supervisé:
-\begin{enumerate}
-	\item Les k - moyennes (k - means): est un outil de partitionnement des données non-hiérarchique qui permet de répartir les données en k clusters homogènes \cite{5}.
+\end{enumerate}
+		\item Les k - moyennes (k - means): est un outil de partitionnement des données non-hiérarchique qui permet de répartir les données en k clusters homogènes \cite{5}.
 	\item Les cartes auto-organisatrices (SOM - self organizing map ou carte de Kohonen (1982)): appartiennent aux techniques de clustering par partitionnement des données. Cette technique est un cas particulier de réseau de neurones non-supervisé \cite{6}.
 	\item La Classification Ascendante Hiérarchique (CAH): Il appartient à la méthode des heuristiques. Cette méthode est utilisée pour construire des clusters pour les documents ainsi que pour les visualiser \cite{7}.
 \end{enumerate}
 \subsection{Autres types d'apprentissage}
-Il existe d'autres types d'apprentissage. Citons l'apprentissage semi-supervisé et l'apprentissage par renforcement. Ces deux types d'apprentissage nous semblent être intéressants pour la recherche d'images.
+Il existe d'autres types d'apprentissage. Citons l'apprentissage semi-supervisé et l'apprentissage par renforcement.
 
 En effet, l'apprentissage semi-supervisé est un bon compromis entre apprentissage supervisé et non-supervisé, car il permet de traiter un grand nombre de données sans avoir besoin de toutes les étiqueter, et, bien utilisé, il donne de meilleurs résultats que l'apprentissage non-supervisé.
 
@@ -117,7 +126,7 @@ Il permet d'intervenir dans le processus de construction de l'ensemble d'apprent
 \subsubsection{Apprentissage par renforcement}
 L’apprentissage par renforcement désigne toute méthode adaptative permettant de résoudre un problème de décision séquentielle. L'apprentissage par renforcement est synonyme d'apprentissage par interaction. Pendant l'apprentissage, le système adaptatif agit en interaction avec son environnement, et en retour reçoit des signaux de renforcement. Son objectif est de maximiser une mesure de gain dépendant des signaux reçus. Le terme adaptatif signifie que l'on part d'une solution inefficace, et qu'elle est améliorée progressivement en fonction de l'expérience du système.
 \subsection{Conclusion}
-Dans cette partie, nous avons décrit quelques techniques d'apprentissage de différents types (supervisés, non-supervisés, semi-supervisés, par renforcement) qui peuvent être employées pour l'indexation et la recherche d'images.
+Dans cette partie, nous avons décrit quelques techniques d'apprentissage de différents types (supervisés, non-supervisés, semi-supervisés, par renforcement) qui peuvent être employées pour l'indexation et la recherche de document.
 
 \newpage
 \section{Apprentissage profond (Deep Learning)}
@@ -133,7 +142,7 @@ Précisons quelques termes \cite{10}:
 	\item \textbf{La notion relative aux grands ensembles de données} signifie que les données d’entrée sont extrêmement diverses. L'apprentissage profond ou l'apprentissage automatique implique généralement que les propriétés importantes de ces données sont détectées lors du processus d'apprentissage.
 \end{itemize}
 
-De nombreux termes de ce utilisés proviennent des sciences neurologiques, notamment de la notion de réseau de neurones. Un réseau neuronal est une sorte de logiciel cérébral ou de machine virtuelle composée de milliers d’unités (les neurones) qui effectuent des calculs. Plus précisément, des unités logiques et de prises de décisions (neurones, perceptrons) relient les données d’entrées et de sorties entre elles par l’intermédiaire d’un réseau complexe (réseau, cerveau) capable de prendre des décisions complexes.
+De nombreux termes de ceux utilisés proviennent des sciences neurologiques, notamment de la notion de réseau de neurones. Un réseau neuronal est une sorte de logiciel cérébral ou de machine virtuelle composée de milliers d’unités (les neurones) qui effectuent des calculs. Plus précisément, des unités logiques et de prises de décisions (neurones, perceptrons) relient les données d’entrées et de sorties entre elles par l’intermédiaire d’un réseau complexe (réseau, cerveau) capable de prendre des décisions complexes.
 
 A l'origine, ces systèmes portaient le nom de réseaux artificiels de neurones (ANN, Artificial Neural Networks) afin de les différencier des systèmes biologiques. Ils se composent en général d’un certain nombre de données d'entrées et de sorties (input / output layer), d’un réseau étroit de neurones et de plusieurs strates intermédiaires (hidden layers). Ces couches intermédiaires permettent de traiter des problèmes complexes ; sans elles, le système ne résout que des calculs simples. Le nombre de couches est donc un facteur décisif pour la complexité du système, et de l’apprentissage ; les données s’associent d’une couche à l’autre, les résultats d’une première couche servant d’entrée à la prochaine, et ainsi de suite afin d’aboutir à une prise de décision complexe. Ce fonctionnement en strates donne toute sa profondeur au réseau et à l’apprentissage.
 \subsection{Réseaux de Neurones Artificiels (ANNs)}
@@ -145,7 +154,7 @@ Naturellement, les chercheurs essayèrent alors de reproduire un neurone de faç
 Après un creux dans les années soixante en raison de doutes sur la robustesse théorique de ces modèles, la recherche sur les ANN prit un second souffle en 1986 lorsque l’algorithme dit de « rétro-propagation » (back-propagation) permit de multiplier le nombre de couches d’un ANN et donc sa capacité à reconnaître des concepts de plus en plus complexes. En 1998, “Yann Le Cun” proposa le fameux réseau LeNet-5 pour la reconnaissance de caractères \cite{11}.
 
 Mais pénalisés par le manque de données et la puissance limitée des machines de l’époque, les réseaux neuronaux passèrent de mode à nouveau au début des années 2000 au profit d’autres techniques de machine learning. Ce n’est que vers 2010 que débuta l’accélération connue aujourd’hui.
-\subsubsection{Le neurone biologique}
+\subsubsection{Neurone biologique}
 L’unité de calcul principal du système nerveux, le neurone, est constitué de trois parties: l’arbre dendritique, le soma et l’axone ; une illustration est présentée à la figure 1. Au repos, l’intérieur du neurone est polarisé négativement par rapport à l’extérieur. Cela est dû à un ensemble de pompes contrôlant les concentrations relatives de différents ions, entre l’intérieur et l’extérieur du neurone. Les synapses sont les points de jonctions entre l’axone et les dendrites de deux neurones, un message y est transmis sous la forme de composés chimiques: les neurotransmetteurs. Lorsque ceux-ci se lient aux récepteurs poste-synaptiques, des canaux ioniques s’ouvrent ou se ferment sur la membrane et des courants poste-synaptiques apparaissent.
 
 Ces courants sont ensuite intégrés de manière complexe et non-linéaire (Koch et al., 1983) dans l’arbre dendritique. Le potentiel du soma va changer et, si il dépasse un certain seuil, un potentiel d’action sera initié et propagé à travers l’axone, ce qui libérera des neurotransmetteurs aux synapses auxquelles il est relié. Les mécanismes de création et de propagation du potentiel d’action sont expliqués par le modèle d’Hodgkin-Huxley (Hodgkin and Huxley, 1952) basé sur un ensemble d’équations différentielles non-linéaires.
@@ -161,7 +170,7 @@ Dans la phase d'apprentissage, les neurones modifient leur comportement de pond�
 
 Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « connaît » rien et fournit des résultats aléatoires, voire chaotiques pour l’utilisateur. Seul un système entraîné fournira le résultat souhaité. Si le problème posé est simple, un programme simple, plus facile à déboguer, pourra le résoudre. Pour un problème plus complexe, on aura recours à un réseau de neurones, que l’on entraînera à l’aide de grands ensembles de données. Chaque neurone peut fournir des variables de sortie complexes et réagir linéairement ou non linéairement aux variables d'entrée.
 
-C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat. Ceci implique deux choses: soit le programmateur du réseau neuronal connaît toutes les connexions possibles internes au réseau, soit il conçoit le réseau de manière si complexe qu'il couvre « toutes » les possibilités \cite{10}.
+C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat \cite{10}.
 \begin{figure}[h]
 \centering
 \includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.jpg}
@@ -170,13 +179,14 @@ C'est là un point assez subtil, car les neurones doivent être en mesure de ré
 \newpage
 \section{Traitement d’Image (Image Processing)}
 \subsection{Introduction}
-Les images sont le moyen le plus courant et le plus pratique de transmettre ou de transmettre des informations. Une image vaut mieux que mille mots. Les images transmettent de manière concise des informations sur les positions, les tailles et les relations entre les objets. Ils décrivent des informations spatiales que nous pouvons reconnaître en tant qu'objets. Les êtres humains sont capables de tirer des informations de telles images, grâce à nos capacités mentales et visuelles innées. Environ 75\% des informations reçues par l'homme sont sous forme graphique.
+Les images sont le moyen le plus courant et le plus pratique de transmettre des informations "Une image vaut mieux que mille mots". Les images transmettent de manière concise des informations sur les positions, les tailles et les relations entre les objets. Ils décrivent des informations spatiales que reconnaître en tant qu'objets. Les êtres humains sont capables de tirer des informations de telles images, grâce à leurs capacités mentales et visuelles innées. Environ 75\% des informations reçues par l'homme sont sous forme graphique.
 
-\subsection{L’image numérique}
-Une image numérique est la représentation d'une image en deux dimensions avec un ensemble de nombres déterminés d'ensembles finis de valeurs numériques appelées éléments d'image ou pixels. Les valeurs de pixels représentent généralement les niveaux de gris, les couleurs, les hauteurs, les opacités, etc. Chaque pixel est un nombre représenté par un nombre numérique qui représente le degré de confiance d'une zone relativement petite dans une scène. La plage de valeurs nombre numérique étant normalement comprise entre 0 et 255. La taille de cette zone affecte la reproduction des détails dans la scène. Au fur et à mesure que la taille du pixel est réduite, plus de détails de la scène sont préservés en représentation numérique \cite{12}.
+\subsection{Image numérique}
+Une image numérique est la représentation d'une image en deux dimensions avec un ensemble de nombres déterminés d'ensembles finis de valeurs numériques appelées éléments d'image ou pixels. Les valeurs de pixels représentent généralement les niveaux de gris, les couleurs, les hauteurs, les opacités, etc. Chaque pixel est un nombre qui représente le degré de confiance d'une zone relativement petite dans une scène. La plage de valeurs nombre numérique étant normalement comprise entre 0 et 255. La taille de cette zone affecte la reproduction des détails dans la scène. Au fur et à mesure que la taille du pixel est réduite, plus de détails de la scène sont préservés en représentation numérique \cite{12}.
 
-Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée d'une image analogique a $(x, y)$ située dans un espace continu 2D par le biais d'un processus d'échantillonnage appelé fréquemment numérisation. L'effet de la numérisation est illustré à la figure 3. L'image continue 2D a $(x, y)$ est divisée en N lignes et M colonnes. L'intersection d'une ligne et d'une colonne est appelée un pixel. La valeur attribuée aux coordonnées entières [m, n] avec \{m = 0,1,2, ..., M - 1\} et \{n = 0,1,2, ..., N - 1\} est un $[m, n]$. En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\Lambda)$ ,  et le temps (t) \cite{13}.
-\newpage
+Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée d'une image analogique a $(x, y)$ située dans un espace continu 2D par le biais d'un processus d'échantillonnage appelé fréquemment numérisation. L'effet de la numérisation est illustré à la figure 3. L'image continue 2D a $(x, y)$ est divisée en N lignes et M colonnes. L'intersection d'une ligne et d'une colonne est appelée un pixel. La valeur attribuée aux coordonnées entières [m, n] avec \{m = 0,1,2, ..., M - 1\} et \{n = 0,1,2, ..., N - 1\}.
+
+En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\Lambda)$ ,  et le temps (t) \cite{13}.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{img-Chapiter-1/neurone.png}
@@ -184,19 +194,21 @@ Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée 
 \end{figure}
 
 L'image présentée à la figure 3 a été divisée en N = 16 lignes et M = 16 colonnes. La valeur attribuée à chaque pixel est la luminosité moyenne dans le pixel arrondis à la valeur entière. Le processus de représentation de l'amplitude du signal 2D à une coordonnée donnée sous forme de valeur entière avec L niveaux de gris différents est généralement appelé quantification d'amplitude ou simplement quantification.
-\subsection{L’image thermique}
+\subsection{Image thermique}
 L'image thermique représente la répartition structurée des données représentatives du rayonnement infrarouge en provenance d'une scène thermique (Norme AFNOR A 09-400).
 
-Tout corps dont la température est supérieure au zéro absolu émet en permanence un rayonnement électromagnétique. Le rayonnement thermique est le phénomène d'écoulement de la chaleur par lequel l'énergie calorique se transmet entre deux objets de température différente et séparés dans l'espace par un milieu transparent. Le spectre des radiations électromagnétiques est divisé arbitrairement en un certain nombre de régions déterminées en fonction des générateurs ou récepteurs appropriés (C. Sirieix, 1990a).
+Tout corps dont la température est supérieure au zéro absolu émet en permanence un rayonnement électromagnétique. Le rayonnement thermique est le phénomène d'écoulement de la chaleur par lequel l'énergie calorique se transmet entre deux objets de température différente et séparés dans l'espace par un milieu transparent.
 
-Le spectre infrarouge est divisé en trois grandes régions suivant les capteurs utilisables pour les déceler (Gaussorgues, 1989):
+Le spectre des radiations électromagnétiques est divisé arbitrairement en un certain nombre de régions déterminées en fonction des générateurs ou récepteurs appropriés \cite{40}.
+
+Le spectre infrarouge est divisé en trois grandes régions suivant les capteurs utilisables pour les déceler \cite{41}:
 \begin{enumerate}
-	\item de 0,75 à 1,5 um, l'infrarouge proche décelé par les émulsions photographiques
-	\item de 1,5 à 20 um, l'infrarouge moyen décelé par des détecteurs thermiques photoconducteurs ou photovoltaïques.
-	\item de 20 à 1000 um, l'infrarouge lointain décelé par les détecteurs thermiques.
+	\item de 0,75 à 1,5 µm \footnote{µm $\longrightarrow$ Micro mètre  = $1 \times 10^{-6}$}, l'infrarouge proche décelé par les émulsions photographiques
+	\item de 1,5 à 20 µm , l'infrarouge moyen décelé par des détecteurs thermiques photoconducteurs ou photovoltaïques.
+	\item de 20 à 1000 µm , l'infrarouge lointain décelé par les détecteurs thermiques.
 \end{enumerate}
-\newpage
-\subsection{Le traitement d’image}
+
+\subsection{Traitement d’image}
 Le traitement et l'analyse d'images peuvent être définis comme "l'acte d'examiner des images dans le but d'en identifier et d'en juger le sens". L'analyste d'images étudie les données de télédétection et tente, via un processus logique, de détecter, identifier, classer, mesurer et évaluer la signification de données physiques. Le traitement numérique de l'image est un ensemble de techniques permettant de manipuler des images numériques par ordinateur. Les données brutes reçues des capteurs d’imagerie sur les plates-formes satellites contiennent des défauts et des carences \cite{14}.
 
 Pour surmonter ces défauts et lacunes afin d'obtenir l'originalité des données, celles-ci doivent subir plusieurs étapes de traitement. Cela varie d'une image à l'autre en fonction du type de format d'image, des conditions initiales de l'image, des informations qui vous intéressent et de la composition de l'image \cite{14}.
@@ -212,8 +224,9 @@ Le traitement des images comprend essentiellement les trois étapes suivantes:
 \caption{Présentant les étapes d’un traitement d’une image}
 \end{figure}
 
-\subsection{Le but du traitement d'image}
-Le traitement de l'image est divisé en 5 groupes. Elles sont:
+\subsection{But du traitement d'image}
+Le traitement de l'image est divisé en 5 groupes.\\
+Elles sont:
 \begin{enumerate}
 	\item Visualisation: Observez les objets non visibles.
 	\item Netteté et restauration d'image: Pour créer une meilleure image.
@@ -221,14 +234,14 @@ Le traitement de l'image est divisé en 5 groupes. Elles sont:
 	\item Mesure du motif: Mesure divers objets dans une image.
 	\item Reconnaissance d'image: Distinguer les objets dans une image.
 \end{enumerate}
-\subsection{Les méthodes pour le traitement d’image}
+\subsection{Méthodes pour le traitement d’image}
 Les deux types de méthodes utilisées pour le traitement d'images sont le traitement d'images analogique et numérique. Des techniques de traitement d'image analogiques ou visuelles peuvent être utilisées pour les copies papier telles que les impressions et les photographies. Les analystes d'images utilisent divers principes d'interprétation lors de l'utilisation de ces techniques visuelles. Le traitement de l'image ne se limite pas à un domaine à étudier, mais à la connaissance de l'analyste. L'association est un autre outil important dans le traitement des images par le biais de techniques visuelles. Les analystes appliquent donc une combinaison de connaissances personnelles et de données collatérales au traitement des images.
 
 Les techniques de traitement numérique aident à manipuler les images numériques en utilisant des ordinateurs. Les données brutes des capteurs d'imagerie contiennent des lacunes et pour surmonter ces défauts et obtenir l’originalité de l’information, l’image doit subir différentes phases de traitement.
 
 Les trois phases générales que doivent subir tous les types de données lors de l’utilisation de la technique numérique sont les suivantes: Prétraitement, Amélioration et Affichage, Extraction d’informations.
 
-\subsection{Les applications existantes}
+\subsection{Applications existantes}
 \begin{enumerate}
 	\item Systèmes de transport intelligents - Cette technique peut être utilisée pour la reconnaissance automatique de plaques d'immatriculation et la reconnaissance de panneaux de signalisation \cite{15}.
 	\item Télédétection - Pour cette application, les capteurs capturent les images de la surface de la Terre dans des satellites de télédétection ou un scanner multispectral monté sur un avion. Ces images sont traitées en les transmettant à la station terrienne. Les techniques utilisées pour interpréter les objets et les régions sont utilisées dans la lutte contre les inondations, la planification urbaine, la mobilisation de ressources, le suivi de la production agricole, etc \cite{16}.
@@ -247,7 +260,7 @@ Les trois phases générales que doivent subir tous les types de données lors d
 	\end{enumerate}
 \end{enumerate}
 
-\subsection{Les recherches et l’avenir}
+\subsection{Perspective de la recherche}
 Une vaste recherche est en cours dans la technique de traitement d'image.
 \begin{enumerate}
 	\item Imagerie du cancer - Différents outils, tels que la ponction trachéo-œsophagienne (TEP), l'IRM (Imagerie par Résonances Magnétique) et la détection assistée par ordinateur, aident à diagnostiquer la tumeur et à en prendre conscience.
@@ -260,10 +273,10 @@ Une vaste recherche est en cours dans la technique de traitement d'image.
 		\item Échographie endoscopique dans la stadification du cancer de l'œsophage.
 		\item Imagerie par résonance magnétique dans les douleurs lombaires.
 		\item Imagerie ophtalmique - Cela fonctionne dans deux catégories:
-		\begin{enumerate}
+		\begin{itemize}
 			\item Technologie d'imagerie - Technologie d'imagerie - Développement d'un logiciel automatisé - Analyse les images de la rétine pour montrer les signes précoces de rétinopathie diabétique
 			\item Développement de l'instrumentation - Se concentre sur le développement de l'ophtalmoscope à balayage laser.
-		\end{enumerate}
+		\end{itemize}
 	\end{enumerate}
 \end{enumerate}
 
@@ -272,9 +285,11 @@ Nous sommes tous en pleine révolution déclenchés par le développement rapide
 
 Mais avec la sophistication croissante et la puissance de l'informatique moderne, le calcul ira au-delà de l'architecture séquentielle conventionnelle de “Von Neumann” et envisagera également l'exécution optique. Les paradigmes de l'informatique distribuée et parallèle devraient améliorer les réponses pour les résultats du traitement des images.
 \newpage
+\rhead{}
 \section*{\Huge{Chapiter 2}}
 \subsection*{\huge{Context et problématique du projet}}
 \newpage
+\rhead{Chapite 2 : Context et problématique du projet}
 \section{Contexte et problématique du projet}
 \subsection{Définition e-santé}
 e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
@@ -296,7 +311,7 @@ Pour présenter les applications de la santé numérique, on peut se baser sur l
 
 Les applications sont nombreuses: On peut distinguer les lieux de prise en charge que sont le cabinet médical pour la médecine ambulatoire et l’hôpital lors des hospitalisations. Le maintien à domicile des patients est un enjeu important.
 
-\subsection{La e-santé inclut}
+\subsection{E-santé inclut}
 \begin{enumerate}
 	\item \textbf{La télésanté} qui comprend les actes de prévention et de soins réalisés à distance : information via des portails grand public, sites de promotion de la santé, systèmes d'alerte téléphonique, prescriptions électroniques à distance...
 	\item \textbf{La télémédecine} (actes médicaux réalisés à distance par un médecin) : consultation par vidéoconférence, téléassistance d'un médecin lors d'une intervention, télésurveillance du patient, télé-expertise (échange des avis des médecins)...
@@ -304,7 +319,7 @@ Les applications sont nombreuses: On peut distinguer les lieux de prise en charg
 	\item \textbf{Les systèmes de dossiers électroniques de santé.}
 \end{enumerate}
 
-\subsection{L’importance de la e-santé}
+\subsection{Importance de la e-santé}
 \begin{enumerate}
 	\item Prévoir une population vieillissante avec une prévalence croissante de maladie chronique, qui coûte de plus en plus cher à traiter.
 	\item Améliorer la sécurité des patients et réduire les erreurs.
@@ -317,7 +332,7 @@ La prévention et les soins du cancer dépendent d'un accès à des informations
 
 Est un organisme à but non lucratif composé de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. Nous nous engageons à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Nous espérons qu'un jour, le cancer sera une maladie du passé.
 
-\subsection{la santé connectée implique} 
+\subsection{Santé connectée implique} 
 plusieurs ressources et acteurs telque:
 \begin{itemize}
 	\item \textbf{L’interopérabilité:} Activés par des systèmes IT de santé qui communiquent entre eux, échangent des données et utilisent des informations.
@@ -326,7 +341,7 @@ plusieurs ressources et acteurs telque:
 	\item \textbf{Le partage de données et intégration:} Améliorer les soins, améliorer la surveillance et faire avancer la recherche.
 \end{itemize}
 
-\subsection{Une approche de la santé connectée offre trois niveaux de création de valeur}
+\subsection{Approche de la santé connectée offre trois niveaux de création de valeur}
 \begin{itemize}
 	\item \textbf{Efficacité clinique}\\
 	Y compris la réduction des activités administratives et des coûts, l’élimination des doublons de tests de laboratoire et de radiologie; améliorer la sécurité des patients grâce à un accès 24 heures sur 24, 7 jours sur 7, à des dossiers médicaux complets et lisibles; et accélérer l'accès aux antécédents médicaux des patients et aux informations vitales.
@@ -336,7 +351,7 @@ plusieurs ressources et acteurs telque:
 	Incluant des analyses avancées pour éclairer la prise de décision clinique, la gestion de la santé de la population et de nouveaux modèles de prestation de soins.
 \end{itemize}
 \newpage
-\subsection{Les principales fonctions de la santé connectée}
+\subsection{Principales fonctions de la santé connectée}
 Les solutions de santé connectée s’articulent autour de 5 fonctions principales :
 \begin{enumerate}
 	\item Capter une information, via un objet (une balance, un tensiomètre, un podomètre…).
@@ -346,7 +361,7 @@ Les solutions de santé connectée s’articulent autour de 5 fonctions principa
 	\item Mettre en relation, en s’affranchissant des problèmes de distance, patients et professionnels de santé.
 \end{enumerate}
 
-\subsection{Les différents champs d’application de la santé connectée}
+\subsection{Différents champs d’application de la santé connectée}
 Les domaines d’applications pour les solutions de santé connectée sont vastes :
 \begin{itemize}
 	\item Mesure de paramètres vitaux et leur télétransmission à un plateau médical.
@@ -376,29 +391,29 @@ Les inconvénients peuvent être:
 L'étude Accenture \cite{28} montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
 
 \newpage
-\section{Le problème de la prise de température dans le service des enfants cancéreux}
+\section{Problème de la prise de température dans le service des enfants cancéreux}
 
 \subsection{Introduction}
 Nous allons dans cette partie, définir les 2 concepts liés à notre projet afin de positionner le problème que l’on va traiter, à savoir la température corporelle chez les personnes et le cancer.
 
-\subsection{Définition: la température corporelle}
+\subsection{Définition: Température corporelle}
 La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37\textdegree{}C, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5\textdegree{C} le soir par rapport au matin. Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre lorsque le corps est infecté. 
 
 Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'augmentation de la température corporelle causée par l'environnement ou l'effort physique, et de l'hypothermie, qui est une diminution et est essentiellement due à une exposition prolongée au froid. 
 
 Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
 
-\subsection{La température chez les enfants}
+\subsection{Température chez les enfants}
 La température chez l’enfant doit normalement être comprise entre 36\textdegree{C} et 37, 5\textdegree{C}. On parle de fièvre quand elle atteint ou dépasse les 38\textdegree{C}. On dit alors familièrement que l’enfant a de la température. Entre 37,5\textdegree{C} et 37,9\textdegree{C}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40\textdegree{C} son issue peut être mortelle \cite{29}.
 
-\subsection{Les causes de l'élévation de la température chez l’enfant}
+\subsection{Causes de l'élévation de la température chez l’enfant}
 Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
 
 Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
 
 En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.
 
-\subsection{Définition : le Cancer}
+\subsection{Définition : Cancer}
 Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
 
 Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
@@ -412,7 +427,7 @@ Il existe un certain nombre de cancers différents, ayant chacun leurs propres s
 	\item ...
 \end{itemize}
 
-\subsection{Le cancer de l’enfant}
+\subsection{Cancer de l’enfant}
 Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
 
 Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
@@ -425,7 +440,7 @@ La plupart des cancers de l’enfant peuvent être guéris grâce aux médicamen
 \caption{Le cancer chez l’enfant}
 \end{figure}
 
-\subsection{Les cancers les plus fréquents chez l’enfant}
+\subsection{Cancers les plus fréquents chez l’enfant}
 Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 \begin{itemize}
 	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) \cite{35}.
@@ -455,7 +470,7 @@ Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse c
 	\item un reflet blanchâtre dans la pupille (« œil de chat »), un strabisme.
 \end{itemize}
 
-\subsection{Le problème de la prise de température dans le service des enfants cancéreux}
+\subsection{Problème de la prise de température dans le service des enfants cancéreux}
 Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
 
 les enfants cancéreux souffrent d’une infection (causée par une bactérie ou un virus), il est normal qu’il fasse de la fièvre, il existe plusieurs moyens de prendre la température qui sont :
@@ -466,8 +481,8 @@ les enfants cancéreux souffrent d’une infection (causée par une bactérie ou
 	\item par voie auriculaire (par l’oreille).
 \end{enumerate}
 
-\subsection{Les solutions existantes}
-La méthode choisi dependra de l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur) ce qui pose des problèmes qui sont:
+\subsection{Solutions existantes}
+La méthode choisi dépendra de l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur) ce qui pose des problèmes qui sont:
 \begin{enumerate}
 	\item le stress,
 	\item On ne le laisse pas se reposer,
@@ -495,7 +510,7 @@ La méthode choisi dependra de l’age de l’enfant, il est important que la me
 	\end{tabular}
 \end{table}
 
-\subsubsection{Le thermomètre}
+\subsubsection{Thermomètre}
 est l’un des outils essentiels de la trousse de premiers soins. Il existe différents modèles de thermomètres et différentes méthodes de prise de température corporelle.
 \begin{enumerate}
 	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est, comme son ancêtre, en verre gradué et permet de lire facilement la température \cite{36}.
@@ -514,7 +529,8 @@ Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il r
 	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
 	\caption{Mesurer la température avec thermomètre électronique}
 \end{figure}
-	\item \textbf{Un thermomètre infrarouge} est un instrument de mesure de la température de surface d'un objet à partir du rayonnement de type corps noir qu'il émet dans l'infrarouge \cite{37}.
+
+	\item \textcolor{red}{\textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance} \cite{37}.
 	\newpage
 	\begin{figure}[h]
 		\centering
@@ -537,11 +553,42 @@ Une fois encore, chez le bébé, la prise de température par voie rectale est l
 		\caption{Bracelet pour mesurer la température}
 	\end{figure}
 \end{enumerate}
+
+\subsection{Description du problème posé}
+
 \newpage
+
 \section{Description de la solution}
+\subsection{IOT en santé}
+Les objets connectés ou objets communicants sont en train de révolutionner tous les secteurs, y compris celui de la médecine générale. On parle alors de santé connectée ou d’e-santé. Cependant leur prescription par les médecins généralistes reste freinée par certaines craintes, notamment en ce qui concerne la protection du secret médical.
 
+Un objet connecté est un objet relié à internet via un système de communication sans fil alors qu’il n’avait pas vocation d’être une interface web, à l’origine. Par exemple, on peut parler de tensiomètre connecté mais un smartphone n’est pas considéré comme un objet connecté puisqu’il est conçu dès le départ pour « surfer » sur le web. En pratique, les dispositifs médicaux connectés contiennent des composants électroniques, leur permettant de communiquer avec différents systèmes : une tablette, un ordinateur, un smartphone… Beaucoup sont des wearables e-santé, c’est-à-dire des objets connectés portables du type montre ou bracelet.\\
+Ils sont capables de:
+\begin{itemize}
+	\item Collecter diverses données santé de vos patients,
+	\item Traiter les données,
+	\item Transmettre les résultats obtenus aux professionnels de santé (ex. : médecin traitant, infirmière à domicile),
+	\item Donner l’alerte en cas d’urgence.
+\end{itemize}
+Ce qui permet :
+\begin{itemize}
+	\item De faciliter le diagnostic en télé-consultation,
+	\item D’assurer un meilleur suivi des patients à distance (télé-surveillance),
+	\item D’aider les patients à suivre leur traitement correctement,
+	\item De faire de la prévention dans divers domaines.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6cm, width=15cm]{img-Chapiter-2/IOT.jpg}
+	\caption{ IOT dans la santé}
+\end{figure}
+\newpage
+\subsection{Solution Proposée}
+Notre objectif dans ce mémoire c’est de minimiser les problèmes déjà ditent dans la partie précédente, ont concevant un prototype qui doit réduire cela et qui permit de laisser le malade ce reposer et l’infirmière de se tourner vers les autres malades. 
 
+Notre prototype sera comme une lampe au-dessus du patient qui va détecter la hausse de la température en se basant sur le traitement d’images ou vidéo. En détectant le visage de notre patient et faire des calculs surs son teint on peut déterminer si notre malade à une fièvre ou pas, donc on va agir vite pour signaler la hausse de la température à l’infirmière pour qu’elle vient vérifier l’état du patient.
 
+Dans notre prototype, le traitement d'images infrarouge thermique dédié à détecter la température chez les enfants cancéreux.
 
 \newpage
 \bibliographystyle{ieeetr}	

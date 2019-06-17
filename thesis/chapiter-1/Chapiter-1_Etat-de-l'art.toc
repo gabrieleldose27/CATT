@@ -8,46 +8,49 @@
 \contentsline {subsubsection}{\numberline {1.2.2}Apprentissage non-supervis\IeC {\'e}}{3}{subsubsection.1.2.2}
 \contentsline {subsection}{\numberline {1.3}Autres types d'apprentissage}{5}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}Apprentissage semi-supervis\IeC {\'e}}{5}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Apprentissage par renforcement}{6}{subsubsection.1.3.2}
-\contentsline {subsection}{\numberline {1.4}Conclusion}{6}{subsection.1.4}
-\contentsline {section}{\numberline {2}Apprentissage profond (Deep Learning)}{7}{section.2}
-\contentsline {subsection}{\numberline {2.1}Introduction}{7}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Apprentissage profond}{7}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}R\IeC {\'e}seaux de Neurones Artificiels (ANNs)}{8}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Historique}{8}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Le neurone biologique}{8}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}D\IeC {\'e}finition}{9}{subsubsection.2.3.3}
-\contentsline {section}{\numberline {3}Traitement d\IeC {\textquoteright }Image (Image Processing)}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}Introduction}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}L\IeC {\textquoteright }image num\IeC {\'e}rique}{11}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}L\IeC {\textquoteright }image thermique}{12}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Le traitement d\IeC {\textquoteright }image}{13}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Le but du traitement d'image}{13}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Les m\IeC {\'e}thodes pour le traitement d\IeC {\textquoteright }image}{14}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Les applications existantes}{14}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Les recherches et l\IeC {\textquoteright }avenir}{16}{subsection.3.8}
-\contentsline {subsection}{\numberline {3.9}Conclusion}{17}{subsection.3.9}
-\contentsline {section}{\numberline {4}Contexte et probl\IeC {\'e}matique du projet}{19}{section.4}
-\contentsline {subsection}{\numberline {4.1}D\IeC {\'e}finition e-sant\IeC {\'e}}{19}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Domaines d\IeC {\textquoteright }application}{19}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}La e-sant\IeC {\'e} inclut}{20}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}L\IeC {\textquoteright }importance de la e-sant\IeC {\'e}}{20}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Focus sur le Cancer}{20}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}la sant\IeC {\'e} connect\IeC {\'e}e implique}{21}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Une approche de la sant\IeC {\'e} connect\IeC {\'e}e offre trois niveaux de cr\IeC {\'e}ation de valeur}{21}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}Les principales fonctions de la sant\IeC {\'e} connect\IeC {\'e}e}{22}{subsection.4.8}
-\contentsline {subsection}{\numberline {4.9}Les diff\IeC {\'e}rents champs d\IeC {\textquoteright }application de la sant\IeC {\'e} connect\IeC {\'e}e}{22}{subsection.4.9}
-\contentsline {subsection}{\numberline {4.10}Avantages et inconv\IeC {\'e}nients}{22}{subsection.4.10}
-\contentsline {section}{\numberline {5}Le probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature dans le service des enfants canc\IeC {\'e}reux}{24}{section.5}
-\contentsline {subsection}{\numberline {5.1}Introduction}{24}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}D\IeC {\'e}finition: la temp\IeC {\'e}rature corporelle}{24}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}La temp\IeC {\'e}rature chez les enfants}{24}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Les causes de l'\IeC {\'e}l\IeC {\'e}vation de la temp\IeC {\'e}rature chez l\IeC {\textquoteright }enfant}{24}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}D\IeC {\'e}finition : le Cancer}{25}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Le cancer de l\IeC {\textquoteright }enfant}{25}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Les cancers les plus fr\IeC {\'e}quents chez l\IeC {\textquoteright }enfant}{26}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Sympt\IeC {\^o}mes}{27}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}Le probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature dans le service des enfants canc\IeC {\'e}reux}{27}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}Les solutions existantes}{27}{subsection.5.10}
-\contentsline {subsubsection}{\numberline {5.10.1}Le thermom\IeC {\`e}tre}{28}{subsubsection.5.10.1}
-\contentsline {section}{\numberline {6}Description de la solution}{32}{section.6}
+\contentsline {subsubsection}{\numberline {1.3.2}Apprentissage par renforcement}{5}{subsubsection.1.3.2}
+\contentsline {subsection}{\numberline {1.4}Conclusion}{5}{subsection.1.4}
+\contentsline {section}{\numberline {2}Apprentissage profond (Deep Learning)}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Apprentissage profond}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}R\IeC {\'e}seaux de Neurones Artificiels (ANNs)}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Historique}{7}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Neurone biologique}{7}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}D\IeC {\'e}finition}{8}{subsubsection.2.3.3}
+\contentsline {section}{\numberline {3}Traitement d\IeC {\textquoteright }Image (Image Processing)}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Introduction}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Image num\IeC {\'e}rique}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Image thermique}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Traitement d\IeC {\textquoteright }image}{11}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}But du traitement d'image}{11}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}M\IeC {\'e}thodes pour le traitement d\IeC {\textquoteright }image}{12}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Applications existantes}{12}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Perspective de la recherche}{14}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}Conclusion}{15}{subsection.3.9}
+\contentsline {section}{\numberline {4}Contexte et probl\IeC {\'e}matique du projet}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}D\IeC {\'e}finition e-sant\IeC {\'e}}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Domaines d\IeC {\textquoteright }application}{17}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}E-sant\IeC {\'e} inclut}{18}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Importance de la e-sant\IeC {\'e}}{18}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Focus sur le Cancer}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Sant\IeC {\'e} connect\IeC {\'e}e implique}{19}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Approche de la sant\IeC {\'e} connect\IeC {\'e}e offre trois niveaux de cr\IeC {\'e}ation de valeur}{19}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Principales fonctions de la sant\IeC {\'e} connect\IeC {\'e}e}{20}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Diff\IeC {\'e}rents champs d\IeC {\textquoteright }application de la sant\IeC {\'e} connect\IeC {\'e}e}{20}{subsection.4.9}
+\contentsline {subsection}{\numberline {4.10}Avantages et inconv\IeC {\'e}nients}{20}{subsection.4.10}
+\contentsline {section}{\numberline {5}Probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature dans le service des enfants canc\IeC {\'e}reux}{21}{section.5}
+\contentsline {subsection}{\numberline {5.1}Introduction}{21}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}D\IeC {\'e}finition: Temp\IeC {\'e}rature corporelle}{21}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Temp\IeC {\'e}rature chez les enfants}{21}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Causes de l'\IeC {\'e}l\IeC {\'e}vation de la temp\IeC {\'e}rature chez l\IeC {\textquoteright }enfant}{21}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}D\IeC {\'e}finition : Cancer}{22}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Cancer de l\IeC {\textquoteright }enfant}{22}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Cancers les plus fr\IeC {\'e}quents chez l\IeC {\textquoteright }enfant}{23}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Sympt\IeC {\^o}mes}{24}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature dans le service des enfants canc\IeC {\'e}reux}{24}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}Solutions existantes}{24}{subsection.5.10}
+\contentsline {subsubsection}{\numberline {5.10.1}Thermom\IeC {\`e}tre}{25}{subsubsection.5.10.1}
+\contentsline {subsection}{\numberline {5.11}Description du probl\IeC {\`e}me pos\IeC {\'e}}{28}{subsection.5.11}
+\contentsline {section}{\numberline {6}Description de la solution}{29}{section.6}
+\contentsline {subsection}{\numberline {6.1}IOT en sant\IeC {\'e}}{29}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Solution Propos\IeC {\'e}e}{30}{subsection.6.2}
