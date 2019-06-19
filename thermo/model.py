@@ -1,58 +1,43 @@
 # import the necessary packages
-from keras.models import Sequential
 from keras.layers.normalization import BatchNormalization
-from keras.layers.convolutional import Conv2D
-from keras.layers.convolutional import MaxPooling2D
-from keras.layers.core import Activation
-from keras.layers.core import Dropout
-from keras.layers.core import Dense
-from keras.layers import Flatten
-from keras.layers import Input
-from keras.models import Model
+from keras.layers.convolutional import Conv2D, MaxPooling2D
+from keras.layers.core import Activation, Dropout, Dense
+from keras.layers import Flatten, Input, Lambda
+from keras.models import Model, Sequential
 
 def create_cnn(width, height, depth, filters=(16, 32, 64), regress=False):
-	# initialize the input shape and channel dimension, assuming
-	# TensorFlow/channels-last ordering
-	input_shape = (height, width, depth)
-	chan_dim = -1
-	inputs = Input(shape=input_shape)
-	# loop over the number of filters
-	for (i, f) in enumerate(filters):
-		# if this is the first CONV layer then set the input
-		# appropriately
-		if i == 0:
-			x = inputs
-		# CONV => RELU => BN => POOL
-		x = Conv2D(f, (3, 3), padding="same")(x)
-		x = Activation("relu")(x)
-		x = BatchNormalization(axis=chan_dim)(x)
-		x = MaxPooling2D(pool_size=(2, 2))(x)
-	x = Flatten()(x)
-	x = Dense(16)(x)
-	x = Activation("relu")(x)
-	x = BatchNormalization(axis=chanDim)(x)
-	x = Dropout(0.5)(x)
-	# apply another FC layer, this one to match the number of nodes
-	# coming out of the MLP
-	x = Dense(4)(x)
-	x = Activation("relu")(x)
-	# check to see if the regression node should be added
-	if regress:
-		x = Dense(1, activation="linear")(x)
-	# construct the CNN
-	model = Model(inputs, x)
-	# return the CNN
-	return model
-"""
-def create_mlp(dim, regress=False):
-	# define our MLP network
-	model = Sequential()
-	model.add(Dense(8, input_dim=dim, activation="relu"))
-	model.add(Dense(4, activation="relu"))
-	# check to see if the regression node should be added
-	if regress:
-		model.add(Dense(1, activation="linear"))
- 
-	# return our model
-	return model
-"""
+#    input_shape = (height, width, depth)
+#    model = Sequential()
+#    model.add(Lambda(lambda x: x/127.5-1.0, input_shape=input_shape))
+#    model.add(Conv2D(24, (5, 5), activation='elu', subsample=(2, 2)))
+#    model.add(Conv2D(36, (5, 5), activation='elu', subsample=(2, 2)))
+#    model.add(Conv2D(48, (5, 5), activation='elu', subsample=(2, 2)))
+#    model.add(Conv2D(64, (3, 3), activation='elu'))
+#    model.add(Conv2D(64, (3, 3), activation='elu'))
+#    model.add(Dropout(0.5))
+#    model.add(Flatten())
+#    model.add(Dense(100, activation='elu'))
+#    model.add(Dense(50, activation='elu'))
+#    model.add(Dense(10, activation='elu'))
+#    model.add(Dense(1))
+#    return model
+    chan_dim = -1
+    inputs = Input(shape=(width, height, depth))
+    for (i, f) in enumerate(filters):
+        if i == 0:
+            x = inputs
+        x = Conv2D(f, (5, 5), padding="same")(x)
+        x = Activation("elu")(x)
+        x = BatchNormalization(axis=chan_dim)(x)
+        x = MaxPooling2D(pool_size=(2, 2))(x)
+    x = Flatten()(x)
+    x = Dense(4)(x)
+    x = Activation("elu")(x)
+    x = BatchNormalization(axis=chan_dim)(x)
+    x = Dropout(0.5)(x)
+    x = Dense(4)(x)
+    x = Activation("elu")(x)
+    if regress:
+    	x = Dense(1, activation="linear")(x)
+    model = Model(inputs, x)
+    return model

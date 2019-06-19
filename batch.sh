@@ -4,7 +4,7 @@ outcsv(){
     echo "\"${1}\", ${2}" >> "datasets.csv"
 }
 
-for img in datasets/*; do
+for img in dsets/*; do
     prefix=$(cut -d'_' -f1 <<< $(basename "$img"))
     case "$prefix" in
         "hotter")

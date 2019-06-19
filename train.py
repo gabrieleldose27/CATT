@@ -1,20 +1,34 @@
 import os
 import pandas as pd
-"""
-from tensorflow.contrib.learn.python.learn.estimators._sklearn import train_test_split
+from sklearn.model_selection import train_test_split
 
+from keras.optimizers import Adam
+from keras.models import Sequential
+from keras.layers.normalization import BatchNormalization
+from keras.layers.convolutional import Conv2D
+from keras.layers.convolutional import MaxPooling2D
+from keras.layers.core import Activation
+from keras.layers.core import Dropout
+from keras.layers.core import Dense
+from keras.layers import Flatten
+from keras.layers import Input
+from keras.layers import Lambda
+from keras.models import Model
+from keras.callbacks import ModelCheckpoint
+"""
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Lambda, Conv2D, Dropout, Flatten, Dense
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.optimizers import Adam
+"""
+from imageprocess import batch_generator, INPUT_SHAPE
 
-from datasets import batch_generator, INPUT_SHAPE
 
 """
-#This file contains the model definition, training and compilation.
+This file contains the model definition, training and compilation.
 """
 
-dataset_dir = "Dataset/"
+dataset_dir = "/content/gdrive/My Drive/Colab Notebooks/datasets/"
 data = ''
 batch_size = 100
 learning_rate = 0.01
@@ -22,17 +36,16 @@ samples_per_epoch = 100             # Assuming 10,000 images
 nb_epoch = 25
 test_size = 0.3
 keep_prob = 0.5
-"""
-data_df = pd.read_csv('datasets.csv')
+cols = ["path", "tempture"]
+#data_df = pd.read_csv('/content/gdrive/My Drive/Colab Notebooks/datasets.csv', sep=",", header=None, names=cols)
+data_df = pd.read_csv('./datasets.csv', sep=",", header=None, names=cols)
 
-X = data_df["center"].values
+X = data_df["path"].values
 y = data_df["tempture"].values
 
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=test_size, random_state=0)
 
-# </editor-fold>
 
-"""
 class Model():
 
     def __init__(self, INPUT_SHAPE, keep_prob):
@@ -89,10 +102,8 @@ class Model():
                                  mode='auto')
         return checkpoint
 
-"""
 if __name__ == '__main__':
-    print data_df
-#    model = Model(INPUT_SHAPE, keep_prob)
-#    model.loss_func(learning_rate)
-#    checkpoint = model.save()
-#    model.train(checkpoint)
+    model = Model(INPUT_SHAPE, keep_prob)
+    model.loss_func(learning_rate)
+    checkpoint = model.save()
+    model.train(checkpoint)

@@ -17,9 +17,10 @@ def load_images(df):
         p = path.split("\"")[0]
         if os.path.exists(p):
             img = cv2.imread(p)
+            img = cv2.resize(img, (64, 64))
             if img is not None:
                 images.append(img)
-                sys.stdout.write("\rloading "+str(len(images))+" images")
+                sys.stdout.write("\r[ * ] Loading "+str(len(images) * 100 / df.shape[0])+"% images")
                 sys.stdout.flush()
         else:
             print "Not existe: {}".format(p)

@@ -5,6 +5,7 @@ ThermoGray it's a solution for detecting if a child with cancer have a fever or 
 ![explicaation](./assets/exp.png)
 ## Dataset's
 Link to the dataset: https://drive.google.com/open?id=1wPjucswpLydSHf8ltSjZdOSDogjDD8D3
+
 # Deep-Learning
 
 - [x] Training data (programmatically).
@@ -14,7 +15,14 @@ Link to the dataset: https://drive.google.com/open?id=1wPjucswpLydSHf8ltSjZdOSDo
 - [x] Datasets regression.
 - [ ] CoLab training our dataset (a free GPU, google solution.).
 
-# CSV
+## colab simple code
+```
+from google.colab import drive
+drive.mount('/content/gdrive', force_remount=True)
+!echo "[ ! ] Starting..."
+!cd "/content/gdrive/My Drive/Colab Notebooks" && python run.py
+```
+# CSV template
 path | temperature
 --- | ---
 ~/my/path/ | 39.9
