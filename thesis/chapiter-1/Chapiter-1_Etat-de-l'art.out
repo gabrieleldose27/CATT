@@ -1,55 +1,64 @@
 \BOOKMARK [1][-]{section*.2}{Liste des figures}{}% 1
 \BOOKMARK [1][-]{section*.3}{Liste des tables}{}% 2
-\BOOKMARK [1][-]{section.1}{Apprentissage automatique \(Machine Learning\)}{}% 3
-\BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.2}{Techniques d'apprentissage automatique}{section.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.2.1}{Apprentissage supervis\351}{subsection.1.2}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.2}{Apprentissage non-supervis\351}{subsection.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.3}{Autres types d'apprentissage}{section.1}% 8
-\BOOKMARK [3][-]{subsubsection.1.3.1}{Apprentissage semi-supervis\351}{subsection.1.3}% 9
-\BOOKMARK [3][-]{subsubsection.1.3.2}{Apprentissage par renforcement}{subsection.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.4}{Conclusion}{section.1}% 11
-\BOOKMARK [1][-]{section.2}{Apprentissage profond \(Deep Learning\)}{}% 12
-\BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 13
-\BOOKMARK [2][-]{subsection.2.2}{Apprentissage profond}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.3}{R\351seaux de Neurones Artificiels \(ANNs\)}{section.2}% 15
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Historique}{subsection.2.3}% 16
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Neurone biologique}{subsection.2.3}% 17
-\BOOKMARK [3][-]{subsubsection.2.3.3}{D\351finition}{subsection.2.3}% 18
-\BOOKMARK [1][-]{section.3}{Traitement d\220Image \(Image Processing\)}{}% 19
-\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 20
-\BOOKMARK [2][-]{subsection.3.2}{Image num\351rique}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.3}{Image thermique}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.4}{Traitement d\220image}{section.3}% 23
-\BOOKMARK [2][-]{subsection.3.5}{But du traitement d'image}{section.3}% 24
-\BOOKMARK [2][-]{subsection.3.6}{M\351thodes pour le traitement d\220image}{section.3}% 25
-\BOOKMARK [2][-]{subsection.3.7}{Applications existantes}{section.3}% 26
-\BOOKMARK [2][-]{subsection.3.8}{Perspective de la recherche}{section.3}% 27
-\BOOKMARK [2][-]{subsection.3.9}{Conclusion}{section.3}% 28
-\BOOKMARK [1][-]{section.4}{Contexte et probl\351matique du projet}{}% 29
-\BOOKMARK [2][-]{subsection.4.1}{D\351finition e-sant\351}{section.4}% 30
-\BOOKMARK [2][-]{subsection.4.2}{Domaines d\220application}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.3}{E-sant\351 inclut}{section.4}% 32
-\BOOKMARK [2][-]{subsection.4.4}{Importance de la e-sant\351}{section.4}% 33
-\BOOKMARK [2][-]{subsection.4.5}{Focus sur le Cancer}{section.4}% 34
-\BOOKMARK [2][-]{subsection.4.6}{Sant\351 connect\351e implique}{section.4}% 35
-\BOOKMARK [2][-]{subsection.4.7}{Approche de la sant\351 connect\351e offre trois niveaux de cr\351ation de valeur}{section.4}% 36
-\BOOKMARK [2][-]{subsection.4.8}{Principales fonctions de la sant\351 connect\351e}{section.4}% 37
-\BOOKMARK [2][-]{subsection.4.9}{Diff\351rents champs d\220application de la sant\351 connect\351e}{section.4}% 38
-\BOOKMARK [2][-]{subsection.4.10}{Avantages et inconv\351nients}{section.4}% 39
-\BOOKMARK [1][-]{section.5}{Probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{}% 40
-\BOOKMARK [2][-]{subsection.5.1}{Introduction}{section.5}% 41
-\BOOKMARK [2][-]{subsection.5.2}{D\351finition: Temp\351rature corporelle}{section.5}% 42
-\BOOKMARK [2][-]{subsection.5.3}{Temp\351rature chez les enfants}{section.5}% 43
-\BOOKMARK [2][-]{subsection.5.4}{Causes de l'\351l\351vation de la temp\351rature chez l\220enfant}{section.5}% 44
-\BOOKMARK [2][-]{subsection.5.5}{D\351finition : Cancer}{section.5}% 45
-\BOOKMARK [2][-]{subsection.5.6}{Cancer de l\220enfant}{section.5}% 46
-\BOOKMARK [2][-]{subsection.5.7}{Cancers les plus fr\351quents chez l\220enfant}{section.5}% 47
-\BOOKMARK [2][-]{subsection.5.8}{Sympt\364mes}{section.5}% 48
-\BOOKMARK [2][-]{subsection.5.9}{Probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{section.5}% 49
-\BOOKMARK [2][-]{subsection.5.10}{Solutions existantes}{section.5}% 50
-\BOOKMARK [3][-]{subsubsection.5.10.1}{Thermom\350tre}{subsection.5.10}% 51
-\BOOKMARK [2][-]{subsection.5.11}{Description du probl\350me pos\351}{section.5}% 52
-\BOOKMARK [1][-]{section.6}{Description de la solution}{}% 53
-\BOOKMARK [2][-]{subsection.6.1}{IOT en sant\351}{section.6}% 54
-\BOOKMARK [2][-]{subsection.6.2}{Solution Propos\351e}{section.6}% 55
+\BOOKMARK [1][-]{section*.3}{Chapiter 1 : \311tat de l'art}{}% 3
+\BOOKMARK [1][-]{section.1}{Apprentissage automatique \(Machine Learning\)}{}% 4
+\BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.2}{Techniques d'apprentissage automatique}{section.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Apprentissage supervis\351}{subsection.1.2}% 7
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Apprentissage non-supervis\351}{subsection.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.3}{Autres types d'apprentissage}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Apprentissage semi-supervis\351}{subsection.1.3}% 10
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Apprentissage par renforcement}{subsection.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.4}{Conclusion}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{Apprentissage profond \(Deep Learning\)}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Apprentissage profond}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.3}{R\351seaux de Neurones Artificiels \(ANNs\)}{section.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Historique}{subsection.2.3}% 17
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Neurone biologique}{subsection.2.3}% 18
+\BOOKMARK [3][-]{subsubsection.2.3.3}{D\351finition}{subsection.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.4}{R\351seau neuronal convolutif \(CNN\)}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.5}{R\351gression}{section.2}% 21
+\BOOKMARK [1][-]{section.3}{Traitement d\220Image \(Image Processing\)}{}% 22
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.2}{Image num\351rique}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.3}{Image thermique}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.4}{Traitement d\220image}{section.3}% 26
+\BOOKMARK [2][-]{subsection.3.5}{But du traitement d'image}{section.3}% 27
+\BOOKMARK [2][-]{subsection.3.6}{M\351thodes pour le traitement d\220image}{section.3}% 28
+\BOOKMARK [2][-]{subsection.3.7}{Applications existantes}{section.3}% 29
+\BOOKMARK [2][-]{subsection.3.8}{Perspective de la recherche}{section.3}% 30
+\BOOKMARK [2][-]{subsection.3.9}{Conclusion}{section.3}% 31
+\BOOKMARK [1][-]{subsection.3.9}{Chapiter 2 : Context et probl\351matique du projet}{}% 32
+\BOOKMARK [1][-]{section.4}{Contexte et probl\351matique du projet}{}% 33
+\BOOKMARK [2][-]{subsection.4.1}{E-sant\351}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.1.1}{D\351finition}{subsection.4.1}% 35
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Domaines d\220application}{subsection.4.1}% 36
+\BOOKMARK [3][-]{subsubsection.4.1.3}{E-sant\351 inclut}{subsection.4.1}% 37
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Importance de la e-sant\351}{subsection.4.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Focus sur le Cancer}{subsection.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.2}{Sant\351 connect\351e}{section.4}% 40
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Sant\351 connect\351e implique}{subsection.4.2}% 41
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Approche de la sant\351 connect\351e offre trois niveaux de cr\351ation de valeur}{subsection.4.2}% 42
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Principales fonctions de la sant\351 connect\351e}{subsection.4.2}% 43
+\BOOKMARK [3][-]{subsubsection.4.2.4}{Diff\351rents champs d\220application de la sant\351 connect\351e}{subsection.4.2}% 44
+\BOOKMARK [2][-]{subsection.4.3}{Avantages et inconv\351nients}{section.4}% 45
+\BOOKMARK [1][-]{section.5}{Probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{}% 46
+\BOOKMARK [2][-]{subsection.5.1}{Introduction}{section.5}% 47
+\BOOKMARK [2][-]{subsection.5.2}{Temp\351rature corporelle}{section.5}% 48
+\BOOKMARK [3][-]{subsubsection.5.2.1}{D\351finition}{subsection.5.2}% 49
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Temp\351rature chez les enfants}{subsection.5.2}% 50
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Causes de l'\351l\351vation de la temp\351rature chez l\220enfant}{subsection.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.3}{Cancer}{section.5}% 52
+\BOOKMARK [3][-]{subsubsection.5.3.1}{D\351finition}{subsection.5.3}% 53
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Cancer de l\220enfant}{subsection.5.3}% 54
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Cancers les plus fr\351quents chez l\220enfant}{subsection.5.3}% 55
+\BOOKMARK [3][-]{subsubsection.5.3.4}{Sympt\364mes}{subsection.5.3}% 56
+\BOOKMARK [2][-]{subsection.5.4}{Probl\350me de la prise de temp\351rature dans le service des enfants canc\351reux}{section.5}% 57
+\BOOKMARK [2][-]{subsection.5.5}{Solutions existantes}{section.5}% 58
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Thermom\350tre}{subsection.5.5}% 59
+\BOOKMARK [2][-]{subsection.5.6}{Description du probl\350me pos\351}{section.5}% 60
+\BOOKMARK [1][-]{section.6}{Description de la solution}{}% 61
+\BOOKMARK [2][-]{subsection.6.1}{IOT en sant\351}{section.6}% 62
+\BOOKMARK [2][-]{subsection.6.2}{Solution Propos\351e}{section.6}% 63
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 64

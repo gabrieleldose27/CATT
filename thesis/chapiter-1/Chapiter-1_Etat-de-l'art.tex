@@ -20,11 +20,51 @@
 \fancyhf{}
 \fancyfoot{}
 \fancyfoot[R]{ \thepage\ }
-\renewcommand{\headrulewidth}{0.25 pt}
+\renewcommand{\headrulewidth}{0 pt}
 \renewcommand{\footrulewidth}{1pt}
+
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
 \begin{document}
+\begin{titlepage}
+	\begin{sffamily}
+		\begin{center}
+		\textsc{République Algérienne Démocratique et Populaire\\Ministère de l'Enseignement Supérieur et de la Recherche Scientifique\\Université Constantine 2 - Abdelhamid Mehri}\\[0.5 cm]			\begin{figure}[h]
+			\centering
+			\includegraphics[height=4cm,width=4cm]{Logo/logo.jpg}
+		\end{figure}
+		
+		 \HRule \\[0.4cm]
+    { \huge \bfseries Détection de la température on se basant sur le teint de la peau chez les enfants cancéreux\\[0.4cm] }
+    \HRule \\[2cm]
+    
+    
+        \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+      	Réalisé \textsc{Par :}\\
+		Nezli \textsc{Amara}\\
+        Khettat \textsc{Brahim}\\
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{Sous la direction de : } DR. Kittouni \textsc{Ilhame}
+      \end{flushright}
+    \end{minipage}
+
+    \vfill
+
+    % Bottom of the page
+    {\large Juillet 2019}
+		\end{center}
+	\end{sffamily}
+\end{titlepage}
+
+\thispagestyle{empty}
+\cleardoublepage
+
 \tableofcontents
 \thispagestyle{empty}
 \newpage
@@ -41,11 +81,12 @@
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\rfoot{Page \thepage}
+\rfoot{\textsc{Page \thepage}}
+\addcontentsline{toc}{section}{Chapiter 1 : \' Etat de l'art}
 \section*{\Huge{Chapiter 1}}
 \subsection*{\huge{\' Etat de l'art}}
 \newpage
-\rhead{Chapite 1 : \' Etat de l'art}
+\rhead{\textsc{Chapite 1 : \' Etat de l'art}}
 \section{Apprentissage automatique (Machine Learning)}
 \subsection{Introduction}
 La faculté d'apprendre est essentielle à l'être humain pour reconnaître une voix, une personne, un objet... On distingue en général deux types d'apprentissage: l'apprentissage «par cœur» qui consiste à mémoriser telles quelles des informations, et l'apprentissage par généralisation où l'on apprend à partir d'exemples un modèle qui nous permettra de reconnaître de nouveaux exemples. Pour les systèmes informatiques, il est facile de mémoriser un grand nombre de données (textes, images, vidéos...), mais difficile de généraliser. Par exemple, il leur est difficile de construire un bon modèle d'un objet et d'être ensuite capable de reconnaître efficacement cet objet dans de nouvelles images.
@@ -160,7 +201,7 @@ L’unité de calcul principal du système nerveux, le neurone, est constitué d
 Ces courants sont ensuite intégrés de manière complexe et non-linéaire (Koch et al., 1983) dans l’arbre dendritique. Le potentiel du soma va changer et, si il dépasse un certain seuil, un potentiel d’action sera initié et propagé à travers l’axone, ce qui libérera des neurotransmetteurs aux synapses auxquelles il est relié. Les mécanismes de création et de propagation du potentiel d’action sont expliqués par le modèle d’Hodgkin-Huxley (Hodgkin and Huxley, 1952) basé sur un ensemble d’équations différentielles non-linéaires.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{img-Chapiter-1/neurone.png}
+\includegraphics[scale=1]{img-Chapiter-1/neurone.jpeg}
 \caption{Schéma d’un neurone biologique}
 \end{figure}
 \subsubsection{Définition}
@@ -173,9 +214,43 @@ Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « conna�
 C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat \cite{10}.
 \begin{figure}[h]
 \centering
-\includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.jpg}
+\includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.png}
 \caption{Schéma d’un réseau artificiel de neurones}
 \end{figure}
+\newpage
+
+\subsection{Réseau neuronal convolutif (CNN)}
+Le réseau de neuronal convolutif (CNN: Convolutional Neural Networks) ou plus généralement connue “ConvNets” a été inspiré par la façon dont le cortex visuel est supposé fonctionner. CNN est similaire à ANN (Réseaux de Neurones Artificiels) mais utilise l’opérateur matrice convolutif. Le volume 3D formé par plusieurs canaux de matrices 2Ds est appelé tenseur «Tensor de l’anglais». Étant donnés une image d'entrée sous la forme d'un tenseur formé de plusieurs matrices 2Ds de pixels pour chaque canal de couleur, plusieurs filtres peuvent être écrits sous forme de matrice de convolution \cite{42}.
+
+Comme la détection des contours (comme dans la figure \ref{fig:détection}), la netteté, le lissage / flou (comme dans la figure \ref{fig:filter}) et l’appariement de motifs. ANN peut être utilisé pour apprendre les valeurs dans de nombreuses matrices de convolution, ce qui permet d'obtenir des filtres d'image qui s'activent lorsqu'ils sont exposés sur des caractéristiques ou des structures visuelles spécifiques.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/CNN.png}
+	\caption{détection de bord écrit en matrice de convolution 3×3}
+	\label{fig:détection}
+	\bigbreak
+	\centering
+	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/CNN2.png}
+	\caption{Un filtre de flou écrit sous forme de matrice de convolution 3 × 3}
+	\label{fig:filter}
+\end{figure}
+
+La taille de chaque matrice de filtre de convolution, également appelée «taille du noyau» ou «taille du voisinage», spécifie le champ de réception du filtre. Par exemple, un noyau de taille 3 × 3 signifie que le cadre de délimitation du voisinage commence par un pixel à gauche, un pixel vers le haut et se termine par un pixel à droite et un pixel vers le bas, tandis qu'une taille de noyau de 5 × 5 signifie un voisinage de deux pixels. de chaque côté.
+
+L'opérateur de convolution utilisé dans CNN est appelée convolution 2D (habituellement appelé “de $conv2d()$” ou “$conv_2d()$” en fonction du langage utilisé) et il fonctionne sur les volumes 3Ds (en prenant un volume 3D en entrée et résultant d'un volume 3D comme sortie), par exemple, une entrée peut être une image en couleur de taille 224x224x3 \cite{43} et une profondeur de 3 canaux RGB(Red: rouge, Green: vert, Blue: bleu) lorsqu'il est passé à une convolution sur une taille de voisinage 3 x 3 et une profondeur de 96 canaux (écrites 3 × 3 × 96) résultat serait un volume de sortie de taille 224 × 224 (ou 222 × 222 en cas d'absence de remplissage) et de profondeur de 96. La taille de l'entrée est largeur × hauteur × profondeur. La profondeur du noyau de convolution représente le nombre de filtres que nous souhaitons appliquer / apprendre.
+
+\subsection{Régression}
+Les techniques de régression sont largement utilisées pour résoudre des tâches ayant pour but de prédire des valeurs continues \cite{44}. En vision par ordinateur, les techniques de régression couvrent un large éventail de scénarios d'application, tels que: détection du visage, estimation de la pose humaine, estimation de l'âge..etc. Au cours de la dernière décennie, les architectures d’apprentissage en profondeur ont dépassé de loin l’état de la technique dans de nombreuses tâches de vision informatiques traditionnelles telles que la classification des images, ou la détection d’images.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/REG.png}
+	\caption{Architecture de modèle linéaire(régression) CNN}
+\end{figure}
+
+En gros, ces architectures se composent de plusieurs couches convolutives, généralement suivies de quelques couches entièrement connectées, et d'une couche de classification “softmax” avec, par exemple, une perte d'entropie croisée; l'architecture globale s'appelle un réseau de neurones convolutionnels (CNN ou ConvNet). En plus de la classification, les réseaux de neurones convolutionnels sont également utilisés pour résoudre des problèmes de régression. Dans ce cas, la couche “softmax” est généralement remplacé par une couche de régression entièrement connectée avec des activations linéaires ou “sigmoid”.
+
 \newpage
 \section{Traitement d’Image (Image Processing)}
 \subsection{Introduction}
@@ -189,7 +264,7 @@ Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée 
 En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\Lambda)$ ,  et le temps (t) \cite{13}.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{img-Chapiter-1/neurone.png}
+\includegraphics[scale=1]{img-Chapiter-1/neurone.jpeg}
 \caption{Schéma d’un neurone biologique}
 \end{figure}
 
@@ -286,12 +361,14 @@ Nous sommes tous en pleine révolution déclenchés par le développement rapide
 Mais avec la sophistication croissante et la puissance de l'informatique moderne, le calcul ira au-delà de l'architecture séquentielle conventionnelle de “Von Neumann” et envisagera également l'exécution optique. Les paradigmes de l'informatique distribuée et parallèle devraient améliorer les réponses pour les résultats du traitement des images.
 \newpage
 \rhead{}
+\addcontentsline{toc}{section}{Chapiter 2 : Context et problématique du projet}  
 \section*{\Huge{Chapiter 2}}
 \subsection*{\huge{Context et problématique du projet}}
 \newpage
-\rhead{Chapite 2 : Context et problématique du projet}
+\rhead{\textsc{Chapite 2 : Context et problématique du projet}}
 \section{Contexte et problématique du projet}
-\subsection{Définition e-santé}
+\subsection{E-santé}
+\subsubsection{Définition}
 e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
 
 Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
@@ -306,12 +383,12 @@ La santé connectée consiste en l’utilisation des nouvelles technologies pour
 
 Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins \cite{27}.
 
-\subsection{Domaines d’application}
+\subsubsection{Domaines d’application}
 Pour présenter les applications de la santé numérique, on peut se baser sur la chronologie du développement et de la prise en charge d’une maladie à savoir les stades de prévention, de diagnostic, puis de prise en charge thérapeutique et d’établissement d’un pronostic.
 
 Les applications sont nombreuses: On peut distinguer les lieux de prise en charge que sont le cabinet médical pour la médecine ambulatoire et l’hôpital lors des hospitalisations. Le maintien à domicile des patients est un enjeu important.
 
-\subsection{E-santé inclut}
+\subsubsection{E-santé inclut}
 \begin{enumerate}
 	\item \textbf{La télésanté} qui comprend les actes de prévention et de soins réalisés à distance : information via des portails grand public, sites de promotion de la santé, systèmes d'alerte téléphonique, prescriptions électroniques à distance...
 	\item \textbf{La télémédecine} (actes médicaux réalisés à distance par un médecin) : consultation par vidéoconférence, téléassistance d'un médecin lors d'une intervention, télésurveillance du patient, télé-expertise (échange des avis des médecins)...
@@ -319,7 +396,7 @@ Les applications sont nombreuses: On peut distinguer les lieux de prise en charg
 	\item \textbf{Les systèmes de dossiers électroniques de santé.}
 \end{enumerate}
 
-\subsection{Importance de la e-santé}
+\subsubsection{Importance de la e-santé}
 \begin{enumerate}
 	\item Prévoir une population vieillissante avec une prévalence croissante de maladie chronique, qui coûte de plus en plus cher à traiter.
 	\item Améliorer la sécurité des patients et réduire les erreurs.
@@ -327,21 +404,22 @@ Les applications sont nombreuses: On peut distinguer les lieux de prise en charg
 	\item La transition démographique vers une population vieillissante vivant plus longtemps avec des maladies chroniques signifie que les prestataires de soins de santé doivent trouver les ressources pour prendre soin de ces personnes. Les technologies de l’information et de la communication (sous les divers aspects de la santé en ligne, télésoins, télésanté, etc.) sont considérées comme une réponse à ces attentes. Les solutions Ehealth sont présentées comme des méthodes relativement peu coûteuses de fournir des soins et une assistance à la fois à distance et avec l’automatisation. Cela comprend la surveillance et la consultation à distance dispensées par des praticiens de la santé, ainsi que des outils d'auto-surveillance pour soutenir l'autogestion. L’objectif est de maintenir une vie autonome pour les personnes atteintes de maladie chronique et de réduire le recours aux soins secondaires.
 \end{enumerate}
 
-\subsection{Focus sur le Cancer}
+\subsubsection{Focus sur le Cancer}
 La prévention et les soins du cancer dépendent d'un accès à des informations exactes et complètes et d'une coordination étendue entre les patients, les soignants et les équipes de soins.
 
 Est un organisme à but non lucratif composé de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. Nous nous engageons à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Nous espérons qu'un jour, le cancer sera une maladie du passé.
 
-\subsection{Santé connectée implique} 
+\subsection{Santé connectée}
+\subsubsection{Santé connectée implique} 
 plusieurs ressources et acteurs telque:
 \begin{itemize}
-	\item \textbf{L’interopérabilité:} Activés par des systèmes IT de santé qui communiquent entre eux, échangent des données et utilisent des informations.
+	\item \textbf{L’interopérabilité:} Activés par des systèmes IT \footnote{Les technologies de l'information et de la communication.} de santé qui communiquent entre eux, échangent des données et utilisent des informations.
 	\item \textbf{Le personnes:} Habilités à accéder à leurs propres informations sur la santé, à les gérer et à participer activement à leurs soins
 	\item \textbf{Les professionnels de santé:} Appuyés par les programmes fédéraux et les outils IT de la santé pour la prestation de soins de haute qualité axés sur le patient, afin de soutenir la participation de tous les individus et fournisseurs de soins de santé à la santé connectée.
 	\item \textbf{Le partage de données et intégration:} Améliorer les soins, améliorer la surveillance et faire avancer la recherche.
 \end{itemize}
 
-\subsection{Approche de la santé connectée offre trois niveaux de création de valeur}
+\subsubsection{Approche de la santé connectée offre trois niveaux de création de valeur}
 \begin{itemize}
 	\item \textbf{Efficacité clinique}\\
 	Y compris la réduction des activités administratives et des coûts, l’élimination des doublons de tests de laboratoire et de radiologie; améliorer la sécurité des patients grâce à un accès 24 heures sur 24, 7 jours sur 7, à des dossiers médicaux complets et lisibles; et accélérer l'accès aux antécédents médicaux des patients et aux informations vitales.
@@ -351,7 +429,7 @@ plusieurs ressources et acteurs telque:
 	Incluant des analyses avancées pour éclairer la prise de décision clinique, la gestion de la santé de la population et de nouveaux modèles de prestation de soins.
 \end{itemize}
 \newpage
-\subsection{Principales fonctions de la santé connectée}
+\subsubsection{Principales fonctions de la santé connectée}
 Les solutions de santé connectée s’articulent autour de 5 fonctions principales :
 \begin{enumerate}
 	\item Capter une information, via un objet (une balance, un tensiomètre, un podomètre…).
@@ -361,7 +439,7 @@ Les solutions de santé connectée s’articulent autour de 5 fonctions principa
 	\item Mettre en relation, en s’affranchissant des problèmes de distance, patients et professionnels de santé.
 \end{enumerate}
 
-\subsection{Différents champs d’application de la santé connectée}
+\subsubsection{Différents champs d’application de la santé connectée}
 Les domaines d’applications pour les solutions de santé connectée sont vastes :
 \begin{itemize}
 	\item Mesure de paramètres vitaux et leur télétransmission à un plateau médical.
@@ -396,24 +474,26 @@ L'étude Accenture \cite{28} montre clairement les avantages des soins de santé
 \subsection{Introduction}
 Nous allons dans cette partie, définir les 2 concepts liés à notre projet afin de positionner le problème que l’on va traiter, à savoir la température corporelle chez les personnes et le cancer.
 
-\subsection{Définition: Température corporelle}
-La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37\textdegree{}C, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5\textdegree{C} le soir par rapport au matin. Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre lorsque le corps est infecté. 
+\subsection{Température corporelle}
+\subsubsection{Définition}
+La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37 C\textdegree{}, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5 C\textdegree{} le soir par rapport au matin. Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre lorsque le corps est infecté. 
 
 Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'augmentation de la température corporelle causée par l'environnement ou l'effort physique, et de l'hypothermie, qui est une diminution et est essentiellement due à une exposition prolongée au froid. 
 
 Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
 
-\subsection{Température chez les enfants}
-La température chez l’enfant doit normalement être comprise entre 36\textdegree{C} et 37, 5\textdegree{C}. On parle de fièvre quand elle atteint ou dépasse les 38\textdegree{C}. On dit alors familièrement que l’enfant a de la température. Entre 37,5\textdegree{C} et 37,9\textdegree{C}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40\textdegree{C} son issue peut être mortelle \cite{29}.
+\subsubsection{Température chez les enfants}
+La température chez l’enfant doit normalement être comprise entre 36 C\textdegree{} et 37, 5 C\textdegree{}. On parle de fièvre quand elle atteint ou dépasse les 38 C\textdegree{}. On dit alors familièrement que l’enfant a de la température. Entre 37,5 C\textdegree{} et 37,9 C\textdegree{}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40 C\textdegree{} son issue peut être mortelle \cite{29}.
 
-\subsection{Causes de l'élévation de la température chez l’enfant}
+\subsubsection{Causes de l'élévation de la température chez l’enfant}
 Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
 
 Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
 
 En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.
 
-\subsection{Définition : Cancer}
+\subsection{Cancer}
+\subsubsection{Définition}
 Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
 
 Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
@@ -427,7 +507,7 @@ Il existe un certain nombre de cancers différents, ayant chacun leurs propres s
 	\item ...
 \end{itemize}
 
-\subsection{Cancer de l’enfant}
+\subsubsection{Cancer de l’enfant}
 Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
 
 Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
@@ -440,7 +520,7 @@ La plupart des cancers de l’enfant peuvent être guéris grâce aux médicamen
 \caption{Le cancer chez l’enfant}
 \end{figure}
 
-\subsection{Cancers les plus fréquents chez l’enfant}
+\subsubsection{Cancers les plus fréquents chez l’enfant}
 Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 \begin{itemize}
 	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) \cite{35}.
@@ -456,7 +536,7 @@ Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 
 \newpage
 
-\subsection{Symptômes}
+\subsubsection{Symptômes}
 Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
 \begin{itemize}
 	\item un ventre anormalement gonflé, des grosseurs.  
@@ -554,8 +634,10 @@ Une fois encore, chez le bébé, la prise de température par voie rectale est l
 	\end{figure}
 \end{enumerate}
 
+\newpage
 \subsection{Description du problème posé}
-
+Le secteur de la santé en Algérie se caractérise par un manque de matériels de santé, le personnel n'est pas bien formé, l'indifférence chez quelques responsables en conséquent les malades souffrent et ils n'ont pas soigné comme il faut dans des cas on a des résultats catastrophiques, suite à des fautes médicaux et le manque des médecins compétent.\\
+Aussi les hôpitaux ne sont pas propres, ils manquent de l'hygiène.
 \newpage
 
 \section{Description de la solution}
@@ -590,7 +672,14 @@ Notre prototype sera comme une lampe au-dessus du patient qui va détecter la ha
 
 Dans notre prototype, le traitement d'images infrarouge thermique dédié à détecter la température chez les enfants cancéreux.
 
+\section{Conclusion}
+La e-santé et les objets connectés qui en sous-tendent l'usage ne vont pas impacter  la médecine, mais bien le parcours de soin dans sa globalité.
+
+La e-santé et les objets connectés  provoquent une grande révolution, Ils génèrent pour l’individu et la collectivité une masse de données inédite, qui crée de nouveaux savoirs.
+
+
 \newpage
+\rhead{\textsc{Références}}
 \bibliographystyle{ieeetr}	
 \bibliography{References}
 	

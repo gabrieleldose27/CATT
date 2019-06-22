@@ -1,12 +1,15 @@
 \babel@toc {french}{}
 \contentsline {figure}{\numberline {1}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{8}{figure.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un r\IeC {\'e}seau artificiel de neurones}}{9}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{10}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Pr\IeC {\'e}sentant les \IeC {\'e}tapes d\IeC {\textquoteright }un traitement d\IeC {\textquoteright }une image}}{12}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Le cancer chez l\IeC {\textquoteright }enfant}}{23}{figure.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{25}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{26}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{27}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{28}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{28}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces IOT dans la sant\IeC {\'e}}}{29}{figure.11}
+\contentsline {figure}{\numberline {3}{\ignorespaces d\IeC {\'e}tection de bord \IeC {\'e}crit en matrice de convolution 3\IeC {\texttimes }3}}{10}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Un filtre de flou \IeC {\'e}crit sous forme de matrice de convolution 3 \IeC {\texttimes } 3}}{10}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Architecture de mod\IeC {\`e}le lin\IeC {\'e}aire(r\IeC {\'e}gression) CNN}}{11}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{12}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Pr\IeC {\'e}sentant les \IeC {\'e}tapes d\IeC {\textquoteright }un traitement d\IeC {\textquoteright }une image}}{14}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Le cancer chez l\IeC {\textquoteright }enfant}}{25}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{27}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{28}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{29}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{30}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{30}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces IOT dans la sant\IeC {\'e}}}{32}{figure.14}

@@ -1,0 +1,202 @@
+\begin{thebibliography}{10}
+
+\bibitem{1}
+J.~Grabmeier and Rudolph, ``A. data mining and knowledge discovery (2002) 6:
+  303.'' \url{https://doi.org/10.1023/A:1016308404627}.
+
+\bibitem{2}
+G.~Govaert, ``Classification et modèle de mélange. analyse de données,'' in
+  {\em Hermès, Paris, pp.263-292}, 2003.
+
+\bibitem{3}
+unsupervised learning, ``22c:145 artificial intelligence,'' in {\em The
+  University of Iowa}.
+
+\bibitem{4}
+J.~Int, ``Advanced networking and applications volume: 5 issue: 6 pages:
+  2104-2116 (2014) issn : 0975-0290,''
+
+\bibitem{5}
+E.~W. Forgy, ``Cluster analysis of multivariate data: efficiency versus
+  interpretability of classifications,'' in {\em Biometrics. 21 (3): 768–769.
+  JSTOR 2528559}, 1965.
+
+\bibitem{6}
+K.~et~al., T.~Kohonen, S.~Kaski, K.~Lagus, J.~Salojärvi, J.~Honkela,
+  V.~Paatero, and A.~Saarela, ``Self organization of a massive document. ieee
+  transactions on neural networks, 11(3), 574-585,'' 2000.
+
+\bibitem{7}
+lance \&~Williams., G.~N. Lance, and W.~T. Williams, ``A general theory of
+  classificatory sorting strategies: I. hierarchical systems. computer journal,
+  9, 373-380,'' 1967.
+
+\bibitem{8}
+V.~Vladimir, ``Statistical learning theory, book,'' September 16, 1998.
+
+\bibitem{10}
+``Apprentissage automatique et deep learning.''
+  \url{https://www.stemmer-imaging.com/fr-ch/conseil-techniqu/apprentissage-automatique-et-apprentissage-profond/}
+  consulté le 2019/6/9.
+
+\bibitem{11}
+``Le deep learning (1) : une tentative de vulgarisation.''
+  \url{https://www.second-glance.fr/2017/02/06/le-deep-learning-1-une-tentative-de-vulgarisation/}
+  consulté le 2019/6/10.
+
+\bibitem{42}
+F.~Chollet, ``Xception: deep learning with depthwise separable convolutions.
+  ieee conference on computer vision and pattern recognition (cvpr),
+  1800–1807. ieee. doi:10.1109/cvpr.2017.195,'' 2017.
+
+\bibitem{43}
+Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner, ``Gradient-based learning
+  applied to document recognition,'' in {\em Proceedings of the IEEE, vol. 86,
+  no. 11, pp. 2278-2324, Nov. 1998. doi: 10.1109/5.726791}, 1998.
+
+\bibitem{44}
+``Les techniques de régression.'' \url{https://arxiv.org/pdf/1803.08450.pdf}
+  consulté le 2019/06/21.
+
+\bibitem{12}
+``International journal of scientific & engineering research, volume 4, issue 6
+  , issn 2229-5518,'' June -2013.
+
+\bibitem{13}
+D.~E. Dudgeon and R.~M. Mersereau, ``Multidimensional digital signal
+  processing. englewood cliffs, new jersey: Prentice-hall,'' 1984.
+
+\bibitem{40}
+C.~SIRJEIX, ``élédétection thermique rapprochée appliquée aux ouvrages
+  souterrains : sites du barrage de vieux-pré et de deux tunnels ferroviaires
+  à bayonne. thèse de doctorat de l'université de bordeaux i.,'' 1990a.
+
+\bibitem{41}
+G.~GAUSSORGUES, ``La thermographie infrarouge. technique et documentation,
+  paris. 540 p.,'' 1989.
+
+\bibitem{14}
+K.~R. Castleman, ``Digital image processing. seconded. englewood cliffs,
+  newjersey: Prentice- hall,'' 1996.
+
+\bibitem{15}
+``Stpi/p6/2015 – 02,'' 2015.
+
+\bibitem{16}
+D.~Tuia and G.~Camps-Valls, ``Recent advances in remote sensing image
+  processing, 2009 16th ieee international conference on image processing
+  (icip), cairo, 2009, pp. 3705-3708. doi: 10.1109/icip.2009.5414281,'' 2009.
+
+\bibitem{17}
+N.~Laouar and M.~S. Laraba, ``Détection d’un mouvement dans une séquence
+  vidéo par filtres morphologiques, projet de fin d’étude, enp, alger,''
+  2009.
+
+\bibitem{18}
+P.~Satyanarayana, V.~B. K.~L. Aruna, and P.~N. V.~S. Kumar, ``International
+  boundary scanning and ship surveillance system," 2017 international
+  conference on electrical, electronics, communication, computer, and
+  optimization techniques (iceeccot), mysuru, 2017, pp. 212-215. doi:
+  10.1109/iceeccot.2017.8284669,'' 2017.
+
+\bibitem{19}
+A.~D. Silva, ``Méthodes optiques pour le diagnostic et l’imagerie
+  biomédicale. optique [physics.optics]. aix-marseille université,
+  tel-01053305,'' 2013.
+
+\bibitem{20}
+S.~B. Mudigoudar and A.~I. Rasheed, ``Design and implementation of image
+  processing algorithms for cardiac blockage detection on fpga, 2016 ieee
+  annual india conference (indicon), bangalore, 2016, pp. 1-5. doi:
+  10.1109/indicon.2016.7839159,'' 2016.
+
+\bibitem{21}
+D.~Pugazhenthi and M.~V, ``Detection of ischemic heart diseases from medical
+  images, 2016 international conference on micro-electronics and
+  telecommunication engineering (icmete), ghaziabad, 2016, pp. 355-360. doi:
+  10.1109/icmete.2016.97,'' 2016.
+
+\bibitem{22}
+A.~Chaudhary and S.~S. Singh, ``Lung cancer detection on ct images by using
+  image processing, 2012 international conference on computing sciences,
+  phagwara, 2012, pp. 142-146. doi: 10.1109/iccs.2012.43,'' 2012.
+
+\bibitem{23}
+S.~Khobragade, A.~Tiwari, C.~Y. Patil, and V.~Narke, ``Automatic detection of
+  major lung diseases using chest radiographs and classification by
+  feed-forward artificial neural network, 2016 ieee 1st international
+  conference on power electronics, intelligent control and energy systems
+  (icpeices), delhi, 2016, pp. 1-5. doi: 10.1109/icpeices.2016.7853683,'' 2016.
+
+\bibitem{24}
+M.~Freedman, D.~S. Artz, and S.~K. Mun, ``Image processing in digital
+  mammography: the optimum image for each woman's breasts, iee colloquium on
+  digital mammography, london, uk, 1996, pp. 1/1-1/6. doi:
+  10.1049/ic:19960484,'' 1996.
+
+\bibitem{25}
+M.~Osadebey, M.~Pedersen, D.~Arnold, and K.~Wendel-Mitoraj, ``Image quality
+  evaluation in clinical research: A case study on brain and cardiac mri images
+  in multi-center clinical trials, in ieee journal of translational engineering
+  in health and medicine, vol. 6, pp. 1-15, 2018, art no. 1800915. doi:
+  10.1109/jtehm.2018.2855213,'' 2018.
+
+\bibitem{26}
+G.~Eysenbach, ``Articles from journal of medical internet research are provided
+  here courtesy.'' \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1761894/}
+  consulté le 2019/06/09.
+
+\bibitem{27}
+``La santé connectée.''
+  \url{https://www.nmmedical.fr/materiel-de-diagnostic/sante-connectee.html}
+  consulté le 2019/06/09.
+
+\bibitem{28}
+``L'étude accenture.''
+  \url{https://www.accenture.com/us-en/insight-making-case-connected-health}
+  consulté le 2019/06/10.
+
+\bibitem{29}
+D.~M. Consolini, ``Md, assistant professor of pediatrics, sidney kimmel medical
+  college of thomas jefferson university.''
+  \url{https://www.msdmanuals.com/fr/professional/p%C3%A9diatrie/sympt%C3%B4mes-chez-le-nourrisson-et-l-enfant/fi%C3%A8vre-chez-le-nourrisson-et-l-enfant}
+  consulté le 2019/06/09.
+
+\bibitem{30}
+``Les causes de l'élévation de la température, mediresource inc. 1996 –
+  2019.'' \url{https://santecheznous.com/condition/getcondition/fievre }
+  consulté le 2019/06/09.
+
+\bibitem{31}
+M.~Lambert, ``Le cancer, le 17 février 2016 à 12:35.''
+  \url{https://www.maxisciences.com/cancer/cancer-definition-causes-types-qu-est-ce-que-c-est_art35165.html}
+  consulté le 2019/06/09.
+
+\bibitem{32}
+E.~Steliarova-Foucher, M.~Colombet, R.~LAG, and et~al, ``International
+  incidence of childhood cancer, 2001-10: a population-based registry study.
+  lancet oncol. 2017;18(6):719-731,'' 2017.
+
+\bibitem{33}
+S.~Gupta, S.~Howard, S.~Hunger, and et~al, ``Treating childhood cancer in low-
+  and middle-income countries. in: Disease control priorities, volume,''
+
+\bibitem{34}
+``Le cancer chez l’enfant.''
+  \url{https://www.liguecancer.ch/a-propos-du-cancer/les-differents-types-de-cancer/le-cancer-chez-lenfant/}
+  consulté le 2019/06/09.
+
+\bibitem{35}
+C.~Kühni and N.~von~der Weid, ``Registre suisse du cancer de l’enfant.,''
+
+\bibitem{36}
+E.~Perrin, ``Les thermomètres, le 5 août 2016 à 16:03.''
+  \url{https://www.maxisciences.com/thermometre/thermometre-quel-type-de-thermometre-choisir-et-ou-prendre-la-temperature_art38501.html}
+  consulté le 2019/06/09, 2016.
+
+\bibitem{37}
+``Les thermomètres infrarouge.''
+  \url{http://dictionnaire.sensagent.leparisien.fr/Thermom%C3%A8tre%20infrarouge/fr-fr/#anchorWiki}
+  consulté le 2019/06/17.
+
+\end{thebibliography}
