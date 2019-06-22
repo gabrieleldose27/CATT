@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  22 JUN 2019 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  22 JUN 2019 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,7 +682,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<img-Chapiter-3/processus.png, id=78, 534.99875pt x 281.05pt>
+<img-Chapiter-3/processus.png, id=73, 534.99875pt x 281.05pt>
 File: img-Chapiter-3/processus.png Graphic file (type png)
 <use img-Chapiter-3/processus.png>
 Package pdftex.def Info: img-Chapiter-3/processus.png  used on input line 42.
@@ -726,7 +726,7 @@ l.45 \newpage
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.57 \end{itemize}
+l.56 \end{itemize}
                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -735,7 +735,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.57 \end{itemize}
+l.56 \end{itemize}
                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -750,7 +750,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 ... mesurera des températures allant de 0 °
+l.79 ... mesurera des températures allant de 0 °
                                                    C à 80 ° C avec une pr�...
 
 Your command was ignored.
@@ -765,7 +765,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 ...es températures allant de 0 ° C à 80 °
+l.79 ...es températures allant de 0 ° C à 80 °
                                                    C avec une précision de ...
 
 Your command was ignored.
@@ -780,7 +780,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 ... 80 ° C avec une précision de + - 2,5 °
+l.79 ... 80 ° C avec une précision de + - 2,5 °
                                                    C (4,5 ° F). Il peut dé...
 
 Your command was ignored.
@@ -795,7 +795,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 ...vec une précision de + - 2,5 ° C (4,5 °
+l.79 ...vec une précision de + - 2,5 ° C (4,5 °
                                                    F). Il peut détecter un ...
 
 Your command was ignored.
@@ -805,7 +805,7 @@ or  <return>  to continue without it.
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.81 
+l.80 
      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -814,7 +814,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.81 
+l.80 
      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -824,7 +824,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.93 	\newpage
+l.91 	\newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -833,32 +833,32 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.93 	\newpage
+l.91 	\newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 [4]
-<img-Chapiter-3/ther.png, id=111, 554.07pt x 513.92pt>
+<img-Chapiter-3/ther.png, id=106, 554.07pt x 513.92pt>
 File: img-Chapiter-3/ther.png Graphic file (type png)
 <use img-Chapiter-3/ther.png>
-Package pdftex.def Info: img-Chapiter-3/ther.png  used on input line 98.
+Package pdftex.def Info: img-Chapiter-3/ther.png  used on input line 96.
 (pdftex.def)             Requested size: 341.43161pt x 256.07324pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.115 		\item G
+l.113 		\item G
                PIO étendu à 40 broches pour améliorer vos projets «réel...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -867,21 +867,21 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.115 		\item G
+l.113 		\item G
                PIO étendu à 40 broches pour améliorer vos projets «réel...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 [5 <./img-Chapiter-3/ther.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.140 \newpage
+l.138 \newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -890,7 +890,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.140 \newpage
+l.138 \newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -898,7 +898,7 @@ look up `weird error' in the index to The TeXbook.)
 
 [6]
 ! Undefined control sequence.
-l.145 		\centernig
+l.143 		\centernig
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -906,10 +906,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<img-Chapiter-3/raspbPi.jpg, id=149, 630.355pt x 459.7175pt>
+<img-Chapiter-3/raspbPi.jpg, id=144, 630.355pt x 459.7175pt>
 File: img-Chapiter-3/raspbPi.jpg Graphic file (type jpg)
 <use img-Chapiter-3/raspbPi.jpg>
-Package pdftex.def Info: img-Chapiter-3/raspbPi.jpg  used on input line 146.
+Package pdftex.def Info: img-Chapiter-3/raspbPi.jpg  used on input line 144.
 (pdftex.def)             Requested size: 341.43503pt x 284.54489pt.
 
 ! LaTeX Error: There's no line here to end.
@@ -918,16 +918,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 
+l.147 
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img-Chapiter-3/therPi.png, id=150, 455.7025pt x 511.9125pt>
+<img-Chapiter-3/therPi.png, id=145, 455.7025pt x 511.9125pt>
 File: img-Chapiter-3/therPi.png Graphic file (type png)
 <use img-Chapiter-3/therPi.png>
-Package pdftex.def Info: img-Chapiter-3/therPi.png  used on input line 154.
+Package pdftex.def Info: img-Chapiter-3/therPi.png  used on input line 152.
 (pdftex.def)             Requested size: 341.44226pt x 284.5288pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -935,7 +935,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.158 \newpage
+l.156 \newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -944,22 +944,18 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.158 \newpage
+l.156 \newpage
               
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 [7 <./img-Chapiter-3/raspbPi.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 162--165
-
- []
-
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.165 	\newpage
-               
+l.171 \newpage
+              
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
@@ -967,117 +963,24 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.165 	\newpage
-               
+l.171 \newpage
+              
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 [8 <./img-Chapiter-3/therPi.png>]
-<img-Chapiter-3/pyth.png, id=164, 131.49126pt x 131.49126pt>
-File: img-Chapiter-3/pyth.png Graphic file (type png)
-<use img-Chapiter-3/pyth.png>
-Package pdftex.def Info: img-Chapiter-3/pyth.png  used on input line 168.
-(pdftex.def)             Requested size: 131.49092pt x 131.49092pt.
-<img-Chapiter-3/cv.png, id=165, 180.675pt x 222.8325pt>
-File: img-Chapiter-3/cv.png Graphic file (type png)
-<use img-Chapiter-3/cv.png>
-Package pdftex.def Info: img-Chapiter-3/cv.png  used on input line 179.
-(pdftex.def)             Requested size: 180.67455pt x 222.83195pt.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.182 \newpage
-              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.182 \newpage
-              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[9 <./img-Chapiter-3/pyth.png> <./img-Chapiter-3/cv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-<img-Chapiter-3/tens.png, id=174, 220.825pt x 183.68625pt>
-File: img-Chapiter-3/tens.png Graphic file (type png)
-<use img-Chapiter-3/tens.png>
-Package pdftex.def Info: img-Chapiter-3/tens.png  used on input line 206.
-(pdftex.def)             Requested size: 220.82445pt x 183.68578pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.216 	\end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.216 	\end{enumerate}
-                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[10 <./img-Chapiter-3/tens.png>]
-<img-Chapiter-3/Keras.jpg, id=190, 220.825pt x 220.825pt>
-File: img-Chapiter-3/Keras.jpg Graphic file (type jpg)
-<use img-Chapiter-3/Keras.jpg>
-Package pdftex.def Info: img-Chapiter-3/Keras.jpg  used on input line 219.
-(pdftex.def)             Requested size: 220.82445pt x 220.82445pt.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.238 \newpage
-              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.238 \newpage
-              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[11 <./img-Chapiter-3/Keras.jpg>]
-<img-Chapiter-3/Picture1.png, id=204, 460.72125pt x 551.05875pt>
+<img-Chapiter-3/Picture1.png, id=159, 480.79625pt x 633.36626pt>
 File: img-Chapiter-3/Picture1.png Graphic file (type png)
 <use img-Chapiter-3/Picture1.png>
-Package pdftex.def Info: img-Chapiter-3/Picture1.png  used on input line 242.
-(pdftex.def)             Requested size: 341.42752pt x 341.44267pt.
-
-Overfull \hbox (4.72304pt too wide) in paragraph at lines 250--253
-[]\T1/cmr/m/n/12 �limination des bruits trou-v�s dans cette image, on uti-lise 
-la bi-blio-th�que \T1/cmr/m/it/12 OpenCV
- []
+Package pdftex.def Info: img-Chapiter-3/Picture1.png  used on input line 175.
+(pdftex.def)             Requested size: 341.44107pt x 341.44249pt.
 
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.258 		\item u
-               ne alerte est lancée à l’infirmière,
+l.191 		\item l
+               ’opération se répète à partir de  l’étape 4.
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
@@ -1085,28 +988,48 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.258 		\item u
-               ne alerte est lancée à l’infirmière,
+l.191 		\item l
+               ’opération se répète à partir de  l’étape 4.
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-[12 <./img-Chapiter-3/Picture1.png>]
-Overfull \hbox (3.16937pt too wide) in paragraph at lines 271--272
+[9 <./img-Chapiter-3/Picture1.png>]
+Overfull \hbox (3.16937pt too wide) in paragraph at lines 207--208
 []\T1/cmr/m/n/12 La Haar Cas-cade est for-m�e en su-per-po-sant l'image po-si-t
 ive sur un en-semble d'images
  []
 
-<img-Chapiter-3/enfant.png, id=216, 187.70125pt x 219.82124pt>
+! Missing number, treated as zero.
+<to be read again> 
+                   p
+l.213 \newpage
+              
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   p
+l.213 \newpage
+              
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+[10]
+<img-Chapiter-3/enfant.png, id=188, 187.70125pt x 219.82124pt>
 File: img-Chapiter-3/enfant.png Graphic file (type png)
 <use img-Chapiter-3/enfant.png>
-Package pdftex.def Info: img-Chapiter-3/enfant.png  used on input line 279.
+Package pdftex.def Info: img-Chapiter-3/enfant.png  used on input line 216.
 (pdftex.def)             Requested size: 187.70079pt x 219.8207pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
+
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.284 \end{document}
+l.221 \end{document}
                     
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1115,60 +1038,43 @@ look up `weird error' in the index to The TeXbook.)
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.284 \end{document}
+l.221 \end{document}
                     
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-[13 <./img-Chapiter-3/enfant.png>]
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.284 \end{document}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.284 \end{document}
-                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-[14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+[11 <./img-Chapiter-3/enfant.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
  (./Chapiter-3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
 Package rerunfilecheck Info: File `Chapiter-3.out' has not changed.
-(rerunfilecheck)             Checksum: 26C1275245E01DC70FB277BDEED5814A;870.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+(rerunfilecheck)             Checksum: AB3D0AA4AF7DA67923F3D247E6D6005F;812.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
  ) 
 Here is how much of TeX's memory you used:
- 7456 strings out of 492982
- 106259 string characters out of 6134895
+ 7414 strings out of 492982
+ 105619 string characters out of 6134895
  204944 words of memory out of 5000000
- 10836 multiletter control sequences out of 15000+600000
+ 10819 multiletter control sequences out of 15000+600000
  14589 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,10n,43p,676b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
-fonts/type1/public/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfti1200.pfb>
-Output written on Chapiter-3.pdf (15 pages, 1484158 bytes).
+ 30i,10n,43p,699b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfbi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
+200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm08
+00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfti1200.pfb>
+Output written on Chapiter-3.pdf (12 pages, 1459093 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 102 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

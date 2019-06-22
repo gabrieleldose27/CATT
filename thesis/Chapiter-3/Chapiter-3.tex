@@ -49,8 +49,7 @@ Notre processus c’est une caméra thermique au-dessus d’un lit d’un malade
 \subsection{Objectifs de processus générale}
 \begin{itemize}
 	\item Être plus civilisé qu’avant.
-	\item Remplacer l’être humain par des appareils qui font les même fonctions que l’homme.
-	\item Au cas d’absence de l’homme, ce processus peut le remplacer.
+	\item Aider l’être humain par des appareils qui font les même fonctions que l’homme.
 	\item L’enfant sera surveillé et sous contrôle tout le temps.
 	\item Quant à l'infirmière le fait de surveiller le malade de temps en temps c'est très fatiguant en utilisant cette processus on gagne du temps, on fournit moins d'efforts qu'avant et en augmentant la précision.	
 	\item Quand l'infirmière vient voir l'enfant d'un temps à l'autre elle le dérange mais avec cette processus il est plus à l'aise, même si l'enfant est endormi cet appareil peut prendre des photos et peut lancer des alertes sans le moindre dérangement.
@@ -58,13 +57,13 @@ Notre processus c’est une caméra thermique au-dessus d’un lit d’un malade
 
 \subsection{Présentation et description de chaque couche}
 \begin{enumerate}
-		\item La 1\textsuperscript{èr} couche: dans chaque chambre on fixe des caméras thermiques  au tête de lit, le malade doit être juste sous la caméra dont la distance est de 2 mètres, pour qu’elle puisse prendre une image claire de son visage.
-		\item La 2\textsuperscript{ème} couche contient le modèle qui va traiter l'image de l’enfant et estime la température et une base de données dans laquelle les données vont être sauvegardées. (Le modèle et la base de données est dans le Raspberry Pi)
-		\item La 3\textsuperscript{ème} couche est un dispositif chez l'infirmière qui détecte l’alerte lancée par le système.
+		\item La 1\textsuperscript{èr} couche: Notre dispositif sera posé sur la tête de lit de malade. 
+		\item La 2\textsuperscript{ème} couche: Raspberry Pi qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
+		\item La 3\textsuperscript{ème} couche: Interface qui détecte les alerte lancé par le système.
 \end{enumerate}
 
 \subsection{Déroulement de la processus générale}
-La caméra thermique se trouve au tête de lit d'un enfant cancéreux, cette caméra est relie avec un Raspberry Pi,cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
+La caméra thermique se trouve au tête de lit d'un enfant cancéreux, cette caméra est relie avec un Raspberry Pi, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
 
 L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
    
@@ -81,7 +80,6 @@ Cette partie mesurera des températures allant de 0 ° C à 80 ° C avec une pr�
 
 L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures à celles de son prédécesseur, l'AMG8831. Le capteur prend uniquement en charge I2C et dispose d'une broche d'interruption configurable pouvant se déclencher lorsqu'un pixel individuel dépasse ou dépasse un seuil que vous avez défini.
 
-Pour le rendre facile à utiliser, nous le sélectionnons et le plaçons sur une carte opto-isolée avec un régulateur 3,3V et un changement de niveau. Vous pouvez donc l’utiliser avec n’importe quel ordinateur ou microcontrôleur 3V ou 5V.
 	\item \textbf{Détails techniques}\\
 	Dimensions du produit: 25.8mm x 25.5mm x 6.0mm / 1.0 "x 1.0" x 0.2 "
 	
@@ -157,84 +155,19 @@ Pour le rendre facile à utiliser, nous le sélectionnons et le plaçons sur une
 \end{itemize}
 \newpage
 
-\subsection{Logiciel}
-\begin{itemize}
-	\item \textbf{Python}\\
-	Python est un langage de programmation interprété, de haut niveau et polyvalent. Créée par Guido van Rossum et publiée pour la première fois en 1991, la philosophie de conception de Python met l'accent sur la lisibilité du code grâce à son utilisation remarquable d'espaces significatifs. Ses constructions de langage et son approche orientée objet visent à aider les programmeurs à écrire du code clair et logique pour des projets de petite et grande envergure [27] .\\
-	%https://en.wikipedia.org/wiki/Python_(programming_language)
-	\newpage
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=1]{img-Chapiter-3/pyth.png}
-		\caption{Logo python}
-	\end{figure}
-	
-	\item \textbf{OpenCv}\\
-	OpenCV (Open Source Computer Vision) est une bibliothèque de fonctions de programmation principalement destinées à la vision par ordinateur en temps réel. [1] Développé à l'origine par Intel, il a ensuite été pris en charge par Willow Garage, puis par Itseez (acquis plus tard par Intel [2]). La bibliothèque est multi-plateforme et libre d'utilisation sous la licence open source BSD.
 
-OpenCV supporte les frameworks d'apprentissage en profondeur TensorFlow, Torch / PyTorch et Caffe.
-%https://en.wikipedia.org/wiki/OpenCV#cite_note-3
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=1]{img-Chapiter-3/cv.png}
-	\caption{Logo OpenCv}
-\end{figure}
-\newpage
-	\item \textbf{TensorFlow}\\
-	\begin{enumerate}
-		\item \textbf{Définition}\\
-		TensorFlow est un outil open source développé automatiquement par Google. Le code source a été ouvert le 9 novembre 2015 par Google et publié sous licence Apache.
-
-DistBelief, lancé par Google en 2011, et doté d'une interface pour Python et Julia.
-
-TensorFlow est l'un des outils les plus utilisés dans le domaine de l'apprentissage [2].
-%https://fr.wikipedia.org/wiki/TensorFlow#cite_note-2
-	\item \textbf{Caractéristiques}
-		\begin{enumerate}
-			\item Constructif réactif
-			\item Flexible
-			\item Facilement entraînable
-			\item Formation parallèle au réseau de neurones
-			\item Grande communauté
-			\item Open source.
-		\end{enumerate}
-	\end{enumerate}
-	
-	
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=1]{img-Chapiter-3/tens.png}
-	\caption{Logo TensorFLow}
-\end{figure}
-	\item \textbf{Keras}\\
-	\begin{enumerate}
-		\item \textbf{Définition}\\
-		Keras est une bibliothèque open source écrite en python[2] et permettant d'interagir avec les algorithmes de réseaux de neurones profonds et de machine learning, notamment Tensorflow et Theano.
-		%https://fr.wikipedia.org/wiki/Keras#cite_note-3
-		\item \textbf{Caractéristiques}\\
-		Keras contient de nombreuses implémentations des blocs de construction de réseaux neuronaux couramment utilisés, tels que des couches, des objectifs, des fonctions d'activation, des optimiseurs et une multitude d'outils facilitant le travail avec des données d'image et de texte. Le code est hébergé sur GitHub et les forums de support de la communauté incluent la page des problèmes de GitHub et un canal Slack.
-	\end{enumerate}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=1]{img-Chapiter-3/Keras.jpg}
-		\caption{Logo Keras}
-	\end{figure}
-\end{itemize}
 
 \subsection{Principe de fonctionnement}
-\begin{enumerate}
-	\item Caméra thermique qui prend le visage de l’enfant en photo, c'est une caméra 
-	\item Modèle qui donne la décision,
-	\item si la température est élevée une alerte sera lancée par le système:
-	\begin{enumerate}
-		\item l’infirmière reçoit l’alerte elle rejoint le malade immédiatement,
-		\item L’image, la décision et les coordonnés seront sauvegardés.
-	\end{enumerate}
-	\item sinon (la température est normale) aucune alerte:
-	\begin{enumerate}
-		\item L’image, la décision et les coordonnés seront sauvegardés.
-	\end{enumerate}
-\end{enumerate}
+\begin{itemize}
+	\item \textbf{Étape 1}\\
+	Une caméra thermique qui prend l'image de visage de l'enfant, l'enfant doit être juste sous la caméra dont la distance est de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec un Raspberry Pi.
+	\item \textbf{Étape 2}\\
+	Quand la caméra thermique prend le visage de l'enfant, l'image sera envoyée  au modèle qui va traiter l'image de l’enfant et estime la température.\\
+	L'image, la décision, et les coordonnées de l'enfant serons sauvegardées dans une base de données.
+	\item \textbf{Étape 3}\\
+	En cas la température est élevée notre système lance une alerte.\\
+	Cette alerte sera détectée par l'interface chez l'infirmière. 
+\end{itemize}
 \newpage
 
 \begin{figure}[h]
@@ -247,23 +180,26 @@ TensorFlow est l'un des outils les plus utilisés dans le domaine de l'apprentis
 Notre plan de travail se base sur quelques étapes:
 \begin{enumerate}
 	\item Faire entrer l’image thermique de l’enfant.
-	\item \' Elimination des bruits trouvés dans cette image,  on utilise la bibliothèque \textit{OpenCV} précisément l'utilisation des algorithmes de débruitage tel que \\
-	 \textbf{cv.fastNlMeansDenoisingColored()}, parce que fonctionne avec une image couleur (le bruit devrait être gaussien [1]).
-	%  [] https://docs.opencv.org/trunk/d5/d69/tutorial_py_non_local_means.html
-	\item Détection de visage de l’enfant ça sert à classifier l’image prise, pour classifier cette image on utilise le dataset \textit{haar cascade} avec la même bibliothèque \textit{OpenCV},
+	\item \' Elimination des bruits trouvés dans cette image, on utilise des algorithmes tels que Papper and salt, Gaussian Blur on utilise kernel $3 \times 3$, 
+	\item Détection de visage de l’enfant ça sert à classifier l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
 	\item Détection s’il s’agit  de face ou de côté ça sert à classifier l’image.
 	\item Calcule de la température pour visage et coté. 
 	\item si la température est élevée:
 	\begin{enumerate}
 		\item une alerte est lancée à l’infirmière,
+		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
 		\item l’opération se répète à partir de  l’étape 4.
 	\end{enumerate}
 	\item si la température est normale:
 	\begin{enumerate}
-		\item l’opération se fait à nouveau.
+		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données.
+		\item l’opération se fait à nouveau à partir de l'étape 4.
 	\end{enumerate}
 \end{enumerate}
 
+\subsection*{Gaussian Blur}
+\subsubsection*{Définition}
+Gaussian Blur (également appelé lissage gaussien) résulte du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
 \subsection*{Haar Cascade}
 \subsubsection*{Définition}
 Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
@@ -274,6 +210,7 @@ On peut également utiliser des cascades Haar prédéfinies, disponibles sur [16
 %https://github.com/opencv/opencv/tree/master/data/haarcascades
 
 Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de haar cascade.
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=1]{img-Chapiter-3/enfant.png}
