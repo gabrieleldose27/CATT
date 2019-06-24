@@ -23,7 +23,7 @@
 \renewcommand{\headrulewidth}{0 pt}
 \renewcommand{\footrulewidth}{1pt}
 
-\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\hsp}{\hspace{10pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
@@ -36,9 +36,9 @@
 			\includegraphics[height=4cm,width=4cm]{Logo/logo.jpg}
 		\end{figure}
 		
-		 \HRule \\[0.4cm]
-    { \huge \bfseries Détection de la température on se basant sur le teint de la peau chez les enfants cancéreux\\[0.4cm] }
-    \HRule \\[2cm]
+		 \HRule \\[0.2cm]
+    { \huge \bfseries Détection de la température on se basant sur le teint de la peau chez les enfants cancéreux\\[0.2cm] }
+    \HRule \\[4cm]
     
     
         \begin{minipage}{0.4\textwidth}
@@ -201,7 +201,7 @@ L’unité de calcul principal du système nerveux, le neurone, est constitué d
 Ces courants sont ensuite intégrés de manière complexe et non-linéaire (Koch et al., 1983) dans l’arbre dendritique. Le potentiel du soma va changer et, si il dépasse un certain seuil, un potentiel d’action sera initié et propagé à travers l’axone, ce qui libérera des neurotransmetteurs aux synapses auxquelles il est relié. Les mécanismes de création et de propagation du potentiel d’action sont expliqués par le modèle d’Hodgkin-Huxley (Hodgkin and Huxley, 1952) basé sur un ensemble d’équations différentielles non-linéaires.
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{img-Chapiter-1/neurone.jpeg}
+\includegraphics[width=10cm]{img-Chapiter-1/neurone.jpeg}
 \caption{Schéma d’un neurone biologique}
 \end{figure}
 \subsubsection{Définition}
@@ -217,26 +217,24 @@ C'est là un point assez subtil, car les neurones doivent être en mesure de ré
 \includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.png}
 \caption{Schéma d’un réseau artificiel de neurones}
 \end{figure}
-\newpage
 
 \subsection{Réseau neuronal convolutif (CNN)}
 Le réseau de neuronal convolutif (CNN: Convolutional Neural Networks) ou plus généralement connue “ConvNets” a été inspiré par la façon dont le cortex visuel est supposé fonctionner. CNN est similaire à ANN (Réseaux de Neurones Artificiels) mais utilise l’opérateur matrice convolutif. Le volume 3D formé par plusieurs canaux de matrices 2Ds est appelé tenseur «Tensor de l’anglais». Étant donnés une image d'entrée sous la forme d'un tenseur formé de plusieurs matrices 2Ds de pixels pour chaque canal de couleur, plusieurs filtres peuvent être écrits sous forme de matrice de convolution \cite{42}.
 
-Comme la détection des contours (comme dans la figure \ref{fig:détection}), la netteté, le lissage / flou (comme dans la figure \ref{fig:filter}) et l’appariement de motifs. ANN peut être utilisé pour apprendre les valeurs dans de nombreuses matrices de convolution, ce qui permet d'obtenir des filtres d'image qui s'activent lorsqu'ils sont exposés sur des caractéristiques ou des structures visuelles spécifiques.
-\newpage
+Comme la détection des contours (voir la figure \ref{fig:détection}), la netteté, le lissage / flou (voir la figure \ref{fig:filter}) et l’appariement de motifs. ANN peut être utilisé pour apprendre les valeurs dans de nombreuses matrices de convolution, ce qui permet d'obtenir des filtres d'image qui s'activent lorsqu'ils sont exposés sur des caractéristiques ou des structures visuelles spécifiques.
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/CNN.png}
+	\includegraphics[width=15cm]{img-Chapiter-1/CNN.png}
 	\caption{détection de bord écrit en matrice de convolution 3×3}
 	\label{fig:détection}
 	\bigbreak
 	\centering
-	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/CNN2.png}
+	\includegraphics[width=15cm]{img-Chapiter-1/CNN2.png}
 	\caption{Un filtre de flou écrit sous forme de matrice de convolution 3 × 3}
 	\label{fig:filter}
 \end{figure}
 
-La taille de chaque matrice de filtre de convolution, également appelée «taille du noyau» ou «taille du voisinage», spécifie le champ de réception du filtre. Par exemple, un noyau de taille 3 × 3 signifie que le cadre de délimitation du voisinage commence par un pixel à gauche, un pixel vers le haut et se termine par un pixel à droite et un pixel vers le bas, tandis qu'une taille de noyau de 5 × 5 signifie un voisinage de deux pixels. de chaque côté.
+La taille de chaque matrice de filtre de convolution, également appelée «taille du noyau» ou «taille du voisinage», spécifie le champ de réception du filtre. Par exemple, un noyau de taille 3 × 3 signifie que le cadre de délimitation du voisinage commence par un pixel à gauche, un pixel vers le haut et se termine par un pixel à droite et un pixel vers le bas, tandis qu'une taille de noyau de 5 × 5 signifie un voisinage de deux pixels de chaque côté.
 
 L'opérateur de convolution utilisé dans CNN est appelée convolution 2D (habituellement appelé “de $conv2d()$” ou “$conv_2d()$” en fonction du langage utilisé) et il fonctionne sur les volumes 3Ds (en prenant un volume 3D en entrée et résultant d'un volume 3D comme sortie), par exemple, une entrée peut être une image en couleur de taille 224x224x3 \cite{43} et une profondeur de 3 canaux RGB(Red: rouge, Green: vert, Blue: bleu) lorsqu'il est passé à une convolution sur une taille de voisinage 3 x 3 et une profondeur de 96 canaux (écrites 3 × 3 × 96) résultat serait un volume de sortie de taille 224 × 224 (ou 222 × 222 en cas d'absence de remplissage) et de profondeur de 96. La taille de l'entrée est largeur × hauteur × profondeur. La profondeur du noyau de convolution représente le nombre de filtres que nous souhaitons appliquer / apprendre.
 
@@ -335,7 +333,7 @@ Les trois phases générales que doivent subir tous les types de données lors d
 	\end{enumerate}
 \end{enumerate}
 
-\subsection{Perspective de la recherche}
+\subsection{Perspectives de la recherche}
 Une vaste recherche est en cours dans la technique de traitement d'image.
 \begin{enumerate}
 	\item Imagerie du cancer - Différents outils, tels que la ponction trachéo-œsophagienne (TEP), l'IRM (Imagerie par Résonances Magnétique) et la détection assistée par ordinateur, aident à diagnostiquer la tumeur et à en prendre conscience.
@@ -366,10 +364,14 @@ Mais avec la sophistication croissante et la puissance de l'informatique moderne
 \subsection*{\huge{Context et problématique du projet}}
 \newpage
 \rhead{\textsc{Chapite 2 : Context et problématique du projet}}
-\section{Contexte et problématique du projet}
-\subsection{E-santé}
-\subsubsection{Définition}
-e-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
+\addcontentsline{toc}{section}{Contexte et problématique du projet}  
+\section*{Contexte et problématique du projet}
+
+\section{Introduction}
+On se positionne dans ce projet à la frontière de la santé numérique et la diagnostic médicale aussi que l'aide à la prise de décision, dans cette section nous allons faire le tour des concepts lies à notre sujet et détailler la problématique à laquelle on s'attaque, à savoir la santé connectée, la température corporelle et le cancer.  
+\section{E-santé}
+\subsection{Définition}
+E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
 
 Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
 Ceux ci comprennent:
@@ -383,12 +385,12 @@ La santé connectée consiste en l’utilisation des nouvelles technologies pour
 
 Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins \cite{27}.
 
-\subsubsection{Domaines d’application}
+\subsection{Domaines d’application}
 Pour présenter les applications de la santé numérique, on peut se baser sur la chronologie du développement et de la prise en charge d’une maladie à savoir les stades de prévention, de diagnostic, puis de prise en charge thérapeutique et d’établissement d’un pronostic.
 
 Les applications sont nombreuses: On peut distinguer les lieux de prise en charge que sont le cabinet médical pour la médecine ambulatoire et l’hôpital lors des hospitalisations. Le maintien à domicile des patients est un enjeu important.
 
-\subsubsection{E-santé inclut}
+E-santé inclut:
 \begin{enumerate}
 	\item \textbf{La télésanté} qui comprend les actes de prévention et de soins réalisés à distance : information via des portails grand public, sites de promotion de la santé, systèmes d'alerte téléphonique, prescriptions électroniques à distance...
 	\item \textbf{La télémédecine} (actes médicaux réalisés à distance par un médecin) : consultation par vidéoconférence, téléassistance d'un médecin lors d'une intervention, télésurveillance du patient, télé-expertise (échange des avis des médecins)...
@@ -396,7 +398,7 @@ Les applications sont nombreuses: On peut distinguer les lieux de prise en charg
 	\item \textbf{Les systèmes de dossiers électroniques de santé.}
 \end{enumerate}
 
-\subsubsection{Importance de la e-santé}
+\subsection{Importance de la e-santé}
 \begin{enumerate}
 	\item Prévoir une population vieillissante avec une prévalence croissante de maladie chronique, qui coûte de plus en plus cher à traiter.
 	\item Améliorer la sécurité des patients et réduire les erreurs.
@@ -404,14 +406,8 @@ Les applications sont nombreuses: On peut distinguer les lieux de prise en charg
 	\item La transition démographique vers une population vieillissante vivant plus longtemps avec des maladies chroniques signifie que les prestataires de soins de santé doivent trouver les ressources pour prendre soin de ces personnes. Les technologies de l’information et de la communication (sous les divers aspects de la santé en ligne, télésoins, télésanté, etc.) sont considérées comme une réponse à ces attentes. Les solutions Ehealth sont présentées comme des méthodes relativement peu coûteuses de fournir des soins et une assistance à la fois à distance et avec l’automatisation. Cela comprend la surveillance et la consultation à distance dispensées par des praticiens de la santé, ainsi que des outils d'auto-surveillance pour soutenir l'autogestion. L’objectif est de maintenir une vie autonome pour les personnes atteintes de maladie chronique et de réduire le recours aux soins secondaires.
 \end{enumerate}
 
-\subsubsection{Focus sur le Cancer}
-La prévention et les soins du cancer dépendent d'un accès à des informations exactes et complètes et d'une coordination étendue entre les patients, les soignants et les équipes de soins.
-
-Est un organisme à but non lucratif composé de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. Nous nous engageons à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Nous espérons qu'un jour, le cancer sera une maladie du passé.
-
-\subsection{Santé connectée}
-\subsubsection{Santé connectée implique} 
-plusieurs ressources et acteurs telque:
+\section{Santé connectée}
+Santé connectée implique plusieurs ressources et acteurs tel que:
 \begin{itemize}
 	\item \textbf{L’interopérabilité:} Activés par des systèmes IT \footnote{Les technologies de l'information et de la communication.} de santé qui communiquent entre eux, échangent des données et utilisent des informations.
 	\item \textbf{Le personnes:} Habilités à accéder à leurs propres informations sur la santé, à les gérer et à participer activement à leurs soins
@@ -419,7 +415,7 @@ plusieurs ressources et acteurs telque:
 	\item \textbf{Le partage de données et intégration:} Améliorer les soins, améliorer la surveillance et faire avancer la recherche.
 \end{itemize}
 
-\subsubsection{Approche de la santé connectée offre trois niveaux de création de valeur}
+Approche de la santé connectée offre trois niveaux de création de valeur
 \begin{itemize}
 	\item \textbf{Efficacité clinique}\\
 	Y compris la réduction des activités administratives et des coûts, l’élimination des doublons de tests de laboratoire et de radiologie; améliorer la sécurité des patients grâce à un accès 24 heures sur 24, 7 jours sur 7, à des dossiers médicaux complets et lisibles; et accélérer l'accès aux antécédents médicaux des patients et aux informations vitales.
@@ -429,7 +425,7 @@ plusieurs ressources et acteurs telque:
 	Incluant des analyses avancées pour éclairer la prise de décision clinique, la gestion de la santé de la population et de nouveaux modèles de prestation de soins.
 \end{itemize}
 \newpage
-\subsubsection{Principales fonctions de la santé connectée}
+\subsection{Principales fonctions de la santé connectée}
 Les solutions de santé connectée s’articulent autour de 5 fonctions principales :
 \begin{enumerate}
 	\item Capter une information, via un objet (une balance, un tensiomètre, un podomètre…).
@@ -439,7 +435,7 @@ Les solutions de santé connectée s’articulent autour de 5 fonctions principa
 	\item Mettre en relation, en s’affranchissant des problèmes de distance, patients et professionnels de santé.
 \end{enumerate}
 
-\subsubsection{Différents champs d’application de la santé connectée}
+\subsection{Différents champs d’application de la santé connectée}
 Les domaines d’applications pour les solutions de santé connectée sont vastes :
 \begin{itemize}
 	\item Mesure de paramètres vitaux et leur télétransmission à un plateau médical.
@@ -450,6 +446,30 @@ Les domaines d’applications pour les solutions de santé connectée sont vaste
 \end{itemize}
 
 L’intérêt de ces outils est directement lié à la manière de les utiliser. La santé connectée constitue une révolution qui permettra de proposer à chacun utilisateur des services de santé efficaces, accessibles et adaptés à ses besoins.
+
+\subsection{IOT en santé}
+Les objets connectés ou objets communicants sont en train de révolutionner tous les secteurs, y compris celui de la médecine générale. On parle alors de santé connectée ou d’e-santé. Cependant leur prescription par les médecins généralistes reste freinée par certaines craintes, notamment en ce qui concerne la protection du secret médical.
+
+Un objet connecté est un objet relié à internet via un système de communication sans fil alors qu’il n’avait pas vocation d’être une interface web, à l’origine. Par exemple, on peut parler de tensiomètre connecté mais un smartphone n’est pas considéré comme un objet connecté puisqu’il est conçu dès le départ pour « surfer » sur le web. En pratique, les dispositifs médicaux connectés contiennent des composants électroniques, leur permettant de communiquer avec différents systèmes : une tablette, un ordinateur, un smartphone… Beaucoup sont des wearables e-santé, c’est-à-dire des objets connectés portables du type montre ou bracelet.\\
+Ils sont capables de:
+\begin{itemize}
+	\item Collecter diverses données santé de vos patients,
+	\item Traiter les données,
+	\item Transmettre les résultats obtenus aux professionnels de santé (ex. : médecin traitant, infirmière à domicile),
+	\item Donner l’alerte en cas d’urgence.
+\end{itemize}
+Ce qui permet :
+\begin{itemize}
+	\item De faciliter le diagnostic en télé-consultation,
+	\item D’assurer un meilleur suivi des patients à distance (télé-surveillance),
+	\item D’aider les patients à suivre leur traitement correctement,
+	\item De faire de la prévention dans divers domaines.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6cm, width=15cm]{img-Chapiter-2/IOT.jpg}
+	\caption{ IOT dans la santé}
+\end{figure}
 
 \subsection{Avantages et inconvénients}
 La e-santé à plusieurs avantages telque:
@@ -468,92 +488,27 @@ Les inconvénients peuvent être:
 
 L'étude Accenture \cite{28} montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
 
-\newpage
-\section{Problème de la prise de température dans le service des enfants cancéreux}
+\section{Température corporelle}
+\subsection{Définition}
+La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37 C\textdegree{}, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5 C\textdegree{} le soir par rapport au matin.
 
-\subsection{Introduction}
-Nous allons dans cette partie, définir les 2 concepts liés à notre projet afin de positionner le problème que l’on va traiter, à savoir la température corporelle chez les personnes et le cancer.
-
-\subsection{Température corporelle}
-\subsubsection{Définition}
-La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ 37 C\textdegree{}, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5 C\textdegree{} le soir par rapport au matin. Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre lorsque le corps est infecté. 
+Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre. 
 
 Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'augmentation de la température corporelle causée par l'environnement ou l'effort physique, et de l'hypothermie, qui est une diminution et est essentiellement due à une exposition prolongée au froid. 
 
 Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
 
-\subsubsection{Température chez les enfants}
-La température chez l’enfant doit normalement être comprise entre 36 C\textdegree{} et 37, 5 C\textdegree{}. On parle de fièvre quand elle atteint ou dépasse les 38 C\textdegree{}. On dit alors familièrement que l’enfant a de la température. Entre 37,5 C\textdegree{} et 37,9 C\textdegree{}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40 C\textdegree{} son issue peut être mortelle \cite{29}.
+\subsection{Température chez les enfants}
+La température chez l’enfant doit normalement être comprise entre 36 C\textdegree{} et 37, 5 C\textdegree{}. On parle de fièvre quand elle atteint ou dépasse les 38 C\textdegree{}. On dit alors familièrement que l’enfant a de la température. Entre 37,5 C\textdegree{} et 37,9 C\textdegree{}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40 C\textdegree{} son issue peut être mortel \cite{29}.
 
-\subsubsection{Causes de l'élévation de la température chez l’enfant}
+\subsection{Causes de l'élévation de la température chez l’enfant}
 Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
 
 Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
 
-En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.
+En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.\\
 
-\subsection{Cancer}
-\subsubsection{Définition}
-Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
-
-Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
-
-Il existe un certain nombre de cancers différents, ayant chacun leurs propres symptômes et pouvant toucher diverses parties du corps. Parmi les cancers les plus fréquents, on retrouve :
-\begin{itemize}
-	\item  Le cancer de la peau,
-	\item Le cancer du sein,
-	\item Le cancer du colon,
-	\item Le cancer de la prostate,
-	\item ...
-\end{itemize}
-
-\subsubsection{Cancer de l’enfant}
-Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
-
-Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
-
-La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
-\newpage
-\begin{figure}[h]
-\centering
-\includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
-\caption{Le cancer chez l’enfant}
-\end{figure}
-
-\subsubsection{Cancers les plus fréquents chez l’enfant}
-Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
-\begin{itemize}
-	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) \cite{35}.
-	\item les tumeurs au cerveau et dans la moelle épinière (20\%) .
-	\item les lymphomes hodgkiniens et non hodgkiniens (12\%) .
-	\item les tumeurs du système nerveux sympathique (7\%) .
-	\item les cancer des tissus mous (7\%) .
-	\item le cancer du rein (5\%) .
-	\item le cancer des os (4\%) .
-	\item les tumeurs germinales (3\%) .
-	\item les tumeurs oculaires (3\%) .
-\end{itemize}
-
-\newpage
-
-\subsubsection{Symptômes}
-Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
-\begin{itemize}
-	\item un ventre anormalement gonflé, des grosseurs.  
-	\item une fièvre inexpliquée et persistante. 
-	\item une pâleur, de l’apathie, une perte de poids. 
-	\item des douleurs inexpliquées et persistantes dans les articulations et les membres.
-	\item des maux de tête, souvent associés à des vomissements. 
-	\item des hématomes fréquents, des saignements inexpliqués . 
-	\item des sueurs nocturnes. 
-	\item des sautes d’humeur et un changement soudain de comportement. 
-	\item un reflet blanchâtre dans la pupille (« œil de chat »), un strabisme.
-\end{itemize}
-
-\subsection{Problème de la prise de température dans le service des enfants cancéreux}
-Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
-
-les enfants cancéreux souffrent d’une infection (causée par une bactérie ou un virus), il est normal qu’il fasse de la fièvre, il existe plusieurs moyens de prendre la température qui sont :
+les enfants cancéreux souffrent d’une infection (causée par une bactérie ou un virus), il est normal qu’il fasse de la fièvre, ils existent plusieurs moyens de prendre la température corporelle qui sont :
 \begin{enumerate}
 	\item par voie rectale (par le rectum ou les fesses),
 	\item par voie buccale (par la bouche),
@@ -561,15 +516,6 @@ les enfants cancéreux souffrent d’une infection (causée par une bactérie ou
 	\item par voie auriculaire (par l’oreille).
 \end{enumerate}
 
-\subsection{Solutions existantes}
-La méthode choisi dépendra de l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur) ce qui pose des problèmes qui sont:
-\begin{enumerate}
-	\item le stress,
-	\item On ne le laisse pas se reposer,
-	\item On ne le laisse pas se reposer,
-	\item ...etc
-\end{enumerate}
-\newpage
 \begin{table}[h]
 	\centering
 	\caption{Choix de la méthode de prise de température suivant l’age de l’enfant}
@@ -590,8 +536,96 @@ La méthode choisi dépendra de l’age de l’enfant, il est important que la m
 	\end{tabular}
 \end{table}
 
+\section{Cancer}
+\subsection{Définition}
+Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
+
+Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
+
+Il existe un certain nombre de cancers différents, ayant chacun leurs propres symptômes et pouvant toucher diverses parties du corps. Parmi les cancers les plus fréquents, on retrouve :
+\begin{itemize}
+	\item  Le cancer de la peau,
+	\item Le cancer du sein,
+	\item Le cancer du colon,
+	\item Le cancer de la prostate,
+	\item ...
+\end{itemize}
+
+\subsection{Cancer de l’enfant}
+Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année chez environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
+
+Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
+
+La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
+
+Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
+\newpage
+\begin{figure}[h]
+\centering
+\includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
+\caption{Le cancer chez l’enfant}
+\end{figure}
+
+\subsection{Cancers les plus fréquents chez l’enfant}
+Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
+\begin{itemize}
+	\item les leucémies (33\% de toutes les maladies cancéreuses chez l’enfant en Suisse) \cite{35}.
+	\item les tumeurs au cerveau et dans la moelle épinière (20\%) .
+	\item les lymphomes hodgkiniens et non hodgkiniens (12\%) .
+	\item les tumeurs du système nerveux sympathique (7\%) .
+	\item les cancer des tissus mous (7\%) .
+	\item le cancer du rein (5\%) .
+	\item le cancer des os (4\%) .
+	\item les tumeurs germinales (3\%) .
+	\item les tumeurs oculaires (3\%) .
+\end{itemize}
+
+\newpage
+
+\subsection{Symptômes}
+Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
+\begin{itemize}
+	\item un ventre anormalement gonflé, des grosseurs.  
+	\item une fièvre inexpliquée et persistante. 
+	\item une pâleur, de l’apathie, une perte de poids. 
+	\item des douleurs inexpliquées et persistantes dans les articulations et les membres.
+	\item des maux de tête, souvent associés à des vomissements. 
+	\item des hématomes fréquents, des saignements inexpliqués . 
+	\item des sueurs nocturnes. 
+	\item des sautes d’humeur et un changement soudain de comportement. 
+	\item un reflet blanchâtre dans la pupille (« œil de chat »), un strabisme.
+\end{itemize}
+
+\subsection{Focus sur le Cancer}
+La prévention et les soins du cancer dépendent d'un accès à des informations exactes et complètes et d'une coordination étendue entre les patients, les soignants et les équipes de soins.
+
+Est un organisme à but non lucratif composé de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. Nous nous engageons à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Nous espérons qu'un jour, le cancer sera une maladie du passé.
+
+\section{Problème de la prise de température corporelle chez les enfants cancéreux}
+Les enfants cancéreux peuvent souffre d'une infection (virus, bactérie,... etc), il est normale qu'il fasse de la fièvre.
+
+La méthode de la prise de température corporelle chez l'enfant dans ce cas dépendra l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur, ... etc).
+
+En Algérie les services hospitaliers qui s'occupent des enfants cancéreux souffrent de beaucoup de problèmes notamment le manque de personnel \textbf{soignant} aussi que la charge excessive sur les médecins, on fait généralement recours aux parents des enfants, pour prendre soin de ceux ci durant la journée et la nuit, les soins ici sont différents des soins médicaux qui sont la responsabilité du personnel médicale.
+
+En général, les gardes malades (mère, sœur, ... ) sont responsables de la prise de température corporelle de l'enfant périodiquement.
+
+En cas de fièvre le garde malade alerte le professionnel médicale (Infirmière ou médecin), selon le cas pour prendre en charge ce problème de la fièvre.\\
+ce qui pose des problèmes entre autres: 
+\begin{itemize}
+	\item Le stress des enfants dû à  la fréquence de la pris de température corporelle.
+	\item Les dérangements engendrés par la prise multiple de la température (l'enfant à réveillé, manipulé, ... à différentes heures de la nuit).
+	\item La mauvaise lecture de la température corporelle par le garde malade.
+	\item Le cas de la prise de température corporelle  dans les délais oublies.
+	\item Le stress et l'angoisse des parents dû à cette responsabilité.
+\end{itemize}
+
+\subsection{Solution existantes}
+Ils existent de part le monde des solutions pour la prise de la température corporelle des enfants, qui soient intelligents ou non.
+
+Nous allons présenter quelques solutions.
 \subsubsection{Thermomètre}
-est l’un des outils essentiels de la trousse de premiers soins. Il existe différents modèles de thermomètres et différentes méthodes de prise de température corporelle.
+Est l’un des outils essentiels de la trousse de premiers soins. Ils existent différents modèles de thermomètres et différentes méthodes de prise de température corporelle.
 \begin{enumerate}
 	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est, comme son ancêtre, en verre gradué et permet de lire facilement la température \cite{36}.
 	\begin{figure}[h]
@@ -633,49 +667,397 @@ Une fois encore, chez le bébé, la prise de température par voie rectale est l
 		\caption{Bracelet pour mesurer la température}
 	\end{figure}
 \end{enumerate}
-
-\newpage
-\subsection{Description du problème posé}
-Le secteur de la santé en Algérie se caractérise par un manque de matériels de santé, le personnel n'est pas bien formé, l'indifférence chez quelques responsables en conséquent les malades souffrent et ils n'ont pas soigné comme il faut dans des cas on a des résultats catastrophiques, suite à des fautes médicaux et le manque des médecins compétent.\\
-Aussi les hôpitaux ne sont pas propres, ils manquent de l'hygiène.
 \newpage
 
-\section{Description de la solution}
-\subsection{IOT en santé}
-Les objets connectés ou objets communicants sont en train de révolutionner tous les secteurs, y compris celui de la médecine générale. On parle alors de santé connectée ou d’e-santé. Cependant leur prescription par les médecins généralistes reste freinée par certaines craintes, notamment en ce qui concerne la protection du secret médical.
+\section{Solution Proposée}
+Notre objectif dans ce projet est de résoudre les problèmes déjà cités liés à la prise de température corporelle de l'enfant.
 
-Un objet connecté est un objet relié à internet via un système de communication sans fil alors qu’il n’avait pas vocation d’être une interface web, à l’origine. Par exemple, on peut parler de tensiomètre connecté mais un smartphone n’est pas considéré comme un objet connecté puisqu’il est conçu dès le départ pour « surfer » sur le web. En pratique, les dispositifs médicaux connectés contiennent des composants électroniques, leur permettant de communiquer avec différents systèmes : une tablette, un ordinateur, un smartphone… Beaucoup sont des wearables e-santé, c’est-à-dire des objets connectés portables du type montre ou bracelet.\\
-Ils sont capables de:
-\begin{itemize}
-	\item Collecter diverses données santé de vos patients,
-	\item Traiter les données,
-	\item Transmettre les résultats obtenus aux professionnels de santé (ex. : médecin traitant, infirmière à domicile),
-	\item Donner l’alerte en cas d’urgence.
-\end{itemize}
-Ce qui permet :
-\begin{itemize}
-	\item De faciliter le diagnostic en télé-consultation,
-	\item D’assurer un meilleur suivi des patients à distance (télé-surveillance),
-	\item D’aider les patients à suivre leur traitement correctement,
-	\item De faire de la prévention dans divers domaines.
-\end{itemize}
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=6cm, width=15cm]{img-Chapiter-2/IOT.jpg}
-	\caption{ IOT dans la santé}
-\end{figure}
-\newpage
-\subsection{Solution Proposée}
-Notre objectif dans ce mémoire c’est de minimiser les problèmes déjà ditent dans la partie précédente, ont concevant un prototype qui doit réduire cela et qui permit de laisser le malade ce reposer et l’infirmière de se tourner vers les autres malades. 
-
-Notre prototype sera comme une lampe au-dessus du patient qui va détecter la hausse de la température en se basant sur le traitement d’images ou vidéo. En détectant le visage de notre patient et faire des calculs surs son teint on peut déterminer si notre malade à une fièvre ou pas, donc on va agir vite pour signaler la hausse de la température à l’infirmière pour qu’elle vient vérifier l’état du patient.
-
-Dans notre prototype, le traitement d'images infrarouge thermique dédié à détecter la température chez les enfants cancéreux.
+Notre solution consiste en un système intégré (Matériel et logiciel) qui se base sur le sujet IOT et l'apprentissage automatique pour déterminer la température corporelle de l'enfant.
+\begin{enumerate}
+	\item \textbf{La partie matériel} consiste en un prototype de caméra infrarouge qui va permettre de prendre l'image thermique du visage de l'enfant, l'envoyer au système de surveillance et  d'alerte.
+	\item \textbf{Un système de surveillance et d'alerte} qui détermine la température corporelle à partir de l'image et déclenche une alerte si la température corporelle est élevée.\\
+	Le système de surveillance et d'alerte implémente un modèle qui est déjà établit dans une 1\textsuperscript{èr} phase de ce projet.
+\end{enumerate}
 
 \section{Conclusion}
-La e-santé et les objets connectés qui en sous-tendent l'usage ne vont pas impacter  la médecine, mais bien le parcours de soin dans sa globalité.
+La e-santé et les objets connectés ne vont pas impacter  la médecine, mais bien le parcours de soin dans sa globalité.
 
-La e-santé et les objets connectés  provoquent une grande révolution, Ils génèrent pour l’individu et la collectivité une masse de données inédite, qui crée de nouveaux savoirs.
+Dans ce chapitre nous avons présenté le contexte et la problématique à laquelle on s'attaque aussi que la solution proposée.
+
+\newpage
+\rhead{}
+\addcontentsline{toc}{section}{Chapiter 3 : Conception de la solution proposée}  
+\section*{\Huge{Chapiter 3}}
+\subsection*{\huge{Conception de la solution proposée}}
+\newpage
+\rhead{\textsc{Chapiter 3 : Conception de la solution proposée}}
+\section{Introduction}
+L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour déminuer sa souffrance.
+
+Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant, tel que la caméra thermique.
+\section{Objectif}
+Notre contribution est la réalisation du modèle basée sur l’apprentissage automatique qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
+
+Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), la période souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
+
+Si la température est élevée (cas de fièvre) une alerte se lancé par le système afin d’avertir l'infirmière ou le médecin, la présence d'un des deux n'est pas indisponsable tout le temps cela lui permet de s’occuper des autres malades qui ont vraiment besoin d’elle.
+\section{Architecture générale de la solution}
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=8cm,width=15cm]{img-Chapiter-3/processus.png}
+	\caption{Architecture de la solution}
+	\label{fig:archgene}
+\end{figure}
+\newpage
+\subsection{Présentation}
+Notre processus c’est une caméra thermique au-dessus d’un lit d’un malade relie avec un Raspberry Pi, cette caméra va photographier l’enfant d'un temps précis à l'autre, cette image va être transmise au modèle, ce dernier va la traiter, au cas de fièvre une alerte est lancée à l’infirmière au même temps cette image va être sauvegardée avec la décision et les coordonnés de l’enfant.
+
+\subsection{Objectifs de processus générale}
+\begin{itemize}
+	\item Être plus civilisé qu’avant.
+	\item Aider l’être humain par des appareils qui font les même fonctions que l’homme.
+	\item L’enfant sera surveillé et sous contrôle tout le temps.
+	\item Quant à l'infirmière le fait de surveiller le malade de temps en temps c'est très fatiguant en utilisant cette processus on gagne du temps, on fournit moins d'efforts qu'avant et en augmentant la précision.	
+	\item Quand l'infirmière vient voir l'enfant d'un temps à l'autre elle le dérange mais avec cette processus il est plus à l'aise, même si l'enfant est endormi cet appareil peut prendre des photos et peut lancer des alertes sans le moindre dérangement.
+\end{itemize}
+
+\subsection{Présentation et description de chaque couche}
+\begin{enumerate}
+		\item La 1\textsuperscript{èr} couche: Notre dispositif sera posé sur la tête de lit de malade. 
+		\item La 2\textsuperscript{ème} couche: Système de surveillance et d'alerte qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
+		\item La 3\textsuperscript{ème} couche: Programme chez l'infirmière qui détecte les alerte lancé par notre système de surveillance.
+\end{enumerate}
+
+\subsection{Déroulement de l'architecture générale}
+La caméra thermique se trouve au tête de lit d'un enfant cancéreux, cette caméra est relie avec un Système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
+
+L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
+   \newpage
+\section{Architecture Détaillée}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-3/architecturedetaillee.png}
+	\caption{Architecture détaillée de la solution}
+\end{figure}
+
+\subsection{Principe de fonctionnement}
+\begin{itemize}
+	\item \textbf{Étape 1}\\
+	Une caméra thermique qui prend l'image de visage de l'enfant, l'enfant doit être juste sous la caméra dont la distance est de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
+	\item \textbf{Étape 2}\\
+	Quand la caméra thermique prend le visage de l'enfant, l'image sera envoyée  au modèle qui va traiter l'image de l’enfant et estime la température.\\
+	L'image, la décision, et les coordonnées de l'enfant serons sauvegardées dans une base de données.
+	\item \textbf{Étape 3}\\
+	En cas la température est élevée notre système lance une alerte.\\
+	Cette alerte sera détectée par le programme de l'infirmière. 
+\end{itemize}
+
+\subsection{Matériel}
+\begin{itemize}
+	\item \textbf{Caméra thermique} \cite{45} qui a comme fonction la prise des images thermiques.
+	%https://www.adafruit.com/product/3538
+	\begin{enumerate}
+	\item \textbf{Description}\\
+	\begin{itemize}
+	\item C'est comme des caméras thermiques sophistiquées, mais suffisamment compactes et simples pour une intégration facile.
+	\item Cette caméra mesurera des températures allant de 0 C\textdegree{} à 80 C\textdegree{} avec une précision de + - 2,5 C\textdegree{}. 
+	\item Il peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, il est idéal pour créer votre propre détecteur humain ou mini caméra thermique.
+	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
+	\end{itemize}
+
+	\item \textbf{Détails techniques}\\
+	Dimensions du produit: 25.8mm x 25.5mm x 6.0mm / 1.0 "x 1.0" x 0.2 "
+	
+	Poids du produit: 2.9g / 0.1oz
+	\item \textbf{Caractéristiques}\\
+	La caractéristique qualitative principale d’une caméra infrarouge thermique peut se résumer par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
+	\item \textbf{Prix}\\
+	Le prix de cette caméra thermique est  \$ 39.95  
+\end{enumerate}	 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=9cm,width=12cm]{img-Chapiter-3/ther.png}
+	\caption{Adafruit AMG8833 IR Thermal Camera}
+\end{figure}
+
+	\item \textbf{Raspberry Pi 2 Model B \cite{46}}
+	% https://thepihut.com/products/raspberry-pi-2-model-b?variant=18198528708
+	\begin{enumerate}
+		\item \textbf{Description}\\
+	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC) BCM2836, qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
+		
+		Le Raspberry Pi 2 Model B est à un niveau totalement nouveau par rapport à ses prédécesseurs en étant 6 fois plus rapide que le Raspberry Pi Model B +.
+	\item \textbf{Spécifications techniques}\\
+		\begin{enumerate}
+			\item Ordinateur à carte unique alimenté par processeur Broadcom BCM2836 ARMv7 à quatre cœurs fonctionnant à 900 MHz.
+			\item 1 Go de RAM.
+			\item GPIO étendu à 40 broches.
+			\item 4 x ports USB.
+			\item Sortie stéréo 4 pôles et port vidéo composite.
+			\item HDMI pleine taille.
+			\item Port de caméra CSI pour connecter la caméra Raspberry Pi.
+			\item Port d’affichage DSI pour connecter l’écran tactile Raspberry Pi.
+			\item Port Micro SD pour le chargement de votre système d'exploitation et le stockage de données.
+			\item Source d'alimentation micro USB.
+\end{enumerate}
+	\item \textbf{Prix}\\
+	Le prix de Raspberry Pi 2 Model B est \$ 43.32
+	\newpage
+	\end{enumerate}
+	\begin{figure}[h]
+		\centernig
+		\includegraphics[width=12cm]{img-Chapiter-3/raspbPi.jpg}
+		\caption{Raspberry Pi 2 Model B}
+	\end{figure}\\
+	
+	
+	Un prototype d'une caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi est présenté par la figure \ref{fig:raspther}.
+	\newpage
+	\begin{figure}[h]
+				\centering
+		\includegraphics[height=10cm,width=12cm]{img-Chapiter-3/therPi.png}
+		\caption{caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi }
+		\label{fig:raspther}
+	\end{figure}
+\end{itemize}
+
+\section{Logiciel}
+Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  sur quelques étapes:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
+	\caption{Architecture du système}
+\end{figure}
+\begin{enumerate}
+	\item Faire entrer l’image thermique de l’enfant.
+	\item \' Elimination des bruits trouvés dans cette image, on utilise des algorithmes tels que Papper and salt, Gaussian Blur on utilise kernel $3 \times 3$, 
+	\item Détection de visage de l’enfant ça sert à classifier l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
+	\item Détection s’il s’agit  de face ou de côté ça sert à classifier l’image.
+	\item Calcule de la température pour visage et coté. 
+	\item si la température est élevée:
+	\begin{enumerate}
+		\item une alerte est lancée à l’infirmière,
+		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
+		\item l’opération se répète à partir de  l’étape 4.
+	\end{enumerate}
+	\item si la température est normale:
+	\begin{enumerate}
+		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données.
+		\item l’opération se fait à nouveau à partir de l'étape 4.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection*{Gaussian Blur}
+\subsubsection*{Définition}
+Gaussian Blur (également appelé lissage gaussien) résulte du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=9cm,width=15cm]{img-Chapiter-3/Blure.png}
+	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
+\end{figure}
+\newpage
+\subsection*{Haar Cascade}
+\subsubsection*{Définition}
+Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
+
+La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
+
+On peut également utiliser des cascades Haar prédéfinies, disponibles sur [16]
+%https://github.com/opencv/opencv/tree/master/data/haarcascades
+
+Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de haar cascade.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{img-Chapiter-3/enfant.png}
+	\caption{Détection de visage avec Haar cascade}
+\end{figure}
+\section{Conclusion}
+Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière plus rapide et plus sure. 
+
+\newpage
+\rhead{}
+\addcontentsline{toc}{section}{Chapiter 4 : Réalisation de la solution proposée}  
+\section*{\Huge{Chapiter 4}}
+\subsection*{\huge{Réalisation de la solution proposée}}
+\newpage
+\rhead{\textsc{Chapiter 4 : Réalisation de la solution proposée}}
+\section{Introduction}
+Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur ces techniques.
+
+\section{Outils et matériel}
+\subsection{Outils}
+\subsubsection*{Google Colaboratory}
+Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème ici est que vous pouvez utiliser les services informatiques pendant un maximum de 12 heures à la fois (vous pouvez le penser en termes de session). 
+
+En règle générale, lorsque vous entraînez vos modèles dans le laboratoire, vous êtes connecté à une machine virtuelle basée sur un processeur graphique, où vous disposez de 12 heures maximum à la fois, après quoi vous perdez l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr) vous est attribuée et le cycle se répète.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=7cm]{img-Chapiter-4/colab.png}
+	\caption{Logo de Google Colab}
+\end{figure}
+
+Le choix de “Google Colab” était une nécessiter, d’abord l’access à une vitesse de traitement rapide comme notre ordinateur n’est pas équipé d’un processeur GPU donc le choix était vite abouti à que nous travaillerons avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+
+\subsubsection*{Keras}
+Est une API de haut niveau permettant de créer et de former des modèles d'apprentissage en profondeur. Il est utilisé pour le prototypage rapide, la recherche avancée et la production, avec trois avantages principaux:
+\begin{enumerate}
+	\item \textbf{Convivialité:} Keras dispose d'une interface simple, cohérente et optimisée pour les cas d'utilisation courants. Il fournit des commentaires clairs et exploitables pour les erreurs des utilisateurs.
+	\item \textbf{Modulaire et composable:} les modèles Keras sont fabriqués en reliant des blocs de construction configurables ensemble, avec peu de restrictions.
+	\item \textbf{Facile à étendre:} écrivez des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. Créez de nouvelles couches, des fonctions de perte et développez des modèles à la pointe de la technologie.
+\end{enumerate}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/keras.png}
+	\caption{Logo de Keras}
+\end{figure}
+
+\subsubsection*{Python}
+Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui vous permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
+	\caption{Logo python}
+\end{figure}
+
+Comme “Colab” python était une nécessiter premièrement parce-que dans “Colab” il y a que le langage Python ou les commandes “Shell”, la deuxième des chose étais les package qu’il y a dans ce langage dans notre domaine Apprentissage profond (Deep Learning) ou dans les autre domaine mathématique, web, etc. La troisième des choses était la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maitriser.
+
+\subsubsection*{Node}
+(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multiplate-forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{img-Chapiter-4/nodejs.png}
+	\caption{Logo Node.js}
+\end{figure}
+
+Il n’y avais pas une nécessiter dans notre choix mais la maitrise de l’outille et la facilite qui offre cette outille.
+\subsection{Matériels}
+\textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
+
+\textbf{Raspberry Pi:} Est un ordinateur économique de la taille d’une carte de crédit qui se branche à un écran d’ordinateur ou d’un téléviseur, et utilise un clavier et une souris standard. C’est un petit appareil capable qui permet aux gens de tous âges d’explorer l’informatique, et d’apprendre à programmer dans des langues comme Scratch et Python. Il est capable de faire tout ce que vous attendez d’un ordinateur de bureau à faire, de la navigation sur Internet et de jouer à la vidéo haute définition, à la fabrication de feuilles de calcul, traitement de texte, et les jeux.
+
+
+De plus, le “Raspberry Pi” a la capacité d’interagir avec le monde extérieur, et a été utilisé dans un large éventail de projets de fabricants numériques, des machines à musique aux stations météorologiques.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/raspberry.png}
+	\caption{Logo Raspberry Pi}
+\end{figure}
+
+Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, mais le manque de la camera infrarouge nous a conduit a improviser avec un serveur portable pour une simulation de notre figure \ref{fig:archgene}.
+
+\section{Ensemble de données (Dataset)}
+Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
+
+Dans le cas de notre étude on utilise cette Dataset [100] qui comporte des image infrarouge avec des niveaux de gris la taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. Le problème avec cette dataset c’est qu’elle n’est pas de définie, plus clairement celle-ci n’a pas des valeurs de la température d’un individu dans chaque image.
+
+La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid). Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+
+Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. D’ici on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et d’écrire dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour définir notre ensemble de données.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-4/batch.png}
+	\caption{Script Bash}
+\end{figure}
+
+La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’image” et la “température de l’image”comme le montre la figure  \ref{fig:dataset.csv}.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-4/datasets.png}
+	\caption{Capture Dataset.csv}
+	\label{fig:dataset.csv}
+\end{figure}
+
+Ces deux colonnes séparées par une virgule sont dispensable pour l’entraînement de notre modèle.
+
+\section{Réalisation}
+Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
+
+Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm]{img-Chapiter-4/loaddataset.png}
+	\caption{Pandas}
+\end{figure}
+
+Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédant à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
+
+Pour cette partie nous allons proportionner les données en groupes d’entraînement et de test en utilisant 75\% des données pour l’entraînement et les 25\% restants pour le test, et on va faire comme on a fait pour les image on va diviser notre table de température à la valeur maximum des températures pour avoir un intervalle de [0, 1] ça nous conduit à un meilleur souverainement et à une bonne convergence, comme le montre la figure \ref{fig:73} ci dessous.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/pretraitementimage.png}
+	\caption{I don't Know}
+	\label{fig:73}
+\end{figure}
+
+Maintenant on va créer notre réseau de neurones de convolution “CNN”, dans cette partie on va déclarer nos couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/createcnn.png}
+	\caption{Create CNN}
+\end{figure}
+
+Puis on a compilé le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/training.png}
+	\caption{Training}
+\end{figure}
+
+Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/train.png}
+	\caption{train}
+\end{figure}
+
+Maintenant que notre modèle est prêt on commence a faire les calcule de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (mean calculer la moyenne arithmétique le long de l'axe spécifié) et l’écart (std calculer l'écart type le long de l'axe spécifié)
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/predecting.png}
+	\caption{predecting}
+\end{figure}
+
+Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entrainement et pour les tests, comme le montre la figure.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/predicting_value.png}
+	\caption{predicting value}
+\end{figure}
+
+Et pour conclure on affiche les résultats dans des courbes graphique on utilisant la bibliothèque “Matplotlib”. Les modèle afficher sont précision du modèle et les pertes du modèle .
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/Figure_1.png}
+	\caption{Accuracy}
+\end{figure}
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/Figure_1-1.png}
+	\caption{loss}
+\end{figure}
 
 
 \newpage

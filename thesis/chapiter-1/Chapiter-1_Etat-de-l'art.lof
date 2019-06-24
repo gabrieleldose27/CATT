@@ -6,10 +6,34 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Architecture de mod\IeC {\`e}le lin\IeC {\'e}aire(r\IeC {\'e}gression) CNN}}{11}{figure.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{12}{figure.6}
 \contentsline {figure}{\numberline {7}{\ignorespaces Pr\IeC {\'e}sentant les \IeC {\'e}tapes d\IeC {\textquoteright }un traitement d\IeC {\textquoteright }une image}}{14}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Le cancer chez l\IeC {\textquoteright }enfant}}{25}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{27}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{28}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{29}{figure.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{30}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{30}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces IOT dans la sant\IeC {\'e}}}{32}{figure.14}
+\contentsline {figure}{\numberline {8}{\ignorespaces IOT dans la sant\IeC {\'e}}}{23}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Le cancer chez l\IeC {\textquoteright }enfant}}{27}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{29}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{30}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{31}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{32}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{32}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Architecture de la solution}}{35}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Architecture d\IeC {\'e}taill\IeC {\'e}e de la solution}}{37}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Adafruit AMG8833 IR Thermal Camera}}{38}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Raspberry Pi 2 Model B}}{40}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces cam\IeC {\'e}ra thermique \textit {Adafruit AMG8833 IR} relie avec un Raspberry Pi }}{41}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Architecture du syst\IeC {\`e}me}}{42}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces \IeC {\'E}limination des bruits d'une image avec l'algorithme Gaussian Blur}}{43}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces D\IeC {\'e}tection de visage avec Haar cascade}}{44}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Logo de Google Colab}}{46}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Logo de Keras}}{47}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Logo python}}{48}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Logo Node.js}}{48}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Logo Raspberry Pi}}{49}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Script Bash}}{50}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Capture Dataset.csv}}{51}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Pandas}}{52}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces I don't Know}}{52}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Create CNN}}{53}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Training}}{53}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces train}}{53}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces predecting}}{54}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces predicting value}}{54}{figure.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Accuracy}}{55}{figure.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces loss}}{56}{figure.38}
