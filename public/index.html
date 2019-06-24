@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>THC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container-fluid text-center">
+    <div class="col-sm-12">
+      <div class="card text-center">
+        <div class="card-header">
+          THC
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firs and Last name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Number of bed</th>
+                <th scope="col">Last tempture</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Yazid Khetat</td>
+                <td>15</td>
+                <td>1</td>
+                <td>37.5</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Oussama Ayadi</td>
+                <td>15</td>
+                <td>2</td>
+                <td>37.6</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Amara Nezli</td>
+                <td>10</td>
+                <td>2</td>
+                <td>38</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer text-muted">
+          <form action="/upload" enctype="multipart/form-data" method="POST">
+            <div class="row">
+              <div class="col">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Number of bed
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                    <a class="dropdown-item" href="#">3</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="custom-file">
+                  <input type="file" type="file" id="photo" name="photo" class="custom-file-input bg-primary" id="validatedCustomFile" required>
+                  <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                <div class="invalid-feedback">Example invalid custom file feedback</div>
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--
+      <div class="col-sm-12">
+        <div class="form">
+          <h1>Upload an image</h1>
+          <form action="/upload" enctype="multipart/form-data" method="POST">
+                <div class="inner-wrap">
+                  <label><input type="file" id="photo" name="photo" /></label>
+                  <div class="button-section">
+                    <input type="submit" name="Upload" value="Upload Photo"/>
+                  </div>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    -->
+  </div>
+</body>
+</html>

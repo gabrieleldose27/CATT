@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 240, 320, 3
+IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 64, 64, 3
 INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
 
 
@@ -82,13 +82,13 @@ def batch_generator(data_dir, image_paths, temptures, batch_size, is_training):
     while True:
         i = 0
         for index in np.random.permutation(image_paths.shape[0]):
-            center, left, right = image_paths[index]
+            path = image_paths[index]
             tempture = temptures[index]
             # argumentation
             if is_training and np.random.rand() < 0.6:
-                image, tempture = AugData(data_dir, center, tempture)
+                image, tempture = AugData(data_dir, path, tempture)
             else:
-                image = load_image(data_dir, center)
+                image = load_image(data_dir, path)
             images[i] = preprocess(image)
             temptures[i] = tempture
             i += 1

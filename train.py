@@ -77,21 +77,21 @@ class Model():
 
     def train(self, checkpoint):
         self.model.fit_generator(batch_generator(dataset_dir + data,
-                                            X_train,
-                                            y_train,
-                                            batch_size,
-                                            True),
-                            samples_per_epoch,
-                            nb_epoch,
-                            max_queue_size=1,
-                            validation_data=batch_generator(dataset_dir + data,
-                                                            X_valid,
-                                                            y_valid,
-                                                            batch_size,
-                                                            False),
-                            validation_steps=len(X_valid),
-                            callbacks=[checkpoint],
-                            verbose=1)
+            X_train,
+            y_train,
+            batch_size,
+            True),
+            samples_per_epoch,
+            nb_epoch,
+            max_queue_size=1,
+            validation_data=batch_generator(dataset_dir + data,
+                X_valid,
+                y_valid,
+                batch_size,
+                False),
+            validation_steps=len(X_valid),
+            callbacks=[checkpoint],
+            verbose=1)
         return  model
 
     def save(self):
