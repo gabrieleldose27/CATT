@@ -25,7 +25,8 @@
 
 \newcommand{\hsp}{\hspace{10pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
+\newcounter{mycounter}[chapter]
+\setcounter{mycounter}{0}
 
 \begin{document}
 \begin{titlepage}
@@ -366,7 +367,6 @@ Mais avec la sophistication croissante et la puissance de l'informatique moderne
 \rhead{\textsc{Chapite 2 : Context et problématique du projet}}
 \addcontentsline{toc}{section}{Contexte et problématique du projet}  
 \section*{Contexte et problématique du projet}
-
 \section{Introduction}
 On se positionne dans ce projet à la frontière de la santé numérique et la diagnostic médicale aussi que l'aide à la prise de décision, dans cette section nous allons faire le tour des concepts lies à notre sujet et détailler la problématique à laquelle on s'attaque, à savoir la santé connectée, la température corporelle et le cancer.  
 \section{E-santé}
@@ -692,15 +692,15 @@ Dans ce chapitre nous avons présenté le contexte et la problématique à laque
 \newpage
 \rhead{\textsc{Chapiter 3 : Conception de la solution proposée}}
 \section{Introduction}
-L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour déminuer sa souffrance.
+L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour diminuer sa souffrance.
 
 Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant, tel que la caméra thermique.
 \section{Objectif}
-Notre contribution est la réalisation du modèle basée sur l’apprentissage automatique qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
+Notre contribution est la réalisation d'un modèle basée sur l’apprentissage automatique qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
 
-Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), la période souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
+Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), elle est souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
 
-Si la température est élevée (cas de fièvre) une alerte se lancé par le système afin d’avertir l'infirmière ou le médecin, la présence d'un des deux n'est pas indisponsable tout le temps cela lui permet de s’occuper des autres malades qui ont vraiment besoin d’elle.
+Si la température est élevée (cas de fièvre) une alerte est lancée par le système afin d’avertir l'infirmière ou le médecin, la présence de l'un des deux n'est pas indispensable tout le temps cela lui permet de s’occuper des autres malades par exemple.
 \section{Architecture générale de la solution}
 \begin{figure}[h]
 	\centering
@@ -709,30 +709,27 @@ Si la température est élevée (cas de fièvre) une alerte se lancé par le sys
 	\label{fig:archgene}
 \end{figure}
 \newpage
-\subsection{Présentation}
-Notre processus c’est une caméra thermique au-dessus d’un lit d’un malade relie avec un Raspberry Pi, cette caméra va photographier l’enfant d'un temps précis à l'autre, cette image va être transmise au modèle, ce dernier va la traiter, au cas de fièvre une alerte est lancée à l’infirmière au même temps cette image va être sauvegardée avec la décision et les coordonnés de l’enfant.
-
-\subsection{Objectifs de processus générale}
-\begin{itemize}
-	\item Être plus civilisé qu’avant.
-	\item Aider l’être humain par des appareils qui font les même fonctions que l’homme.
-	\item L’enfant sera surveillé et sous contrôle tout le temps.
-	\item Quant à l'infirmière le fait de surveiller le malade de temps en temps c'est très fatiguant en utilisant cette processus on gagne du temps, on fournit moins d'efforts qu'avant et en augmentant la précision.	
-	\item Quand l'infirmière vient voir l'enfant d'un temps à l'autre elle le dérange mais avec cette processus il est plus à l'aise, même si l'enfant est endormi cet appareil peut prendre des photos et peut lancer des alertes sans le moindre dérangement.
-\end{itemize}
-
-\subsection{Présentation et description de chaque couche}
-\begin{enumerate}
-		\item La 1\textsuperscript{èr} couche: Notre dispositif sera posé sur la tête de lit de malade. 
-		\item La 2\textsuperscript{ème} couche: Système de surveillance et d'alerte qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
-		\item La 3\textsuperscript{ème} couche: Programme chez l'infirmière qui détecte les alerte lancé par notre système de surveillance.
-\end{enumerate}
-
-\subsection{Déroulement de l'architecture générale}
-La caméra thermique se trouve au tête de lit d'un enfant cancéreux, cette caméra est relie avec un Système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
+\subsection{Présentation de la solution}
+Une caméra est installée au dessus du lit de l'enfant malade, cette caméra est relie avec un Système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
 
 L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
-   \newpage
+
+\subsection{Objectifs du processus général}
+\begin{itemize}
+	\item L’enfant sera surveillé et sous contrôle tout le temps.
+	\item Quant à l'infirmière, le fait de surveiller le malade tout le temps est très contraignant. Avec notre système on gagne du temps, d'efforts et précision.	
+	\item Notre solution permet une amélioration des soins et du confort de l'enfant qui ne sera pas dérangé si la température est normale.
+		\item Notre solution permet d'introduire les nouvelles technologies ainsi que l'intelligence dans les composants pour améliorer le travail des professionnel de santé.
+	\item Notre solution contribue dans l'amélioration du système de santé en Algérie.
+\end{itemize}
+
+\subsection{Description de chaque couche}
+\begin{enumerate}
+		\item La 1\textsuperscript{èr} couche: Le dispositif est posé sur la tête de lit du malade. 
+		\item La 2\textsuperscript{ème} couche: Système de surveillance et d'alerte qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
+		\item La 3\textsuperscript{ème} couche: L'application qui détecte les alerte lancées par notre système de surveillance, elle sera consultée par le professionnel de santé.
+\end{enumerate}
+
 \section{Architecture Détaillée}
 
 \begin{figure}[h]
@@ -744,34 +741,33 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 \subsection{Principe de fonctionnement}
 \begin{itemize}
 	\item \textbf{Étape 1}\\
-	Une caméra thermique qui prend l'image de visage de l'enfant, l'enfant doit être juste sous la caméra dont la distance est de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
+	Une caméra thermique qui prend l'image du visage de l'enfant, l'enfant doit être juste sous la caméra à une distance de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
 	\item \textbf{Étape 2}\\
-	Quand la caméra thermique prend le visage de l'enfant, l'image sera envoyée  au modèle qui va traiter l'image de l’enfant et estime la température.\\
-	L'image, la décision, et les coordonnées de l'enfant serons sauvegardées dans une base de données.
+	L'image sera envoyée  au système de surveillance et d'alerte, qui a l'aide du modèle déjà établit va traiter l'image de l’enfant et estime la température.\\
+	L'image, la décision et les coordonnées de l'enfant serons sauvegardées dans une base de données.
 	\item \textbf{Étape 3}\\
-	En cas la température est élevée notre système lance une alerte.\\
-	Cette alerte sera détectée par le programme de l'infirmière. 
+	En cas de température élevée le système lance une alerte.
 \end{itemize}
 
-\subsection{Matériel}
+\subsection{Partie matériel}
 \begin{itemize}
-	\item \textbf{Caméra thermique} \cite{45} qui a comme fonction la prise des images thermiques.
+	\item \textbf{Caméra thermique AMG8833} \cite{45} qui a comme fonction la prise des images thermiques.
 	%https://www.adafruit.com/product/3538
 	\begin{enumerate}
 	\item \textbf{Description}\\
 	\begin{itemize}
+	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
 	\item C'est comme des caméras thermiques sophistiquées, mais suffisamment compactes et simples pour une intégration facile.
 	\item Cette caméra mesurera des températures allant de 0 C\textdegree{} à 80 C\textdegree{} avec une précision de + - 2,5 C\textdegree{}. 
-	\item Il peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, il est idéal pour créer votre propre détecteur humain ou mini caméra thermique.
-	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
+	\item Elle peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, elle est idéale pour créer des systèmes de détecteur humain.
+
 	\end{itemize}
 
 	\item \textbf{Détails techniques}\\
 	Dimensions du produit: 25.8mm x 25.5mm x 6.0mm / 1.0 "x 1.0" x 0.2 "
 	
-	Poids du produit: 2.9g / 0.1oz
-	\item \textbf{Caractéristiques}\\
-	La caractéristique qualitative principale d’une caméra infrarouge thermique peut se résumer par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
+	Poids du produit: 2.9g / 0.1oz\\
+	La AMG8833 est caractérisée qualitativement par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
 	\item \textbf{Prix}\\
 	Le prix de cette caméra thermique est  \$ 39.95  
 \end{enumerate}	 
@@ -786,7 +782,7 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	% https://thepihut.com/products/raspberry-pi-2-model-b?variant=18198528708
 	\begin{enumerate}
 		\item \textbf{Description}\\
-	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC) BCM2836, qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
+	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC \footnote{Broadcom BCM2836}) BCM2836, qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
 		
 		Le Raspberry Pi 2 Model B est à un niveau totalement nouveau par rapport à ses prédécesseurs en étant 6 fois plus rapide que le Raspberry Pi Model B +.
 	\item \textbf{Spécifications techniques}\\
@@ -823,36 +819,40 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\end{figure}
 \end{itemize}
 
-\section{Logiciel}
-Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  sur quelques étapes:
+\section{Partie logiciel}
+Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de détermine la température sur la base de l'image thermique de l'enfant.
+
+La figure \ref{fig:achdelasolu} présente cette architecture \textit{version 1} que l'on va implémenté en une 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
+
+Une 2\textsuperscript{ème} version sera présentée en un \textsuperscript{ème} temps basée sur l'apprentissage profond.
+
+Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte \textit{version 1}  en quelques étapes:
 \newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
-	\caption{Architecture du système}
+	\caption{Architecture de système logiciel}
+	\label{fig:achdelasolu}
 \end{figure}
 \begin{enumerate}
-	\item Faire entrer l’image thermique de l’enfant.
-	\item \' Elimination des bruits trouvés dans cette image, on utilise des algorithmes tels que Papper and salt, Gaussian Blur on utilise kernel $3 \times 3$, 
-	\item Détection de visage de l’enfant ça sert à classifier l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
-	\item Détection s’il s’agit  de face ou de côté ça sert à classifier l’image.
-	\item Calcule de la température pour visage et coté. 
+	\item Collecte de l’image thermique de l’enfant.
+	\item \' Elimination des bruits trouvés dans cette image.
+	\item Détection du visage de l’enfant c'est une classification de l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
+	\item Détection s’il s’agit  de face ou de profile c'est une classification de l’image.
+	\item Calcule de la température pour visage et profile. 
+	\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
+	\item l’opération se répète à partir de  l’étape 2.
 	\item si la température est élevée:
 	\begin{enumerate}
 		\item une alerte est lancée à l’infirmière,
-		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
-		\item l’opération se répète à partir de  l’étape 4.
-	\end{enumerate}
-	\item si la température est normale:
-	\begin{enumerate}
-		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données.
-		\item l’opération se fait à nouveau à partir de l'étape 4.
 	\end{enumerate}
 \end{enumerate}
 
-\subsection*{Gaussian Blur}
-\subsubsection*{Définition}
-Gaussian Blur (également appelé lissage gaussien) résulte du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+\subsection{Algorithme d'élimination des bruits}
+\subsubsection*{Gaussian Blur}
+Gaussian Blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
+
+Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=9cm,width=15cm]{img-Chapiter-3/Blure.png}
@@ -865,10 +865,10 @@ Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'ob
 
 La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
 
-On peut également utiliser des cascades Haar prédéfinies, disponibles sur [16]
+On peut également utiliser des cascades Haar prédéfinies, disponibles sur le gitHub [16]
 %https://github.com/opencv/opencv/tree/master/data/haarcascades
 
-Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de haar cascade.
+Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de Haar cascade.
 
 \begin{figure}[h]
 	\centering
@@ -876,7 +876,9 @@ Voici une capture présente comment détecter le visage d'un enfant à partir d'
 	\caption{Détection de visage avec Haar cascade}
 \end{figure}
 \section{Conclusion}
-Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière plus rapide et plus sure. 
+Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière rapide et sure. 
+
+Il faut noter que nous n'avons pas réalisé le prototype de la partie matérielle, car nous avons jugé \textit{bon} de nous \textbf{consecier} à l'élaboration du modèle et l'implémentation des différentes applications aussi la réalisation de ce type de prototype n'est pas chose difficile, elle fera l'objet d'un travail future.
 
 \newpage
 \rhead{}
