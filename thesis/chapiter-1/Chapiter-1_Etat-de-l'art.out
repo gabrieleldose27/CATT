@@ -72,10 +72,13 @@
 \BOOKMARK [1][-]{section.17}{Chapiter 4 : R\351alisation de la solution propos\351e}{}% 72
 \BOOKMARK [1][-]{section.18}{Impl\351mentation de la version 1 de la solution}{}% 73
 \BOOKMARK [2][-]{subsection.18.1}{Algorithmes de classification d'image}{section.18}% 74
-\BOOKMARK [1][-]{section.19}{Introduction}{}% 75
-\BOOKMARK [1][-]{section.20}{Outils et mat\351riels}{}% 76
-\BOOKMARK [2][-]{subsection.20.1}{Outils}{section.20}% 77
-\BOOKMARK [2][-]{subsection.20.2}{Mat\351riels}{section.20}% 78
-\BOOKMARK [1][-]{section.21}{Ensemble de donn\351es \(Dataset\)}{}% 79
-\BOOKMARK [2][-]{subsection.21.1}{\311tape de l'augmentation}{section.21}% 80
-\BOOKMARK [1][-]{section.22}{Entra\356nement ou cr\351ation du mod\350le ? Ay ta3ti w halha b3id}{}% 81
+\BOOKMARK [3][-]{subsubsection.18.1.1}{Partie logiciel}{subsection.18.1}% 75
+\BOOKMARK [3][-]{subsubsection.18.1.2}{Impl\351mentation}{subsection.18.1}% 76
+\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 77
+\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 78
+\BOOKMARK [2][-]{subsection.19.2}{Outils et mat\351riels}{section.19}% 79
+\BOOKMARK [3][-]{subsubsection.19.2.1}{Outils}{subsection.19.2}% 80
+\BOOKMARK [3][-]{subsubsection.19.2.2}{Mat\351riels}{subsection.19.2}% 81
+\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 82
+\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 83
+\BOOKMARK [2][-]{subsection.19.4}{Entra\356nement ou cr\351ation du mod\350le ? Ay ta3ti w halha b3id}{section.19}% 84

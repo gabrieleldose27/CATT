@@ -38,6 +38,7 @@
 		\end{figure}
 		
 		 \HRule \\[0.2cm]
+		 
     { \huge \bfseries Analyse des images thermiques pour la détermination de la température corporelle des patients du cancer à l'aide de méthodes d'apprentissage profond\\[0.2cm] }
     \HRule \\[4cm]
     
@@ -124,7 +125,7 @@ Nous présentons maintenant brièvement trois algorithmes classiques d'apprentis
 \begin{enumerate}
 	\item Les k plus proches voisins (k - NN): déterminer pour chaque nouvel individu que l'on veut classer, la liste des k plus proches voisins parmi les individus déjà classés.
 	\item La classification bayésienne: Le classifieur bayésien va choisir la classe Ck qui a la plus grande probabilité, on parle de règle MAP (maximum a posteriori).
-	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.
+	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.cv2.fastNlMeansDenoisingColored()
 \end{enumerate}
 
 \subsubsection{Apprentissage non-supervisé}
@@ -560,7 +561,7 @@ Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de t
 La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
 
 Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
-\newpage
+
 \begin{figure}[h]
 \centering
 \includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
@@ -580,8 +581,6 @@ Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 	\item les tumeurs germinales (3\%) .
 	\item les tumeurs oculaires (3\%) .
 \end{itemize}
-
-\newpage
 
 \subsection{Symptômes}
 Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
@@ -639,13 +638,14 @@ Est l’un des outils essentiels de la trousse de premiers soins. Ils existent d
 	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
 	
 Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale \cite{36}.
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
 	\caption{Mesurer la température avec thermomètre électronique}
 \end{figure}
 
-	\item \textcolor{red}{\textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance} \cite{37}.
+	\item \textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance \cite{37}.
 	\newpage
 	\begin{figure}[h]
 		\centering
@@ -801,7 +801,7 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 \end{enumerate}
 	\item \textbf{Prix}\\
 	Le prix de Raspberry Pi 2 Model B est \$ 43.32
-	\newpage
+	
 	\end{enumerate}
 	\begin{figure}[h]
 		\centernig
@@ -832,7 +832,7 @@ Nous présentons dans ce qui suit l'architecture du système de surveillance et 
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
-	\caption{Architecture de système logiciel}
+	\caption{Architecture de système logiciel version 1}
 	\label{fig:achdelasolu}
 \end{figure}
 \begin{enumerate}
@@ -850,32 +850,25 @@ Nous présentons dans ce qui suit l'architecture du système de surveillance et 
 \end{enumerate}
 
 \subsection{Algorithme d'élimination des bruits}
-\subsubsection*{Gaussian Blur}
+Dans une image numérique on appelle bruit numérique toute information parasite ou dégradation que subit l'image de l'instant de son acquisition jusqu'à son enregistrement. 
+
+Le bruit numérique est une notion générale à tout type d'image numérique, et ce quel que soit le type du capteur à l'origine de son acquisition (appareil photo numérique, scanner, caméra thermique...etc). 
+
+Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'images durant l'acquisition, d'autres apparaissent durant la numérisation de l'information.\\
+
+\textbf{Gaussian Blur}
+
 Gaussian Blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
 
 Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=9cm,width=15cm]{img-Chapiter-3/Blure.png}
+	\includegraphics[width=13cm]{img-Chapiter-3/Blure.png}
 	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
 \end{figure}
+
 \newpage
-\subsection*{Haar Cascade}
-\subsubsection*{Définition}
-Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
-
-La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
-
-On peut également utiliser des cascades Haar prédéfinies, disponibles sur le gitHub [16]
-%https://github.com/opencv/opencv/tree/master/data/haarcascades
-
-Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de Haar cascade.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=1]{img-Chapiter-3/enfant.png}
-	\caption{Détection de visage avec Haar cascade}
-\end{figure}
 \section{Conclusion}
 Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière rapide et sure. 
 
@@ -893,14 +886,82 @@ Pour l'implémentation de la solution proposée en version 1 nous allons étudie
 
 \subsection{Algorithmes de classification d'image}
 Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination des bruits et la détection de visage.
+\subsubsection{Partie logiciel}
+\subsubsection*{Python}
+Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
 
-\subsubsection*{Détection de visage}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
+	\caption{Logo python}
+\end{figure}
 
-\section{Introduction}
+\subsubsection*{OpenCv}
+OpenCV (pour Open Computer Vision) est une bibliothèque graphique libre, initialement développée par Intel, spécialisée dans le traitement d'images en temps réel. La société de robotique Willow Garage et la société ItSeez se sont succédé au support de cette bibliothèque. Depuis 2016 et le rachat de ItSeez par Intel, le support est de nouveau assuré par Intel. 
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=4cm]{img-Chapiter-4/open.png}
+	\caption{Logo OpenCv}
+\end{figure}
+
+\subsubsection{Implémentation}
+
+\subsubsection*{Détection de visage: Haar Cascade}
+Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
+
+La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
+
+On peut également utiliser des cascades Haar prédéfinies, disponibles sur le gitHub [16]
+%https://github.com/opencv/opencv/tree/master/data/haarcascades
+
+Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de Haar cascade.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-3/enfant.png}
+	\caption{Détection de visage avec Haar cascade}
+\end{figure}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/detection.png}
+	\caption{Capture montre comment  détecter le visage}
+\end{figure}
+
+\subsubsection*{\' Elimination des bruits}
+\textbf{Denoising d'image dans OpenCV}\\
+
+OpenCV fournit quatre variantes de cette technique :
+\begin{enumerate}
+	\item \textit{cv2.fastNlMeansDenoising()} fonctionne avec une seule image en niveaux de gris.
+	\item \textit{cv2.fastNlMeansDenoisingColored()} fonctionne avec une image couleur.
+	\item \textit{cv2.fastNlMeansDenoisingMulti()} fonctionne avec des séquences d'images capturées en peu de temps (images en niveaux de gris).
+	\item \textit{cv2.fastNlMeansDenoisingColoredMulti()} comme ci-dessus, mais pour les images en couleur.
+\end{enumerate}
+
+Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()} ,comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Voir la figure ci-dessous:
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
+	\caption{\' Elimination des bruits}
+\end{figure}
+
+Voici une capture présente on a éliminer les bruits.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
+	\caption{\' Elimination des bruits d'une image avec OpenCv}
+\end{figure}
+s
+\newpage
+\section{Implémentation de la version 2 de la solution}
+\subsection{Introduction}
 Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur les techniques.
 
-\section{Outils et matériels}
-\subsection{Outils}
+\subsection{Outils et matériels}
+\subsubsection{Outils}
 \subsubsection*{Google Colaboratory}
 Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème est que \textit{l'on pour} utiliser les services informatiques pendant un maximum de 12 heures à la fois. 
 
@@ -914,6 +975,8 @@ En règle générale, lorsque on entraîne les modèles dans le laboratoire, on 
 
 Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
 
+Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autre domaine mathématique, web, etc , très intéressants et complètes,  troisièmement la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maîtriser.
+
 \subsubsection*{Keras}
 Est une API de haut niveau permettant de créer et de former des modèles d'apprentissage en profondeur. Il est utilisé pour le prototypage rapide, la recherche avancée et la production, avec trois avantages principaux:
 \begin{enumerate}
@@ -922,22 +985,12 @@ Est une API de haut niveau permettant de créer et de former des modèles d'appr
 	\item \textbf{Facile à étendre:} on peut écrire des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. On peut créer de nouvelles couches, des fonctions de perte et développer des modèles à la pointe de la technologie.
 \end{enumerate}
 
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{img-Chapiter-4/keras.png}
 	\caption{Logo de Keras}
 \end{figure}
-
-\subsubsection*{Python}
-Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
-	\caption{Logo python}
-\end{figure}
-
-Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autre domaine mathématique, web, etc , très intéressants et complètes,  troisièmement la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maitriser.
 
 \subsubsection*{Node}
 (Ou plus officiellement Node.js) Est un environnement d'exécution open source, multi-plate forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
@@ -949,7 +1002,7 @@ Comme “Colab” python était une nécessité premièrement parce que dans “
 \end{figure}
 
 Cela a motivé notre choix, aussi la maîtrise de l’outil et la facilite qu'il offre.
-\subsection{Matériels}
+\subsubsection{Matériels}
 \textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
 
 \textbf{Raspberry Pi:} Est un ordinateur économique de la taille d’une carte de crédit qui se branche à un écran d’ordinateur ou d’un téléviseur, et utilise un clavier et une souris standard. C’est un petit appareil capable qui permet aux gens de tous âges d’explorer l’informatique, et d’apprendre à programmer dans des langues comme Scratch et Python. Il est capable de faire tout ce que vous attendez d’un ordinateur de bureau à faire, de la navigation sur Internet et de jouer à la vidéo haute définition, à la fabrication de feuilles de calcul, traitement de texte, et les jeux.
@@ -965,14 +1018,14 @@ De plus, le “Raspberry Pi” a la capacité d’interagir avec le monde extér
 
 Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, mais le manque de la camera infrarouge nous a conduit a improviser avec un serveur portable pour une simulation de notre figure \ref{fig:archgene}.
 
-\section{Ensemble de données (Dataset)}
+\subsection{Ensemble de données (Dataset)}
 Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
 
 Dans le cas de notre étude on utilise le Dataset proposé dans  [100] qui comporte des image infrarouge avec des niveaux de gris. La taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. 
 
 Le problème avec cette Dataset c’est qu’elle n’est pas annoter, c-à-d celle-ci n’est pas conçu \textit{on proposé} pour la détermination de la température corporelle .
 
-\subsection{\' Etape de l'augmentation}
+\subsubsection{\' Etape de l'augmentation}
 La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid).
 
  Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
@@ -987,7 +1040,7 @@ Après cette analyse et traitement on a presque un ensemble de données complet 
 	\caption{Script Bash}
 \end{figure}
 
-\subsection*{Titre ta3 Hadi}
+\subsubsection*{Titre ta3 Hadi}
 La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’image” et la “température de l’image”comme le montre la figure  \ref{fig:dataset.csv}.
 
 \begin{figure}[h]
@@ -999,7 +1052,7 @@ La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’imag
 
 Ces deux colonnes séparées par une virgule sont indispensable pour l’entraînement de notre modèle.
 
-\section{Entraînement ou création du modèle ? Ay ta3ti w halha b3id}
+\subsection{Entraînement ou création du modèle ? Ay ta3ti w halha b3id}
 Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
 
 Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
@@ -1009,7 +1062,7 @@ Commençant par importer notre ensemble de données et faire quelque pré-traite
 	\includegraphics[width=16cm]{img-Chapiter-4/loaddataset.png}
 	\caption{Pandas}
 \end{figure}
-\subsection*{\' Etape de la normalisation}
+\subsubsection*{\' Etape de la normalisation}
 Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédons à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
 
 Pour cette partie nous allons proportionner les données en groupes d’entraînement et de test en utilisant 75\% des données pour l’entraînement et les 25\% restants pour le test, et on va faire comme on a fait pour les image on va diviser notre table de température à la valeur maximum des températures pour avoir un intervalle de [0, 1] ça nous conduit à un meilleur souverainement et à une bonne convergence, comme le montre la figure \ref{fig:73} ci dessous.
@@ -1021,7 +1074,7 @@ Pour cette partie nous allons proportionner les données en groupes d’entraîn
 	\label{fig:73}
 \end{figure}
 
-\subsection*{Création du réseau CNN}
+\subsubsection*{Création du réseau CNN}
 Dans cette partie on va déclarer les couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
 
 \begin{figure}[h]
@@ -1038,7 +1091,7 @@ Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (
 	\caption{Training}
 \end{figure}
 
-\subsection*{Gatlak chghol Epoque w zebi}
+\subsubsection*{Gatlak chghol Epoque w zebi}
 Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
 
 \begin{figure}[h]
