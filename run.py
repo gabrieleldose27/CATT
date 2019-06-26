@@ -40,7 +40,7 @@ if __name__ == '__main__':
     args = vars(ap.parse_args())
 
     df = load_df(args["datasets"])
-    print "[ i ] There'is {} line in the DataFrame".format(df.shape[0])
+    print ("[ i ] There'is {} line in the DataFrame" format(df.shape[0]))
     images = dataset.load_images(df, resize=(args["resize"], args["resize"]))
     images = images / 255.0
     (trainAttrX, testAttrX, trainImagesX, testImagesX) = test_split(df, images)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     maxTempture = trainAttrX["tempture"].max()
     trainY = trainAttrX["tempture"].astype(float) / maxTempture
     testY = testAttrX["tempture"].astype(float) / maxTempture
-    print "[ i ] Creating the model..."
+    print ("[ i ] Creating the model...")
 
     model = model.create_cnn(64, 64, 3, regress=True)
     model.compile(
@@ -56,7 +56,7 @@ if __name__ == '__main__':
             optimizer=Adam(lr=.01),
             metrics=['accuracy'])
     
-    print "[ i ] Training model..."
+    print ("[ i ] Training model...")
 #    history = model.fit_generator(batch_generator(
 #                args["datasets"],
 #                trainImagesX,
@@ -77,16 +77,16 @@ if __name__ == '__main__':
     history = model.fit(trainImagesX, trainY, validation_data=(testImagesX, testY),
             epochs=args["epochs"], batch_size=100)
 
-    print "[ i ] Predicting tempture"
+    print ("[ i ] Predicting tempture")
     mean, std = predicting(model, testImagesX, testY)
-    print "[ * ] Mean: {:.2f}%, STD: {:.2f}%".format(mean, std)
+    print ("[ * ] Mean: {:.2f}%, STD: {:.2f}%".format(mean, std))
     
     loss, accuracy = model.evaluate(trainImagesX, trainY, verbose=1)
-    print "[ * ] Training Accuracy: {:.4f}, Loss: {:.4f}".format(accuracy, loss)
+    print ("[ * ] Training Accuracy: {:.4f}, Loss: {:.4f}".format(accuracy, loss))
     loss, accuracy = model.evaluate(testImagesX, testY, verbose=1)
-    print "[ * ] Testing Accuracy:  {:.4f}, Loss: {:.4f}".format(accuracy, loss)
+    print ("[ * ] Testing Accuracy:  {:.4f}, Loss: {:.4f}".format(accuracy, loss))
 
-    print "[ * ] Saving the model"
+    print ("[ * ] Saving the model")
     model.save_weights('thermo-'+str(args["epochs"])+'.h5')
 
     plt.plot(history.history['acc'])

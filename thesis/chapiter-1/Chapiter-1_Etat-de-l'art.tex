@@ -38,20 +38,21 @@
 		\end{figure}
 		
 		 \HRule \\[0.2cm]
-    { \huge \bfseries Détection de la température on se basant sur le teint de la peau chez les enfants cancéreux\\[0.2cm] }
+    { \huge \bfseries Analyse des images thermiques pour la détermination de la température corporelle des patients du cancer à l'aide de méthodes d'apprentissage profond\\[0.2cm] }
     \HRule \\[4cm]
     
     
         \begin{minipage}{0.4\textwidth}
       \begin{flushleft} \large
-      	Réalisé \textsc{Par :}\\
-		Nezli \textsc{Amara}\\
-        Khettat \textsc{Brahim}\\
+      	\emph{\textsc{Réalisé Par :}}\\
+		\textsc{Nezli} Amara\\
+        \textsc{Khettat} Brahim\\
       \end{flushleft}
     \end{minipage}
     \begin{minipage}{0.4\textwidth}
       \begin{flushright} \large
-        \emph{Sous la direction de : } DR. Kittouni \textsc{Ilhame}
+        \emph{\textsc{Sous la direction de :}}\\ \textsc{DR}. \textsc{Kitouni} Ilham\\
+        												\textsc{DR}. \textsc{Mennour} Rostom
       \end{flushright}
     \end{minipage}
 
@@ -730,7 +731,7 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 		\item La 3\textsuperscript{ème} couche: L'application qui détecte les alerte lancées par notre système de surveillance, elle sera consultée par le professionnel de santé.
 \end{enumerate}
 
-\section{Architecture Détaillée}
+\section{Architecture Détaillée de la solution}
 
 \begin{figure}[h]
 	\centering
@@ -743,10 +744,10 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\item \textbf{Étape 1}\\
 	Une caméra thermique qui prend l'image du visage de l'enfant, l'enfant doit être juste sous la caméra à une distance de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
 	\item \textbf{Étape 2}\\
-	L'image sera envoyée  au système de surveillance et d'alerte, qui a l'aide du modèle déjà établit va traiter l'image de l’enfant et estime la température.\\
-	L'image, la décision et les coordonnées de l'enfant serons sauvegardées dans une base de données.
+	L'image collecte est envoyée au système de surveillance et d'alerte via un système de connectivité.
 	\item \textbf{Étape 3}\\
-	En cas de température élevée le système lance une alerte.
+	L'image sera envoyée  au système de surveillance et d'alerte, qui a l'aide du modèle déjà établit va traiter l'image de l’enfant et estime la température, en cas de température élevée le système lance une alerte.\\
+	L'image, la décision et les coordonnées de l'enfant serons sauvegardées dans une base de données.
 \end{itemize}
 
 \subsection{Partie matériel}
@@ -884,18 +885,26 @@ Il faut noter que nous n'avons pas réalisé le prototype de la partie matériel
 \rhead{}
 \addcontentsline{toc}{section}{Chapiter 4 : Réalisation de la solution proposée}  
 \section*{\Huge{Chapiter 4}}
-\subsection*{\huge{Réalisation de la solution proposée}}
+\subsection*{\huge{Implémentation des solutions proposées}}
 \newpage
-\rhead{\textsc{Chapiter 4 : Réalisation de la solution proposée}}
-\section{Introduction}
-Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur ces techniques.
+\rhead{\textsc{Chapiter 4 : Implémentation des solutions proposées}}
+\section{Implémentation de la version 1 de la solution}
+Pour l'implémentation de la solution proposée en version 1 nous allons étudier quelques algorithmes et présenter ce qui a été réalisé.
 
-\section{Outils et matériel}
+\subsection{Algorithmes de classification d'image}
+Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination des bruits et la détection de visage.
+
+\subsubsection*{Détection de visage}
+
+\section{Introduction}
+Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur les techniques.
+
+\section{Outils et matériels}
 \subsection{Outils}
 \subsubsection*{Google Colaboratory}
-Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème ici est que vous pouvez utiliser les services informatiques pendant un maximum de 12 heures à la fois (vous pouvez le penser en termes de session). 
+Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème est que \textit{l'on pour} utiliser les services informatiques pendant un maximum de 12 heures à la fois. 
 
-En règle générale, lorsque vous entraînez vos modèles dans le laboratoire, vous êtes connecté à une machine virtuelle basée sur un processeur graphique, où vous disposez de 12 heures maximum à la fois, après quoi vous perdez l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr) vous est attribuée et le cycle se répète.
+En règle générale, lorsque on entraîne les modèles dans le laboratoire, on est connecté à une machine virtuelle basée sur un processeur graphique, où on dispose de 12 heures maximum à la fois, après quoi on perde l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr)  attribuée et le cycle se répète.
 
 \begin{figure}[h]
 	\centering
@@ -903,14 +912,14 @@ En règle générale, lorsque vous entraînez vos modèles dans le laboratoire, 
 	\caption{Logo de Google Colab}
 \end{figure}
 
-Le choix de “Google Colab” était une nécessiter, d’abord l’access à une vitesse de traitement rapide comme notre ordinateur n’est pas équipé d’un processeur GPU donc le choix était vite abouti à que nous travaillerons avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
 
 \subsubsection*{Keras}
 Est une API de haut niveau permettant de créer et de former des modèles d'apprentissage en profondeur. Il est utilisé pour le prototypage rapide, la recherche avancée et la production, avec trois avantages principaux:
 \begin{enumerate}
 	\item \textbf{Convivialité:} Keras dispose d'une interface simple, cohérente et optimisée pour les cas d'utilisation courants. Il fournit des commentaires clairs et exploitables pour les erreurs des utilisateurs.
 	\item \textbf{Modulaire et composable:} les modèles Keras sont fabriqués en reliant des blocs de construction configurables ensemble, avec peu de restrictions.
-	\item \textbf{Facile à étendre:} écrivez des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. Créez de nouvelles couches, des fonctions de perte et développez des modèles à la pointe de la technologie.
+	\item \textbf{Facile à étendre:} on peut écrire des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. On peut créer de nouvelles couches, des fonctions de perte et développer des modèles à la pointe de la technologie.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -920,7 +929,7 @@ Est une API de haut niveau permettant de créer et de former des modèles d'appr
 \end{figure}
 
 \subsubsection*{Python}
-Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui vous permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
+Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
 
 \begin{figure}[h]
 	\centering
@@ -928,10 +937,10 @@ Python est un langage de programmation de haut niveau largement utilisé. Il a �
 	\caption{Logo python}
 \end{figure}
 
-Comme “Colab” python était une nécessiter premièrement parce-que dans “Colab” il y a que le langage Python ou les commandes “Shell”, la deuxième des chose étais les package qu’il y a dans ce langage dans notre domaine Apprentissage profond (Deep Learning) ou dans les autre domaine mathématique, web, etc. La troisième des choses était la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maitriser.
+Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autre domaine mathématique, web, etc , très intéressants et complètes,  troisièmement la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maitriser.
 
 \subsubsection*{Node}
-(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multiplate-forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
+(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multi-plate forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
 
 \begin{figure}[h]
 	\centering
@@ -939,7 +948,7 @@ Comme “Colab” python était une nécessiter premièrement parce-que dans “
 	\caption{Logo Node.js}
 \end{figure}
 
-Il n’y avais pas une nécessiter dans notre choix mais la maitrise de l’outille et la facilite qui offre cette outille.
+Cela a motivé notre choix, aussi la maîtrise de l’outil et la facilite qu'il offre.
 \subsection{Matériels}
 \textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
 
@@ -959,11 +968,18 @@ Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer
 \section{Ensemble de données (Dataset)}
 Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
 
-Dans le cas de notre étude on utilise cette Dataset [100] qui comporte des image infrarouge avec des niveaux de gris la taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. Le problème avec cette dataset c’est qu’elle n’est pas de définie, plus clairement celle-ci n’a pas des valeurs de la température d’un individu dans chaque image.
+Dans le cas de notre étude on utilise le Dataset proposé dans  [100] qui comporte des image infrarouge avec des niveaux de gris. La taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. 
 
-La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid). Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+Le problème avec cette Dataset c’est qu’elle n’est pas annoter, c-à-d celle-ci n’est pas conçu \textit{on proposé} pour la détermination de la température corporelle .
 
-Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. D’ici on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et d’écrire dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour définir notre ensemble de données.
+\subsection{\' Etape de l'augmentation}
+La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid).
+
+ Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+
+Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. 
+
+Après cette analyse et traitement on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et \textit{les inserire} dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour formater notre ensemble de données.
 
 \begin{figure}[h]
 	\centering
@@ -971,8 +987,9 @@ Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe co
 	\caption{Script Bash}
 \end{figure}
 
+\subsection*{Titre ta3 Hadi}
 La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’image” et la “température de l’image”comme le montre la figure  \ref{fig:dataset.csv}.
-\newpage
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{img-Chapiter-4/datasets.png}
@@ -980,21 +997,20 @@ La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’imag
 	\label{fig:dataset.csv}
 \end{figure}
 
-Ces deux colonnes séparées par une virgule sont dispensable pour l’entraînement de notre modèle.
+Ces deux colonnes séparées par une virgule sont indispensable pour l’entraînement de notre modèle.
 
-\section{Réalisation}
+\section{Entraînement ou création du modèle ? Ay ta3ti w halha b3id}
 Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
 
 Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=16cm]{img-Chapiter-4/loaddataset.png}
 	\caption{Pandas}
 \end{figure}
-
-Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédant à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
+\subsection*{\' Etape de la normalisation}
+Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédons à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
 
 Pour cette partie nous allons proportionner les données en groupes d’entraînement et de test en utilisant 75\% des données pour l’entraînement et les 25\% restants pour le test, et on va faire comme on a fait pour les image on va diviser notre table de température à la valeur maximum des températures pour avoir un intervalle de [0, 1] ça nous conduit à un meilleur souverainement et à une bonne convergence, comme le montre la figure \ref{fig:73} ci dessous.
 
@@ -1005,16 +1021,16 @@ Pour cette partie nous allons proportionner les données en groupes d’entraîn
 	\label{fig:73}
 \end{figure}
 
-Maintenant on va créer notre réseau de neurones de convolution “CNN”, dans cette partie on va déclarer nos couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
+\subsection*{Création du réseau CNN}
+Dans cette partie on va déclarer les couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/createcnn.png}
-	\caption{Create CNN}
+	\caption{Création du réseau CNN}
 \end{figure}
 
-Puis on a compilé le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
+Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam \footnote{méthode d'optimisation stochastique} (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
 
 \begin{figure}[h]
 	\centering
@@ -1022,15 +1038,16 @@ Puis on a compilé le modèle en utilisant le pourcentage d'erreur absolu moyen 
 	\caption{Training}
 \end{figure}
 
+\subsection*{Gatlak chghol Epoque w zebi}
 Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/train.png}
-	\caption{train}
+	\caption{M3ref wsh chhal epoque z3ma?}
 \end{figure}
 
-Maintenant que notre modèle est prêt on commence a faire les calcule de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (mean calculer la moyenne arithmétique le long de l'axe spécifié) et l’écart (std calculer l'écart type le long de l'axe spécifié)
+Maintenant que notre modèle est prêt on commence a faire les calcules de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (\textbf{mean:} calcule la moyenne arithmétique le long de l'axe spécifié) et l’écart (\textbf{std:} calcule l'écart type le long de l'axe spécifié)
 
 \begin{figure}[h]
 	\centering
@@ -1038,15 +1055,16 @@ Maintenant que notre modèle est prêt on commence a faire les calcule de notre 
 	\caption{predecting}
 \end{figure}
 
-Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entrainement et pour les tests, comme le montre la figure.
+Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entrainement et pour les tests, comme le montre la figure \ref{fig:prediction}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/predicting_value.png}
 	\caption{predicting value}
+	\label{fig:prediction}
 \end{figure}
 
-Et pour conclure on affiche les résultats dans des courbes graphique on utilisant la bibliothèque “Matplotlib”. Les modèle afficher sont précision du modèle et les pertes du modèle .
+Et pour conclure on affiche les résultats dans les graphiques suivants on utilisant la bibliothèque “Matplotlib”. Les modèles affiches présente la précision du modèle et les pertes du modèle .
 \newpage
 \begin{figure}[h]
 	\centering
