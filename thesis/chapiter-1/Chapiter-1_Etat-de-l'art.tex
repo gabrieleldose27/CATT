@@ -217,7 +217,7 @@ Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « conna�
 C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat \cite{10}.
 \begin{figure}[h]
 \centering
-\includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.png}
+\includegraphics[width=13cm]{img-Chapiter-1/shemadenourone.png}
 \caption{Schéma d’un réseau artificiel de neurones}
 \end{figure}
 
@@ -263,10 +263,12 @@ Une image numérique est la représentation d'une image en deux dimensions avec 
 Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée d'une image analogique a $(x, y)$ située dans un espace continu 2D par le biais d'un processus d'échantillonnage appelé fréquemment numérisation. L'effet de la numérisation est illustré à la figure 3. L'image continue 2D a $(x, y)$ est divisée en N lignes et M colonnes. L'intersection d'une ligne et d'une colonne est appelée un pixel. La valeur attribuée aux coordonnées entières [m, n] avec \{m = 0,1,2, ..., M - 1\} et \{n = 0,1,2, ..., N - 1\}.
 
 En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\Lambda)$ ,  et le temps (t) \cite{13}.
+
+\newpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{img-Chapiter-1/neurone.jpeg}
-\caption{Schéma d’un neurone biologique}
+\includegraphics[width=15cm]{img-Chapiter-1/nor.png}
+\caption{Numérisation d'une image}
 \end{figure}
 
 L'image présentée à la figure 3 a été divisée en N = 16 lignes et M = 16 colonnes. La valeur attribuée à chaque pixel est la luminosité moyenne dans le pixel arrondis à la valeur entière. Le processus de représentation de l'amplitude du signal 2D à une coordonnée donnée sous forme de valeur entière avec L niveaux de gris différents est généralement appelé quantification d'amplitude ou simplement quantification.
@@ -373,7 +375,7 @@ Mais avec la sophistication croissante et la puissance de l'informatique moderne
 On se positionne dans ce projet à la frontière de la santé numérique et la diagnostic médicale aussi que l'aide à la prise de décision, dans cette section nous allons faire le tour des concepts lies à notre sujet et détailler la problématique à laquelle on s'attaque, à savoir la santé connectée, la température corporelle et le cancer.  
 \section{E-santé}
 \subsection{Définition}
-E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
+E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. En utilisant les technologies de l'information et de la communication \cite{26}.
 
 Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
 Ceux ci comprennent:
@@ -538,6 +540,9 @@ les enfants cancéreux souffrent d’une infection (causée par une bactérie ou
 	\end{tabular}
 \end{table}
 
+
+
+
 \section{Cancer}
 \subsection{Définition}
 Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
@@ -638,18 +643,18 @@ Est l’un des outils essentiels de la trousse de premiers soins. Ils existent d
 	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
 	
 Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale \cite{36}.
-\newpage
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
+	\includegraphics[width=10cm]{img-Chapiter-2/classs.jpg}
 	\caption{Mesurer la température avec thermomètre électronique}
 \end{figure}
 
+\newpage
 	\item \textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance \cite{37}.
-	\newpage
 	\begin{figure}[h]
 		\centering
-		\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/infra.jpg}
+		\includegraphics[width=10cm]{img-Chapiter-2/infra.jpg}
 		\caption{Thermomètre infrarouge}
 	\end{figure}
 	\item \textbf{Le thermomètre tétine } peut-être un gadget, mais le thermomètre tétine peut s’avérer pratique si on n’a pas d’autre thermomètre sous la main. 
@@ -695,9 +700,10 @@ Dans ce chapitre nous avons présenté le contexte et la problématique à laque
 \section{Introduction}
 L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour diminuer sa souffrance.
 
-Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant, tel que la caméra thermique.
+Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant.
 \section{Objectif}
-Notre contribution est la réalisation d'un modèle basée sur l’apprentissage automatique qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
+Notre contribution est la réalisation d'un modèle %basée sur l’apprentissage automatique 
+qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
 
 Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), elle est souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
 
@@ -711,9 +717,7 @@ Si la température est élevée (cas de fièvre) une alerte est lancée par le s
 \end{figure}
 \newpage
 \subsection{Présentation de la solution}
-Une caméra est installée au dessus du lit de l'enfant malade, cette caméra est relie avec un Système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
-
-L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
+Une caméra est installée au dessus du lit de l'enfant malade, cette caméra est relie avec un système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée à l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
 
 \subsection{Objectifs du processus général}
 \begin{itemize}
@@ -761,13 +765,11 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\item C'est comme des caméras thermiques sophistiquées, mais suffisamment compactes et simples pour une intégration facile.
 	\item Cette caméra mesurera des températures allant de 0 C\textdegree{} à 80 C\textdegree{} avec une précision de + - 2,5 C\textdegree{}. 
 	\item Elle peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, elle est idéale pour créer des systèmes de détecteur humain.
-
 	\end{itemize}
-
 	\item \textbf{Détails techniques}\\
-	Dimensions du produit: 25.8mm x 25.5mm x 6.0mm / 1.0 "x 1.0" x 0.2 "
-	
+	Dimensions du produit: $25.8mm \times 25.5mm \times 6.0mm / 1.0 " \times 1.0" \times 0.2 "$\\
 	Poids du produit: 2.9g / 0.1oz\\
+	
 	La AMG8833 est caractérisée qualitativement par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
 	\item \textbf{Prix}\\
 	Le prix de cette caméra thermique est  \$ 39.95  
@@ -802,16 +804,9 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\item \textbf{Prix}\\
 	Le prix de Raspberry Pi 2 Model B est \$ 43.32
 	
-	\end{enumerate}
-	\begin{figure}[h]
-		\centernig
-		\includegraphics[width=12cm]{img-Chapiter-3/raspbPi.jpg}
-		\caption{Raspberry Pi 2 Model B}
-	\end{figure}\\
-	
+	\end{enumerate}\\
 	
 	Un prototype d'une caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi est présenté par la figure \ref{fig:raspther}.
-	\newpage
 	\begin{figure}[h]
 				\centering
 		\includegraphics[height=10cm,width=12cm]{img-Chapiter-3/therPi.png}
@@ -820,15 +815,15 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\end{figure}
 \end{itemize}
 
+\newpage
 \section{Partie logiciel}
 Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de détermine la température sur la base de l'image thermique de l'enfant.
 
-La figure \ref{fig:achdelasolu} présente cette architecture \textit{version 1} que l'on va implémenté en une 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
+La figure \ref{fig:achdelasolu} présente cette architecture \textit{(version 1)} que l'on va implémenté en une 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
 
-Une 2\textsuperscript{ème} version sera présentée en un \textsuperscript{ème} temps basée sur l'apprentissage profond.
+Une 2\textsuperscript{ème} version sera présentée en un 2\textsuperscript{ème} temps basée sur l'apprentissage profond.\\
 
-Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte \textit{version 1}  en quelques étapes:
-\newpage
+Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  en quelques étapes:
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
@@ -854,7 +849,7 @@ Dans une image numérique on appelle bruit numérique toute information parasite
 
 Le bruit numérique est une notion générale à tout type d'image numérique, et ce quel que soit le type du capteur à l'origine de son acquisition (appareil photo numérique, scanner, caméra thermique...etc). 
 
-Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'images durant l'acquisition, d'autres apparaissent durant la numérisation de l'information.\\
+Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'images durant l'acquisition, d'autres apparaissent durant la numérisation de l'information \cite{48}.\\
 
 \textbf{Gaussian Blur}
 
@@ -867,6 +862,35 @@ Le lissage gaussien est également utilisé comme étape de prétraitement dans 
 	\includegraphics[width=13cm]{img-Chapiter-3/Blure.png}
 	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
 \end{figure}
+
+\newpage
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele1.png}
+	\caption{Architecture de système logiciel version 2 étape 1}
+	\label{fig:achdelasolu2}
+\end{figure}
+
+\begin{enumerate}
+	\item Entrer le Dataset qui contient plusieurs images thermiques.
+	\item Appliquer l'algorithme d'augmentation sur les image thermique entrées.
+	\item Modèle basé sur l'apprentissage profond pour entraîner sur l'ensemble des images thermiques.
+	\item Enregistrer le modèle.
+\end{enumerate}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele2.png}
+	\caption{Architecture de système logiciel version 2 étape 2}
+	\label{fig:achdelasolu2}
+\end{figure}
+\begin{enumerate}
+	\item Collecte l'image thermique du malade.
+	\item Le modèle traité l'image puis détermine la température.
+	\item Sauvegarder les données.
+	\item Alerter l'infirmière si la température corporelle est élevée.
+\end{enumerate}
 
 \newpage
 \section{Conclusion}
@@ -915,14 +939,7 @@ La Haar Cascade est formée en superposant l'image positive sur un ensemble d'im
 On peut également utiliser des cascades Haar prédéfinies, disponibles sur le gitHub [16]
 %https://github.com/opencv/opencv/tree/master/data/haarcascades
 
-Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de Haar cascade.
-
-\newpage
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=10cm]{img-Chapiter-3/enfant.png}
-	\caption{Détection de visage avec Haar cascade}
-\end{figure}
+Voici une capture présente comment détecter le visage programmatiquement à partir d'une image thermique avec l'utilisation de Haar cascade.
 \newpage
 \begin{figure}[h]
 	\centering
@@ -930,6 +947,15 @@ Voici une capture présente comment détecter le visage d'un enfant à partir d'
 	\caption{Capture montre comment  détecter le visage}
 \end{figure}
 
+La figure \ref{fig:res} montre le résultat comment le programme au dessus détecter le visage.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{img-Chapiter-3/enfant.png}
+	\caption{Détection de visage avec Haar cascade}
+	\label{fig:res}
+\end{figure}
+
+\newpage
 \subsubsection*{\' Elimination des bruits}
 \textbf{Denoising d'image dans OpenCV}\\
 
@@ -942,19 +968,20 @@ OpenCV fournit quatre variantes de cette technique :
 \end{enumerate}
 
 Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()} ,comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Voir la figure ci-dessous:
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
-	\caption{\' Elimination des bruits}
+	\caption{\' Elimination des bruits programmatiquement}
 \end{figure}
 
-Voici une capture présente on a éliminer les bruits.
+Voici une capture présente comment on a éliminer les bruits d'une image.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
 	\caption{\' Elimination des bruits d'une image avec OpenCv}
 \end{figure}
-s
+
 \newpage
 \section{Implémentation de la version 2 de la solution}
 \subsection{Introduction}
@@ -985,7 +1012,6 @@ Est une API de haut niveau permettant de créer et de former des modèles d'appr
 	\item \textbf{Facile à étendre:} on peut écrire des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. On peut créer de nouvelles couches, des fonctions de perte et développer des modèles à la pointe de la technologie.
 \end{enumerate}
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{img-Chapiter-4/keras.png}
@@ -1005,11 +1031,7 @@ Cela a motivé notre choix, aussi la maîtrise de l’outil et la facilite qu'il
 \subsubsection{Matériels}
 \textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
 
-\textbf{Raspberry Pi:} Est un ordinateur économique de la taille d’une carte de crédit qui se branche à un écran d’ordinateur ou d’un téléviseur, et utilise un clavier et une souris standard. C’est un petit appareil capable qui permet aux gens de tous âges d’explorer l’informatique, et d’apprendre à programmer dans des langues comme Scratch et Python. Il est capable de faire tout ce que vous attendez d’un ordinateur de bureau à faire, de la navigation sur Internet et de jouer à la vidéo haute définition, à la fabrication de feuilles de calcul, traitement de texte, et les jeux.
-
-
-De plus, le “Raspberry Pi” a la capacité d’interagir avec le monde extérieur, et a été utilisé dans un large éventail de projets de fabricants numériques, des machines à musique aux stations météorologiques.
-
+\textbf{Raspberry Pi:}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{img-Chapiter-4/raspberry.png}
@@ -1034,15 +1056,17 @@ Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe co
 
 Après cette analyse et traitement on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et \textit{les inserire} dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour formater notre ensemble de données.
 
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{img-Chapiter-4/batch.png}
-	\caption{Script Bash}
+	\caption{Script Bash pour classifier le Dataset en 5 classes}
 \end{figure}
 
-\subsubsection*{Titre ta3 Hadi}
+
 La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’image” et la “température de l’image”comme le montre la figure  \ref{fig:dataset.csv}.
 
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{img-Chapiter-4/datasets.png}
@@ -1052,15 +1076,15 @@ La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’imag
 
 Ces deux colonnes séparées par une virgule sont indispensable pour l’entraînement de notre modèle.
 
-\subsection{Entraînement ou création du modèle ? Ay ta3ti w halha b3id}
+\subsection{Création et entraînement du modèle}
 Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
 
-Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
+Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner les images à une largeur et une hauteur de $64 \times 64$ pixels par image.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=16cm]{img-Chapiter-4/loaddataset.png}
-	\caption{Pandas}
+	\caption{Importer et redimensionner les images}
 \end{figure}
 \subsubsection*{\' Etape de la normalisation}
 Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédons à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
@@ -1070,7 +1094,7 @@ Pour cette partie nous allons proportionner les données en groupes d’entraîn
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/pretraitementimage.png}
-	\caption{I don't Know}
+	\caption{Pré traitement d'image}
 	\label{fig:73}
 \end{figure}
 
@@ -1083,21 +1107,21 @@ Dans cette partie on va déclarer les couches cachées de notre réseau de neuro
 	\caption{Création du réseau CNN}
 \end{figure}
 
-Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam \footnote{méthode d'optimisation stochastique} (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
+Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam \footnote{Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/training.png}
-	\caption{Training}
+	\caption{L'utilisation de l'optimiseur Adam}
 \end{figure}
 
-\subsubsection*{Gatlak chghol Epoque w zebi}
+\subsubsection*{L’entraînement du modèle}
 Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
-
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/train.png}
-	\caption{M3ref wsh chhal epoque z3ma?}
+	\caption{Entraîne le modèle pour un nombre donné d'époques}
 \end{figure}
 
 Maintenant que notre modèle est prêt on commence a faire les calcules de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (\textbf{mean:} calcule la moyenne arithmétique le long de l'axe spécifié) et l’écart (\textbf{std:} calcule l'écart type le long de l'axe spécifié)
@@ -1105,15 +1129,16 @@ Maintenant que notre modèle est prêt on commence a faire les calcules de notre
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/predecting.png}
-	\caption{predecting}
+	\caption{Génère des prévisions de sortie pour les échantillons d'entrée}
 \end{figure}
 
-Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entrainement et pour les tests, comme le montre la figure \ref{fig:prediction}.
+\subsubsection*{L'évaluation du modèle}
+Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entraînement et pour les tests, comme le montre la figure \ref{fig:prediction}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/predicting_value.png}
-	\caption{predicting value}
+	\caption{Renvoie les valeurs de perte et de mesures pour le modèle en mode test}
 	\label{fig:prediction}
 \end{figure}
 
