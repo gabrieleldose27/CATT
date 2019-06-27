@@ -25,7 +25,8 @@
 
 \newcommand{\hsp}{\hspace{10pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
+\newcounter{mycounter}[chapter]
+\setcounter{mycounter}{0}
 
 \begin{document}
 \begin{titlepage}
@@ -37,20 +38,22 @@
 		\end{figure}
 		
 		 \HRule \\[0.2cm]
-    { \huge \bfseries Détection de la température on se basant sur le teint de la peau chez les enfants cancéreux\\[0.2cm] }
+		 
+    { \huge \bfseries Analyse des images thermiques pour la détermination de la température corporelle des patients du cancer à l'aide de méthodes d'apprentissage profond\\[0.2cm] }
     \HRule \\[4cm]
     
     
         \begin{minipage}{0.4\textwidth}
       \begin{flushleft} \large
-      	Réalisé \textsc{Par :}\\
-		Nezli \textsc{Amara}\\
-        Khettat \textsc{Brahim}\\
+      	\emph{\textsc{Réalisé Par :}}\\
+		\textsc{Nezli} Amara\\
+        \textsc{Khettat} Brahim\\
       \end{flushleft}
     \end{minipage}
     \begin{minipage}{0.4\textwidth}
       \begin{flushright} \large
-        \emph{Sous la direction de : } DR. Kittouni \textsc{Ilhame}
+        \emph{\textsc{Sous la direction de :}}\\ \textsc{DR}. \textsc{Kitouni} Ilham\\
+        												\textsc{DR}. \textsc{Mennour} Rostom
       \end{flushright}
     \end{minipage}
 
@@ -122,7 +125,7 @@ Nous présentons maintenant brièvement trois algorithmes classiques d'apprentis
 \begin{enumerate}
 	\item Les k plus proches voisins (k - NN): déterminer pour chaque nouvel individu que l'on veut classer, la liste des k plus proches voisins parmi les individus déjà classés.
 	\item La classification bayésienne: Le classifieur bayésien va choisir la classe Ck qui a la plus grande probabilité, on parle de règle MAP (maximum a posteriori).
-	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.
+	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.cv2.fastNlMeansDenoisingColored()
 \end{enumerate}
 
 \subsubsection{Apprentissage non-supervisé}
@@ -214,7 +217,7 @@ Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « conna�
 C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat \cite{10}.
 \begin{figure}[h]
 \centering
-\includegraphics[ height=10cm, width=13cm]{img-Chapiter-1/shemadenourone.png}
+\includegraphics[width=13cm]{img-Chapiter-1/shemadenourone.png}
 \caption{Schéma d’un réseau artificiel de neurones}
 \end{figure}
 
@@ -260,10 +263,12 @@ Une image numérique est la représentation d'une image en deux dimensions avec 
 Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée d'une image analogique a $(x, y)$ située dans un espace continu 2D par le biais d'un processus d'échantillonnage appelé fréquemment numérisation. L'effet de la numérisation est illustré à la figure 3. L'image continue 2D a $(x, y)$ est divisée en N lignes et M colonnes. L'intersection d'une ligne et d'une colonne est appelée un pixel. La valeur attribuée aux coordonnées entières [m, n] avec \{m = 0,1,2, ..., M - 1\} et \{n = 0,1,2, ..., N - 1\}.
 
 En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\Lambda)$ ,  et le temps (t) \cite{13}.
+
+\newpage
 \begin{figure}[h]
 \centering
-\includegraphics[scale=1]{img-Chapiter-1/neurone.jpeg}
-\caption{Schéma d’un neurone biologique}
+\includegraphics[width=15cm]{img-Chapiter-1/nor.png}
+\caption{Numérisation d'une image}
 \end{figure}
 
 L'image présentée à la figure 3 a été divisée en N = 16 lignes et M = 16 colonnes. La valeur attribuée à chaque pixel est la luminosité moyenne dans le pixel arrondis à la valeur entière. Le processus de représentation de l'amplitude du signal 2D à une coordonnée donnée sous forme de valeur entière avec L niveaux de gris différents est généralement appelé quantification d'amplitude ou simplement quantification.
@@ -366,12 +371,11 @@ Mais avec la sophistication croissante et la puissance de l'informatique moderne
 \rhead{\textsc{Chapite 2 : Context et problématique du projet}}
 \addcontentsline{toc}{section}{Contexte et problématique du projet}  
 \section*{Contexte et problématique du projet}
-
 \section{Introduction}
 On se positionne dans ce projet à la frontière de la santé numérique et la diagnostic médicale aussi que l'aide à la prise de décision, dans cette section nous allons faire le tour des concepts lies à notre sujet et détailler la problématique à laquelle on s'attaque, à savoir la santé connectée, la température corporelle et le cancer.  
 \section{E-santé}
 \subsection{Définition}
-E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. en utilisant les technologies de l'information et de la communication \cite{26}.
+E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via Internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. En utilisant les technologies de l'information et de la communication \cite{26}.
 
 Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
 Ceux ci comprennent:
@@ -536,6 +540,9 @@ les enfants cancéreux souffrent d’une infection (causée par une bactérie ou
 	\end{tabular}
 \end{table}
 
+
+
+
 \section{Cancer}
 \subsection{Définition}
 Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
@@ -559,7 +566,7 @@ Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de t
 La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
 
 Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
-\newpage
+
 \begin{figure}[h]
 \centering
 \includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
@@ -579,8 +586,6 @@ Les cancers les plus fréquents chez l’enfant \cite{34} sont les suivants :
 	\item les tumeurs germinales (3\%) .
 	\item les tumeurs oculaires (3\%) .
 \end{itemize}
-
-\newpage
 
 \subsection{Symptômes}
 Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
@@ -638,17 +643,18 @@ Est l’un des outils essentiels de la trousse de premiers soins. Ils existent d
 	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
 	
 Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale \cite{36}.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/classs.jpg}
+	\includegraphics[width=10cm]{img-Chapiter-2/classs.jpg}
 	\caption{Mesurer la température avec thermomètre électronique}
 \end{figure}
 
-	\item \textcolor{red}{\textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance} \cite{37}.
-	\newpage
+\newpage
+	\item \textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance \cite{37}.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[height=9cm,width=9cm]{img-Chapiter-2/infra.jpg}
+		\includegraphics[width=10cm]{img-Chapiter-2/infra.jpg}
 		\caption{Thermomètre infrarouge}
 	\end{figure}
 	\item \textbf{Le thermomètre tétine } peut-être un gadget, mais le thermomètre tétine peut s’avérer pratique si on n’a pas d’autre thermomètre sous la main. 
@@ -692,15 +698,16 @@ Dans ce chapitre nous avons présenté le contexte et la problématique à laque
 \newpage
 \rhead{\textsc{Chapiter 3 : Conception de la solution proposée}}
 \section{Introduction}
-L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour déminuer sa souffrance.
+L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour diminuer sa souffrance.
 
-Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant, tel que la caméra thermique.
+Pour cela on utilise des outils inventé par l'homme pour faciliter la tache de la surveillance de cet enfant.
 \section{Objectif}
-Notre contribution est la réalisation du modèle basée sur l’apprentissage automatique qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
+Notre contribution est la réalisation d'un modèle %basée sur l’apprentissage automatique 
+qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
 
-Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), la période souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
+Pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), elle est souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
 
-Si la température est élevée (cas de fièvre) une alerte se lancé par le système afin d’avertir l'infirmière ou le médecin, la présence d'un des deux n'est pas indisponsable tout le temps cela lui permet de s’occuper des autres malades qui ont vraiment besoin d’elle.
+Si la température est élevée (cas de fièvre) une alerte est lancée par le système afin d’avertir l'infirmière ou le médecin, la présence de l'un des deux n'est pas indispensable tout le temps cela lui permet de s’occuper des autres malades par exemple.
 \section{Architecture générale de la solution}
 \begin{figure}[h]
 	\centering
@@ -709,31 +716,26 @@ Si la température est élevée (cas de fièvre) une alerte se lancé par le sys
 	\label{fig:archgene}
 \end{figure}
 \newpage
-\subsection{Présentation}
-Notre processus c’est une caméra thermique au-dessus d’un lit d’un malade relie avec un Raspberry Pi, cette caméra va photographier l’enfant d'un temps précis à l'autre, cette image va être transmise au modèle, ce dernier va la traiter, au cas de fièvre une alerte est lancée à l’infirmière au même temps cette image va être sauvegardée avec la décision et les coordonnés de l’enfant.
+\subsection{Présentation de la solution}
+Une caméra est installée au dessus du lit de l'enfant malade, cette caméra est relie avec un système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée à l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
 
-\subsection{Objectifs de processus générale}
+\subsection{Objectifs du processus général}
 \begin{itemize}
-	\item Être plus civilisé qu’avant.
-	\item Aider l’être humain par des appareils qui font les même fonctions que l’homme.
 	\item L’enfant sera surveillé et sous contrôle tout le temps.
-	\item Quant à l'infirmière le fait de surveiller le malade de temps en temps c'est très fatiguant en utilisant cette processus on gagne du temps, on fournit moins d'efforts qu'avant et en augmentant la précision.	
-	\item Quand l'infirmière vient voir l'enfant d'un temps à l'autre elle le dérange mais avec cette processus il est plus à l'aise, même si l'enfant est endormi cet appareil peut prendre des photos et peut lancer des alertes sans le moindre dérangement.
+	\item Quant à l'infirmière, le fait de surveiller le malade tout le temps est très contraignant. Avec notre système on gagne du temps, d'efforts et précision.	
+	\item Notre solution permet une amélioration des soins et du confort de l'enfant qui ne sera pas dérangé si la température est normale.
+		\item Notre solution permet d'introduire les nouvelles technologies ainsi que l'intelligence dans les composants pour améliorer le travail des professionnel de santé.
+	\item Notre solution contribue dans l'amélioration du système de santé en Algérie.
 \end{itemize}
 
-\subsection{Présentation et description de chaque couche}
+\subsection{Description de chaque couche}
 \begin{enumerate}
-		\item La 1\textsuperscript{èr} couche: Notre dispositif sera posé sur la tête de lit de malade. 
+		\item La 1\textsuperscript{èr} couche: Le dispositif est posé sur la tête de lit du malade. 
 		\item La 2\textsuperscript{ème} couche: Système de surveillance et d'alerte qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
-		\item La 3\textsuperscript{ème} couche: Programme chez l'infirmière qui détecte les alerte lancé par notre système de surveillance.
+		\item La 3\textsuperscript{ème} couche: L'application qui détecte les alerte lancées par notre système de surveillance, elle sera consultée par le professionnel de santé.
 \end{enumerate}
 
-\subsection{Déroulement de l'architecture générale}
-La caméra thermique se trouve au tête de lit d'un enfant cancéreux, cette caméra est relie avec un Système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée a l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
-
-L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
-   \newpage
-\section{Architecture Détaillée}
+\section{Architecture Détaillée de la solution}
 
 \begin{figure}[h]
 	\centering
@@ -744,34 +746,31 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 \subsection{Principe de fonctionnement}
 \begin{itemize}
 	\item \textbf{Étape 1}\\
-	Une caméra thermique qui prend l'image de visage de l'enfant, l'enfant doit être juste sous la caméra dont la distance est de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
+	Une caméra thermique qui prend l'image du visage de l'enfant, l'enfant doit être juste sous la caméra à une distance de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
 	\item \textbf{Étape 2}\\
-	Quand la caméra thermique prend le visage de l'enfant, l'image sera envoyée  au modèle qui va traiter l'image de l’enfant et estime la température.\\
-	L'image, la décision, et les coordonnées de l'enfant serons sauvegardées dans une base de données.
+	L'image collecte est envoyée au système de surveillance et d'alerte via un système de connectivité.
 	\item \textbf{Étape 3}\\
-	En cas la température est élevée notre système lance une alerte.\\
-	Cette alerte sera détectée par le programme de l'infirmière. 
+	L'image sera envoyée  au système de surveillance et d'alerte, qui a l'aide du modèle déjà établit va traiter l'image de l’enfant et estime la température, en cas de température élevée le système lance une alerte.\\
+	L'image, la décision et les coordonnées de l'enfant serons sauvegardées dans une base de données.
 \end{itemize}
 
-\subsection{Matériel}
+\subsection{Partie matériel}
 \begin{itemize}
-	\item \textbf{Caméra thermique} \cite{45} qui a comme fonction la prise des images thermiques.
+	\item \textbf{Caméra thermique AMG8833} \cite{45} qui a comme fonction la prise des images thermiques.
 	%https://www.adafruit.com/product/3538
 	\begin{enumerate}
 	\item \textbf{Description}\\
 	\begin{itemize}
+	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
 	\item C'est comme des caméras thermiques sophistiquées, mais suffisamment compactes et simples pour une intégration facile.
 	\item Cette caméra mesurera des températures allant de 0 C\textdegree{} à 80 C\textdegree{} avec une précision de + - 2,5 C\textdegree{}. 
-	\item Il peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, il est idéal pour créer votre propre détecteur humain ou mini caméra thermique.
-	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
+	\item Elle peut détecter un être humain à une distance maximale de 7 mètres (23 pieds). Avec une fréquence d'images maximale de 10 Hz, elle est idéale pour créer des systèmes de détecteur humain.
 	\end{itemize}
-
 	\item \textbf{Détails techniques}\\
-	Dimensions du produit: 25.8mm x 25.5mm x 6.0mm / 1.0 "x 1.0" x 0.2 "
+	Dimensions du produit: $25.8mm \times 25.5mm \times 6.0mm / 1.0 " \times 1.0" \times 0.2 "$\\
+	Poids du produit: 2.9g / 0.1oz\\
 	
-	Poids du produit: 2.9g / 0.1oz
-	\item \textbf{Caractéristiques}\\
-	La caractéristique qualitative principale d’une caméra infrarouge thermique peut se résumer par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
+	La AMG8833 est caractérisée qualitativement par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
 	\item \textbf{Prix}\\
 	Le prix de cette caméra thermique est  \$ 39.95  
 \end{enumerate}	 
@@ -786,7 +785,7 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	% https://thepihut.com/products/raspberry-pi-2-model-b?variant=18198528708
 	\begin{enumerate}
 		\item \textbf{Description}\\
-	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC) BCM2836, qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
+	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC \footnote{Broadcom BCM2836}) BCM2836, qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
 		
 		Le Raspberry Pi 2 Model B est à un niveau totalement nouveau par rapport à ses prédécesseurs en étant 6 fois plus rapide que le Raspberry Pi Model B +.
 	\item \textbf{Spécifications techniques}\\
@@ -804,17 +803,10 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 \end{enumerate}
 	\item \textbf{Prix}\\
 	Le prix de Raspberry Pi 2 Model B est \$ 43.32
-	\newpage
-	\end{enumerate}
-	\begin{figure}[h]
-		\centernig
-		\includegraphics[width=12cm]{img-Chapiter-3/raspbPi.jpg}
-		\caption{Raspberry Pi 2 Model B}
-	\end{figure}\\
 	
+	\end{enumerate}\\
 	
 	Un prototype d'une caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi est présenté par la figure \ref{fig:raspther}.
-	\newpage
 	\begin{figure}[h]
 				\centering
 		\includegraphics[height=10cm,width=12cm]{img-Chapiter-3/therPi.png}
@@ -823,77 +815,184 @@ L'image prise, la décision et les coordonnées de l'enfant seront sauvegardées
 	\end{figure}
 \end{itemize}
 
-\section{Logiciel}
-Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  sur quelques étapes:
 \newpage
+\section{Partie logiciel}
+Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de détermine la température sur la base de l'image thermique de l'enfant.
+
+La figure \ref{fig:achdelasolu} présente cette architecture \textit{(version 1)} que l'on va implémenté en une 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
+
+Une 2\textsuperscript{ème} version sera présentée en un 2\textsuperscript{ème} temps basée sur l'apprentissage profond.\\
+
+Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  en quelques étapes:
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
-	\caption{Architecture du système}
+	\caption{Architecture de système logiciel version 1}
+	\label{fig:achdelasolu}
 \end{figure}
 \begin{enumerate}
-	\item Faire entrer l’image thermique de l’enfant.
-	\item \' Elimination des bruits trouvés dans cette image, on utilise des algorithmes tels que Papper and salt, Gaussian Blur on utilise kernel $3 \times 3$, 
-	\item Détection de visage de l’enfant ça sert à classifier l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
-	\item Détection s’il s’agit  de face ou de côté ça sert à classifier l’image.
-	\item Calcule de la température pour visage et coté. 
+	\item Collecte de l’image thermique de l’enfant.
+	\item \' Elimination des bruits trouvés dans cette image.
+	\item Détection du visage de l’enfant c'est une classification de l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
+	\item Détection s’il s’agit  de face ou de profile c'est une classification de l’image.
+	\item Calcule de la température pour visage et profile. 
+	\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
+	\item l’opération se répète à partir de  l’étape 2.
 	\item si la température est élevée:
 	\begin{enumerate}
 		\item une alerte est lancée à l’infirmière,
-		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
-		\item l’opération se répète à partir de  l’étape 4.
-	\end{enumerate}
-	\item si la température est normale:
-	\begin{enumerate}
-		\item l'image, décision et les coordonnées serons sauvegardées dans une base de données.
-		\item l’opération se fait à nouveau à partir de l'étape 4.
 	\end{enumerate}
 \end{enumerate}
 
-\subsection*{Gaussian Blur}
-\subsubsection*{Définition}
-Gaussian Blur (également appelé lissage gaussien) résulte du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+\subsection{Algorithme d'élimination des bruits}
+Dans une image numérique on appelle bruit numérique toute information parasite ou dégradation que subit l'image de l'instant de son acquisition jusqu'à son enregistrement. 
+
+Le bruit numérique est une notion générale à tout type d'image numérique, et ce quel que soit le type du capteur à l'origine de son acquisition (appareil photo numérique, scanner, caméra thermique...etc). 
+
+Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'images durant l'acquisition, d'autres apparaissent durant la numérisation de l'information \cite{48}.\\
+
+\textbf{Gaussian Blur}
+
+Gaussian Blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
+
+Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=9cm,width=15cm]{img-Chapiter-3/Blure.png}
+	\includegraphics[width=13cm]{img-Chapiter-3/Blure.png}
 	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
 \end{figure}
+
 \newpage
-\subsection*{Haar Cascade}
-\subsubsection*{Définition}
-Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
-
-La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
-
-On peut également utiliser des cascades Haar prédéfinies, disponibles sur [16]
-%https://github.com/opencv/opencv/tree/master/data/haarcascades
-
-Voici une capture présente comment détecter le visage d'un enfant à partir d'une image thermique avec l'utilisation de haar cascade.
-
+\newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=1]{img-Chapiter-3/enfant.png}
-	\caption{Détection de visage avec Haar cascade}
+	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele1.png}
+	\caption{Architecture de système logiciel version 2 étape 1}
+	\label{fig:achdelasolu2}
 \end{figure}
+
+\begin{enumerate}
+	\item Entrer le Dataset qui contient plusieurs images thermiques.
+	\item Appliquer l'algorithme d'augmentation sur les image thermique entrées.
+	\item Modèle basé sur l'apprentissage profond pour entraîner sur l'ensemble des images thermiques.
+	\item Enregistrer le modèle.
+\end{enumerate}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele2.png}
+	\caption{Architecture de système logiciel version 2 étape 2}
+	\label{fig:achdelasolu2}
+\end{figure}
+\begin{enumerate}
+	\item Collecte l'image thermique du malade.
+	\item Le modèle traité l'image puis détermine la température.
+	\item Sauvegarder les données.
+	\item Alerter l'infirmière si la température corporelle est élevée.
+\end{enumerate}
+
+\newpage
 \section{Conclusion}
-Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière plus rapide et plus sure. 
+Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière rapide et sure. 
+
+Il faut noter que nous n'avons pas réalisé le prototype de la partie matérielle, car nous avons jugé \textit{bon} de nous \textbf{consecier} à l'élaboration du modèle et l'implémentation des différentes applications aussi la réalisation de ce type de prototype n'est pas chose difficile, elle fera l'objet d'un travail future.
 
 \newpage
 \rhead{}
 \addcontentsline{toc}{section}{Chapiter 4 : Réalisation de la solution proposée}  
 \section*{\Huge{Chapiter 4}}
-\subsection*{\huge{Réalisation de la solution proposée}}
+\subsection*{\huge{Implémentation des solutions proposées}}
 \newpage
-\rhead{\textsc{Chapiter 4 : Réalisation de la solution proposée}}
-\section{Introduction}
-Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur ces techniques.
+\rhead{\textsc{Chapiter 4 : Implémentation des solutions proposées}}
+\section{Implémentation de la version 1 de la solution}
+Pour l'implémentation de la solution proposée en version 1 nous allons étudier quelques algorithmes et présenter ce qui a été réalisé.
 
-\section{Outils et matériel}
-\subsection{Outils}
+\subsection{Algorithmes de classification d'image}
+Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination des bruits et la détection de visage.
+\subsubsection{Partie logiciel}
+\subsubsection*{Python}
+Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
+	\caption{Logo python}
+\end{figure}
+
+\subsubsection*{OpenCv}
+OpenCV (pour Open Computer Vision) est une bibliothèque graphique libre, initialement développée par Intel, spécialisée dans le traitement d'images en temps réel. La société de robotique Willow Garage et la société ItSeez se sont succédé au support de cette bibliothèque. Depuis 2016 et le rachat de ItSeez par Intel, le support est de nouveau assuré par Intel. 
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=4cm]{img-Chapiter-4/open.png}
+	\caption{Logo OpenCv}
+\end{figure}
+
+\subsubsection{Implémentation}
+
+\subsubsection*{Détection de visage: Haar Cascade}
+Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
+
+La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
+
+On peut également utiliser des cascades Haar prédéfinies, disponibles sur le gitHub [16]
+%https://github.com/opencv/opencv/tree/master/data/haarcascades
+
+Voici une capture présente comment détecter le visage programmatiquement à partir d'une image thermique avec l'utilisation de Haar cascade.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/detection.png}
+	\caption{Capture montre comment  détecter le visage}
+\end{figure}
+
+La figure \ref{fig:res} montre le résultat comment le programme au dessus détecter le visage.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{img-Chapiter-3/enfant.png}
+	\caption{Détection de visage avec Haar cascade}
+	\label{fig:res}
+\end{figure}
+
+\newpage
+\subsubsection*{\' Elimination des bruits}
+\textbf{Denoising d'image dans OpenCV}\\
+
+OpenCV fournit quatre variantes de cette technique :
+\begin{enumerate}
+	\item \textit{cv2.fastNlMeansDenoising()} fonctionne avec une seule image en niveaux de gris.
+	\item \textit{cv2.fastNlMeansDenoisingColored()} fonctionne avec une image couleur.
+	\item \textit{cv2.fastNlMeansDenoisingMulti()} fonctionne avec des séquences d'images capturées en peu de temps (images en niveaux de gris).
+	\item \textit{cv2.fastNlMeansDenoisingColoredMulti()} comme ci-dessus, mais pour les images en couleur.
+\end{enumerate}
+
+Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()} ,comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Voir la figure ci-dessous:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
+	\caption{\' Elimination des bruits programmatiquement}
+\end{figure}
+
+Voici une capture présente comment on a éliminer les bruits d'une image.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
+	\caption{\' Elimination des bruits d'une image avec OpenCv}
+\end{figure}
+
+\newpage
+\section{Implémentation de la version 2 de la solution}
+\subsection{Introduction}
+Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur les techniques.
+
+\subsection{Outils et matériels}
+\subsubsection{Outils}
 \subsubsection*{Google Colaboratory}
-Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème ici est que vous pouvez utiliser les services informatiques pendant un maximum de 12 heures à la fois (vous pouvez le penser en termes de session). 
+Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème est que \textit{l'on pour} utiliser les services informatiques pendant un maximum de 12 heures à la fois. 
 
-En règle générale, lorsque vous entraînez vos modèles dans le laboratoire, vous êtes connecté à une machine virtuelle basée sur un processeur graphique, où vous disposez de 12 heures maximum à la fois, après quoi vous perdez l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr) vous est attribuée et le cycle se répète.
+En règle générale, lorsque on entraîne les modèles dans le laboratoire, on est connecté à une machine virtuelle basée sur un processeur graphique, où on dispose de 12 heures maximum à la fois, après quoi on perde l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr)  attribuée et le cycle se répète.
 
 \begin{figure}[h]
 	\centering
@@ -901,14 +1000,16 @@ En règle générale, lorsque vous entraînez vos modèles dans le laboratoire, 
 	\caption{Logo de Google Colab}
 \end{figure}
 
-Le choix de “Google Colab” était une nécessiter, d’abord l’access à une vitesse de traitement rapide comme notre ordinateur n’est pas équipé d’un processeur GPU donc le choix était vite abouti à que nous travaillerons avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+
+Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autre domaine mathématique, web, etc , très intéressants et complètes,  troisièmement la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maîtriser.
 
 \subsubsection*{Keras}
 Est une API de haut niveau permettant de créer et de former des modèles d'apprentissage en profondeur. Il est utilisé pour le prototypage rapide, la recherche avancée et la production, avec trois avantages principaux:
 \begin{enumerate}
 	\item \textbf{Convivialité:} Keras dispose d'une interface simple, cohérente et optimisée pour les cas d'utilisation courants. Il fournit des commentaires clairs et exploitables pour les erreurs des utilisateurs.
 	\item \textbf{Modulaire et composable:} les modèles Keras sont fabriqués en reliant des blocs de construction configurables ensemble, avec peu de restrictions.
-	\item \textbf{Facile à étendre:} écrivez des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. Créez de nouvelles couches, des fonctions de perte et développez des modèles à la pointe de la technologie.
+	\item \textbf{Facile à étendre:} on peut écrire des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. On peut créer de nouvelles couches, des fonctions de perte et développer des modèles à la pointe de la technologie.
 \end{enumerate}
 
 \begin{figure}[h]
@@ -917,19 +1018,8 @@ Est une API de haut niveau permettant de créer et de former des modèles d'appr
 	\caption{Logo de Keras}
 \end{figure}
 
-\subsubsection*{Python}
-Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui vous permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
-	\caption{Logo python}
-\end{figure}
-
-Comme “Colab” python était une nécessiter premièrement parce-que dans “Colab” il y a que le langage Python ou les commandes “Shell”, la deuxième des chose étais les package qu’il y a dans ce langage dans notre domaine Apprentissage profond (Deep Learning) ou dans les autre domaine mathématique, web, etc. La troisième des choses était la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maitriser.
-
 \subsubsection*{Node}
-(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multiplate-forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
+(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multi-plate forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
 
 \begin{figure}[h]
 	\centering
@@ -937,15 +1027,11 @@ Comme “Colab” python était une nécessiter premièrement parce-que dans “
 	\caption{Logo Node.js}
 \end{figure}
 
-Il n’y avais pas une nécessiter dans notre choix mais la maitrise de l’outille et la facilite qui offre cette outille.
-\subsection{Matériels}
+Cela a motivé notre choix, aussi la maîtrise de l’outil et la facilite qu'il offre.
+\subsubsection{Matériels}
 \textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
 
-\textbf{Raspberry Pi:} Est un ordinateur économique de la taille d’une carte de crédit qui se branche à un écran d’ordinateur ou d’un téléviseur, et utilise un clavier et une souris standard. C’est un petit appareil capable qui permet aux gens de tous âges d’explorer l’informatique, et d’apprendre à programmer dans des langues comme Scratch et Python. Il est capable de faire tout ce que vous attendez d’un ordinateur de bureau à faire, de la navigation sur Internet et de jouer à la vidéo haute définition, à la fabrication de feuilles de calcul, traitement de texte, et les jeux.
-
-
-De plus, le “Raspberry Pi” a la capacité d’interagir avec le monde extérieur, et a été utilisé dans un large éventail de projets de fabricants numériques, des machines à musique aux stations météorologiques.
-
+\textbf{Raspberry Pi:}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{img-Chapiter-4/raspberry.png}
@@ -954,22 +1040,32 @@ De plus, le “Raspberry Pi” a la capacité d’interagir avec le monde extér
 
 Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, mais le manque de la camera infrarouge nous a conduit a improviser avec un serveur portable pour une simulation de notre figure \ref{fig:archgene}.
 
-\section{Ensemble de données (Dataset)}
+\subsection{Ensemble de données (Dataset)}
 Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
 
-Dans le cas de notre étude on utilise cette Dataset [100] qui comporte des image infrarouge avec des niveaux de gris la taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. Le problème avec cette dataset c’est qu’elle n’est pas de définie, plus clairement celle-ci n’a pas des valeurs de la température d’un individu dans chaque image.
+Dans le cas de notre étude on utilise le Dataset proposé dans  [100] qui comporte des image infrarouge avec des niveaux de gris. La taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. 
 
-La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid). Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+Le problème avec cette Dataset c’est qu’elle n’est pas annoter, c-à-d celle-ci n’est pas conçu \textit{on proposé} pour la détermination de la température corporelle .
 
-Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. D’ici on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et d’écrire dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour définir notre ensemble de données.
+\subsubsection{\' Etape de l'augmentation}
+La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid).
 
+ Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+
+Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. 
+
+Après cette analyse et traitement on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et \textit{les inserire} dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour formater notre ensemble de données.
+
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{img-Chapiter-4/batch.png}
-	\caption{Script Bash}
+	\caption{Script Bash pour classifier le Dataset en 5 classes}
 \end{figure}
 
+
 La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’image” et la “température de l’image”comme le montre la figure  \ref{fig:dataset.csv}.
+
 \newpage
 \begin{figure}[h]
 	\centering
@@ -978,73 +1074,75 @@ La sortie de ce fichier “datasets.csv” est de la forme “chemin de l’imag
 	\label{fig:dataset.csv}
 \end{figure}
 
-Ces deux colonnes séparées par une virgule sont dispensable pour l’entraînement de notre modèle.
+Ces deux colonnes séparées par une virgule sont indispensable pour l’entraînement de notre modèle.
 
-\section{Réalisation}
+\subsection{Création et entraînement du modèle}
 Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
 
-Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
+Commençant par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner les images à une largeur et une hauteur de $64 \times 64$ pixels par image.
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=16cm]{img-Chapiter-4/loaddataset.png}
-	\caption{Pandas}
+	\caption{Importer et redimensionner les images}
 \end{figure}
-
-Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédant à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
+\subsubsection*{\' Etape de la normalisation}
+Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédons à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
 
 Pour cette partie nous allons proportionner les données en groupes d’entraînement et de test en utilisant 75\% des données pour l’entraînement et les 25\% restants pour le test, et on va faire comme on a fait pour les image on va diviser notre table de température à la valeur maximum des températures pour avoir un intervalle de [0, 1] ça nous conduit à un meilleur souverainement et à une bonne convergence, comme le montre la figure \ref{fig:73} ci dessous.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/pretraitementimage.png}
-	\caption{I don't Know}
+	\caption{Pré traitement d'image}
 	\label{fig:73}
 \end{figure}
 
-Maintenant on va créer notre réseau de neurones de convolution “CNN”, dans cette partie on va déclarer nos couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
+\subsubsection*{Création du réseau CNN}
+Dans cette partie on va déclarer les couches cachées de notre réseau de neurone. Les configurations sont presque aléatoire on va changer les valeur de la Conv2D et la densité de nos couches cachées.
 
-\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/createcnn.png}
-	\caption{Create CNN}
+	\caption{Création du réseau CNN}
 \end{figure}
 
-Puis on a compilé le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
+Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam \footnote{Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/training.png}
-	\caption{Training}
+	\caption{L'utilisation de l'optimiseur Adam}
 \end{figure}
 
+\subsubsection*{L’entraînement du modèle}
 Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
-
+\newpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/train.png}
-	\caption{train}
+	\caption{Entraîne le modèle pour un nombre donné d'époques}
 \end{figure}
 
-Maintenant que notre modèle est prêt on commence a faire les calcule de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (mean calculer la moyenne arithmétique le long de l'axe spécifié) et l’écart (std calculer l'écart type le long de l'axe spécifié)
+Maintenant que notre modèle est prêt on commence a faire les calcules de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (\textbf{mean:} calcule la moyenne arithmétique le long de l'axe spécifié) et l’écart (\textbf{std:} calcule l'écart type le long de l'axe spécifié)
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/predecting.png}
-	\caption{predecting}
+	\caption{Génère des prévisions de sortie pour les échantillons d'entrée}
 \end{figure}
 
-Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entrainement et pour les tests, comme le montre la figure.
+\subsubsection*{L'évaluation du modèle}
+Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entraînement et pour les tests, comme le montre la figure \ref{fig:prediction}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/predicting_value.png}
-	\caption{predicting value}
+	\caption{Renvoie les valeurs de perte et de mesures pour le modèle en mode test}
+	\label{fig:prediction}
 \end{figure}
 
-Et pour conclure on affiche les résultats dans des courbes graphique on utilisant la bibliothèque “Matplotlib”. Les modèle afficher sont précision du modèle et les pertes du modèle .
+Et pour conclure on affiche les résultats dans les graphiques suivants on utilisant la bibliothèque “Matplotlib”. Les modèles affiches présente la précision du modèle et les pertes du modèle .
 \newpage
 \begin{figure}[h]
 	\centering

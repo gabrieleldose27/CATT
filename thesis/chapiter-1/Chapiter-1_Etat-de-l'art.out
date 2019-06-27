@@ -60,19 +60,25 @@
 \BOOKMARK [1][-]{section.12}{Introduction}{}% 60
 \BOOKMARK [1][-]{section.13}{Objectif}{}% 61
 \BOOKMARK [1][-]{section.14}{Architecture g\351n\351rale de la solution}{}% 62
-\BOOKMARK [2][-]{subsection.14.1}{Pr\351sentation}{section.14}% 63
-\BOOKMARK [2][-]{subsection.14.2}{Objectifs de processus g\351n\351rale}{section.14}% 64
-\BOOKMARK [2][-]{subsection.14.3}{Pr\351sentation et description de chaque couche}{section.14}% 65
-\BOOKMARK [2][-]{subsection.14.4}{D\351roulement de l'architecture g\351n\351rale}{section.14}% 66
-\BOOKMARK [1][-]{section.15}{Architecture D\351taill\351e}{}% 67
-\BOOKMARK [2][-]{subsection.15.1}{Principe de fonctionnement}{section.15}% 68
-\BOOKMARK [2][-]{subsection.15.2}{Mat\351riel}{section.15}% 69
-\BOOKMARK [1][-]{section.16}{Logiciel}{}% 70
+\BOOKMARK [2][-]{subsection.14.1}{Pr\351sentation de la solution}{section.14}% 63
+\BOOKMARK [2][-]{subsection.14.2}{Objectifs du processus g\351n\351ral}{section.14}% 64
+\BOOKMARK [2][-]{subsection.14.3}{Description de chaque couche}{section.14}% 65
+\BOOKMARK [1][-]{section.15}{Architecture D\351taill\351e de la solution}{}% 66
+\BOOKMARK [2][-]{subsection.15.1}{Principe de fonctionnement}{section.15}% 67
+\BOOKMARK [2][-]{subsection.15.2}{Partie mat\351riel}{section.15}% 68
+\BOOKMARK [1][-]{section.16}{Partie logiciel}{}% 69
+\BOOKMARK [2][-]{subsection.16.1}{Algorithme d'\351limination des bruits}{section.16}% 70
 \BOOKMARK [1][-]{section.17}{Conclusion}{}% 71
 \BOOKMARK [1][-]{section.17}{Chapiter 4 : R\351alisation de la solution propos\351e}{}% 72
-\BOOKMARK [1][-]{section.18}{Introduction}{}% 73
-\BOOKMARK [1][-]{section.19}{Outils et mat\351riel}{}% 74
-\BOOKMARK [2][-]{subsection.19.1}{Outils}{section.19}% 75
-\BOOKMARK [2][-]{subsection.19.2}{Mat\351riels}{section.19}% 76
-\BOOKMARK [1][-]{section.20}{Ensemble de donn\351es \(Dataset\)}{}% 77
-\BOOKMARK [1][-]{section.21}{R\351alisation}{}% 78
+\BOOKMARK [1][-]{section.18}{Impl\351mentation de la version 1 de la solution}{}% 73
+\BOOKMARK [2][-]{subsection.18.1}{Algorithmes de classification d'image}{section.18}% 74
+\BOOKMARK [3][-]{subsubsection.18.1.1}{Partie logiciel}{subsection.18.1}% 75
+\BOOKMARK [3][-]{subsubsection.18.1.2}{Impl\351mentation}{subsection.18.1}% 76
+\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 77
+\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 78
+\BOOKMARK [2][-]{subsection.19.2}{Outils et mat\351riels}{section.19}% 79
+\BOOKMARK [3][-]{subsubsection.19.2.1}{Outils}{subsection.19.2}% 80
+\BOOKMARK [3][-]{subsubsection.19.2.2}{Mat\351riels}{subsection.19.2}% 81
+\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 82
+\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 83
+\BOOKMARK [2][-]{subsection.19.4}{Cr\351ation et entra\356nement du mod\350le}{section.19}% 84
