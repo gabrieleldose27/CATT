@@ -6,11 +6,10 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 from keras.utils import to_categorical
-from keras.optimizers import Adam
+from keras.optimizers import Adam, SGD, RMSprop
 
 from thermo import dataset
 from thermo import model
-from imageprocess import batch_generator
 
 batch_size = 100
 
@@ -18,7 +17,7 @@ def load_df(path):
     return dataset.load_dataset(path)
 
 def test_split(df, images):
-    return train_test_split(df, images, test_size=.25, random_state=42)
+    return train_test_split(df, images, test_size=.05, random_state=42)
 
 def predicting(model, testImagesX, testY):
     preds = model.predict(testImagesX, verbose=1)
@@ -50,30 +49,13 @@ if __name__ == '__main__':
     testY = testAttrX["tempture"].astype(float) / maxTempture
     print "[ i ] Creating the model..."
 
-    model = model.create_cnn(64, 64, 3, regress=True)
+    model = model.create_cnn(args["resize"], args["resize"], 3, regress=True)
     model.compile(
-            loss="mean_absolute_percentage_error",
-            optimizer=Adam(lr=.01),
+            loss="mean_squared_error",
+            optimizer = RMSprop(lr=0.001),
             metrics=['accuracy'])
     
     print "[ i ] Training model..."
-#    history = model.fit_generator(batch_generator(
-#                args["datasets"],
-#                trainImagesX,
-#                trainY,
-#                batch_size,
-#                True),
-#            100,
-#            args["epochs"],
-#            max_queue_size = 1,
-#            validation_data=batch_generator(
-#                args["datasets"],
-#                testImagesX,
-#                testY,
-#                batch_size,
-#                False),
-#            validation_steps = len(testAttrX),
-#            verbose = 1)
     history = model.fit(trainImagesX, trainY, validation_data=(testImagesX, testY),
             epochs=args["epochs"], batch_size=100)
 
@@ -87,7 +69,7 @@ if __name__ == '__main__':
     print "[ * ] Testing Accuracy:  {:.4f}, Loss: {:.4f}".format(accuracy, loss)
 
     print "[ * ] Saving the model"
-    model.save_weights('thermo-'+str(args["epochs"])+'.h5')
+    model.save_weights('h5/thermo-'+str(args["epochs"])+'-'+str(accuracy)+'.h5')
 
     plt.plot(history.history['acc'])
     plt.plot(history.history['val_acc'])

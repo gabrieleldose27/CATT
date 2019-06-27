@@ -5,9 +5,9 @@ import sys
 import os
  
 def load_dataset(dataset_path):
-	cols = ["path", "tempture"]
-	df = pd.read_csv(dataset_path, sep=",", header=None, names=cols)
-	return df
+    cols = ["path", "tempture"]
+    df = pd.read_csv(dataset_path, sep=",", header=None, names=cols)
+    return df
 
 def load_images(df, resize=(64, 64)):
     images = []
@@ -18,7 +18,7 @@ def load_images(df, resize=(64, 64)):
             img = cv2.resize(img, resize)
             if img is not None:
                 images.append(img)
-                sys.stdout.write("\r[ * ] Loading "+str(len(images) * 100 / df.shape[0])+"% images. Remain: "+str(df.shape[0]-len(images)))
+                sys.stdout.write("\r[ * ] Loading "+str(len(images) * 100 / df.shape[0])+"% images. Remain: "+str(df.shape[0]-len(images))+"...")
                 sys.stdout.flush()
         else:
             print "[?] This '{0}' does not exist".format(p)
