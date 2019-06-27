@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  27 JUN 2019 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  28 JUN 2019 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,7 +1000,7 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <12> not available
 (Font)              Font shape `T1/lmr/m/sc' tried instead on input line 35.
 
-<Logo/logo.jpg, id=337, 312.41719pt x 312.41719pt>
+<Logo/logo.jpg, id=325, 312.41719pt x 312.41719pt>
 File: Logo/logo.jpg Graphic file (type jpg)
 <use Logo/logo.jpg>
 Package pdftex.def Info: Logo/logo.jpg  used on input line 37.
@@ -1125,7 +1125,7 @@ u carte de Ko-ho-nen (1982)) :
  []
 
 [4] [5] [6]
-<img-Chapiter-1/neurone.jpeg, id=615, 163.3302pt x 116.5956pt>
+<img-Chapiter-1/neurone.jpeg, id=598, 163.3302pt x 116.5956pt>
 File: img-Chapiter-1/neurone.jpeg Graphic file (type jpg)
 <use img-Chapiter-1/neurone.jpeg>
 Package pdftex.def Info: img-Chapiter-1/neurone.jpeg  used on input line 207.
@@ -1137,18 +1137,18 @@ Package pdftex.def Info: img-Chapiter-1/neurone.jpeg  used on input line 207.
                                                   \fi \fi 
 l.216 
        <./img-Chapiter-1/neurone.jpeg>]
-<img-Chapiter-1/shemadenourone.png, id=628, 642.4pt x 401.5pt>
+<img-Chapiter-1/shemadenourone.png, id=611, 642.4pt x 401.5pt>
 File: img-Chapiter-1/shemadenourone.png Graphic file (type png)
 <use img-Chapiter-1/shemadenourone.png>
 Package pdftex.def Info: img-Chapiter-1/shemadenourone.png  used on input line 
 220.
 (pdftex.def)             Requested size: 369.88582pt x 231.1854pt.
-<img-Chapiter-1/CNN.png, id=633, 506.89375pt x 173.64874pt>
+<img-Chapiter-1/CNN.png, id=616, 506.89375pt x 173.64874pt>
 File: img-Chapiter-1/CNN.png Graphic file (type png)
 <use img-Chapiter-1/CNN.png>
 Package pdftex.def Info: img-Chapiter-1/CNN.png  used on input line 230.
 (pdftex.def)             Requested size: 426.79134pt x 146.21104pt.
-<img-Chapiter-1/CNN2.png, id=634, 616.3025pt x 220.825pt>
+<img-Chapiter-1/CNN2.png, id=617, 616.3025pt x 220.825pt>
 File: img-Chapiter-1/CNN2.png Graphic file (type png)
 <use img-Chapiter-1/CNN2.png>
 Package pdftex.def Info: img-Chapiter-1/CNN2.png  used on input line 235.
@@ -1178,7 +1178,7 @@ l.246
                                                   \fi \fi 
 l.246 
        <./img-Chapiter-1/CNN.png> <./img-Chapiter-1/CNN2.png>]
-<img-Chapiter-1/REG.png, id=652, 1562.83875pt x 785.93625pt>
+<img-Chapiter-1/REG.png, id=634, 1562.83875pt x 785.93625pt>
 File: img-Chapiter-1/REG.png Graphic file (type png)
 <use img-Chapiter-1/REG.png>
 Package pdftex.def Info: img-Chapiter-1/REG.png  used on input line 249.
@@ -1190,7 +1190,7 @@ Package pdftex.def Info: img-Chapiter-1/REG.png  used on input line 249.
                                                   \fi \fi 
 l.255 \newpage
                <./img-Chapiter-1/REG.png (PNG copy)>] [12]
-<img-Chapiter-1/nor.png, id=667, 1903.11pt x 1223.57124pt>
+<img-Chapiter-1/nor.png, id=650, 1903.11pt x 1223.57124pt>
 File: img-Chapiter-1/nor.png Graphic file (type png)
 <use img-Chapiter-1/nor.png>
 Package pdftex.def Info: img-Chapiter-1/nor.png  used on input line 270.
@@ -1209,7 +1209,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 l.285 	\item d
               e 1,5 Ã  20 Âµm , l'infrarouge moyen dÃ©celÃ© par des dÃ©tecte...
  <./img-Chapiter-1/nor.png>]
-<img-Chapiter-1/1.png, id=680, 525.965pt x 172.645pt>
+<img-Chapiter-1/1.png, id=663, 525.965pt x 172.645pt>
 File: img-Chapiter-1/1.png Graphic file (type png)
 <use img-Chapiter-1/1.png>
 Package pdftex.def Info: img-Chapiter-1/1.png  used on input line 301.
@@ -1227,7 +1227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
  []
 
 [23]
-<img-Chapiter-2/IOT.jpg, id=806, 942.52126pt x 334.24875pt>
+<img-Chapiter-2/IOT.jpg, id=789, 942.52126pt x 334.24875pt>
 File: img-Chapiter-2/IOT.jpg Graphic file (type jpg)
 <use img-Chapiter-2/IOT.jpg>
 Package pdftex.def Info: img-Chapiter-2/IOT.jpg  used on input line 474.
@@ -1255,7 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 513--514
                                                   \fi \fi 
 l.565 
       ]
-<img-Chapiter-2/cancerenfant.png, id=837, 488.82625pt x 466.74374pt>
+<img-Chapiter-2/cancerenfant.png, id=820, 488.82625pt x 466.74374pt>
 File: img-Chapiter-2/cancerenfant.png Graphic file (type png)
 <use img-Chapiter-2/cancerenfant.png>
 Package pdftex.def Info: img-Chapiter-2/cancerenfant.png  used on input line 57
@@ -1269,7 +1269,7 @@ Package pdftex.def Info: img-Chapiter-2/cancerenfant.png  used on input line 57
 l.585 	\item l
               e cancer des os (4\%) . <./img-Chapiter-2/cancerenfant.png>]
 [28]
-<img-Chapiter-2/galune.jpeg, id=854, 225.84375pt x 225.84375pt>
+<img-Chapiter-2/galune.jpeg, id=837, 225.84375pt x 225.84375pt>
 File: img-Chapiter-2/galune.jpeg Graphic file (type jpg)
 <use img-Chapiter-2/galune.jpeg>
 Package pdftex.def Info: img-Chapiter-2/galune.jpeg  used on input line 638.
@@ -1279,7 +1279,7 @@ Package pdftex.def Info: img-Chapiter-2/galune.jpeg  used on input line 638.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29]
-<img-Chapiter-2/classs.jpg, id=863, 1027.84pt x 686.565pt>
+<img-Chapiter-2/classs.jpg, id=846, 1027.84pt x 686.565pt>
 File: img-Chapiter-2/classs.jpg Graphic file (type jpg)
 <use img-Chapiter-2/classs.jpg>
 Package pdftex.def Info: img-Chapiter-2/classs.jpg  used on input line 649.
@@ -1297,7 +1297,7 @@ l.653 \newpage
                                                   \fi \fi 
 l.653 \newpage
                <./img-Chapiter-2/galune.jpeg> <./img-Chapiter-2/classs.jpg>]
-<img-Chapiter-2/infra.jpg, id=872, 501.875pt x 501.875pt>
+<img-Chapiter-2/infra.jpg, id=854, 501.875pt x 501.875pt>
 File: img-Chapiter-2/infra.jpg Graphic file (type jpg)
 <use img-Chapiter-2/infra.jpg>
 Package pdftex.def Info: img-Chapiter-2/infra.jpg  used on input line 657.
@@ -1310,13 +1310,13 @@ Package pdftex.def Info: img-Chapiter-2/infra.jpg  used on input line 657.
                                                   \fi \fi 
 l.663 \newpage
                <./img-Chapiter-2/infra.jpg>]
-<img-Chapiter-2/tetiiiiiiiiine.jpg, id=881, 602.25pt x 602.25pt>
+<img-Chapiter-2/tetiiiiiiiiine.jpg, id=863, 602.25pt x 602.25pt>
 File: img-Chapiter-2/tetiiiiiiiiine.jpg Graphic file (type jpg)
 <use img-Chapiter-2/tetiiiiiiiiine.jpg>
 Package pdftex.def Info: img-Chapiter-2/tetiiiiiiiiine.jpg  used on input line 
 666.
 (pdftex.def)             Requested size: 256.0861pt x 170.71487pt.
-<img-Chapiter-2/bbracelet.jpg, id=882, 401.5pt x 401.5pt>
+<img-Chapiter-2/bbracelet.jpg, id=864, 401.5pt x 401.5pt>
 File: img-Chapiter-2/bbracelet.jpg Graphic file (type jpg)
 <use img-Chapiter-2/bbracelet.jpg>
 Package pdftex.def Info: img-Chapiter-2/bbracelet.jpg  used on input line 672.
@@ -1335,7 +1335,7 @@ l.676 \newpage
 l.676 \newpage
                <./img-Chapiter-2/tetiiiiiiiiine.jpg> <./img-Chapiter-2/bbracele
 t.jpg>] [33] [34]
-<img-Chapiter-3/processus.png, id=900, 1204.5pt x 548.0475pt>
+<img-Chapiter-3/processus.png, id=883, 1204.5pt x 548.0475pt>
 File: img-Chapiter-3/processus.png Graphic file (type png)
 <use img-Chapiter-3/processus.png>
 Package pdftex.def Info: img-Chapiter-3/processus.png  used on input line 714.
@@ -1347,7 +1347,7 @@ Package pdftex.def Info: img-Chapiter-3/processus.png  used on input line 714.
                                                   \fi \fi 
 l.718 \newpage
                <./img-Chapiter-3/processus.png>]
-<img-Chapiter-3/architecturedetaillee.png, id=906, 734.745pt x 161.60374pt>
+<img-Chapiter-3/architecturedetaillee.png, id=889, 734.745pt x 161.60374pt>
 File: img-Chapiter-3/architecturedetaillee.png Graphic file (type png)
 <use img-Chapiter-3/architecturedetaillee.png>
 Package pdftex.def Info: img-Chapiter-3/architecturedetaillee.png  used on inpu
@@ -1369,7 +1369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 769--772
 
  []
 
-<img-Chapiter-3/ther.png, id=918, 554.07pt x 513.92pt>
+<img-Chapiter-3/ther.png, id=901, 554.07pt x 513.92pt>
 File: img-Chapiter-3/ther.png Graphic file (type png)
 <use img-Chapiter-3/ther.png>
 Package pdftex.def Info: img-Chapiter-3/ther.png  used on input line 780.
@@ -1411,7 +1411,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img-Chapiter-3/therPi.png, id=945, 455.7025pt x 511.9125pt>
+<img-Chapiter-3/therPi.png, id=928, 455.7025pt x 511.9125pt>
 File: img-Chapiter-3/therPi.png Graphic file (type png)
 <use img-Chapiter-3/therPi.png>
 Package pdftex.def Info: img-Chapiter-3/therPi.png  used on input line 812.
@@ -1427,80 +1427,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 824--825
 
  []
 
-<img-Chapiter-3/Picture1.png, id=958, 471.7625pt x 640.3925pt>
+<img-Chapiter-3/Picture1.png, id=941, 471.7625pt x 640.3925pt>
 File: img-Chapiter-3/Picture1.png Graphic file (type png)
 <use img-Chapiter-3/Picture1.png>
-Package pdftex.def Info: img-Chapiter-3/Picture1.png  used on input line 829.
+Package pdftex.def Info: img-Chapiter-3/Picture1.png  used on input line 831.
 (pdftex.def)             Requested size: 341.43956pt x 341.43889pt.
 [40pdfTeX warning (ext4): destination with the same identifier (name{figure.19}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.838 	\item C
-              alcule de la tempÃ©rature pour visage et profile. <./img-Chapiter
--3/Picture1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 852--853
+l.840 	\item C
+              alcule de la tempÃ©rature pour visage et profil. <./img-Chapiter-
+3/Picture1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
 
  []
 
-<img-Chapiter-3/Blure.png, id=968, 1248.665pt x 575.14874pt>
+[41]
+<img-Chapiter-3/Blure.png, id=962, 1248.665pt x 575.14874pt>
 File: img-Chapiter-3/Blure.png Graphic file (type png)
 <use img-Chapiter-3/Blure.png>
-Package pdftex.def Info: img-Chapiter-3/Blure.png  used on input line 862.
-(pdftex.def)             Requested size: 369.88582pt x 170.36949pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[41]
-<img-Chapiter-3/modele1.png, id=981, 211.79124pt x 349.305pt>
-File: img-Chapiter-3/modele1.png Graphic file (type png)
-<use img-Chapiter-3/modele1.png>
-Package pdftex.def Info: img-Chapiter-3/modele1.png  used on input line 870.
-(pdftex.def)             Requested size: 341.44531pt x 341.45311pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
-) has been already used, duplicate ignored
+Package pdftex.def Info: img-Chapiter-3/Blure.png  used on input line 863.
+(pdftex.def)             Requested size: 312.9803pt x 144.15543pt.
+<img-Chapiter-3/modele2.png, id=963, 365.365pt x 373.395pt>
+File: img-Chapiter-3/modele2.png Graphic file (type png)
+<use img-Chapiter-3/modele2.png>
+Package pdftex.def Info: img-Chapiter-3/modele2.png  used on input line 871.
+(pdftex.def)             Requested size: 227.62204pt x 232.62492pt.
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.20
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.881 \newpage
-               <./img-Chapiter-3/Blure.png>]
-<img-Chapiter-3/modele2.png, id=991, 365.365pt x 373.395pt>
-File: img-Chapiter-3/modele2.png Graphic file (type png)
-<use img-Chapiter-3/modele2.png>
-Package pdftex.def Info: img-Chapiter-3/modele2.png  used on input line 884.
-(pdftex.def)             Requested size: 341.44728pt x 341.44797pt.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.21}) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.881 \newpage
+               <./img-Chapiter-3/Blure.png> <./img-Chapiter-3/modele2.png>]
+<img-Chapiter-3/modele1.png, id=976, 211.79124pt x 349.305pt>
+File: img-Chapiter-3/modele1.png Graphic file (type png)
+<use img-Chapiter-3/modele1.png>
+Package pdftex.def Info: img-Chapiter-3/modele1.png  used on input line 886.
+(pdftex.def)             Requested size: 142.26378pt x 234.64075pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.895 \newpage
-               <./img-Chapiter-3/modele1.png>] [44pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.22}) has been already used, duplica
-te ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.901 \newpage
-               <./img-Chapiter-3/modele2.png>]
-Overfull \hbox (5.93307pt too wide) in paragraph at lines 905--905
+l.897 \newpage
+               <./img-Chapiter-3/modele1.png>] [44]
+Overfull \hbox (5.93307pt too wide) in paragraph at lines 910--910
 [][]\T1/lmr/bx/n/24.88 Implémentation des so-lu-tions pro-po-sées 
  []
 
 [45]
-<img-Chapiter-4/Python_logo.png, id=1012, 1897.0875pt x 803.0pt>
+<img-Chapiter-4/Python_logo.png, id=996, 1897.0875pt x 803.0pt>
 File: img-Chapiter-4/Python_logo.png Graphic file (type png)
 <use img-Chapiter-4/Python_logo.png>
-Package pdftex.def Info: img-Chapiter-4/Python_logo.png  used on input line 919
+Package pdftex.def Info: img-Chapiter-4/Python_logo.png  used on input line 921
 .
 (pdftex.def)             Requested size: 341.43306pt x 144.5215pt.
  [46pdfTeX warning (ext4): destination with the same identifier (name{figure.23
@@ -1508,257 +1497,258 @@ Package pdftex.def Info: img-Chapiter-4/Python_logo.png  used on input line 919
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.925 \newpage
+l.926 \newpage
                <./img-Chapiter-4/Python_logo.png>]
-<img-Chapiter-4/open.png, id=1020, 52.998pt x 65.2839pt>
+<img-Chapiter-4/open.png, id=1002, 52.998pt x 65.2839pt>
 File: img-Chapiter-4/open.png Graphic file (type png)
 <use img-Chapiter-4/open.png>
-Package pdftex.def Info: img-Chapiter-4/open.png  used on input line 928.
+Package pdftex.def Info: img-Chapiter-4/open.png  used on input line 929.
 (pdftex.def)             Requested size: 113.81102pt x 140.20921pt.
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.24
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.943 \newpage
-               <./img-Chapiter-4/open.png>]
-<img-Chapiter-4/detection.png, id=1027, 594.22pt x 470.75874pt>
-File: img-Chapiter-4/detection.png Graphic file (type png)
-<use img-Chapiter-4/detection.png>
-Package pdftex.def Info: img-Chapiter-4/detection.png  used on input line 946.
-(pdftex.def)             Requested size: 426.79134pt x 338.13434pt.
-<img-Chapiter-3/enfant.png, id=1029, 187.70125pt x 219.82124pt>
-File: img-Chapiter-3/enfant.png Graphic file (type png)
-<use img-Chapiter-3/enfant.png>
-Package pdftex.def Info: img-Chapiter-3/enfant.png  used on input line 953.
-(pdftex.def)             Requested size: 227.62204pt x 266.59161pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48pdfTeX warning (ext4): destination with the same identifier (name{figure.25}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.958 \newpage
-               <./img-Chapiter-4/detection.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 960--961
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
 
  []
 
 
-Overfull \hbox (5.27438pt too wide) in paragraph at lines 970--971
+Overfull \hbox (5.24237pt too wide) in paragraph at lines 946--947
 []\T1/lmr/m/n/12 Nous uti-li-sons la fonc-tion \T1/lmr/m/it/12 cv2.fastNlMeansD
-enoisingColored() \T1/lmr/m/n/12 ,comme men-tionné ci-dessus,
+enoisingColored()\T1/lmr/m/n/12 , comme men-tionné ci-dessus,
  []
 
-[49pdfTeX warning (ext4): destination with the same identifier (name{figure.26}
+[47pdfTeX warning (ext4): destination with the same identifier (name{figure.24}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.971 \newpage
-               <./img-Chapiter-3/enfant.png>]
-<img-Chapiter-4/elimination.png, id=1046, 431.6125pt x 109.40875pt>
+l.947 \newpage
+               <./img-Chapiter-4/open.png>]
+<img-Chapiter-4/elimination.png, id=1013, 431.6125pt x 109.40875pt>
 File: img-Chapiter-4/elimination.png Graphic file (type png)
 <use img-Chapiter-4/elimination.png>
-Package pdftex.def Info: img-Chapiter-4/elimination.png  used on input line 974
+Package pdftex.def Info: img-Chapiter-4/elimination.png  used on input line 950
 .
 (pdftex.def)             Requested size: 426.79134pt x 108.18976pt.
-<img-Chapiter-4/elicapture.png, id=1047, 1084.05pt x 548.0475pt>
+<img-Chapiter-4/elicapture.png, id=1014, 567.11874pt x 287.0725pt>
 File: img-Chapiter-4/elicapture.png Graphic file (type png)
 <use img-Chapiter-4/elicapture.png>
-Package pdftex.def Info: img-Chapiter-4/elicapture.png  used on input line 981.
+Package pdftex.def Info: img-Chapiter-4/elicapture.png  used on input line 957.
 
-(pdftex.def)             Requested size: 398.33858pt x 201.37785pt.
- [50pdfTeX warning (ext4): destination with the same identifier (name{figure.27
+(pdftex.def)             Requested size: 398.33858pt x 201.64146pt.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.25
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.985 \newpage
+l.969 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
-{figure.28}) has been already used, duplicate ignored
+{figure.26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.985 \newpage
+l.969 \newpage
                <./img-Chapiter-4/elimination.png> <./img-Chapiter-4/elicapture.
 png>]
-<img-Chapiter-4/colab.png, id=1054, 398.48875pt x 247.92625pt>
-File: img-Chapiter-4/colab.png Graphic file (type png)
-<use img-Chapiter-4/colab.png>
-Package pdftex.def Info: img-Chapiter-4/colab.png  used on input line 999.
-(pdftex.def)             Requested size: 199.16928pt x 123.91742pt.
- [51pdfTeX warning (ext4): destination with the same identifier (name{figure.29
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1006 
-        <./img-Chapiter-4/colab.png>]
-<img-Chapiter-4/keras.png, id=1061, 1204.5pt x 349.305pt>
-File: img-Chapiter-4/keras.png Graphic file (type png)
-<use img-Chapiter-4/keras.png>
-Package pdftex.def Info: img-Chapiter-4/keras.png  used on input line 1017.
-(pdftex.def)             Requested size: 341.43306pt x 99.01462pt.
-<img-Chapiter-4/nodejs.png, id=1062, 1204.5pt x 736.7525pt>
-File: img-Chapiter-4/nodejs.png Graphic file (type png)
-<use img-Chapiter-4/nodejs.png>
-Package pdftex.def Info: img-Chapiter-4/nodejs.png  used on input line 1026.
-(pdftex.def)             Requested size: 256.0748pt x 156.63371pt.
+<img-Chapiter-4/detection.png, id=1023, 594.22pt x 470.75874pt>
+File: img-Chapiter-4/detection.png Graphic file (type png)
+<use img-Chapiter-4/detection.png>
+Package pdftex.def Info: img-Chapiter-4/detection.png  used on input line 972.
+(pdftex.def)             Requested size: 426.79134pt x 338.13434pt.
+<img-Chapiter-4/enfant.png, id=1025, 216.81pt x 258.9675pt>
+File: img-Chapiter-4/enfant.png Graphic file (type png)
+<use img-Chapiter-4/enfant.png>
+Package pdftex.def Info: img-Chapiter-4/enfant.png  used on input line 979.
+(pdftex.def)             Requested size: 227.62204pt x 271.89621pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52pdfTeX warning (ext4): destination with the same identifier (name{figure.30}
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.27}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1034 \textbf{Raspberry Pi:}
-                              <./img-Chapiter-4/keras.png>]
-<img-Chapiter-4/raspberry.png, id=1073, 898.35625pt x 247.92625pt>
-File: img-Chapiter-4/raspberry.png Graphic file (type png)
-<use img-Chapiter-4/raspberry.png>
-Package pdftex.def Info: img-Chapiter-4/raspberry.png  used on input line 1037.
+l.984 \newpage
+               <./img-Chapiter-4/detection.png>] [50pdfTeX warning (ext4): dest
+ination with the same identifier (name{figure.28}) has been already used, dupli
+cate ignored
 
-(pdftex.def)             Requested size: 341.43306pt x 94.22807pt.
- [53pdfTeX warning (ext4): destination with the same identifier (name{figure.31
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.994 
+       <./img-Chapiter-4/enfant.png>]
+<img-Chapiter-4/colab.png, id=1037, 398.48875pt x 247.92625pt>
+File: img-Chapiter-4/colab.png Graphic file (type png)
+<use img-Chapiter-4/colab.png>
+Package pdftex.def Info: img-Chapiter-4/colab.png  used on input line 997.
+(pdftex.def)             Requested size: 199.16928pt x 123.91742pt.
+<img-Chapiter-4/keras.png, id=1038, 1204.5pt x 349.305pt>
+File: img-Chapiter-4/keras.png Graphic file (type png)
+<use img-Chapiter-4/keras.png>
+Package pdftex.def Info: img-Chapiter-4/keras.png  used on input line 1015.
+(pdftex.def)             Requested size: 341.43306pt x 99.01462pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.29}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1021 
+        <./img-Chapiter-4/colab.png>]
+<img-Chapiter-4/nodejs.png, id=1048, 1204.5pt x 736.7525pt>
+File: img-Chapiter-4/nodejs.png Graphic file (type png)
+<use img-Chapiter-4/nodejs.png>
+Package pdftex.def Info: img-Chapiter-4/nodejs.png  used on input line 1024.
+(pdftex.def)             Requested size: 256.0748pt x 156.63371pt.
+ [52pdfTeX warning (ext4): destination with the same identifier (name{figure.30
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1047 
+l.1039 
        pdfTeX warning (ext4): destination with the same identifier (name{figure
-.32}) has been already used, duplicate ignored
+.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1047 
-        <./img-Chapiter-4/nodejs.png> <./img-Chapiter-4/raspberry.png>]
-[54]
-<img-Chapiter-4/batch.png, id=1086, 569.12625pt x 592.2125pt>
+l.1039 
+        <./img-Chapiter-4/keras.png> <./img-Chapiter-4/nodejs.png>] [53]
+<img-Chapiter-4/batch.png, id=1062, 569.12625pt x 592.2125pt>
 File: img-Chapiter-4/batch.png Graphic file (type png)
 <use img-Chapiter-4/batch.png>
-Package pdftex.def Info: img-Chapiter-4/batch.png  used on input line 1062.
+Package pdftex.def Info: img-Chapiter-4/batch.png  used on input line 1054.
 (pdftex.def)             Requested size: 284.52756pt x 296.0784pt.
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.33
-}) has been already used, duplicate ignored
+
+[54pdfTeX warning (ext4): destination with the same identifier (name{figure.32}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1069 \newpage
+l.1061 \newpage
                 <./img-Chapiter-4/batch.png>]
-<img-Chapiter-4/datasets.png, id=1092, 456.70625pt x 457.71pt>
+<img-Chapiter-4/datasets.png, id=1069, 456.70625pt x 457.71pt>
 File: img-Chapiter-4/datasets.png Graphic file (type png)
 <use img-Chapiter-4/datasets.png>
-Package pdftex.def Info: img-Chapiter-4/datasets.png  used on input line 1072.
+Package pdftex.def Info: img-Chapiter-4/datasets.png  used on input line 1064.
 (pdftex.def)             Requested size: 284.52756pt x 285.16013pt.
-<img-Chapiter-4/loaddataset.png, id=1093, 1113.15875pt x 426.59375pt>
+<img-Chapiter-4/loaddataset.png, id=1070, 1113.15875pt x 426.59375pt>
 File: img-Chapiter-4/loaddataset.png Graphic file (type png)
 <use img-Chapiter-4/loaddataset.png>
-Package pdftex.def Info: img-Chapiter-4/loaddataset.png  used on input line 108
-6.
+Package pdftex.def Info: img-Chapiter-4/loaddataset.png  used on input line 107
+8.
 (pdftex.def)             Requested size: 455.24408pt x 174.46193pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56pdfTeX warning (ext4): destination with the same identifier (name{figure.34}
+[55pdfTeX warning (ext4): destination with the same identifier (name{figure.33}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1091 
+l.1083 
         <./img-Chapiter-4/datasets.png>]
-<img-Chapiter-4/pretraitementimage.png, id=1100, 593.21625pt x 127.47626pt>
+<img-Chapiter-4/pretraitementimage.png, id=1076, 593.21625pt x 127.47626pt>
 File: img-Chapiter-4/pretraitementimage.png Graphic file (type png)
 <use img-Chapiter-4/pretraitementimage.png>
 Package pdftex.def Info: img-Chapiter-4/pretraitementimage.png  used on input l
-ine 1096.
+ine 1088.
 (pdftex.def)             Requested size: 426.79134pt x 91.71669pt.
-<img-Chapiter-4/createcnn.png, id=1101, 596.2275pt x 216.81pt>
+<img-Chapiter-4/createcnn.png, id=1077, 596.2275pt x 216.81pt>
 File: img-Chapiter-4/createcnn.png Graphic file (type png)
 <use img-Chapiter-4/createcnn.png>
-Package pdftex.def Info: img-Chapiter-4/createcnn.png  used on input line 1106.
+Package pdftex.def Info: img-Chapiter-4/createcnn.png  used on input line 1098.
 
 (pdftex.def)             Requested size: 426.79134pt x 155.19661pt.
- [57pdfTeX warning (ext4): destination with the same identifier (name{figure.35
+ [56pdfTeX warning (ext4): destination with the same identifier (name{figure.34
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1108 \end{figure}
+l.1100 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
-(name{figure.36}) has been already used, duplicate ignored
+(name{figure.35}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1108 \end{figure}
+l.1100 \end{figure}
                     <./img-Chapiter-4/loaddataset.png> <./img-Chapiter-4/pretra
 itementimage.png>]
-<img-Chapiter-4/training.png, id=1109, 599.23875pt x 71.26625pt>
+<img-Chapiter-4/training.png, id=1085, 599.23875pt x 71.26625pt>
 File: img-Chapiter-4/training.png Graphic file (type png)
 <use img-Chapiter-4/training.png>
-Package pdftex.def Info: img-Chapiter-4/training.png  used on input line 1114.
+Package pdftex.def Info: img-Chapiter-4/training.png  used on input line 1106.
 (pdftex.def)             Requested size: 426.79134pt x 50.75813pt.
- [58pdfTeX warning (ext4): destination with the same identifier (name{figure.37
+ [57pdfTeX warning (ext4): destination with the same identifier (name{figure.36
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1120 \newpage
+l.1112 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
-e{figure.38}) has been already used, duplicate ignored
+e{figure.37}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1120 \newpage
+l.1112 \newpage
                 <./img-Chapiter-4/createcnn.png> <./img-Chapiter-4/training.png
 >]
-<img-Chapiter-4/train.png, id=1116, 573.14125pt x 50.1875pt>
+<img-Chapiter-4/train.png, id=1092, 573.14125pt x 50.1875pt>
 File: img-Chapiter-4/train.png Graphic file (type png)
 <use img-Chapiter-4/train.png>
-Package pdftex.def Info: img-Chapiter-4/train.png  used on input line 1123.
+Package pdftex.def Info: img-Chapiter-4/train.png  used on input line 1115.
 (pdftex.def)             Requested size: 426.79134pt x 37.37248pt.
-<img-Chapiter-4/predecting.png, id=1117, 573.14125pt x 122.4575pt>
+<img-Chapiter-4/predecting.png, id=1093, 573.14125pt x 122.4575pt>
 File: img-Chapiter-4/predecting.png Graphic file (type png)
 <use img-Chapiter-4/predecting.png>
-Package pdftex.def Info: img-Chapiter-4/predecting.png  used on input line 1131
+Package pdftex.def Info: img-Chapiter-4/predecting.png  used on input line 1123
 .
 (pdftex.def)             Requested size: 426.79134pt x 91.18889pt.
-<img-Chapiter-4/predicting_value.png, id=1119, 603.25375pt x 122.4575pt>
+<img-Chapiter-4/predicting_value.png, id=1095, 603.25375pt x 122.4575pt>
 File: img-Chapiter-4/predicting_value.png Graphic file (type png)
 <use img-Chapiter-4/predicting_value.png>
 Package pdftex.def Info: img-Chapiter-4/predicting_value.png  used on input lin
-e 1140.
+e 1132.
 (pdftex.def)             Requested size: 426.79134pt x 86.63524pt.
- [59pdfTeX warning (ext4): destination with the same identifier (name{figure.39
+ [58pdfTeX warning (ext4): destination with the same identifier (name{figure.38
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1146 \newpage
+l.1138 \newpage
+               pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.39}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1138 \newpage
                pdfTeX warning (ext4): destination with the same identifier (nam
 e{figure.40}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1146 \newpage
-               pdfTeX warning (ext4): destination with the same identifier (nam
-e{figure.41}) has been already used, duplicate ignored
+l.1138 \newpage
+                <./img-Chapiter-4/train.png> <./img-Chapiter-4/predecting.png> 
+<./img-Chapiter-4/predicting_value.png>]
+<img-Chapiter-4/Figure_1.png, id=1102, 462.528pt x 346.896pt>
+File: img-Chapiter-4/Figure_1.png Graphic file (type png)
+<use img-Chapiter-4/Figure_1.png>
+Package pdftex.def Info: img-Chapiter-4/Figure_1.png  used on input line 1141.
+(pdftex.def)             Requested size: 426.79134pt x 320.11154pt.
+ [59pdfTeX warning (ext4): destination with the same identifier (name{figure.41
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1146 \newpage
-                <./img-Chapiter-4/train.png> <./img-Chapiter-4/predecting.png> 
-<./img-Chapiter-4/predicting_value.png>]
-<img-Chapiter-4/Figure_1.png, id=1125, 462.528pt x 346.896pt>
-File: img-Chapiter-4/Figure_1.png Graphic file (type png)
-<use img-Chapiter-4/Figure_1.png>
-Package pdftex.def Info: img-Chapiter-4/Figure_1.png  used on input line 1149.
+l.1145 \newpage
+                <./img-Chapiter-4/Figure_1.png>]
+<img-Chapiter-4/Figure_1-1.png, id=1108, 462.528pt x 346.896pt>
+File: img-Chapiter-4/Figure_1-1.png Graphic file (type png)
+<use img-Chapiter-4/Figure_1-1.png>
+Package pdftex.def Info: img-Chapiter-4/Figure_1-1.png  used on input line 1148
+.
 (pdftex.def)             Requested size: 426.79134pt x 320.11154pt.
  [60pdfTeX warning (ext4): destination with the same identifier (name{figure.42
 }) has been already used, duplicate ignored
@@ -1766,19 +1756,6 @@ Package pdftex.def Info: img-Chapiter-4/Figure_1.png  used on input line 1149.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1153 \newpage
-                <./img-Chapiter-4/Figure_1.png>]
-<img-Chapiter-4/Figure_1-1.png, id=1132, 462.528pt x 346.896pt>
-File: img-Chapiter-4/Figure_1-1.png Graphic file (type png)
-<use img-Chapiter-4/Figure_1-1.png>
-Package pdftex.def Info: img-Chapiter-4/Figure_1-1.png  used on input line 1156
-.
-(pdftex.def)             Requested size: 426.79134pt x 320.11154pt.
- [61pdfTeX warning (ext4): destination with the same identifier (name{figure.43
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1161 \newpage
                 <./img-Chapiter-4/Figure_1-1.png>]
 (./Chapiter-1_Etat-de-l'art.bbl
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
@@ -1812,7 +1789,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[62] [63]
+[61] [62]
 Underfull \hbox (badness 10000) in paragraph at lines 150--153
 []\T1/lmr/m/n/12 ``La santé connec-tée.'' []$\T1/lmtt/m/n/12 https : / / www . 
 nmmedical . fr / materiel-[]de-[]diagnostic /
@@ -1883,28 +1860,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--210
 m / products / raspberry-[]pi-[]2-[]model-[]b ?
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1167.
+[63])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1159.
  [64]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1159.
  (./Chapiter-1_Etat-de-l'art.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1167.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1167.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1159.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1159.
 
 Package rerunfilecheck Info: File `Chapiter-1_Etat-de-l'art.out' has not change
 d.
-(rerunfilecheck)             Checksum: A66142B96936B7F0ECFFCCFE74C4A4E1;6244.
+(rerunfilecheck)             Checksum: 21C1F128960F171BBF4A0FAC8564779D;6023.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1167.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1159.
  ) 
 Here is how much of TeX's memory you used:
- 10331 strings out of 492982
- 146103 string characters out of 6134895
- 241061 words of memory out of 5000000
- 13272 multiletter control sequences out of 15000+600000
+ 10320 strings out of 492982
+ 145821 string characters out of 6134895
+ 241056 words of memory out of 5000000
+ 13266 multiletter control sequences out of 15000+600000
  81818 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,12n,43p,980b,658s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1920,10 +1897,10 @@ ic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Chapiter-1_Etat-de-l'art.pdf (71 pages, 4871838 bytes).
+Output written on Chapiter-1_Etat-de-l'art.pdf (71 pages, 4905846 bytes).
 PDF statistics:
- 1317 PDF objects out of 1440 (max. 8388607)
- 1150 compressed objects within 12 object streams
- 378 named destinations out of 1000 (max. 500000)
- 893 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1298 PDF objects out of 1440 (max. 8388607)
+ 1133 compressed objects within 12 object streams
+ 374 named destinations out of 1000 (max. 500000)
+ 864 words of extra memory for PDF output out of 10000 (max. 10000000)
 

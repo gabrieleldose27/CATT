@@ -65,20 +65,17 @@
 \BOOKMARK [2][-]{subsection.14.3}{Description de chaque couche}{section.14}% 65
 \BOOKMARK [1][-]{section.15}{Architecture D\351taill\351e de la solution}{}% 66
 \BOOKMARK [2][-]{subsection.15.1}{Principe de fonctionnement}{section.15}% 67
-\BOOKMARK [2][-]{subsection.15.2}{Partie mat\351riel}{section.15}% 68
-\BOOKMARK [1][-]{section.16}{Partie logiciel}{}% 69
-\BOOKMARK [2][-]{subsection.16.1}{Algorithme d'\351limination des bruits}{section.16}% 70
+\BOOKMARK [2][-]{subsection.15.2}{Partie mat\351rielle}{section.15}% 68
+\BOOKMARK [1][-]{section.16}{Partie logicielle}{}% 69
+\BOOKMARK [2][-]{subsection.16.1}{Algorithme d'\351limination du bruit}{section.16}% 70
 \BOOKMARK [1][-]{section.17}{Conclusion}{}% 71
 \BOOKMARK [1][-]{section.17}{Chapiter 4 : R\351alisation de la solution propos\351e}{}% 72
 \BOOKMARK [1][-]{section.18}{Impl\351mentation de la version 1 de la solution}{}% 73
-\BOOKMARK [2][-]{subsection.18.1}{Algorithmes de classification d'image}{section.18}% 74
-\BOOKMARK [3][-]{subsubsection.18.1.1}{Partie logiciel}{subsection.18.1}% 75
-\BOOKMARK [3][-]{subsubsection.18.1.2}{Impl\351mentation}{subsection.18.1}% 76
-\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 77
-\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 78
-\BOOKMARK [2][-]{subsection.19.2}{Outils et mat\351riels}{section.19}% 79
-\BOOKMARK [3][-]{subsubsection.19.2.1}{Outils}{subsection.19.2}% 80
-\BOOKMARK [3][-]{subsubsection.19.2.2}{Mat\351riels}{subsection.19.2}% 81
-\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 82
-\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 83
-\BOOKMARK [2][-]{subsection.19.4}{Cr\351ation et entra\356nement du mod\350le}{section.19}% 84
+\BOOKMARK [2][-]{subsection.18.1}{Outils et plateformes utilis\351es}{section.18}% 74
+\BOOKMARK [3][-]{subsubsection.18.1.1}{Impl\351mentation}{subsection.18.1}% 75
+\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 76
+\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 77
+\BOOKMARK [2][-]{subsection.19.2}{Outils et plateformes}{section.19}% 78
+\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 79
+\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 80
+\BOOKMARK [2][-]{subsection.19.4}{Cr\351ation et entra\356nement du mod\350le}{section.19}% 81

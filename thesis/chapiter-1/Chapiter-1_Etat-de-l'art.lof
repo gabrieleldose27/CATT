@@ -19,26 +19,25 @@
 \contentsline {figure}{\numberline {18}{\ignorespaces cam\IeC {\'e}ra thermique \textit {Adafruit AMG8833 IR} relie avec un Raspberry Pi }}{39}{figure.18}
 \contentsline {figure}{\numberline {19}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 1}}{40}{figure.19}
 \contentsline {figure}{\numberline {20}{\ignorespaces \IeC {\'E}limination des bruits d'une image avec l'algorithme Gaussian Blur}}{42}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 2 \IeC {\'e}tape 1}}{43}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 2 \IeC {\'e}tape 2}}{44}{figure.22}
+\contentsline {figure}{\numberline {21}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 2}}{42}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Cr\IeC {\'e}ation du mod\IeC {\`e}le TOTO}}{43}{figure.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Logo python}}{46}{figure.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces Logo OpenCv}}{47}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Capture montre comment d\IeC {\'e}tecter le visage}}{48}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces D\IeC {\'e}tection de visage avec Haar cascade}}{49}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces \' Elimination des bruits programmatiquement}}{50}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces \' Elimination des bruits d'une image avec OpenCv}}{50}{figure.28}
+\contentsline {figure}{\numberline {25}{\ignorespaces Pseudo code de l'\IeC {\'e}limination du bruit}}{48}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces \' Elimination des bruits d'une image avec OpenCv}}{48}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Pseudo code pour d\IeC {\'e}tection du visage}}{49}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces D\IeC {\'e}tection du visage avec Haar cascade}}{50}{figure.28}
 \contentsline {figure}{\numberline {29}{\ignorespaces Logo de Google Colab}}{51}{figure.29}
 \contentsline {figure}{\numberline {30}{\ignorespaces Logo de Keras}}{52}{figure.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Logo Node.js}}{53}{figure.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Logo Raspberry Pi}}{53}{figure.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Script Bash pour classifier le Dataset en 5 classes}}{55}{figure.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Capture Dataset.csv}}{56}{figure.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Importer et redimensionner les images}}{57}{figure.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Pr\IeC {\'e} traitement d'image}}{57}{figure.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Cr\IeC {\'e}ation du r\IeC {\'e}seau CNN}}{58}{figure.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces L'utilisation de l'optimiseur Adam}}{58}{figure.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Entra\IeC {\^\i }ne le mod\IeC {\`e}le pour un nombre donn\IeC {\'e} d'\IeC {\'e}poques}}{59}{figure.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces G\IeC {\'e}n\IeC {\`e}re des pr\IeC {\'e}visions de sortie pour les \IeC {\'e}chantillons d'entr\IeC {\'e}e}}{59}{figure.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Renvoie les valeurs de perte et de mesures pour le mod\IeC {\`e}le en mode test}}{59}{figure.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Accuracy}}{60}{figure.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces loss}}{61}{figure.43}
+\contentsline {figure}{\numberline {31}{\ignorespaces Logo Node.js}}{52}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Script Bash pour classifier le Dataset en 5 classes}}{54}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Capture Dataset.csv}}{55}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Importer et redimensionner les images}}{56}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Pr\IeC {\'e} traitement d'image}}{56}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Cr\IeC {\'e}ation du r\IeC {\'e}seau CNN}}{57}{figure.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces L'utilisation de l'optimiseur Adam}}{57}{figure.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Entra\IeC {\^\i }ne le mod\IeC {\`e}le pour un nombre donn\IeC {\'e} d'\IeC {\'e}poques}}{58}{figure.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces G\IeC {\'e}n\IeC {\`e}re des pr\IeC {\'e}visions de sortie pour les \IeC {\'e}chantillons d'entr\IeC {\'e}e}}{58}{figure.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Renvoie les valeurs de perte et de mesures pour le mod\IeC {\`e}le en mode test}}{58}{figure.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Accuracy}}{59}{figure.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces loss}}{60}{figure.42}

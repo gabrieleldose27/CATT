@@ -754,7 +754,7 @@ Une caméra est installée au dessus du lit de l'enfant malade, cette caméra es
 	L'image, la décision et les coordonnées de l'enfant serons sauvegardées dans une base de données.
 \end{itemize}
 
-\subsection{Partie matériel}
+\subsection{Partie matérielle}
 \begin{itemize}
 	\item \textbf{Caméra thermique AMG8833} \cite{45} qui a comme fonction la prise des images thermiques.
 	%https://www.adafruit.com/product/3538
@@ -816,14 +816,16 @@ Une caméra est installée au dessus du lit de l'enfant malade, cette caméra es
 \end{itemize}
 
 \newpage
-\section{Partie logiciel}
-Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de détermine la température sur la base de l'image thermique de l'enfant.
+\section{Partie logicielle}
+Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de déterminer la température sur la base de l'image thermique de l'enfant.
 
-La figure \ref{fig:achdelasolu} présente cette architecture \textit{(version 1)} que l'on va implémenté en une 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
+La figure \ref{fig:achdelasolu} présente cette architecture \textit{(version 1)} que l'on va implémenté en un 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
 
 Une 2\textsuperscript{ème} version sera présentée en un 2\textsuperscript{ème} temps basée sur l'apprentissage profond.\\
 
-Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  en quelques étapes:
+\begin{enumerate}
+	\item \textbf{Solution version 1}\\
+	Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  en quelques étapes:
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/Picture1.png}
@@ -831,72 +833,75 @@ Nous présentons dans ce qui suit l'architecture du système de surveillance et 
 	\label{fig:achdelasolu}
 \end{figure}
 \begin{enumerate}
-	\item Collecte de l’image thermique de l’enfant.
+	\item Collecte de l’image thermique de l’enfant périodiquement.
 	\item \' Elimination des bruits trouvés dans cette image.
-	\item Détection du visage de l’enfant c'est une classification de l’image prise, pour classifier cette image on utilise le \textit{haar cascade}.
-	\item Détection s’il s’agit  de face ou de profile c'est une classification de l’image.
-	\item Calcule de la température pour visage et profile. 
-	\item l'image, décision et les coordonnées serons sauvegardées dans une base de données. 
-	\item l’opération se répète à partir de  l’étape 2.
-	\item si la température est élevée:
+	\item Détection du visage de l’enfant c'est une classification de l’image prise.
+	\item Détection s’il s’agit  de face ou de profil c'est une classification de l’image.
+	\item Calcule de la température pour visage et profil. 
+	\item L'image, décision et les coordonnées serons sauvegardées dans une base de données.
+	\item Si la température est élevée:
 	\begin{enumerate}
-		\item une alerte est lancée à l’infirmière,
+		\item Une alerte est lancée à l’infirmière,
 	\end{enumerate}
 \end{enumerate}
 
-\subsection{Algorithme d'élimination des bruits}
+\subsection{Algorithme d'élimination du bruit}
 Dans une image numérique on appelle bruit numérique toute information parasite ou dégradation que subit l'image de l'instant de son acquisition jusqu'à son enregistrement. 
 
 Le bruit numérique est une notion générale à tout type d'image numérique, et ce quel que soit le type du capteur à l'origine de son acquisition (appareil photo numérique, scanner, caméra thermique...etc). 
 
 Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'images durant l'acquisition, d'autres apparaissent durant la numérisation de l'information \cite{48}.\\
 
-\textbf{Gaussian Blur}
-
-Gaussian Blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
+Un exemple de l'algorithme d'élimination du bruit est celui de gaussian blur.\\
+Gaussian blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
 
 Le lissage gaussien est également utilisé comme étape de prétraitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
 
+\newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm]{img-Chapiter-3/Blure.png}
+	\includegraphics[width=11cm]{img-Chapiter-3/Blure.png}
 	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
 \end{figure}
-
-\newpage
-\newpage
+	\item \textbf{Solution version 2}\\
+	Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte version 2  en quelques étapes en utilisant un modèle basé sur l'apprentissage profond. 
+\end{enumerate}
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele1.png}
-	\caption{Architecture de système logiciel version 2 étape 1}
+	\includegraphics[width=8cm]{img-Chapiter-3/modele2.png}
+	\caption{Architecture de système logiciel version 2}
+	\label{fig:achdelasolu2}
+\end{figure}
+\begin{enumerate}
+	\item Collecte l'image thermique du malade périodiquement.
+	\item Le modèle traité l'image puis détermine la température.
+	\item Sauvegarder les données.
+	\item Alerter l'infirmière si la température corporelle est élevée.
+\end{enumerate}
+\newpage
+Pour la calcule du modèle (TOTO), nous allons suivre les étapes suivantes:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm]{img-Chapiter-3/modele1.png}
+	\caption{Création du modèle TOTO}
 	\label{fig:achdelasolu2}
 \end{figure}
 
 \begin{enumerate}
 	\item Entrer le Dataset qui contient plusieurs images thermiques.
 	\item Appliquer l'algorithme d'augmentation sur les image thermique entrées.
-	\item Modèle basé sur l'apprentissage profond pour entraîner sur l'ensemble des images thermiques.
+	\item Création du modèle par entraînement sur l'ensemble des images thermiques.
 	\item Enregistrer le modèle.
 \end{enumerate}
 \newpage
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=12cm,width=12cm]{img-Chapiter-3/modele2.png}
-	\caption{Architecture de système logiciel version 2 étape 2}
-	\label{fig:achdelasolu2}
-\end{figure}
-\begin{enumerate}
-	\item Collecte l'image thermique du malade.
-	\item Le modèle traité l'image puis détermine la température.
-	\item Sauvegarder les données.
-	\item Alerter l'infirmière si la température corporelle est élevée.
-\end{enumerate}
+
 
 \newpage
 \section{Conclusion}
 Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière rapide et sure. 
 
-Il faut noter que nous n'avons pas réalisé le prototype de la partie matérielle, car nous avons jugé \textit{bon} de nous \textbf{consecier} à l'élaboration du modèle et l'implémentation des différentes applications aussi la réalisation de ce type de prototype n'est pas chose difficile, elle fera l'objet d'un travail future.
+Il faut noter que nous n'avons pas réalisé le prototype de la partie matérielle, car nous avons jugé bon de nous consacrer à l'élaboration du modèle et l'implémentation des différentes applications aussi la réalisation de ce type de prototype n'est pas chose difficile, elle fera l'objet d'un travail future.
 
 \newpage
 \rhead{}
@@ -908,11 +913,8 @@ Il faut noter que nous n'avons pas réalisé le prototype de la partie matériel
 \section{Implémentation de la version 1 de la solution}
 Pour l'implémentation de la solution proposée en version 1 nous allons étudier quelques algorithmes et présenter ce qui a été réalisé.
 
-\subsection{Algorithmes de classification d'image}
-Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination des bruits et la détection de visage.
-\subsubsection{Partie logiciel}
-\subsubsection*{Python}
-Python est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
+\subsection{Outils et plateformes utilisées}
+\textbf{Python} est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
 
 \begin{figure}[h]
 	\centering
@@ -920,8 +922,7 @@ Python est un langage de programmation de haut niveau largement utilisé. Il a �
 	\caption{Logo python}
 \end{figure}
 
-\subsubsection*{OpenCv}
-OpenCV (pour Open Computer Vision) est une bibliothèque graphique libre, initialement développée par Intel, spécialisée dans le traitement d'images en temps réel. La société de robotique Willow Garage et la société ItSeez se sont succédé au support de cette bibliothèque. Depuis 2016 et le rachat de ItSeez par Intel, le support est de nouveau assuré par Intel. 
+\textbf{OpenCV} (pour Open Computer Vision) est une bibliothèque graphique libre, initialement développée par Intel, spécialisée dans le traitement d'images en temps réel. La société de robotique Willow Garage et la société ItSeez se sont succédé au support de cette bibliothèque. Depuis 2016 et le rachat de ItSeez par Intel, le support est de nouveau assuré par Intel. 
 \newpage
 \begin{figure}[h]
 	\centering
@@ -930,7 +931,32 @@ OpenCV (pour Open Computer Vision) est une bibliothèque graphique libre, initia
 \end{figure}
 
 \subsubsection{Implémentation}
+Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination du bruit et la détection du visage.
+\subsubsection*{\' Elimination des bruits}
+\textbf{Élimination du bruit  d'une image thermique dans OpenCV}\\
 
+OpenCV fournit quatre variantes de cette technique :
+\begin{enumerate}
+	\item \textit{cv2.fastNlMeansDenoising()} fonctionne avec une seule image en niveaux de gris.
+	\item \textit{cv2.fastNlMeansDenoisingColored()} fonctionne avec une image couleur.
+	\item \textit{cv2.fastNlMeansDenoisingMulti()} fonctionne avec des séquences d'images capturées en peu de temps (images en niveaux de gris).
+	\item \textit{cv2.fastNlMeansDenoisingColoredMulti()} comme ci-dessus, mais pour les images en couleur.
+\end{enumerate}
+
+Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()}, comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Voir la figure ci-dessous:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
+	\caption{Pseudo code de l'élimination du bruit}
+\end{figure}
+
+Voici une capture présente comment on a éliminer les bruits d'une image.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
+	\caption{\' Elimination des bruits d'une image avec OpenCv}
+\end{figure}
 \subsubsection*{Détection de visage: Haar Cascade}
 Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
 
@@ -944,42 +970,15 @@ Voici une capture présente comment détecter le visage programmatiquement à pa
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{img-Chapiter-4/detection.png}
-	\caption{Capture montre comment  détecter le visage}
+	\caption{Pseudo code pour détection du visage}
 \end{figure}
 
-La figure \ref{fig:res} montre le résultat comment le programme au dessus détecter le visage.
+\textit{La figure \ref{fig:res} montre le résultat comment le programme au dessus détecter le visage.}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=8cm]{img-Chapiter-3/enfant.png}
-	\caption{Détection de visage avec Haar cascade}
+	\includegraphics[width=8cm]{img-Chapiter-4/enfant.png}
+	\caption{Détection du visage avec Haar cascade}
 	\label{fig:res}
-\end{figure}
-
-\newpage
-\subsubsection*{\' Elimination des bruits}
-\textbf{Denoising d'image dans OpenCV}\\
-
-OpenCV fournit quatre variantes de cette technique :
-\begin{enumerate}
-	\item \textit{cv2.fastNlMeansDenoising()} fonctionne avec une seule image en niveaux de gris.
-	\item \textit{cv2.fastNlMeansDenoisingColored()} fonctionne avec une image couleur.
-	\item \textit{cv2.fastNlMeansDenoisingMulti()} fonctionne avec des séquences d'images capturées en peu de temps (images en niveaux de gris).
-	\item \textit{cv2.fastNlMeansDenoisingColoredMulti()} comme ci-dessus, mais pour les images en couleur.
-\end{enumerate}
-
-Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()} ,comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Voir la figure ci-dessous:
-\newpage
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
-	\caption{\' Elimination des bruits programmatiquement}
-\end{figure}
-
-Voici une capture présente comment on a éliminer les bruits d'une image.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
-	\caption{\' Elimination des bruits d'une image avec OpenCv}
 \end{figure}
 
 \newpage
@@ -987,12 +986,11 @@ Voici une capture présente comment on a éliminer les bruits d'une image.
 \subsection{Introduction}
 Après avoir parler de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution a notre problème on ce basant sur les techniques.
 
-\subsection{Outils et matériels}
-\subsubsection{Outils}
+\subsection{Outils et plateformes}
 \subsubsection*{Google Colaboratory}
 Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème est que \textit{l'on pour} utiliser les services informatiques pendant un maximum de 12 heures à la fois. 
 
-En règle générale, lorsque on entraîne les modèles dans le laboratoire, on est connecté à une machine virtuelle basée sur un processeur graphique, où on dispose de 12 heures maximum à la fois, après quoi on perde l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr)  attribuée et le cycle se répète.
+En règle générale, lorsque on entraîne les modèles dans le laboratoire, on est connecté à une machine virtuelle basée sur un processeur graphique, où on dispose de 12 heures maximum à la fois, après quoi on perde l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr)  sera attribuée et le cycle se répète.
 
 \begin{figure}[h]
 	\centering
@@ -1000,7 +998,7 @@ En règle générale, lorsque on entraîne les modèles dans le laboratoire, on 
 	\caption{Logo de Google Colab}
 \end{figure}
 
-Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser avec “Colab” comme service et on plus l’access aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser avec “Colab” comme service et on plus l’accès aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
 
 Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autre domaine mathématique, web, etc , très intéressants et complètes,  troisièmement la facilite du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maîtriser.
 
@@ -1028,33 +1026,27 @@ Est une API de haut niveau permettant de créer et de former des modèles d'appr
 \end{figure}
 
 Cela a motivé notre choix, aussi la maîtrise de l’outil et la facilite qu'il offre.
-\subsubsection{Matériels}
-\textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les bon outils précédemment déclarer dans la partie outils.
+%\subsubsection{Matériels}
+%\textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les %bon outils précédemment déclarer dans la partie outils.
 
-\textbf{Raspberry Pi:}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{img-Chapiter-4/raspberry.png}
-	\caption{Logo Raspberry Pi}
-\end{figure}
-
-Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, mais le manque de la camera infrarouge nous a conduit a improviser avec un serveur portable pour une simulation de notre figure \ref{fig:archgene}.
+%\textbf{Raspberry Pi:}
+%Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un %serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un %matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, %mais le manque de la camera infrarouge nous a conduit a improviser avec un %serveur portable pour une simulation de notre figure \ref{fig:archgene}.
 
 \subsection{Ensemble de données (Dataset)}
 Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
 
-Dans le cas de notre étude on utilise le Dataset proposé dans  [100] qui comporte des image infrarouge avec des niveaux de gris. La taille des image et comme suit: 320x220x1, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a 64x64x3. 
+Dans le cas de notre étude on utilise le Dataset proposé dans  \cite{47} qui comporte des image infrarouge avec des niveaux de gris. La taille des image et comme suit: $320 \times 220 \times 1$, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a $64 \times 64 \times 3$. 
 
-Le problème avec cette Dataset c’est qu’elle n’est pas annoter, c-à-d celle-ci n’est pas conçu \textit{on proposé} pour la détermination de la température corporelle .
+Le problème avec cette Dataset c’est qu’elle n’est pas annoter, c-à-d celle-ci n’est pas conçu ou préparée pour la détermination de la température corporelle .
 
-\subsubsection{\' Etape de l'augmentation}
+\subsubsection{\' Etape de l'augmentation} \textit{voir figure 22}
 La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’oeil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid).
 
  Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
 
 Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. 
 
-Après cette analyse et traitement on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et \textit{les inserire} dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour formater notre ensemble de données.
+Après cette analyse et traitement on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et les inscrire dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour formater notre ensemble de données.
 
 \newpage
 \begin{figure}[h]
@@ -1115,7 +1107,7 @@ Puis on a compile le modèle en utilisant le pourcentage d'erreur absolu moyen (
 	\caption{L'utilisation de l'optimiseur Adam}
 \end{figure}
 
-\subsubsection*{L’entraînement du modèle}
+\subsubsection*{Entraînement du modèle}
 Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “batch\_ size” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
 \newpage
 \begin{figure}[h]
@@ -1132,7 +1124,7 @@ Maintenant que notre modèle est prêt on commence a faire les calcules de notre
 	\caption{Génère des prévisions de sortie pour les échantillons d'entrée}
 \end{figure}
 
-\subsubsection*{L'évaluation du modèle}
+\subsubsection*{Évaluation du modèle}
 Et puis on affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entraînement et pour les tests, comme le montre la figure \ref{fig:prediction}.
 
 \begin{figure}[h]
