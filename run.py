@@ -17,7 +17,7 @@ def load_df(path):
     return dataset.load_dataset(path)
 
 def test_split(df, images):
-    return train_test_split(df, images, test_size=.05, random_state=42)
+    return train_test_split(df, images, test_size=.01, random_state=42)
 
 def predicting(model, testImagesX, testY):
     preds = model.predict(testImagesX, verbose=1)

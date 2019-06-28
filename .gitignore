@@ -3,3 +3,4 @@ venv/
 datasets/*
 dataset/*
 dsets/*
+node_modules

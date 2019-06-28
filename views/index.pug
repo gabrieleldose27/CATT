@@ -1,0 +1,83 @@
+doctype html
+html(lang='en')
+  head
+    title CATT
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+    link(rel='stylesheet', href='static/css/style.css')
+    link(rel='stylesheet', href='./styles/style.css')
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+  body.bg-light
+    nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+      a.navbar-brand.mr-auto.mr-lg-0(href='#') CATT 
+      button.navbar-toggler.p-0.border-0(type='button', data-toggle='offcanvas')
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Dashboard 
+              span.sr-only (current)
+          li.nav-item.dropdown
+            a#dropdown01.nav-link.dropdown-toggle(href='', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Settings
+            .dropdown-menu(aria-labelledby='dropdown01')
+              a.dropdown-item(href='#') Change default temperature
+              a.dropdown-item(href='#') Statics
+        form.form-inline.my-2.my-lg-0
+    main.container(role='main')
+      .d-flex.align-items-center.p-3.my-3.text-white-50.bg-purple.rounded.shadow-sm
+        img.mr-3(src='static/img/thermometer.svg', alt='', width='48', height='48')
+        .lh-100
+          h6.mb-0.text-white.lh-100 Temperatures
+          small Updated every 15 min
+      .my-3.p-3.bg-white.rounded.shadow-sm
+        h6.border-bottom.border-gray.pb-2.mb-0 Recent updates
+        .card-body.table
+          table.table.table-striped
+            thead.thead-dark
+              tr
+                th(scope='col') #
+                th(scope='col') Firs and Last-name
+                th(scope='col') Age
+                th(scope='col') Bed Number
+                th(scope='col') Last Temperature
+            tbody
+              tr
+                th(scope='row') 1
+                td Yazid Khetat
+                td 12
+                td 1
+                td 37.5
+              tr
+                th(scope='row') 2
+                td Amara Nezli
+                td 10
+                td 2
+                td 38
+      .my-3.p-3.bg-white.rounded.shadow-sm
+        h6.border-bottom.border-gray.pb-2.mb-0 Upload an image to test
+        br
+        form(action='/upload', enctype='multipart/form-data', method='POST')
+          .row
+            .col-6
+              .dropdown
+                button#dropdownMenuButton.btn.btn-success.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Number of bed
+                .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                  a.dropdown-item(href='#') 1
+                  a.dropdown-item(href='#') 2
+            .col-6
+              .custom-file
+                input#photo.custom-file-input.bg-primary(name='photo', required='', type='file')
+                label.custom-file-label(for='validatedCustomFile') Choose file...
+                 .invalid-feedback Example invalid custom file feedback
+          br
+          button.btn.btn-primary.btn-lg.btn-block(type='submit') Send
+    footer.footer
+      .container
+        span
+          | Made with ♥ by the 
+          a(href='https://github.com/hihebark/ThermoGray') team
+          |.
