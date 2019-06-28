@@ -34,45 +34,45 @@ Warning--empty year in 33
 Warning--empty booktitle in 35
 Warning--empty year in 35
 Warning--empty journal in 48
-You've used 44 entries,
+You've used 45 entries,
             1876 wiz_defined-function locations,
-            629 strings with 10788 characters,
-and the built_in function-call counts, 6446 in all, are:
-= -- 444
-> -- 272
+            634 strings with 10873 characters,
+and the built_in function-call counts, 6577 in all, are:
+= -- 455
+> -- 276
 < -- 0
-+ -- 114
-- -- 70
-* -- 358
-:= -- 893
-add.period$ -- 41
-call.type$ -- 44
-change.case$ -- 44
++ -- 116
+- -- 71
+* -- 365
+:= -- 915
+add.period$ -- 42
+call.type$ -- 45
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 75
-duplicate$ -- 409
-empty$ -- 912
-format.name$ -- 70
-if$ -- 1570
+cite$ -- 76
+duplicate$ -- 418
+empty$ -- 929
+format.name$ -- 71
+if$ -- 1601
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 29
-newline$ -- 135
-num.names$ -- 32
-pop$ -- 346
+int.to.str$ -- 45
+missing$ -- 30
+newline$ -- 138
+num.names$ -- 33
+pop$ -- 350
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 132
 stack$ -- 0
 substring$ -- 0
-swap$ -- 4
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 31
-while$ -- 32
-width$ -- 46
-write$ -- 299
+while$ -- 33
+width$ -- 47
+write$ -- 307
 (There were 31 warnings)

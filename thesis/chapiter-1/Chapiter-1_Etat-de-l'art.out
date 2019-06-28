@@ -1,6 +1,6 @@
 \BOOKMARK [1][-]{section*.2}{Liste des figures}{}% 1
 \BOOKMARK [1][-]{section*.3}{Liste des tables}{}% 2
-\BOOKMARK [1][-]{section*.3}{Chapiter 1 : \311tat de l'art}{}% 3
+\BOOKMARK [1][-]{section*.3}{Chapitre 1 : \311tat de l'art}{}% 3
 \BOOKMARK [1][-]{section.1}{Apprentissage automatique \(Machine Learning\)}{}% 4
 \BOOKMARK [2][-]{subsection.1.1}{Introduction}{section.1}% 5
 \BOOKMARK [2][-]{subsection.1.2}{Techniques d'apprentissage automatique}{section.1}% 6
@@ -29,7 +29,7 @@
 \BOOKMARK [2][-]{subsection.3.7}{Applications existantes}{section.3}% 29
 \BOOKMARK [2][-]{subsection.3.8}{Perspectives de la recherche}{section.3}% 30
 \BOOKMARK [2][-]{subsection.3.9}{Conclusion}{section.3}% 31
-\BOOKMARK [1][-]{subsection.3.9}{Chapiter 2 : Context et probl\351matique du projet}{}% 32
+\BOOKMARK [1][-]{subsection.3.9}{Chapitre 2 : Contexte et probl\351matique du projet}{}% 32
 \BOOKMARK [1][-]{section*.7}{Contexte et probl\351matique du projet}{}% 33
 \BOOKMARK [1][-]{section.4}{Introduction}{}% 34
 \BOOKMARK [1][-]{section.5}{E-sant\351}{}% 35
@@ -56,7 +56,7 @@
 \BOOKMARK [3][-]{subsubsection.9.1.1}{Thermom\350tre}{subsection.9.1}% 56
 \BOOKMARK [1][-]{section.10}{Solution Propos\351e}{}% 57
 \BOOKMARK [1][-]{section.11}{Conclusion}{}% 58
-\BOOKMARK [1][-]{section.11}{Chapiter 3 : Conception de la solution propos\351e}{}% 59
+\BOOKMARK [1][-]{section.11}{Chapitre 3 : Conception de la solution propos\351e}{}% 59
 \BOOKMARK [1][-]{section.12}{Introduction}{}% 60
 \BOOKMARK [1][-]{section.13}{Objectif}{}% 61
 \BOOKMARK [1][-]{section.14}{Architecture g\351n\351rale de la solution}{}% 62
@@ -65,20 +65,17 @@
 \BOOKMARK [2][-]{subsection.14.3}{Description de chaque couche}{section.14}% 65
 \BOOKMARK [1][-]{section.15}{Architecture D\351taill\351e de la solution}{}% 66
 \BOOKMARK [2][-]{subsection.15.1}{Principe de fonctionnement}{section.15}% 67
-\BOOKMARK [2][-]{subsection.15.2}{Partie mat\351riel}{section.15}% 68
-\BOOKMARK [1][-]{section.16}{Partie logiciel}{}% 69
-\BOOKMARK [2][-]{subsection.16.1}{Algorithme d'\351limination des bruits}{section.16}% 70
+\BOOKMARK [2][-]{subsection.15.2}{Partie mat\351rielle}{section.15}% 68
+\BOOKMARK [1][-]{section.16}{Partie logicielle}{}% 69
+\BOOKMARK [2][-]{subsection.16.1}{Algorithme d'\351limination du bruit}{section.16}% 70
 \BOOKMARK [1][-]{section.17}{Conclusion}{}% 71
-\BOOKMARK [1][-]{section.17}{Chapiter 4 : R\351alisation de la solution propos\351e}{}% 72
+\BOOKMARK [1][-]{section.17}{Chapitre 4 : Impl\351mentation des solutions propos\351es}{}% 72
 \BOOKMARK [1][-]{section.18}{Impl\351mentation de la version 1 de la solution}{}% 73
-\BOOKMARK [2][-]{subsection.18.1}{Algorithmes de classification d'image}{section.18}% 74
-\BOOKMARK [3][-]{subsubsection.18.1.1}{Partie logiciel}{subsection.18.1}% 75
-\BOOKMARK [3][-]{subsubsection.18.1.2}{Impl\351mentation}{subsection.18.1}% 76
-\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 77
-\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 78
-\BOOKMARK [2][-]{subsection.19.2}{Outils et mat\351riels}{section.19}% 79
-\BOOKMARK [3][-]{subsubsection.19.2.1}{Outils}{subsection.19.2}% 80
-\BOOKMARK [3][-]{subsubsection.19.2.2}{Mat\351riels}{subsection.19.2}% 81
-\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 82
-\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 83
-\BOOKMARK [2][-]{subsection.19.4}{Cr\351ation et entra\356nement du mod\350le}{section.19}% 84
+\BOOKMARK [2][-]{subsection.18.1}{Outils et plateformes utilis\351es}{section.18}% 74
+\BOOKMARK [3][-]{subsubsection.18.1.1}{Impl\351mentation}{subsection.18.1}% 75
+\BOOKMARK [1][-]{section.19}{Impl\351mentation de la version 2 de la solution}{}% 76
+\BOOKMARK [2][-]{subsection.19.1}{Introduction}{section.19}% 77
+\BOOKMARK [2][-]{subsection.19.2}{Outils et plateformes}{section.19}% 78
+\BOOKMARK [2][-]{subsection.19.3}{Ensemble de donn\351es \(Dataset\)}{section.19}% 79
+\BOOKMARK [3][-]{subsubsection.19.3.1}{\311tape de l'augmentation}{subsection.19.3}% 80
+\BOOKMARK [2][-]{subsection.19.4}{Cr\351ation et entra\356nement du mod\350le}{section.19}% 81

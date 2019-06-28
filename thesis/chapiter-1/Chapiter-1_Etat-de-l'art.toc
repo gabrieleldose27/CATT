@@ -1,7 +1,7 @@
 \babel@toc {french}{}
 \contentsline {section}{\hbox to\@tempdima {\hfil }Liste des figures}{ii}{section*.2}
 \contentsline {section}{\hbox to\@tempdima {\hfil }Liste des tables}{iii}{section*.3}
-\contentsline {section}{Chapiter 1 : \' Etat de l'art}{1}{section*.3}
+\contentsline {section}{Chapitre 1 : \' Etat de l'art}{1}{section*.3}
 \contentsline {section}{\numberline {1}Apprentissage automatique (Machine Learning)}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Techniques d'apprentissage automatique}{2}{subsection.1.2}
@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.7}Applications existantes}{15}{subsection.3.7}
 \contentsline {subsection}{\numberline {3.8}Perspectives de la recherche}{17}{subsection.3.8}
 \contentsline {subsection}{\numberline {3.9}Conclusion}{18}{subsection.3.9}
-\contentsline {section}{Chapiter 2 : Context et probl\IeC {\'e}matique du projet}{19}{subsection.3.9}
+\contentsline {section}{Chapitre 2 : Contexte et probl\IeC {\'e}matique du projet}{19}{subsection.3.9}
 \contentsline {section}{Contexte et probl\IeC {\'e}matique du projet}{20}{section*.7}
 \contentsline {section}{\numberline {4}Introduction}{20}{section.4}
 \contentsline {section}{\numberline {5}E-sant\IeC {\'e}}{20}{section.5}
@@ -57,7 +57,7 @@
 \contentsline {subsubsection}{\numberline {9.1.1}Thermom\IeC {\`e}tre}{29}{subsubsection.9.1.1}
 \contentsline {section}{\numberline {10}Solution Propos\IeC {\'e}e}{33}{section.10}
 \contentsline {section}{\numberline {11}Conclusion}{33}{section.11}
-\contentsline {section}{Chapiter 3 : Conception de la solution propos\IeC {\'e}e}{34}{section.11}
+\contentsline {section}{Chapitre 3 : Conception de la solution propos\IeC {\'e}e}{34}{section.11}
 \contentsline {section}{\numberline {12}Introduction}{35}{section.12}
 \contentsline {section}{\numberline {13}Objectif}{35}{section.13}
 \contentsline {section}{\numberline {14}Architecture g\IeC {\'e}n\IeC {\'e}rale de la solution}{35}{section.14}
@@ -66,20 +66,17 @@
 \contentsline {subsection}{\numberline {14.3}Description de chaque couche}{36}{subsection.14.3}
 \contentsline {section}{\numberline {15}Architecture D\IeC {\'e}taill\IeC {\'e}e de la solution}{36}{section.15}
 \contentsline {subsection}{\numberline {15.1}Principe de fonctionnement}{37}{subsection.15.1}
-\contentsline {subsection}{\numberline {15.2}Partie mat\IeC {\'e}riel}{37}{subsection.15.2}
-\contentsline {section}{\numberline {16}Partie logiciel}{40}{section.16}
-\contentsline {subsection}{\numberline {16.1}Algorithme d'\IeC {\'e}limination des bruits}{41}{subsection.16.1}
+\contentsline {subsection}{\numberline {15.2}Partie mat\IeC {\'e}rielle}{37}{subsection.15.2}
+\contentsline {section}{\numberline {16}Partie logicielle}{40}{section.16}
+\contentsline {subsection}{\numberline {16.1}Algorithme d'\IeC {\'e}limination du bruit}{41}{subsection.16.1}
 \contentsline {section}{\numberline {17}Conclusion}{44}{section.17}
-\contentsline {section}{Chapiter 4 : R\IeC {\'e}alisation de la solution propos\IeC {\'e}e}{45}{section.17}
+\contentsline {section}{Chapitre 4 : Impl\IeC {\'e}mentation des solutions propos\IeC {\'e}es}{45}{section.17}
 \contentsline {section}{\numberline {18}Impl\IeC {\'e}mentation de la version 1 de la solution}{46}{section.18}
-\contentsline {subsection}{\numberline {18.1}Algorithmes de classification d'image}{46}{subsection.18.1}
-\contentsline {subsubsection}{\numberline {18.1.1}Partie logiciel}{46}{subsubsection.18.1.1}
-\contentsline {subsubsection}{\numberline {18.1.2}Impl\IeC {\'e}mentation}{47}{subsubsection.18.1.2}
-\contentsline {section}{\numberline {19}Impl\IeC {\'e}mentation de la version 2 de la solution}{51}{section.19}
-\contentsline {subsection}{\numberline {19.1}Introduction}{51}{subsection.19.1}
-\contentsline {subsection}{\numberline {19.2}Outils et mat\IeC {\'e}riels}{51}{subsection.19.2}
-\contentsline {subsubsection}{\numberline {19.2.1}Outils}{51}{subsubsection.19.2.1}
-\contentsline {subsubsection}{\numberline {19.2.2}Mat\IeC {\'e}riels}{53}{subsubsection.19.2.2}
-\contentsline {subsection}{\numberline {19.3}Ensemble de donn\IeC {\'e}es (Dataset)}{53}{subsection.19.3}
-\contentsline {subsubsection}{\numberline {19.3.1}\' Etape de l'augmentation}{54}{subsubsection.19.3.1}
-\contentsline {subsection}{\numberline {19.4}Cr\IeC {\'e}ation et entra\IeC {\^\i }nement du mod\IeC {\`e}le}{56}{subsection.19.4}
+\contentsline {subsection}{\numberline {18.1}Outils et plateformes utilis\IeC {\'e}es}{46}{subsection.18.1}
+\contentsline {subsubsection}{\numberline {18.1.1}Impl\IeC {\'e}mentation}{47}{subsubsection.18.1.1}
+\contentsline {section}{\numberline {19}Impl\IeC {\'e}mentation de la version 2 de la solution}{50}{section.19}
+\contentsline {subsection}{\numberline {19.1}Introduction}{50}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}Outils et plateformes}{50}{subsection.19.2}
+\contentsline {subsection}{\numberline {19.3}Ensemble de donn\IeC {\'e}es (Dataset)}{52}{subsection.19.3}
+\contentsline {subsubsection}{\numberline {19.3.1}\' Etape de l'augmentation}{53}{subsubsection.19.3.1}
+\contentsline {subsection}{\numberline {19.4}Cr\IeC {\'e}ation et entra\IeC {\^\i }nement du mod\IeC {\`e}le}{55}{subsection.19.4}
