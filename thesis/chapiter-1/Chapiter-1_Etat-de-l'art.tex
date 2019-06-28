@@ -839,11 +839,11 @@ Une 2\textsuperscript{ème} version sera présentée en un 2\textsuperscript{èm
 	\item Détection du visage de l’enfant c'est une classification de l’image prise.
 	\item Détection s’il s’agit  de face ou de profil c'est une classification de l’image.
 	\item Calcule de la température pour visage et profil. 
-	\item L'image, décision et les coordonnées seront sauvegardées dans une base de données.
 	\item Si la température est élevée:
 	\begin{enumerate}
 		\item Une alerte est lancée à l’infirmière,
 	\end{enumerate}
+	\item L'image, décision et les coordonnées seront sauvegardées dans une base de données.
 \end{enumerate}
 
 \subsection{Algorithme d'élimination du bruit}
@@ -876,8 +876,8 @@ Le lissage gaussien est également utilisé comme étape de prétraitement dans 
 \begin{enumerate}
 	\item Collecte l'image thermique du malade périodiquement.
 	\item Le modèle traite l'image puis détermine la température.
-	\item Sauvegarder les données.
 	\item Alerter l'infirmière si la température corporelle est élevée.
+	\item Sauvegarder les données.
 \end{enumerate}
 \newpage
 Pour la calcule du modèle (TOTO), nous allons suivre les étapes suivantes:
