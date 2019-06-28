@@ -1,0 +1,140 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.10)  28 JUN 2019 18:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**resume.tex
+(./resume.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/french.sty
+(/usr/share/texlive/texmf-dist/tex/latex/msg/msg.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+\@inputmsg=\read1
+Package: msg 2006/11/09 chargement de l'extension de localisation (V0.50).
+)
+Package: french 2017/08/10 The e-french package /V6,01/
+
+
+-29- ***Attention*** : le moteur TeX en utilisation avec des fontes CM 
+    (comme dans ce format TeX) est insuffisant pour la césure 
+    des mots accentués (comme en français).
+\@FrDimen=\dimen103
+
+-23- Extension : e-french V6,01 -- 10 ao\unhbox \voidb@x \bgroup \let \unhbox \
+voidb@x \setbox \@tempboxa \hbox {u\global \mathchardef \accent@spacefactor \sp
+acefactor }\accent 94 u\egroup \spacefactor \accent@spacefactor t 2017 -- (B.Ga
+ulle)
+-24- french.sty utilise dans ce document le codage de fonte OT1.
+-25- french.sty affiche ici ses messages en 7-bits << à la TeX >>.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n (voir le source, ligne 52).
+)
+LaTeX Font Info:    Redeclaring font encoding T1 (voir le source, ligne 608).
+
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/fenglish.sty
+File: fenglish.sty 2004/06/23 english interface for the french(le/pro) package
+))
+(./resume.aux)
+\openout1 = `resume.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it (voir le source, ligne 4
+).
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+LaTeX Font Info:    Checking defaults for T1/lmr/m/n (voir le source, ligne 4).
+
+LaTeX Font Info:    Try loading font information for T1+lmr (voir le source, li
+gne 4).
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n (voir le source, ligne 4)
+.
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n (voir le source, ligne 4
+).
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n (voir le source, ligne 4
+).
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+LaTeX Font Info:    Checking defaults for U/cmr/m/n (voir le source, ligne 4).
+LaTeX Font Info:    ... okay (voir le source, ligne 4).
+\c@chapter=\count87
+\@FrCount=\count88
+
+
+ french.sty : -48- Lecture du fichier de configuration de e-french (\`a la lign
+e 4).
+(/usr/share/texlive/texmf-dist/tex/generic/e-french/french.cfg)
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+
+Overfull \hbox (10.78526pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/10.95 l'en-fant canc^^Sereux par l'in-firmi^^Rere tout au long de 
+la journ^^See ^^Sevidemment,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./resume.aux) ) 
+Here is how much of TeX's memory you used:
+ 1632 strings out of 492982
+ 16982 string characters out of 6134895
+ 74618 words of memory out of 5000000
+ 5249 multiletter control sequences out of 15000+600000
+ 5251 words of font info for 19 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 25i,4n,23p,337b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on resume.pdf (1 page, 37603 bytes).
+PDF statistics:
+ 20 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
