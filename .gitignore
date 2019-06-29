@@ -1,6 +1,5 @@
 venv/
 .idea/
-datasets/*
-dataset/*
-dsets/*
+core/datasets/*
+core/dsets/*
 node_modules
