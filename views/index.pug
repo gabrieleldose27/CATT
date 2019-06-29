@@ -45,34 +45,44 @@ html(lang='en')
                 th(scope='col') Bed Number
                 th(scope='col') Last Temperature
             tbody
-              tr
-                th(scope='row') 1
-                td Yazid Khetat
-                td 12
-                td 1
-                td 37.5
-              tr
-                th(scope='row') 2
-                td Amara Nezli
-                td 10
-                td 2
-                td 38
+              each patient, i in patients
+                if patient.temperature < 37.6 && patient.temperature > 36.8
+                  tr.bg-success.text-white
+                    th(scope='row')=i
+                    td=patient.fullName
+                    td=patient.age
+                    td=patient.bed
+                    td=patient.temperature
+                else
+                  tr.bg-danger.text-white
+                    th(scope='row')=i
+                    td=patient.fullName
+                    td=patient.age
+                    td=patient.bed
+                    td=patient.temperature
       .my-3.p-3.bg-white.rounded.shadow-sm
         h6.border-bottom.border-gray.pb-2.mb-0 Upload an image to test
         br
-        form(action='/upload', enctype='multipart/form-data', method='POST')
+        form(enctype='multipart/form-data', method='POST')
           .row
-            .col-6
-              .dropdown
-                button#dropdownMenuButton.btn.btn-success.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Number of bed
-                .dropdown-menu(aria-labelledby='dropdownMenuButton')
-                  a.dropdown-item(href='#') 1
-                  a.dropdown-item(href='#') 2
-            .col-6
-              .custom-file
-                input#photo.custom-file-input.bg-primary(name='photo', required='', type='file')
-                label.custom-file-label(for='validatedCustomFile') Choose file...
-                 .invalid-feedback Example invalid custom file feedback
+            .col
+              .form-group
+                label(for='fullName') Full Name
+                input#fullName.form-control(placeholder='Full Name', type='text')
+            .col
+              .form-group
+                label(for='age') Age
+                input#age.form-control(placeholder='Age', type='text')
+            .col
+              .form-group
+                label(for='bed') Bed number
+                input#bed.form-control(placeholder='Bed', type='text')
+            .col
+              .form-group
+                .custom-file
+                  input#photo.custom-file-input(name='photo', type='file')
+                  label.custom-file-label(for='validatedCustomFile') Choose file...
+                    .invalid-feedback Example invalid custom file feedback
           br
           button.btn.btn-primary.btn-lg.btn-block(type='submit') Calculate
     footer.footer
