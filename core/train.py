@@ -37,7 +37,7 @@ if __name__ == '__main__':
     ap.add_argument("-r", "--resize", type=int, required=False,
     	help="zise of resized image", default=64)
     args = vars(ap.parse_args())
-
+ 	
     df = load_df(args["datasets"])
     print "[ i ] There'is {} line in the DataFrame".format(df.shape[0])
     images = dataset.load_images(df, resize=(args["resize"], args["resize"]))
@@ -56,8 +56,9 @@ if __name__ == '__main__':
             metrics=['accuracy'])
     
     print "[ i ] Training model..."
-    history = model.fit(trainImagesX, trainY, validation_data=(testImagesX, testY),
-            epochs=args["epochs"], batch_size=100)
+    history = model.fit(trainImagesX, trainY,
+            validation_data=(testImagesX, testY),
+            epochs=args["epochs"], batch_size=32)
 
     print "[ i ] Predicting tempture"
     mean, std = predicting(model, testImagesX, testY)
@@ -69,14 +70,14 @@ if __name__ == '__main__':
     print "[ * ] Testing Accuracy:  {:.4f}, Loss: {:.4f}".format(accuracy, loss)
 
     print "[ * ] Saving the model"
-    model.save_weights('h5/thermo-'+str(args["epochs"])+'-'+str(accuracy)+'.h5')
+    model.save_weights('core/h5/thermo-'+str(args["epochs"])+'-'+str(accuracy)+'.h5')
 
     plt.plot(history.history['acc'])
     plt.plot(history.history['val_acc'])
     plt.title('model accuracy')
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'test'], loc='upper right')
     plt.show()
 
     plt.plot(history.history['loss'])
@@ -84,6 +85,6 @@ if __name__ == '__main__':
     plt.title('model loss')
     plt.ylabel('loss')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'test'], loc='upper right')
     plt.show()
 #    model.summary()
