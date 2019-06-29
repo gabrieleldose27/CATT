@@ -1,5 +1,7 @@
 # ThermoGray
 
+<p align="center"><img src="./assets/catt.jpeg"></p>
+
 ThermoGray it's a solution for detecting if a child with cancer have a fever or not if so the solution notify the nurse to comes give the child the medicine.
 
 ![explicaation](./assets/exp.png)
@@ -13,7 +15,8 @@ Link to the dataset: https://drive.google.com/open?id=1wPjucswpLydSHf8ltSjZdOSDo
 - [x] Batch to make a `CSV` dataset table.
 - [x] Datasets classification.
 - [x] Datasets regression.
-- [ ] CoLab training our dataset (a free GPU, google solution.).
+- [x] CoLab training our dataset (a free GPU, google solution.).
+- [ ] Working on the application...
 
 ## colab simple code
 ```
