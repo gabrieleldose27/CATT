@@ -29,5 +29,5 @@ drive.mount('/content/gdrive', force_remount=True)
 path | temperature
 --- | ---
 ~/my/path/ | 39.9
-~/my/path/ | 37.9
-~/my/path/ | 36.4
+## Screenshots
+![explicaation](./assets/screenshots.png)
