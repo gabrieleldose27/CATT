@@ -3,3 +3,4 @@ venv/
 core/datasets/*
 core/dsets/*
 node_modules
+public/uploads/*
