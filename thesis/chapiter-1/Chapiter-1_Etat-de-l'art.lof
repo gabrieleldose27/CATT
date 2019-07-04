@@ -1,43 +1,51 @@
 \babel@toc {french}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{8}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un r\IeC {\'e}seau artificiel de neurones}}{9}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces d\IeC {\'e}tection de bord \IeC {\'e}crit en matrice de convolution 3\IeC {\texttimes }3}}{10}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Un filtre de flou \IeC {\'e}crit sous forme de matrice de convolution 3 \IeC {\texttimes } 3}}{10}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Architecture de mod\IeC {\`e}le lin\IeC {\'e}aire(r\IeC {\'e}gression) CNN}}{11}{figure.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Num\IeC {\'e}risation d'une image}}{13}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Pr\IeC {\'e}sentant les \IeC {\'e}tapes d\IeC {\textquoteright }un traitement d\IeC {\textquoteright }une image}}{14}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces IOT dans la sant\IeC {\'e}}}{24}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Le cancer chez l\IeC {\textquoteright }enfant}}{27}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{30}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{30}{figure.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{31}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{32}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{32}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Architecture de la solution}}{35}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Architecture d\IeC {\'e}taill\IeC {\'e}e de la solution}}{36}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Adafruit AMG8833 IR Thermal Camera}}{38}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces cam\IeC {\'e}ra thermique \textit {Adafruit AMG8833 IR} relie avec un Raspberry Pi }}{39}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 1}}{40}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces \IeC {\'E}limination des bruits d'une image avec l'algorithme Gaussian Blur}}{42}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 2}}{42}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Cr\IeC {\'e}ation du mod\IeC {\`e}le TOTO}}{43}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Logo python}}{46}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Logo OpenCv}}{47}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Pseudo code de l'\IeC {\'e}limination du bruit}}{48}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces \' Elimination des bruits d'une image avec OpenCv}}{48}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Pseudo code pour d\IeC {\'e}tection du visage}}{49}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces D\IeC {\'e}tection du visage avec Haar cascade}}{50}{figure.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Logo de Google Colab}}{51}{figure.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Logo de Keras}}{52}{figure.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Logo Node.js}}{52}{figure.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Script Bash pour classifier le Dataset en 5 classes}}{54}{figure.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Capture Dataset.csv}}{55}{figure.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Importer et redimensionner les images}}{56}{figure.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Pr\IeC {\'e} traitement d'image}}{56}{figure.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Cr\IeC {\'e}ation du r\IeC {\'e}seau CNN}}{57}{figure.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces L'utilisation de l'optimiseur Adam}}{57}{figure.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Entra\IeC {\^\i }ne le mod\IeC {\`e}le pour un nombre donn\IeC {\'e} d'\IeC {\'e}poques}}{58}{figure.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces G\IeC {\'e}n\IeC {\`e}re des pr\IeC {\'e}visions de sortie pour les \IeC {\'e}chantillons d'entr\IeC {\'e}e}}{58}{figure.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Renvoie les valeurs de perte et de mesures pour le mod\IeC {\`e}le en mode test}}{58}{figure.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Accuracy}}{59}{figure.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces loss}}{60}{figure.42}
+\contentsline {figure}{\numberline {1}{\ignorespaces Machine learning est un ensemble de l\IeC {\textquoteright }intelligence artificiel}}{3}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un neurone biologique}}{11}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Mod\IeC {\`e}le d'un r\IeC {\'e}seau de neurone}}{12}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Sch\IeC {\'e}ma d\IeC {\textquoteright }un r\IeC {\'e}seau artificiel de neurones}}{13}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces d\IeC {\'e}tection de bord \IeC {\'e}crit en matrice de convolution 3\IeC {\texttimes }3}}{14}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Un filtre de flou \IeC {\'e}crit sous forme de matrice de convolution 3\IeC {\texttimes }3}}{14}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Architecture de mod\IeC {\`e}le lin\IeC {\'e}aire(r\IeC {\'e}gression) CNN}}{15}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Num\IeC {\'e}risation d'une image}}{18}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Pr\IeC {\'e}sentation des \IeC {\'e}tapes de traitement d\IeC {\textquoteright }image}}{20}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces IOT dans la sant\IeC {\'e}}}{31}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Le cancer chez les enfants}}{34}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Thermom\IeC {\`e}tre \IeC {\`a} gallium}}{37}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Mesurer la temp\IeC {\'e}rature avec thermom\IeC {\`e}tre \IeC {\'e}lectronique}}{38}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Thermom\IeC {\`e}tre infrarouge}}{38}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Thermom\IeC {\`e}tre t\IeC {\'e}tine}}{39}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Bracelet pour mesurer la temp\IeC {\'e}rature}}{39}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Architecture de la solution}}{42}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Architecture d\IeC {\'e}taill\IeC {\'e}e de la solution}}{44}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Adafruit AMG8833 IR Thermal Camera}}{45}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Raspberry Pi 2 Model B}}{47}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Cam\IeC {\'e}ra thermique \textit {Adafruit AMG8833 IR} relie avec un Raspberry Pi }}{48}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel version 1}}{49}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces \IeC {\'E}limination des bruits d'une image avec l'algorithme Gaussian Blur}}{50}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Architecture de syst\IeC {\`e}me logiciel $CATT$}}{51}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Cr\IeC {\'e}ation du mod\IeC {\`e}le du syst\IeC {\`e}me CATT}}{52}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Logo python}}{54}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Logo OpenCV}}{55}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Pseudo code de l'\IeC {\'e}limination du bruit}}{56}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces \' Elimination des bruits d'une image avec OpenCV}}{56}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Pseudo code pour d\IeC {\'e}tection du visage}}{57}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces D\IeC {\'e}tection du visage thermique avec Haar Cascade}}{58}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Logo de Google Colab}}{59}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Logo de Keras}}{60}{figure.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Logo Node.js}}{60}{figure.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Script Bash pour classifier le Dataset en 5 classes}}{62}{figure.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Capture Dataset.csv}}{63}{figure.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Importation de l'ensemble de donn\IeC {\'e}es}}{64}{figure.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Normalisation des donn\IeC {\'e}es}}{65}{figure.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Cr\IeC {\'e}ation du r\IeC {\'e}seau CNN}}{65}{figure.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces La diff\IeC {\'e}rences entre les pertes}}{66}{figure.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces L'utilisation de l\IeC {\textquoteright }optimiseur Adam}}{66}{figure.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Entra\IeC {\^\i }nement de mod\IeC {\`e}le pour un nombre donn\IeC {\'e} d\IeC {\textquoteright }\IeC {\'e}poques}}{67}{figure.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces G\IeC {\'e}n\IeC {\'e}ration des pr\IeC {\'e}dictions de sortie pour les \IeC {\'e}chantillons d'entr\IeC {\'e}e}}{67}{figure.43}
+\contentsline {figure}{\numberline {44}{\ignorespaces Renvoie les valeurs de l\IeC {\textquoteright }\IeC {\'e}valuation du mod\IeC {\`e}le}}{68}{figure.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Capture d\IeC {\textquoteright }\IeC {\'e}cran apr\IeC {\`e}s l\IeC {\textquoteright }ex\IeC {\'e}cution}}{68}{figure.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Capture d\IeC {\textquoteright }\IeC {\'e}cran apr\IeC {\`e}s l\IeC {\textquoteright }ex\IeC {\'e}cution}}{69}{figure.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces Augmentation des donn\IeC {\'e}es}}{70}{figure.47}
+\contentsline {figure}{\numberline {48}{\ignorespaces Deuxi\IeC {\`e}me ex\IeC {\'e}cution}}{70}{figure.48}
+\contentsline {figure}{\numberline {49}{\ignorespaces Interface graphique de l'application}}{71}{figure.49}
+\contentsline {figure}{\numberline {50}{\ignorespaces Interface graphique de l'application}}{72}{figure.50}

@@ -44,6 +44,16 @@ V.~Vladimir, ``Statistical learning theory, book,'' September 16, 1998.
   \url{https://www.second-glance.fr/2017/02/06/le-deep-learning-1-une-tentative-de-vulgarisation/}
   consulté le 2019/6/10.
 
+\bibitem{49}
+C.~Koch, T.~Poggio, and V.~Torre, ``Nonlinear interactions in a dendritic tree:
+  localization, timing, and role in information processing. proceedings of the
+  national academy of sciences 80 (9),'' 1983.
+
+\bibitem{50}
+A.~L. Hodgkin and A.~F. Huxley, ``A quantitative description of membrane
+  current and its application to conduction and excitation in nerve. the
+  journal of physiology 117 (4),'' 1952, August.
+
 \bibitem{42}
 F.~Chollet, ``Xception: deep learning with depthwise separable convolutions.
   ieee conference on computer vision and pattern recognition (cvpr),
@@ -185,9 +195,6 @@ S.~Gupta, S.~Howard, S.~Hunger, and et~al, ``Treating childhood cancer in low-
 ``Le cancer chez l’enfant.''
   \url{https://www.liguecancer.ch/a-propos-du-cancer/les-differents-types-de-cancer/le-cancer-chez-lenfant/}
   consulté le 2019/06/09.
-
-\bibitem{35}
-C.~Kühni and N.~von~der Weid, ``Registre suisse du cancer de l’enfant.,''
 
 \bibitem{36}
 E.~Perrin, ``Les thermomètres, le 5 août 2016 à 16:03.''
