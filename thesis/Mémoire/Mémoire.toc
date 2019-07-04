@@ -1,0 +1,86 @@
+\babel@toc {french}{}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Liste des figures}{vi}{section*.2}
+\contentsline {section}{\hbox to\@tempdima {\hfil }Liste des tables}{vii}{section*.3}
+\contentsline {section}{\numberline {1}Introduction g\IeC {\'e}n\IeC {\'e}rale}{1}{section.1}
+\contentsline {section}{Chapitre 1 : \' Etat de l'art}{2}{section.1}
+\contentsline {section}{\numberline {2}Apprentissage automatique (Machine Learning)}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Techniques d'apprentissage automatique}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Apprentissage supervis\IeC {\'e}}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Apprentissage non-supervis\IeC {\'e}}{5}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Autres techniques d'apprentissage}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Apprentissage semi-supervis\IeC {\'e}}{7}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Apprentissage par renforcement}{7}{subsubsection.2.3.2}
+\contentsline {subsection}{\numberline {2.4}Conclusion}{8}{subsection.2.4}
+\contentsline {section}{\numberline {3}Apprentissage profond (Deep Learning)}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Introduction}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}D\IeC {\'e}finition}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}R\IeC {\'e}seaux de Neurones Artificiels (ANNs)}{10}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Historique}{10}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Neurone biologique}{11}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}D\IeC {\'e}finition}{12}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}R\IeC {\'e}seau neuronal convolutif (CNN)}{13}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}R\IeC {\'e}gression}{15}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Quelques concepts utiles}{16}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Conclusion}{16}{subsection.3.7}
+\contentsline {section}{\numberline {4}Traitement d\IeC {\textquoteright }Image (Image Processing)}{17}{section.4}
+\contentsline {subsection}{\numberline {4.1}Introduction}{17}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Image num\IeC {\'e}rique}{17}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Image thermique}{18}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Traitement d\IeC {\textquoteright }image}{19}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}But du traitement d'image}{19}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}M\IeC {\'e}thodes pour le traitement d\IeC {\textquoteright }image}{20}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Applications existantes}{21}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Perspectives de la recherche}{23}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Conclusion}{24}{subsection.4.9}
+\contentsline {section}{Chapitre 2 : Contexte et probl\IeC {\'e}matique du projet}{25}{subsection.4.9}
+\contentsline {section}{\numberline {1}Introduction}{26}{section.1}
+\contentsline {section}{\numberline {2}E-sant\IeC {\'e}}{26}{section.2}
+\contentsline {subsection}{\numberline {2.1}D\IeC {\'e}finition}{26}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Domaines d\IeC {\textquoteright }application}{27}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Importance de la e-sant\IeC {\'e}}{27}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Avantages et inconv\IeC {\'e}nients}{28}{subsection.2.4}
+\contentsline {section}{\numberline {3}Sant\IeC {\'e} connect\IeC {\'e}e}{28}{section.3}
+\contentsline {subsection}{\numberline {3.1}Principales fonctions de la sant\IeC {\'e} connect\IeC {\'e}e}{29}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Diff\IeC {\'e}rents champs d\IeC {\textquoteright }application de la sant\IeC {\'e} connect\IeC {\'e}e}{30}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Internet des objets en sant\IeC {\'e}}{30}{subsection.3.3}
+\contentsline {section}{\numberline {4}Temp\IeC {\'e}rature corporelle}{31}{section.4}
+\contentsline {subsection}{\numberline {4.1}D\IeC {\'e}finition}{31}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Temp\IeC {\'e}rature chez les enfants}{32}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Causes de l'\IeC {\'e}l\IeC {\'e}vation de la temp\IeC {\'e}rature chez l\IeC {\textquoteright }enfant}{32}{subsection.4.3}
+\contentsline {section}{\numberline {5}Cancer}{33}{section.5}
+\contentsline {subsection}{\numberline {5.1}D\IeC {\'e}finition}{33}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Cancer de l\IeC {\textquoteright }enfant}{34}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Cancers les plus fr\IeC {\'e}quents chez les enfants}{35}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Sympt\IeC {\^o}mes}{35}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Conclusion}{35}{subsection.5.5}
+\contentsline {section}{\numberline {6}Probl\IeC {\`e}me de la prise de temp\IeC {\'e}rature corporelle chez les enfants canc\IeC {\'e}reux}{36}{section.6}
+\contentsline {subsection}{\numberline {6.1}Introduction}{36}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Solutions existantes}{37}{subsection.6.2}
+\contentsline {section}{\numberline {7}Solution Propos\IeC {\'e}e}{40}{section.7}
+\contentsline {section}{\numberline {8}Tableau comparatif}{40}{section.8}
+\contentsline {section}{\numberline {9}Conclusion}{40}{section.9}
+\contentsline {section}{Chapitre 3 : Conception de la solution propos\IeC {\'e}e}{41}{section.9}
+\contentsline {section}{\numberline {1}Introduction et objectifs}{42}{section.1}
+\contentsline {section}{\numberline {2}Architecture g\IeC {\'e}n\IeC {\'e}rale de la solution}{42}{section.2}
+\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation de la solution}{43}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Objectifs du processus g\IeC {\'e}n\IeC {\'e}ral}{43}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Description de chaque couche (figure \ref {fig:archgene})}{43}{subsection.2.3}
+\contentsline {section}{\numberline {3}Architecture D\IeC {\'e}taill\IeC {\'e}e de la solution}{43}{section.3}
+\contentsline {subsection}{\numberline {3.1}Principe de fonctionnement}{44}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Partie mat\IeC {\'e}rielle}{44}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Partie logicielle}{48}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Algorithme d'\IeC {\'e}limination du bruit}{50}{subsubsection.3.3.1}
+\contentsline {section}{\numberline {4}Conclusion}{52}{section.4}
+\contentsline {section}{Chapitre 4 : Impl\IeC {\'e}mentation des solutions propos\IeC {\'e}es}{53}{section.4}
+\contentsline {section}{\numberline {1}Impl\IeC {\'e}mentation de la version 1 de la solution}{54}{section.1}
+\contentsline {subsection}{\numberline {1.1}Outils et plateformes utilis\IeC {\'e}es}{54}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Impl\IeC {\'e}mentation}{55}{subsubsection.1.1.1}
+\contentsline {section}{\numberline {2}Impl\IeC {\'e}mentation de la version 2 de la solution}{58}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{58}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Outils et plateformes}{58}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Ensemble de donn\IeC {\'e}es (Dataset)}{60}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}R\IeC {\'e}alisation}{63}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Sc\IeC {\'e}nario exp\IeC {\'e}rimental}{71}{subsection.2.5}
+\contentsline {section}{\numberline {3}Conclusion}{73}{section.3}
+\contentsline {section}{\numberline {4}Conclusion g\IeC {\'e}n\IeC {\'e}rale}{74}{section.4}
