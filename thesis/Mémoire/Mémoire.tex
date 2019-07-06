@@ -1,0 +1,1370 @@
+\documentclass[12pt]{article}
+\usepackage{cite}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{pifont}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx} % allows import photo
+\usepackage{float} % controle position
+\usepackage[dvipsnames]{xcolor}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, includefoot]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhf{}
+\fancyfoot{}
+\fancyfoot[R]{ \thepage\ }
+\renewcommand{\headrulewidth}{0 pt}
+\renewcommand{\footrulewidth}{1pt}
+\newcommand{\xmark}{\ding{55}}}
+\newcommand{\cmark}{\ding{51}}}
+\usepackage[hidelinks]{hyperref} % allows  clickable 
+\newcommand{\hsp}{\hspace{10pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+\begin{titlepage}
+	\begin{sffamily}
+		\begin{center}
+		\textsc{République Algérienne Démocratique et Populaire\\Ministère de l'Enseignement Supérieur et de la Recherche Scientifique\\Université Constantine 2 - Abdelhamid Mehri}\\[0.5 cm]			\begin{figure}[h]
+			\centering
+			\includegraphics[height=4cm,width=4cm]{Logo/logo.jpg}
+		\end{figure}
+		
+\textsc{Mémoire de Fin d’Études Pour l’Obtention du Diplôme de Master}\\
+
+\textsc{Spécialité : Réseaux et système distribués}\\[1 cm]
+		 \HRule \\[0.2cm]
+    { \huge  Analyse des images thermiques pour la détermination de la température corporelle des patients du cancer à l'aide de méthodes d'apprentissage profond \\[0.2cm] }
+    \HRule \\[1cm]
+    
+    
+        \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+      	\emph{\textsc{Réalisé Par :}}\\
+		\textsc{Nezli} Amara\\
+        \textsc{Khettat} Brahim\\
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{\textsc{Sous la direction de :}}\\ \textsc{DR}. \textsc{Kitouni} Ilham\\
+        												\textsc{DR}. \textsc{Mennour} Rostom
+      \end{flushright}
+    \end{minipage}
+\vfill
+
+	\\[1 cm]
+    % Bottom of the page
+    {\large Session - Juillet 2019}
+		\end{center}
+	\end{sffamily}
+\end{titlepage}
+
+\renewcommand{\abstractname}{Résumé}
+\begin{abstract} La sant\'e est la chose la plus importante pour chaque individu, vivre en bonne sant\' e c'est vivre heureux.\\
+	Les pays d\'evelopp\'es donnent une importance majeure \`a ce secteur pour le rendre intelligent, par contre dans les pays sous-d\' evelopp\' es ils trouvent beaucoup de difficult\' es li\'ees \`a la sant\'e. \\
+	
+	L'un des probl\`emes c'est la prise de la temp\' erature corporelle de l'enfant canc\' ereux par l'infirmi\`ere tout au long de la journ\' ee, \' evidemment l'enfant va \^ etre d\' erang\' e. Pour cela notre projet a vis\' e le probl\`eme de la prise de temp\' erature corporelle par l'infirmi\`ere elle m\^ eme.\\
+
+	Pour atteindre notre  objectif, on a r\' ealis\' e  un syst\` eme bas\' e sur  l'apprentissage  profond pour  la surveillance et l'alerte (SSA), on a impl\' ement\' e le mod\` ele obtenu par notre syst\` eme (SSA) dans une application bureau et un serveur.\\ \\
+
+\textbf{Les mots cl\' es :} Deep Learning. \end{abstract}
+\thispagestyle{empty}
+\newpage
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract} Health is the most important thing for every individual, to live in good health is to live happily. The developed countries give a major importance to this sector to make it intelligent, on the other side in the underdeveloped countries they find many difficulties related to health.\\
+		
+		One of the problems is taking the body temperature of
+the cancerous child by the nurse throughout the day, obviously the child will be disturbed. For this our project has targeted the problem of body temperature by the nurse herself.\\
+
+		To achieve our goal, we realized a system based on deep learning for monitoring and warning (MWS), we implemented the model obtained by our system (MWS) in a desktop application and a server. 
+\end{abstract}
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+
+\listoffigures
+\addcontentsline{toc}{section}{\numberline{}Liste des figures}
+\cleardoublepage
+
+\listoftables
+\addcontentsline{toc}{section}{\numberline{}Liste des tables}
+\cleardoublepage
+
+\pagenumbering{arabic}
+\rfoot{\textsc{Page \thepage}}
+\setcounter{page}{1}
+
+\rhead{\textsc{Introduction générale}}
+\section{Introduction générale}
+Les caméras infrarouges thermiques sont de plus en plus populaires en raison de leurs longues longueurs d’onde qui leur permettent de fonctionner dans des conditions de faible luminosité. Les caméras infrarouges thermiques ne nécessitent aucun éclairage actif parce-qu’ils sentent la chaleur émise par les objets.
+
+Cela ouvre la porte à de nombreuses applications telles que la conduite dans l'obscurité totale ou par mauvais temps. Cependant, un inconvénients des caméras infrarouges thermiques est leur interprétabilité visuelle limitée pour les humains.
+
+Dans ce travail, on aborde le problème de l’analyse des images thermiques pour la détermination de la température corporelle des patients du cancer à l’aide de méthodes d’apprentissage profond et la technique de l’image thermique. Chacun des chapitres présentés constitue un pas en avant dans la construction d'un système de prédiction de bout en bout pour prédire la température d’un patient depuis une image thermique.
+
+Dans le premier chapitre on a commencé par donner une définition de l’apprentissage automatique et donner les techniques utilisées dans ce dernier, puis on a défini aussi l’apprentissage profond et le réseau de neurones et on a expliqué le réseau neuronal convolutif et la régression enfin nous avons présenté les concepts qui concernent le traitement d’images.
+
+Dans le deuxième chapitre on a défini la e-santé et donner les différents domaines d'application et l’importance de cette dernière, Aussi la santé connectée, l’internet des objets dans la santé et quelques avantages et inconvénients de ce nouvelles technologies. On a introduit la maladie du cancer en général et chez les enfants en particulier. La prise de la température corporelle chez les enfants cancéreux est ensuite détaillée avant de faire une proposition de notre solution.
+
+Dans le troisième chapitre on a donné deux architectures générales de la solution, avec quelques objectifs et on a détaillé les partie logicielle et matérielle. 
+
+Dans le dernier chapitre on a présenté l’implémentation des deux versions de la solution proposée.
+
+\newpage
+\addcontentsline{toc}{section}{Chapitre 1 : \' Etat de l'art}
+\rhead{\textsc{}}
+\section*{\Huge{Chapitre 1}}
+\subsection*{\huge{\' Etat de l'art}}
+\newpage
+\rhead{\textsc{Chapitre 1 : \' Etat de l'art}}
+\section{Apprentissage automatique (Machine Learning)}
+\subsection{Introduction}
+La faculté d'apprendre est essentielle à l'être humain pour reconnaître une voix, une personne, un objet... On distingue en général deux types d'apprentissage: l'apprentissage « par cœur » qui consiste à mémoriser telles quelles des informations, et l'apprentissage par généralisation où l'on apprend à partir d'exemples un modèle qui nous permettra de reconnaître de nouveaux exemples. Pour les systèmes informatiques, il est facile de mémoriser un grand nombre de données (textes, images, vidéos...), mais difficile de généraliser. Par exemple, il leur est difficile de construire un bon modèle d'un objet et d'être ensuite capable de reconnaître efficacement cet objet dans de nouvelles images.
+
+L'apprentissage automatique est une tentative pour comprendre et reproduire cette faculté d'apprentissage dans des systèmes artificiels. Il semble donc approprié d'utiliser des techniques issues de ce domaine pour découvrir et modéliser des connaissances liant texte et image.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-1/zeze.png}
+	\caption{Machine learning est un ensemble de l’intelligence artificiel}
+\end{figure}
+
+L'apprentissage automatique se trouve au carrefour de nombreux autres domaines: intelligence artificielle, statistiques, sciences cognitives, théorie des probabilités, de l'optimisation, du signal et de l'information... Il est donc bien difficile de donner une taxonomie des techniques d'apprentissage.
+
+Après avoir donné quelques définitions, nous présentons brièvement dans ce chapitre les deux principaux types d'apprentissage: l'apprentissage supervisé et non-supervisé, nous donnons pour chacun d'eux quelques exemples de techniques d'apprentissage et définir d'autres types d'apprentissage.
+\subsection{Techniques d'apprentissage automatique}
+Dans ce mémoire, nous nous intéressons aux techniques d'apprentissage sur de grande masses d'images. Cependant, avant de pouvoir utiliser les techniques d'apprentissage, il est nécessaire de réaliser quelques pré-traitements sur les données. L'ensemble des techniques utilisées avant, pendant et après l'apprentissage sur de grandes masses de données est souvent regroupé sous le terme de Exploration de données dite « Data Mining ».
+
+Exploration de données «Data Mining» c’est une technique qui considère tout le processus d'extraction de connaissances à partir d'un grand nombre de données \cite{1}.\\
+Ses principales étapes sont:
+\begin{enumerate}
+  	  \item L'extraction et le stockage des données.
+  	  \item L'exploration des données pour la détection des valeurs aberrantes, atypiques, d'incohérences, et pour la sélection et la transformation des données à étudier...
+  	\item Le partitionnement aléatoire des données en trois ensembles: apprentissage, validation et test.
+  	\item La réalisation d'un apprentissage numérique ou symbolique à partir des données nettoyées avec estimation de la complexité du modèle et optimisation des paramètres sur l'ensemble de validation.
+  	\item La comparaison des résultats obtenus à l'aide des modèles optimaux sur l'ensemble de validation avec les résultats obtenus sur l'ensemble de test afin de tester la capacité de généralisation du modèle.\\
+\end{enumerate}
+
+Il est utilisé dans de nombreux domaines: bases de données, analyse de données, statistiques, classification, programmation logique, visualisation...
+\subsubsection{Apprentissage supervisé}
+La classification supervisée (appelée aussi classement ou classification inductive) à pour objectif d'apprendre par l'exemple. Elle cherche à expliquer et prédire l’appartenance de documents à des classes connues apriori. Ainsi c'est l'ensemble des techniques qui visent à deviner l'appartenance d'un individu à une classe en s'aidant uniquement à des valeurs qu'il prend \cite{2}.
+
+L'apprentissage supervisé suppose qu'un oracle fournit les étiquettes de chaque donnée d'apprentissage.
+
+l’oracle c’est pour chaque $xi$, fournit une étiquette $ui$ dans $U$ (avec une distribution de probabilité $F(u|x)$ inconnue).
+
+On distingue en général trois types de problèmes auxquels l'apprentissage supervisé est appliqué: la classification supervisée, la régression, et les séries temporelles. Ces trois types de problèmes se différencient en fonction du type d'étiquettes fournit par l'oracle.
+Nous présentons maintenant brièvement trois algorithmes classiques d'apprentissage supervisé:
+\begin{enumerate}
+	\item Les k plus proches voisins (k - NN): déterminer pour chaque nouvel individu que l'on veut classer, la liste des k plus proches voisins parmi les individus déjà classés.
+	\item La classification bayésienne: Le classifieur bayésien va choisir la classe $C_k$ qui à la plus grande probabilité, on parle de règle MAP (maximum à posteriori).
+	\item Machines à vecteurs de support (SVM): (Support Vector Machines) La méthode à base de SVM cherche l'hyperplan séparateur le plus éloigné des documents du corpus d'apprentissage.
+\end{enumerate}
+
+\subsubsection{Apprentissage non-supervisé}
+Contrairement à l'apprentissage supervisé, dans l'apprentissage non-supervisé il n'y a pas d'oracle qui explicite les étiquettes. L'utilisation de ce type d'algorithme permet de trouver des structures, des dépendances entre descripteurs, qui sont inconnues (on dit aussi latentes). 
+
+Le plus connu des problèmes non-supervisés est la classification non-supervisée ou clustering. Les classes, que nous appellerons clusters, sont formées par regroupement des documents qui ont certaines caractéristiques en commun.
+
+Un autre problème non-supervisé est l'estimation de la densité. Son objectif est de modéliser la distribution des données. Le modèle doit pouvoir fournir une bonne estimation d'un document de test issu de la même distribution (inconnue) que les données d'apprentissage. Son objectif est de résumer l'information importante, de la dissocier du bruit.
+
+Le clustering est un outil important pour l'analyse de données. En français, le mot classification est ambigüe, car il s'agit soit de retrouver la classe à laquelle le document appartient (classification supervisée), soit de construire des regroupements de documents (classification non-supervisée). Pour distinguer ces deux cas, nous parlerons de classement pour la première et de clustering pour la seconde. Le clustering vise à trouver les structures intrinsèques des données en les organisant en groupes homogènes et distincts (les clusters). Les objets dans un même cluster doivent être similaires entre eux et différents des objets des autres clusters \cite{3}.\\
+Pour construire un regroupement de ces données, un utilisateur a trois choix méthodologiques à faire :
+\begin{enumerate}
+	\item Choisir une mesure de ressemblance entre les données.
+	\item Choisir le type de structure qu'on veut obtenir: partition, hiérarchie, arbre, pyramide.
+	\item Choisir la méthode permettant d'obtenir la structure désirée.
+	
+On distingue généralement quatre types d'approches du clustering \cite{4}:
+	\begin{enumerate}
+	\item Les approches basées sur le partitionnement des données: les points de données sont diviser en $k$ partition, où chaque partition représente un cluster. La partition est faite sur la base de certains objectif fonction. Une de ces fonctions standard est de minimiser le carrée d’erreur.
+	\item Densités: sont définies comme des zones de densité supérieure au reste de l’ensemble de données. Les objets rares dans ces zones - qui sont nécessaires pour séparer les clusters - sont généralement considérés comme du bruit et des points frontières.	
+	\item L'espace (grid): utilise une structure de données de grille multi-résolution. Il quantifie l'espace objet en un nombre fini de cellules qui forment une structure de grille sur laquelle toutes les opérations de clustering sont effectuées.
+	\item Les approches hiérarchiques: les plus petites clusters sont fusionnées en plus grandes, ou les plus grandes clusters sont découpés en plus petites clusters. Le résultat de l'algorithme est un arbre de cluster, appelé dendrogramme, qui montre la relation entre les clusters.
+	
+Nous présentons trois algorithmes classiques d'apprentissage non-supervisé:
+\end{enumerate}
+		\item Les k - moyennes (k - means): est un outil de partitionnement des données non-hiérarchique qui permet de répartir les données en k clusters homogènes \cite{5}.
+	\item Les cartes auto-organisatrices (SOM - self organizing map ou carte de Kohonen (1982)): appartiennent aux techniques de clustering par partitionnement des données. Cette technique est un cas particulier de réseau de neurones non-supervisé \cite{6}.
+	\item La Classification Ascendante Hiérarchique (CAH): Il appartient à la méthode des heuristiques. Cette méthode est utilisée pour construire des clusters pour les documents ainsi que pour les visualiser \cite{7}.
+\end{enumerate}
+\subsection{Autres techniques d'apprentissage}
+Il existe d'autres types d'apprentissage. Citons l'apprentissage semi-supervisé et l'apprentissage par renforcement.
+
+En effet, l'apprentissage semi-supervisé est un bon compromis entre l'apprentissage supervisé et non-supervisé, car il permet de traiter un grand nombre de données sans avoir besoin de toutes les étiqueter, il donne de meilleurs résultats que l'apprentissage non-supervisé.
+
+L'apprentissage par renforcement est utile dans le cas d'apprentissage interactif, comme les techniques de bouclage de pertinence.
+\subsubsection{Apprentissage semi-supervisé}
+L’apprentissage semi-supervisé suppose que l’on dispose de peu de données étiquetées et d’un grand nombre de données non étiquetées. L’apprentissage s’effectue alors à partir des deux sources de données.
+	
+Un exemple d'apprentissage semi-supervisé est le co-apprentissage (co-training). L'apprentissage actif est une forme particulière d'apprentissage semi-supervisé, car il consiste à faire annoter par l'utilisateur quelques exemples positifs et négatifs.
+	
+Il permet d'intervenir dans le processus de construction de l'ensemble d'apprentissage dans le cadre de la recherche interactive. Certaines techniques classiques ont été étendues au cas de l'apprentissage semi-supervisé \cite{8}.
+\subsubsection{Apprentissage par renforcement}
+L’apprentissage par renforcement désigne toute méthodes adaptative permettant de résoudre un problème de décision séquentielle. L'apprentissage par renforcement est synonyme d'apprentissage par interaction. Pendant l'apprentissage, le système adaptatif agit en interaction avec son environnement, et en retour reçoit des signaux de renforcement. Son objectif est de maximiser une mesure de gain dépendant des signaux reçus. Le terme adaptatif signifie que l'on part d'une solution inefficace, et qu'elle est améliorée progressivement en fonction de l'expérience du système.
+\subsection{Conclusion}
+Dans cette partie, nous avons décrit quelques techniques d'apprentissages de différents types (supervisés, non-supervisés, semi-supervisés, par renforcement) qui peuvent être employées pour l'indexation et la recherche de document.
+
+\newpage
+\section{Apprentissage profond (Deep Learning)}
+\subsection{Introduction}
+Après avoir présenté de manière globale l’apprentissage automatique, nous allons maintenant nous intéresser plus particulièrement à l’apprentissage profond. Pour illustrer la discussion, nous allons d’abord présenter en détail le type de modèle le plus utilisé dans ce contexte: les Réseaux de Neurones Artificiels (ANNs).
+\subsection{Définition}
+La notion d’apprentissage profond est tout d’abord une traduction directe du terme anglais « Deep Learning », que certain préfère traduire par la notion d’apprentissage statistique. De même que sa traduction, sa définition varie également, mais principalement au niveau des détails \cite{10}. % adha rahou 10 ref derto bark khater malgitch 9
+Pour définir cette notion dans les grandes lignes, on pourrait dire que L’apprentissage profond est un algorithme d'abstraction de haut niveau qui permet de modéliser les données à partir de grands ensembles de données apprises.\\
+Précisons quelques termes \cite{10}:
+\begin{itemize}
+	\item \textbf{L'abstraction} suppose que les données initiales diffèrent largement des données de sorties, avec pour résultat possible la classification d’images, la prédiction d’un comportement ou une traduction. L'abstraction signifie qu'il n'y a pas de relation simple entre l'entrée et la sortie.
+	\item \textbf{La modélisation} signifie que nous tentons de créer un certain scenario réaliste de sorte qu'une classification ou un résultat réaliste en découle.
+	\item \textbf{La notion relative aux grands ensembles de données} signifie que les données d’entrée sont extrêmement diverses. L'apprentissage profond ou l'apprentissage automatique implique généralement que les propriétés importantes de ces données sont détectées lors du processus d'apprentissage.
+\end{itemize}
+
+De nombreux termes de ceux utilisés proviennent des sciences neurologiques, notamment de la notion de réseau de neurones. Un réseau neuronal est une sorte de logiciel cérébral ou de machine virtuelle composée de milliers d’unités (les neurones) qui effectuent des calculs. Plus précisément, des unités logiques et de prises de décisions (neurones, perceptrons) relient les données d’entrées et de sorties entre elles par l’intermédiaire d’un réseau complexe (réseau, cerveau) capable de prendre des décisions complexes.
+
+A l'origine, ces systèmes portaient le nom de réseaux artificiels de neurones (ANN, Artificial Neural Networks) afin de les différencier des systèmes biologiques. Ils se composent en général d’un certain nombre de données d'entrées et de sorties (input / output layer), d’un réseau étroit de neurones et de plusieurs couches intermédiaires (hidden layers). Ces couches intermédiaires permettent de traiter des problèmes complexes ; sans elles, le système ne résout que des calculs simples. Le nombre de couches est donc un facteur décisif pour la complexité du système, et de l’apprentissage ; les données s’associent d’une couche à l’autre, les résultats d’une première couche servant d’entrée à la prochaine, et ainsi de suite afin d’aboutir à une prise de décision complexe. Ce fonctionnement en couches donne toute sa profondeur au réseau et à l’apprentissage.
+\subsection{Réseaux de Neurones Artificiels (ANNs)}
+\subsubsection{Historique}
+C’est dans les années 40 que la neurophysiologie a commencé à comprendre le fonctionnement des neurones biologiques, avec notamment les notions d’influx nerveux, de seuil d’activation, d’excitation du neurone et de renforcement de certaines structures par l’apprentissage \cite{11}.
+
+Naturellement, les chercheurs essayèrent alors de reproduire un neurone de façon artificielle, d’abord sous forme de circuits électriques puis lorsque les langages de programmation le permirent, sous forme de code. En 1957, “Franck Rosenblatt” invente le “Perceptron”, qui est la première tentative de reconnaissance d’image par un algorithme.
+
+Après un creux dans les années soixante en raison de doutes sur la robustesse théorique de ces modèles, la recherche sur les ANN prit un second souffle en 1986 lorsque l’algorithme dit de « rétro-propagation » (back-propagation) permit de multiplier le nombre de couches d’un ANN et donc sa capacité à reconnaître des concepts de plus en plus complexes. En 1998, “Yann Le Cun” proposa le fameux réseau LeNet-5 pour la reconnaissance de caractères \cite{11}.
+
+Mais pénalisés par le manque de données et la puissance limitée des machines de l’époque, les réseaux neuronaux passèrent de mode à nouveau au début des années 2000 au profit d’autres techniques de machine learning. Ce n’est que vers 2010 que débuta l’accélération connue aujourd’hui.
+\subsubsection{Neurone biologique}
+L’unité de calcul principal du système nerveux, le neurone, est constitué de trois parties: l’arbre dendritique, le soma et l’axone ; une illustration est présentée à la figure \ref{fig:nrb}. Au repos, l’intérieur du neurone est polarisé négativement par rapport à l’extérieur. Cela est dû à un ensemble de pompes contrôlant les concentrations relatives de différents ions, entre l’intérieur et l’extérieur du neurone. Les synapses sont les points de jonctions entre l’axone et les dendrites de deux neurones, un message y est transmis sous la forme de composés chimiques: les neurotransmetteurs. Lorsque ceux-ci se lient aux récepteurs poste-synaptiques, des canaux ioniques s’ouvrent ou se ferment sur la membrane et des courants poste-synaptiques apparaissent.
+
+Ces courants sont ensuite intégrés de manière complexe et non-linéaire \cite{49} dans l’arbre dendritique. Le potentiel du soma va changer et s'il dépasse un certain seuil, un potentiel d’action sera initié et propagé à travers l’axone, ce qui libérera des neurotransmetteurs aux synapses auxquelles il est relié. Les mécanismes de création et de propagation du potentiel d’action sont expliqués par le modèle d’Hodgkin-Huxley \cite{50} basé sur un ensemble d’équations différentielles non-linéaires.
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{img-Chapiter-1/neurone.jpeg}
+\caption{Schéma d’un neurone biologique}
+\label{fig:nrb}
+\end{figure}
+\subsubsection{Définition}
+L'idée de neurone artificiel n’a pas encore été vraiment spécifiée. Au sein d'un processeur, l’unité logique se compose de transistors ; on pourrait également y trouver un réseau neuronal « câblé », mais il faudrait qu’il soit « adaptatif », qu’il ait une « capacité d'apprentissage ». En effet, la réponse d'un neurone à des impulsions entrantes doit pouvoir évoluer tout au long du processus d'apprentissage. C'est ce qu'on appelle la « pondération » : un neurone évalue (pondère) diverses variables d'entrée pour obtenir la variable de sortie souhaitée. C'est pourquoi les neurones sont généralement des fonctions mathématiques qui relient entre elles des variables d'entrée et de sortie \cite{10}.
+
+Dans la phase d'apprentissage, les neurones modifient leur comportement de pondération et affinent les résultats de sortie en fonction des variables d'entrées. Il doit donc y avoir un retour d'information du résultat global qui influence chaque neurone. On peut donc dire que les variables d'entrées et de sorties d'un réseau neuronal sont connues, mais que les valeurs des neurones, surtout dans les couches cachées restent inconnues. On a affaire à une « boîte noire » \cite{10}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=17cm]{img-Chapiter-1/neuron_model.jpeg}
+	\caption{Modèle d'un réseau de neurone}
+\end{figure}
+
+Pris isolément, un réseau neuronal qui n’a pas été entraîné ne « connaît » rien et fournit des résultats aléatoires, voire chaotiques. Seul un système entraîné fournira le résultat souhaité. Si le problème posé est simple, un programme simple, plus facile à déboguer, pourra le résoudre. Pour un problème plus complexe, on aura recours à un réseau de neurones, que l’on entraînera à l’aide de grands ensembles de données. Chaque neurone peut fournir des variables de sorties complexes et réagir linéairement ou non linéairement aux variables d'entrées.
+
+C'est là un point assez subtil, car les neurones doivent être en mesure de réagir à l’ensemble des possibilités afin de fournir un résultat adéquat \cite{10}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{img-Chapiter-1/shemadenourone.png}
+\caption{Schéma d’un réseau artificiel de neurones}
+\end{figure}
+
+\subsection{Réseau neuronal convolutif (CNN)}
+Le réseau de neuronal convolutif (CNN: Convolutional Neural Networks) ou plus généralement connue “ConvNets” a été inspiré par la façon dont le cortex visuel est supposé fonctionner. CNN est similaire à ANN (Réseaux de Neurones Artificiels) mais utilise l’opérateur matrice convolutif. Le volume 3D formé par plusieurs canaux de matrices 2Ds est appelé tenseur «Tensor de l’anglais». Étant donnés une image d'entrée sous la forme d'un tenseur formé de plusieurs matrices 2Ds de pixels pour chaque canal de couleur, plusieurs filtres peuvent être écrits sous forme de matrice de convolution \cite{42}.
+
+Comme la détection des contours (voir la figure \ref{fig:détection}), la netteté, le lissage / flou (voir la figure \ref{fig:filter}) et l’appariement de motifs. ANN peut être utilisé pour apprendre les valeurs dans de nombreuses matrices de convolution, ce qui permet d'obtenir des filtres d'image qui s'activent lorsqu'ils sont exposés sur des caractéristiques ou des structures visuelles spécifiques.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-1/CNN.png}
+	\caption{détection de bord écrit en matrice de convolution 3×3}
+	\label{fig:détection}
+	\bigbreak
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-1/CNN2.png}
+	\caption{Un filtre de flou écrit sous forme de matrice de convolution 3×3}
+	\label{fig:filter}
+\end{figure}
+
+La taille de chaque matrice de filtre de convolution, également appelée «taille du noyau» ou «taille du voisinage», spécifie le champ de réception du filtre. Par exemple, un noyau de taille 3×3 signifie que le cadre de délimitation du voisinage commence par un pixel à gauche, un pixel vers le haut et se termine par un pixel à droite et un pixel vers le bas, tandis qu'une taille de noyau de 5×5 signifie un voisinage de deux pixels de chaque côté.
+
+L'opérateur de convolution utilisé dans CNN est appelée convolution 2D (habituellement appelé “de $conv2d()$” ou “$conv\_2d()$” en fonction du langage utilisé) et il fonctionne sur les volumes 3Ds (en prenant un volume 3D en entrée et résultant d'un volume 3D comme sortie), par exemple, une entrée peut être une image en couleur de taille 224×224×3 \cite{43} et une profondeur de 3 canaux RGB(Red: rouge, Green: vert, Blue: bleu) lorsqu'il est passé à une convolution sur une taille de voisinage 3 x 3 et une profondeur de 96 canaux (écrites 3×3×96) résultat serait un volume de sortie de taille 224×224 (ou 222×222 en cas d'absence de remplissage) et de profondeur de 96. La taille de l'entrée est largeur × hauteur × profondeur. La profondeur du noyau de convolution représente le nombre de filtres que nous souhaitons appliquer / apprendre.
+
+\subsection{Régression}
+Les techniques de régression sont largement utilisées pour résoudre des tâches ayant pour but de prédire des valeurs continues \cite{44}. En vision par ordinateur, les techniques de régression couvrent un large éventail de scénarios d'application, tels que: détection du visage, estimation de la pose humaine, estimation de l'âge..etc. Au cours de la dernière décennie, les architectures d’apprentissage en profondeur ont dépassé de loin l’état de la technique dans de nombreuses tâches de vision informatiques traditionnelles telles que la classification des images, ou la détection d’images.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=7cm,width=15cm]{img-Chapiter-1/REG.png}
+	\caption{Architecture de modèle linéaire(régression) CNN}
+\end{figure}
+
+En gros, ces architectures se composent de plusieurs couches convolutives, généralement suivies de quelques couches entièrement connectées, et d'une couche de classification “softmax” avec, par exemple, une perte d'entropie croisée; l'architecture globale s'appelle un réseau de neurones convolutionnels (CNN ou ConvNet). En plus de la classification, les réseaux de neurones convolutionnels sont également utilisés pour résoudre des problèmes de régression. Dans ce cas, la couche “softmax” est généralement remplacée par une couche de régression entièrement connectée avec des activations linéaires ou “sigmoid”.
+
+\subsection{Quelques concepts utiles}
+\subsubsection*{Époques}
+Un certain nombre d'époques signifient combien de fois l'application d’entraînement par un ensemble de données.
+
+\subsubsection*{Normalisation}
+La normalisation est une technique permettant d'améliorer les performances et la stabilité des réseaux de neurones. Elle permet également de mettre en œuvre des architectures d'apprentissage en profondeur plus sophistiquées.
+
+L'idée est de normaliser les entrées de chaque couche de manière à ce qu'elles aient une activation de sortie moyenne égale à zéro et un écart-type égal à un. Ceci est analogue à la façon dont les entrées des réseaux sont normalisées.
+
+\subsection{Conclusion}
+Bien que généralement présenté comme une nouvelle tendance dans l'apprentissage automatique, l'apprentissage en profondeur a déjà plusieurs décennies. En effet, comme on l'a vu dans cette partie, il remonte au premier ANN multicouche introduit dans les années 1980. Cependant, l’entraînement de tels modèles n’était pas pratique, en raison de la longueur des entraînement et de la faible puissance de traitement disponible à l’époque.
+
+\newpage
+\section{Traitement d’Image (Image Processing)}
+\subsection{Introduction}
+Les images sont le moyen le plus courant et le plus pratique de transmettre des informations «Une image vaut mieux que mille mots». Les images transmettent de manière concise des informations sur les positions, les tailles et les relations entre les objets. Ils décrivent des informations spatiales que reconnaître en tant qu'objets. Les êtres humains sont capables de tirer des informations de telles images, grâce à leurs capacités mentales et visuelles innées. Environ 75\% des informations reçues par l'homme sont sous forme graphique.
+
+\subsection{Image numérique}
+Une image numérique est la représentation d'une image en deux dimensions avec un ensemble de nombres déterminés d'ensembles finis de valeurs numériques appelées éléments d'image ou pixels. Les valeurs de pixels représentent généralement les niveaux de gris, les couleurs, les hauteurs, les opacités, etc. Chaque pixel est un nombre qui représente le degré  d'une zone relativement petite dans une scène. La plage de valeurs nombre numérique étant normalement comprise entre 0 et 255. La taille de cette zone affecte la reproduction des détails dans la scène. Au fur et à mesure que la taille du pixel est réduite, plus de détails de la scène sont préservés en représentation numérique \cite{12}.
+
+Une image numérique $a[m, n]$ décrite dans un espace discret 2D est dérivée d'une image analogique $a(x, y)$ située dans un espace continu 2D par le biais d'un processus d'échantillonnage appelé fréquemment numérisation. L'effet de la numérisation est illustré à la figure \ref{fig:imagenum}. L'image continue 2D $a(x, y)$ est divisée en N lignes et M colonnes. L'intersection d'une ligne et d'une colonne est appelée un pixel. La valeur attribuée aux coordonnées entières [m, n] avec \{m = 0,1,2, ..., M - 1\} et \{n = 0,1,2, ..., N - 1\}.
+
+En fait, dans la plupart des cas, un $(x, y)$ - que nous pourrions considérer comme le signal physique qui frappe la face d’un capteur 2D - est en fait une fonction de nombreuses variables, notamment la profondeur $(z)$, la couleur $(\lambda)$  et le temps (t) \cite{13}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm]{img-Chapiter-1/nor.png}
+\caption{Numérisation d'une image}
+\label{fig:imagenum}
+\end{figure}
+
+L'image présentée à la figure \ref{fig:imagenum} a été divisée en N = 16 lignes et M = 16 colonnes. La valeur attribuée à chaque pixel est la luminosité moyenne dans le pixel arrondis à la valeur entière. Le processus de représentation de l'amplitude du signal 2D à une coordonnée donnée sous forme de valeur entière avec L niveaux de gris différents est généralement appelé quantification d'amplitude ou simplement quantification.
+\subsection{Image thermique}
+L'image thermique représente la répartition structurée des données représentatives du rayonnement infrarouge en provenance d'une scène thermique (Norme AFNOR A 09-400).
+
+Tout corps dont la température est supérieure au zéro absolu émet en permanence un rayonnement électromagnétique. Le rayonnement thermique est le phénomène d'écoulement de la chaleur par lequel l'énergie calorique se transmet entre deux objets de température différente et séparés dans l'espace par un milieu transparent.
+
+Le spectre des radiations électromagnétiques est divisé arbitrairement en un certain nombre de régions déterminées en fonction des générateurs ou récepteurs appropriés \cite{40}.
+
+Le spectre infrarouge est divisé en trois grandes régions suivant les capteurs utilisables pour les déceler \cite{41}:
+\begin{enumerate}
+	\item de 0,75 à 1,5 µm \footnote{µm $\longrightarrow$ Micro mètre  = $1 \times 10^{-6}$}, l'infrarouge proche décelé par les émulsions photographiques
+	\item de 1,5 à 20 µm , l'infrarouge moyen décelé par des détecteurs thermiques photoconducteurs ou photovoltaïques.
+	\item de 20 à 1000 µm , l'infrarouge lointain décelé par les détecteurs thermiques.
+\end{enumerate}
+
+\subsection{Traitement d’image}
+Le traitement et l'analyse d'images peuvent être définis comme «l'acte d'examiner des images dans le but d'en identifier et d'en juger le sens». L'analyste d'images étudie les données de télédétection et tente, via un processus logique, de détecter, identifier, classer, mesurer et évaluer la signification de données physiques. Le traitement numérique de l'image est un ensemble de techniques permettant de manipuler des images numériques par ordinateur. Les données brutes reçues des capteurs d’imagerie sur les plates-formes satellites contiennent des défauts et des carences \cite{14}.
+
+Pour surmonter ces défauts et lacunes afin d'obtenir l'originalité des données, celles-ci doivent subir plusieurs étapes de traitement. Cela varie d'une image à l'autre en fonction du type de format d'image, des conditions initiales de l'image, des informations qui vous intéressent et de la composition de l'image \cite{14}.
+Le traitement des images comprend essentiellement les trois étapes suivantes:
+\begin{enumerate}
+	\item Importation de l'image avec un scanner optique ou par photographie numérique.
+	\item Analyser et manipuler l'image, ce qui inclut la compression des données, l'amélioration de l'image et la détection de motifs qui ne sont pas visible à l’œil humain comme les photographies satellitaire.
+	\item La sortie est la dernière étape dans laquelle le résultat peut être une image modifiée ou un rapport basé sur une analyse d'image.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{img-Chapiter-1/1.png}
+\caption{Présentation des étapes de traitement d’image}
+\end{figure}
+
+\subsection{But du traitement d'image}
+Le traitement de l'image est divisé en 5 groupes.\\
+Elles sont:
+\begin{enumerate}
+	\item Visualisation: Observez les objets non visibles.
+	\item Netteté et restauration d'image: Pour créer une meilleure image.
+	\item Récupération d'image: Recherchez l'image à laquelle on s’intéresse.
+	\item Mesure du motif: Mesure divers objets dans une image.
+	\item Reconnaissance d'image: Distinguer les objets dans une image.
+\end{enumerate}
+\subsection{Méthodes pour le traitement d’image}
+Les deux types de méthodes utilisées pour le traitement d'images sont le traitement d'images analogique et numérique. Des techniques de traitement d'image analogiques ou visuelles peuvent être utilisées pour les copies papier telles que les impressions et les photographies. Les analystes d'images utilisent divers principes d'interprétation lors de l'utilisation de ces techniques visuelles. Le traitement de l'image ne se limite pas à un domaine à étudier, mais à la connaissance de l'analyste. L'association est un autre outil important dans le traitement des images par le biais de techniques visuelles. Les analystes appliquent donc une combinaison de connaissances personnelles et de données collatérales au traitement des images.
+
+Les techniques de traitement numérique aident à manipuler les images numériques en utilisant des ordinateurs. Les données brutes des capteurs d'imagerie contiennent des lacunes et pour surmonter ces défauts et obtenir l’originalité de l’information, l’image doit subir différentes phases de traitement.
+
+Les trois phases générales que doivent subir tous les types de données lors de l’utilisation de la technique numérique sont les suivantes: Pré-traitement, Amélioration et Affichage, Extraction d’informations.
+
+\subsection{Applications existantes}
+\begin{enumerate}
+	\item Systèmes de transport intelligents - Cette technique peut être utilisée pour la reconnaissance automatique de plaques d'immatriculation et la reconnaissance de panneaux de signalisation \cite{15}.
+	\item Télédétection - Pour cette application, les capteurs capturent les images de la surface de la terre dans des satellites de télédétection ou un scanner multispectral monté sur un avion. Ces images sont traitées en les transmettant à la station terrienne. Les techniques utilisées pour interpréter les objets et les régions sont utilisées dans la lutte contre les inondations, la planification urbaine, la mobilisation des ressources, le suivi de la production agricole, etc \cite{16}.
+	\item Suivi d'objet en mouvement - Cette application permet de mesurer les paramètres de mouvement et d'acquérir un enregistrement visuel de l'objet en mouvement. Les différents types d’approche permettant de suivre un objet sont les suivants: suivi basé sur le mouvement et suivi basé sur la reconnaissance \cite{17}.
+	\item Surveillance de la défense - Des méthodes de surveillance aérienne sont utilisées pour surveiller en permanence les terres et les océans. Cette application est également utilisée pour localiser les types et la formation des navires de la surface de l'océan. L'important est de diviser les différents objets présents dans la partie de l'image contenant de l'eau. Les différents paramètres tels que longueur, largeur, surface, périmètre et compacité sont configurés pour classifier chacun des objets divisés. Il est important de reconnaître la répartition de ces objets dans différentes directions (est, ouest, nord, sud, nord-est, nord-ouest, sud-ouest et sud-ouest) pour expliquer toutes les formations possibles des navires. On peut interpréter l'ensemble du scénario océanique à partir de la distribution spatiale de ces objets \cite{18}.
+	\item Système d'inspection visuelle automatique - Cette application améliore la qualité et la productivité du produit dans les industries. Système d’inspection automatique des filaments des lampes à incandescence - Cela implique un examen du processus de fabrication de l'ampoule. En raison de l’absence d’uniformité dans le pas des câbles de la lampe, le filament de l’ampoule se fond rapidement. Dans cette application, une tranche d'image binaire du filament est créée à partir de laquelle la silhouette du filament est fabriquée. Les silhouettes sont analysées pour reconnaître la non-uniformité du pas du câblage dans la lampe. Ce système est utilisé par la “General Electric Corporation”.
+	\begin{enumerate}
+		\item Systèmes automatiques d'inspection des surfaces - Dans les industries métallurgiques, il est essentiel de détecter les défauts sur les surfaces. Par exemple, il est essentiel de détecter tout type d'aberration sur la surface du métal laminé dans les laminoirs à chaud ou à froid d'une aciérie. Des techniques de traitement d'image telles que l'identification de texture, la détection de bord, l'analyse fractale, etc. sont utilisées pour la détection.
+		\item Identification des composants défectueux - Cette application identifie les composants défectueux dans les systèmes électroniques ou électromécaniques. Une plus grande quantité d'énergie thermique est générée par ces composants défectueux. Les images infrarouges sont produites à partir de la distribution des énergies thermiques dans l'assemblage. Les composants défectueux peuvent être identifiés en analysant les images infrarouges.
+	\end{enumerate}
+	\item Techniques d'imagerie biomédicale - Pour le diagnostic médical, différents types d'outils d'imagerie tels que les rayons X, les ultra-sons, la tomographie assistée par ordinateur (CT), etc. sont utilisés \cite{19}. Certaines des applications d'imagerie biomédicale sont les suivantes:
+	\begin{enumerate}
+		\item Identification des maladies cardiaques - Il est nécessaire de connaître les caractéristiques de diagnostic importantes telles que la taille du cœur et sa forme afin de classifier les maladies cardiaques. Pour améliorer le diagnostic des maladies cardiaques, des techniques d'analyse d'images sont utilisées pour les images radiographiques \cite{20} \cite{21}.
+		\item Identification des maladies pulmonaires - Dans les rayons X, les régions qui apparaissent sombres contiennent de l'air, tandis que celles qui apparaissent plus claires sont des tissus solides. Les os sont plus radio-opaques que les tissus. Les côtes, le cœur, la colonne thoracique et le diaphragme qui sépare la cavité thoracique de la cavité abdominale sont clairement visibles sur le film radiographique \cite{22} \cite{23}.
+		\item Mammographies numériques - Ceci est utilisé pour détecter la tumeur du sein. Les mammogrammes peuvent être analysés à l'aide de techniques de traitement d'images telles que la segmentation, l'analyse de forme, l'amélioration du contraste, l'extraction de caractéristiques, etc \cite{24}.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Perspectives de la recherche}
+Une vaste recherche est en cours dans la technique de traitement d'image.
+\begin{enumerate}
+	\item Imagerie du cancer - Différents outils, tels que la ponction trachéo-œsophagienne (TEP), l'IRM (Imagerie par Résonances Magnétique) et la détection assistée par ordinateur, aident à diagnostiquer la tumeur et à en prendre conscience.
+	\item Imagerie cérébrale - Se concentre sur le développement normal et anormal du cerveau, le vieillissement cérébral et les états pathologiques courants.
+	\item Cette recherche intègre l'IRM structurelle et fonctionnelle en neurologie, l'analyse de la forme et de la structure des os, le développement d'outils d'imagerie fonctionnelle en oncologie et le développement de logiciels de traitement d'images TEP \cite{25}.
+	\item Le développement de la technologie de l'image impose de déterminer si les nouvelles technologies sont efficaces et rentables, et si cette technologie fonctionne dans les domaines tel-que:
+	\begin{enumerate}
+		\item Imagerie par résonance magnétique du genou.
+		\item Détection assistée par ordinateur en mammographie.
+		\item Échographie endoscopique dans la stadification du cancer de l'œsophage.
+		\item Imagerie par résonance magnétique dans les douleurs lombaires.
+		\item Imagerie ophtalmique - Cela fonctionne dans deux catégories:
+		\begin{itemize}
+			\item Technologie d'imagerie - Développement d'un logiciel automatisé - Analyse les images de la rétine pour montrer les signes précoces de la rétinopathie diabétique
+			\item Développement de l'instrumentation - Se concentre sur le développement de l'ophtalmoscope à balayage laser.
+		\end{itemize}
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Conclusion}
+Nous sommes tous en pleine révolution déclenchés par le développement rapide de la technologie informatique et de l'imagerie. Contrairement aux idées reçues, les ordinateurs ne sont pas en mesure d’associer les humains aux calculs liés au traitement et à l’analyse des images.
+
+Mais avec la sophistication croissante et la puissance de l'informatique moderne, le calcul ira au-delà de l'architecture séquentielle conventionnelle de “Von Neumann” et envisagera également l'exécution optique. Les paradigmes de l'informatique distribuée et parallèle devraient améliorer les réponses pour les résultats du traitement des images.
+\newpage
+\rhead{}
+\addcontentsline{toc}{section}{Chapitre 2 : Contexte et problématique du projet}  
+\section*{\Huge{Chapitre 2}}
+\subsection*{\huge{Contexte et problématique du projet}}
+\newpage
+\rhead{\textsc{Chapitre 2 : Contexte et problématique du projet}}\setcounter{section}{0}
+\section{Introduction}
+On se positionne dans ce projet à la frontière de la santé numérique et la diagnostic médicale aussi que l'aide à la prise de décisions, dans cette section nous allons faire le tour des concepts liés à notre sujet et détailler la problématique à laquelle on s'attaque, à savoir la santé connectée, la température corporelle et le cancer.  
+\section{E-santé}
+\subsection{Définition}
+E-santé est un domaine émergent qui se situe au croisement de l'informatique médicale, de la santé publique et des entreprises, de la référence aux services de santé et à l'information fournie ou améliorée via internet et les technologies associées. Dans un sens plus large, le terme caractérise non seulement un développement technique, mais également un état d'esprit, une façon de penser, une attitude et un engagement envers la pensée globale en réseau afin d'améliorer les soins de santé aux niveaux local, régional et mondial. En utilisant les technologies de l'information et de la communication \cite{26}.
+
+Le terme \textit{e-santé} désigne l'ensemble des technologies et services - pour les soins médicaux spécifiquement - basés sur les technologies de l'information et de la communication. 
+Ceux ci comprennent:
+\begin{itemize}
+	\item Les réseaux régionaux et nationaux d'information pour la santé et les systèmes de dossiers électroniques distribués y compris les systèmes d'information pour les professionnels de santé et les hôpitaux, les services en ligne tels que la prescription électronique, les bases de données...
+	\item Les systèmes de télémédecine et les services associés.
+	\item Les outils spécialisés pour les professionnels de santé et les chercheurs (robotique et environnements avancés pour le diagnostic et la chirurgie, outils pour la simulation et la modélisation, grilles pour la santé et outils pour la formation).
+\end{itemize}
+
+La santé connectée consiste en l’utilisation des nouvelles technologies pour améliorer la santé des citoyens. Ces technologies peuvent faciliter la collecte, la circulation, l'utilisation efficaces d'informations sur la santé, l’accès aux soins et permettent à leurs utilisateurs une prise en charge personnalisée en matière de prévention ou de soins médicaux.
+
+Elle regroupe plusieurs leviers : faire des patients des acteurs de leur santé, promotion de l’e-santé à travers les professionnels santé, les données médicales comme levier majeur d’innovation, favoriser le rapprochement patients-médecins \cite{27}.
+
+\subsection{Domaines d’application}
+Pour présenter les applications de la santé numérique, on peut se baser sur la chronologie du développement et de la prise en charge d’une maladie à savoir les stades de prévention, de diagnostic, puis de prise en charge thérapeutique et d’établissement d’un pronostic.
+
+Les applications sont nombreuses: On peut distinguer les lieux de prise en charge que sont le cabinet médical pour la médecine ambulatoire et l’hôpital lors des hospitalisations. Le maintien à domicile des patients est un enjeu important.
+
+E-santé inclut:
+\begin{enumerate}
+	\item \textbf{La télésanté} qui comprend les actes de prévention et de soins réalisés à distance : information via des portails grand public, sites de promotion de la santé, systèmes d'alerte téléphonique, prescriptions électroniques à distance...
+	\item \textbf{La télémédecine} (actes médicaux réalisés à distance par un médecin) : consultation par vidéoconférence, téléassistance d'un médecin lors d'une intervention, télésurveillance du patient, télé-expertise (échange des avis des médecins)...
+	\item \textbf{La m-santé (mobile santé)} qui comprend les applications numériques pour smartphones ou objets connectés (bracelets...) en lien avec la santé.
+	\item \textbf{Les systèmes de dossiers électroniques de santé.}
+\end{enumerate}
+
+\subsection{Importance de la e-santé}
+\begin{enumerate}
+	\item Prévoir une population vieillissante avec une prévalence croissante de maladie chronique, qui coûte de plus en plus cher à traiter.
+	\item Améliorer la sécurité des patients et réduire les erreurs.
+	\item Aider les patients à devenir des consommateurs informés qui prennent un rôle actif dans leurs propres soins de santé.
+	\item La transition démographique vers une population vieillissante vivant plus longtemps avec des maladies chroniques signifie que les prestataires de soins de santé doivent trouver les ressources pour prendre soin de ces personnes. Les technologies de l’information et de la communication (sous les divers aspects de la santé en ligne, télésoins, télésanté, etc.) sont considérées comme une réponse à ces attentes. Les solutions Ehealth sont présentées comme des méthodes relativement peu coûteuses de fournir des soins et une assistance à la fois à distance et avec l’automatisation. Cela comprend la surveillance et la consultation à distance dispensées par des praticiens de la santé, ainsi que des outils d'auto-surveillance pour soutenir l'autogestion. L’objectif est de maintenir une vie autonome pour les personnes atteintes de maladie chronique et de réduire le recours aux soins secondaires.
+\end{enumerate}
+
+\subsection{Avantages et inconvénients}
+La e-santé à plusieurs avantages tels que:
+\begin{itemize}
+	\item Réduit le stress du personnel.
+	\item Fait un dossier patient efficace et accessible.
+	\item Réaliser un gain de temps et réduction des travaux indirects, ce qui conduit à une prestation de soins plus directe.
+	\item Causes de garder le personnel en leur possession et de l'attirer.
+\end{itemize}
+
+Les inconvénients peuvent être:
+\begin{itemize}
+	\item La modification des processus de communication avec le personnel
+	\item La formation du personnel prend beaucoup de temps sur ce type de système.\\
+\end{itemize}
+
+L'étude Accenture \cite{28} montre clairement les avantages des soins de santé intégrés et de l'échange de données à l'échelle du système. Il montre que la santé connectée facilite une meilleure coordination des soins, une gestion améliorée de la maladie, moins d'erreurs cliniques et de nouvelles opportunités d'économie de coûts administratifs et cliniques.
+
+\section{Santé connectée}
+Santé connectée implique plusieurs ressources et acteurs tel que:
+\begin{itemize}
+	\item \textbf{L’interopérabilité:} Activés par des systèmes IT \footnote{Les technologies de l'information et de la communication.} de santé qui communiquent entre eux, échangent des données et utilisent des informations.
+	\item \textbf{Les personnes:} Habilités à accéder à leurs propres informations sur la santé, à les gérer et à participer activement à leurs soins
+	\item \textbf{Les professionnels de santé:} Appuyés par les programmes fédéraux et les outils IT de la santé pour la prestation de soins de haute qualité axés sur le patient, afin de soutenir la participation de tous les individus et fournisseurs de soins de santé à la santé connectée.
+	\item \textbf{Le partage de données et intégration:} Améliorer les soins, améliorer la surveillance et faire avancer la recherche.\\
+	
+\end{itemize}
+
+Approche de la santé connectée offre trois niveaux de création de valeur
+\begin{itemize}
+	\item \textbf{Efficacité clinique}\\
+	Y compris la réduction des activités administratives et des coûts, l’élimination des doublons de tests de laboratoire et de radiologie; améliorer la sécurité des patients grâce à un accès 24 heures sur 24, 7 jours sur 7, à des dossiers médicaux complets et lisibles; et accélérer l'accès aux antécédents médicaux des patients et aux informations vitales.
+	\item \textbf{Savoir partagé}\\
+	Y compris la réduction des erreurs médicales et l'amélioration de la qualité des soins, les alertes d'interaction médicamenteuse, des outils sophistiqués pour améliorer la prise de décision clinique par le biais de protocoles de soins fondés sur des preuves, ainsi que des innovations et de nouvelles capacités en matière de soins de population.
+	\item \textbf{Transformation de soins}\\
+	Incluant des analyses avancées pour éclairer la prise de décision clinique, la gestion de la santé de la population et de nouveaux modèles de prestation de soins.
+\end{itemize}
+
+\subsection{Principales fonctions de la santé connectée}
+Les solutions de santé connectée s’articulent autour de 5 fonctions principales :
+\begin{enumerate}
+	\item Capter une information, via un objet (une balance, un tensiomètre, un podomètre…).
+	\item Transmettre automatiquement l’information captée.
+	\item Intégrer l’information dans un système informatique.
+	\item Afficher l’information de manière compréhensible pour l’utilisateur.
+	\item Mettre en relation, en s’affranchissant des problèmes de distance, patients et professionnels de santé.
+\end{enumerate}
+
+\subsection{Différents champs d’application de la santé connectée}
+Les domaines d’applications pour les solutions de santé connectée sont vastes :
+\begin{itemize}
+	\item Mesure de paramètres vitaux et leur télétransmission à un plateau médical.
+	\item Mise en relation de patients à travers des réseaux sociaux dédiés.
+	\item Services de prévention personnalisée Web.
+	\item Téléconsultation, télémédecine et diagnostic à distance.
+	\item ...\\
+\end{itemize}
+
+L’intérêt de ces outils est directement lié à la manière de les utiliser. La santé connectée constitue une révolution qui permettra de proposer à chacun utilisateur des services de santé efficaces, accessibles et adaptés à ses besoins.
+
+\subsection{Internet des objets en santé}
+Les objets connectés ou objets communicants sont en train de révolutionner tous les secteurs, y compris celui de la médecine générale. Cependant leur prescription par les médecins généralistes reste freinée par certaines craintes, notamment en ce qui concerne la protection du secret médical.
+
+Un objet connecté est un objet relié à internet via un système de communication sans fil alors qu’il n’avait pas vocation d’être une interface web, à l’origine. Par exemple, on peut parler de tensiomètre connecté mais un smartphone n’est pas considéré comme un objet connecté puisqu’il est conçu dès le départ pour « surfer » sur le web. En pratique, les dispositifs médicaux connectés contiennent des composants électroniques, leur permettant de communiquer avec différents systèmes : une tablette, un ordinateur, un smartphone … Beaucoup sont des wearables, c’est-à-dire des objets connectés portables du type montre ou bracelet.\\
+Ils sont capables de:
+\begin{itemize}
+	\item Collecter diverses données santé de vos patients,
+	\item Traiter les données,
+	\item Transmettre les résultats obtenus aux professionnels de santé (ex. : médecin traitant, infirmière à domicile),
+	\item Donner l’alerte en cas d’urgence.
+\end{itemize}
+Ce qui permet :
+\begin{itemize}
+	\item De faciliter le diagnostic en télé-consultation,
+	\item D’assurer un meilleur suivi des patients à distance (télé-surveillance),
+	\item D’aider les patients à suivre leur traitement correctement,
+	\item De faire de la prévention dans divers domaines.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6cm, width=15cm]{img-Chapiter-2/IOT.jpg}
+	\caption{ IOT dans la santé}
+\end{figure}
+
+\section{Température corporelle}
+\subsection{Définition}
+La température corporelle est définie comme la température moyenne du corps humain. La température moyenne est estimée à environ entre 36.8 C\textdegree{} et 37.6 C\textdegree{}, bien que cela puisse varier en fonction du moment de la journée, généralement de 0,5 C\textdegree{} le soir par rapport au matin.
+
+Le centre qui régule la température corporelle est situé dans une glande, l'hypophyse, et le point exact de régulation peut être modifié en cas de dommage ou de maladie, d'où l'apparition de fièvre. 
+
+Selon les puristes, ce processus est distinct de l'hyperthermie, qui définit l'augmentation de la température corporelle causée par l'environnement ou l'effort physique, et de l'hypothermie, qui est une diminution et est essentiellement due à une exposition prolongée au froid. 
+
+Dans les deux cas, le point de régulation n'est pas modifié et le corps initie certains processus destinés à ramener la température à la normale, par exemple en transpirant ou en frissonnant.
+
+\subsection{Température chez les enfants}
+La température chez l’enfant doit normalement être comprise entre 36 C\textdegree{} et 37, 5 C\textdegree{}. On parle de fièvre quand elle atteint ou dépasse les 38 C\textdegree{}. On dit alors familièrement que l’enfant a de la température. Entre 37,5 C\textdegree{} et 37,9 C\textdegree{}, on parle de fièvre modérée ou de fébricule. La fièvre est très courante chez les enfants. Souvent sans gravité, il faut toutefois surveiller de près son évolution car au-dessus de 40 C\textdegree{} son issue peut être mortel \cite{29}.
+
+\subsection{Causes de l'élévation de la température chez l’enfant}
+Parmi les causes de l'élévation de la température, on peut distinguer deux grandes familles. La première regroupe toutes les causes extérieures : coup de soleil, coup de chaleur… 
+
+Cette fièvre infantile est alors liée à la chaleur du milieu extérieur. La seconde famille regroupe les très nombreuses causes infectieuses (virus, bactérie, champignon, parasite).
+
+En effet, pour combattre une infection, le système immunitaire de l’organisme entre en grande activité. Activité qui génère l’élévation de la température \cite{30}.\\
+
+les enfants cancéreux souffrent d’une infection (causée par une bactérie ou un virus), il est normal qu’il fasse de la fièvre, ils existent plusieurs moyens de prendre la température corporelle qui sont :
+\begin{enumerate}
+	\item par voie rectale (par le rectum ou les fesses),
+	\item par voie buccale (par la bouche),
+	\item par voie axillaire (sous l’aisselle),
+	\item par voie auriculaire (par l’oreille).
+\end{enumerate}
+
+\begin{table}[h]
+	\centering
+	\caption{Choix de la méthode de prise de température suivant l’age de l’enfant}
+	\begin{tabular}{ | l | l | c }
+		\hline
+		\bfseries{Âge} & \bfseries{Techniques recommandées}\\ \hline
+		De la naissance à 2 ans & 1èr choix : Rectum ( pour obtenir une lecture exacte )\\
+		                                      &  2ème choix : Aisselle ( pour vérifier si bébé fait de la fièvre\\
+\hline
+		De 2 à 5 ans & 1èr choix : Rectum\\
+							& 2ème choix : Oreille\\
+							& 3ème choix : Aisselle\\ 
+\hline
+		Plus de 5 ans & 1èr choix : Bouche\\
+							  & 2ème choix : Oreille\\
+							  & 3ème choix : Aisselle\\ 
+\hline 
+	\end{tabular}
+\end{table}
+
+
+
+
+\section{Cancer}
+\subsection{Définition}
+Le cancer est une maladie caractérisée par une prolifération cellulaire, ou tumeur maligne, anormalement importante formée à partir de la transformation par mutation ou instabilité génétique d'une cellule initialement normale. Parfois, les cellules cancéreuses envahissent les tissus environnants, ou se détachent de la tumeur d'origine pour migrer vers d'autres régions du corps, c'est ce qu'on appelle des métastases. C'est pourquoi il est important de dépister le cancer le plus tôt possible afin d'éviter cette migration. La majorité des cancers prennent plusieurs années à se former et peuvent apparaître à tout âge. 
+
+Les symptômes sont très variables d'une personne à l'autre mais aussi en fonction du type de cancer et de son stade \cite{31}.
+
+Il existe un certain nombre de cancers différents, ayant chacun leurs propres symptômes et pouvant toucher diverses parties du corps. Parmi les cancers les plus fréquents, on retrouve :
+\begin{itemize}
+	\item  Le cancer de la peau,
+	\item Le cancer du sein,
+	\item Le cancer du colon,
+	\item Le cancer de la prostate,
+	\item ...
+\end{itemize}
+
+\subsection{Cancer de l’enfant}
+Le cancer est une cause majeure de décès chez les enfants et les adolescents dans le monde. Il est diagnostiqué chaque année environ 300 000 enfants âgés de 0 à 19 ans \cite{32}.
+
+Le cancer de l’enfant (ou cancer pédiatrique) recouvre de nombreux types de tumeurs spécifiques apparaissant chez l’enfant et l’adolescent entre 0 et 19 ans. Les formes les plus fréquentes sont la leucémie, les cancers du cerveau, les lymphomes et les tumeurs solides telles que le neuroblastome et la tumeur de Wilms \cite{32} \cite{33}.
+
+La plupart des cancers de l’enfant peuvent être guéris grâce aux médicaments génériques et à d’autres formes de traitement, notamment la chirurgie et la radiothérapie. Le traitement du cancer de l’enfant peut avoir un bon rapport coût/efficacité \cite{33}.
+
+Le cancer dépossède le patient de son système immunitaire qui alter son traitement de chimio ce qui perturbe sa guérison. Cela produit un retour négative sur la santé du patient surtout que la maladie du cancer attaque le système immunitaire ce qui le rend vulnérable à des infections, à la fatigue, sueur, insomnie, perte du poids, ...etc.
+
+\begin{figure}[h]
+\centering
+\includegraphics[ height=9cm, width=9cm ]{img-Chapiter-2/cancerenfant.png}
+\caption{Le cancer chez les enfants}
+\end{figure}
+
+\subsection{Cancers les plus fréquents chez les enfants}
+Les cancers les plus fréquents chez les enfants \cite{34} sont les suivants :
+\begin{itemize}
+	\item les leucémies (33\%)
+	\item les tumeurs au cerveau et dans la moelle épinière (20\%) .
+	\item les lymphomes hodgkiniens et non hodgkiniens (12\%) .
+	\item les tumeurs du système nerveux sympathique (7\%) .
+	\item les cancer des tissus mous (7\%) .
+	\item le cancer du rein (5\%) .
+	\item le cancer des os (4\%) .
+	\item les tumeurs germinales (3\%) .
+	\item les tumeurs oculaires (3\%) .
+\end{itemize}
+
+\subsection{Symptômes}
+Les signes suivants peuvent indiquer l’existence d’une maladie cancéreuse chez l’enfant \cite{34}:
+\begin{itemize}
+	\item Un ventre anormalement gonflé, des grosseurs.  
+	\item Une fièvre inexpliquée et persistante. 
+	\item Une pâleur, de l’apathie, une perte de poids. 
+	\item Des douleurs inexpliquées et persistantes dans les articulations et les membres.
+	\item Des maux de tête, souvent associés à des vomissements. 
+	\item Des hématomes fréquents, des saignements inexpliqués . 
+	\item Des sueurs nocturnes. 
+	\item Des sautes d’humeur et un changement soudain de comportement. 
+	\item Un reflet blanchâtre dans la pupille « œil de chat », un strabisme.
+\end{itemize}
+
+\subsection{Conclusion}
+La prévention et les soins du cancer dépendent d'un accès à des informations exactes et complètes et d'une coordination étendue entre les patients, les soignants et les équipes de soins.
+
+Beaucoup d'organismes à but non lucratif composés de médecins, d'infirmières en oncologie, de survivants du cancer et de membres de la famille d'individus atteints du cancer. ils s'engagent à changer la vie des personnes touchées par le cancer et à responsabiliser les patients et leurs proches au cours de ce voyage. Ils espèrent qu'un jour, le cancer sera une maladie du passé.
+
+\section{Problème de la prise de température corporelle chez les enfants cancéreux}
+\subsection{Introduction}
+Les enfants cancéreux peuvent souffrir d'une infection (virus, bactérie,... etc), il est normale qu'il fasse de la fièvre.
+
+La méthode de la prise de température corporelle chez l'enfant dans ce cas dépendra de l’age de l’enfant, il est important que la mesure soit exacte. Chez les enfants cancéreux il faut mesurer la température corporelle chaque deux heures par l’infirmière ou le garde malade (Mère ou sœur, ... etc).
+
+En Algérie les services hospitaliers qui s'occupent des enfants cancéreux souffrent de beaucoup de problèmes notamment le manque de personnel soignant aussi que la charge excessive sur les médecins, on fait généralement recours aux parents des enfants, pour prendre soin de ceux ci durant la journée et la nuit, les soins ici sont différents des soins médicaux qui sont la responsabilité du personnel médicale.
+
+En général, les gardes malades (mère, sœur, ... ) sont responsables de la prise de la température corporelle de l'enfant périodiquement.
+
+En cas de fièvre le garde malade alerte le professionnel médicale (Infirmière ou médecin), selon le cas pour prendre en charge ce problème de la fièvre.\\
+ce qui pose des problèmes entre autres: 
+\begin{itemize}
+	\item Le stress des enfants dû à  la fréquence de la prise de température corporelle.
+	\item Les dérangements engendrés par la prise multiple de la température (l'enfant à réveillé, manipulé, ... à différentes heures de la nuit).
+	\item La mauvaise lecture de la température corporelle par le garde malade.
+	\item Le cas de la prise de température corporelle  dans les délais oublies.
+	\item Le stress et l'angoisse des parents dû à cette responsabilité.
+\end{itemize}
+
+\subsection{Solutions existantes}
+Ils existent de part le monde des solutions pour la prise de la température corporelle des enfants, qui soient intelligents ou non.
+
+\subsubsection*{Thermomètre}
+Est l’un des outils essentiels de la trousse de premiers soins. Ils existent différents modèles de thermomètres et différentes méthodes de prise de la température corporelle dite précédemment.
+
+Nous allons présenter quelques solutions.
+\begin{enumerate}
+	\item \textbf{Le thermomètre à gallium} c’est le thermomètre qui a remplacé celui au mercure. Il renferme un mélange de gallium, d’étain et d’indium qui, sous l’effet de la chaleur, se dilatent dans le thermomètre. Il est comme son ancêtre, en verre gradué et permet de lire facilement la température \cite{36}.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=6cm,width=9cm]{img-Chapiter-2/galune.jpeg}
+		\caption{Thermomètre à gallium}
+		\label{fig:gallium}
+	\end{figure}
+	
+	\item \textbf{Les thermomètres électronique} très facile à utiliser, il affiche la température en quelques secondes sur un écran à cristaux liquides. Au bout d’une vingtaine de secondes, un bip sonore indiquera que la température a atteint le bon niveau. En cas de fièvre, certains thermomètres électroniques possèdent un bip spécifique. 
+	
+Un peu plus cher que le thermomètre à gallium "Figure \ref{fig:gallium}", il reste tout de même très économique et fiable. On peut l’utiliser autant pour la prise de température buccale, axillaire et rectale \cite{36}.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-2/classs.jpg}
+	\caption{Mesurer la température avec thermomètre électronique}
+\end{figure}
+
+	\item \textbf{Un thermomètre infrarouge} est un instrument permettant de mesurer la température de surface d'un objet à partir de l'émission de lumière de type corps noir qu'il produit. Un tel thermomètre est parfois appelé à tort thermomètre laser s'il est aidé d'un laser pour viser, ou encore thermomètre sans-contact pour illustrer sa capacité à mesurer la température à distance \cite{37}.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=6cm]{img-Chapiter-2/infra.jpg}
+		\caption{Thermomètre infrarouge}
+	\end{figure}
+	
+	\newpage
+	\item \textbf{Le thermomètre tétine } peut-être un gadget, mais le thermomètre tétine peut s’avérer pratique si on n’a pas d’autre thermomètre sous la main. 
+
+Une fois encore, chez le bébé, la prise de température par voie rectale est la plus fiable et la plus précise \cite{36}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=6cm,width=9cm]{img-Chapiter-2/tetiiiiiiiiine.jpg}
+	\caption{Thermomètre tétine}
+\end{figure}
+	\item \textbf{Bracelet thermomètre} Le bracelet plaçe sur la main d'un enfant pour mesurer la température corporelle, dans le cas d'une température élevée cette dernière émit un son.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[height=7cm,width=9cm]{img-Chapiter-2/bbracelet.jpg}
+		\caption{Bracelet pour mesurer la température}
+	\end{figure}
+\end{enumerate}
+
+\section{Solution Proposée}
+Notre objectif dans ce projet est de résoudre les problèmes déjà cités liés à la prise de température corporelle de l'enfant.
+
+Notre solution consiste en un système intégré (Matériel et logiciel) qui se base sur le sujet IOT et l'apprentissage automatique pour déterminer la température corporelle de l'enfant.
+\begin{enumerate}
+	\item \textbf{La partie matériel} consiste en un prototype de caméra infrarouge qui va permettre de prendre l'image thermique du visage de l'enfant, l'envoyer au système de surveillance et  d'alerte.
+	\item \textbf{Un système de surveillance et d'alerte} qui détermine la température corporelle à partir de l'image et déclenche une alerte si la température corporelle est élevée.\\
+	Le système de surveillance et d'alerte implémente un modèle qui est déjà établit dans une 1\textsuperscript{èr} phase de ce projet.
+\end{enumerate}
+\section{Tableau comparatif}
+\begin{table}[h]
+	\centering
+	\caption{Tableau comparatif décrivant la différence entre les solutions existantes et notre solution}
+	\begin{tabular}{ | l | c | c | c | c |}
+		\hline
+		{Les solutions} & \bfseries{Non intervention} & \bfseries{Non invasive} & \textbf{Intelligente} & \textbf{Système logiciel}\\ 
+								 &  \bfseries{humain}                & 											&									& \textbf{de support}\\
+\hline
+		Gallium & \xmark & \xmark & \xmark & \xmark \\ \hline
+		Électronique & \xmark & \xmark & \xmark & \xmark \\ \hline
+		Infrarouge & \xmark & \cmark & \xmark & \xmark \\ \hline
+		Tétine & \cmark & \xmark & \cmark & \xmark \\ \hline
+		Bracelet & \cmark & \xmark & \cmark & \xmark \\ \hline
+		Notre solution & \cmark & \cmark & \cmark & \cmark \\ \hline
+	\end{tabular}
+\end{table}
+\section{Conclusion}
+La e-santé et les objets connectés ne vont pas impacter  la médecine, mais bien le parcours de soin dans sa globalité.
+
+Dans ce chapitre nous avons présenté le contexte et la problématique à laquelle on s'attaque ainsi que la solution proposée.
+
+\newpage
+\rhead{}
+\addcontentsline{toc}{section}{Chapitre 3 : Conception de la solution proposée}  
+\section*{\Huge{Chapitre 3}}
+\subsection*{\huge{Conception de la solution proposée}}
+\newpage
+\rhead{\textsc{Chapitre 3 : Conception de la solution proposée}}
+\setcounter{section}{0}
+\section{Introduction et objectifs}
+L'enfant cancéreux souffre en silence, il affronte de sérieux problèmes. Sa maladie est mortelle, on doit s’occuper de lui et trouver des solutions pour diminuer sa souffrance.
+
+Pour cela on utilise des outils inventés par l'homme pour faciliter la tache de la surveillance de l'enfant.
+
+Notre contribution consiste en:
+\begin{enumerate}
+	\item La réalisation d'un modèle qui détecte la température corporelle de l'enfant cancéreux, basé sur une image thermique.
+	\item La réalisation d'un système qui implémente le modèle déjà établit pour cela on utilise des images thermiques prisent périodiquement (la période sera définie par le professionnel de santé), elle est souvent estimée à deux heures, elle fera l’objet d’entrée dans le modèle établi afin de déduire la température corporelle de l’enfant.
+	Si la température est élevée (cas de fièvre) une alerte est lancée par le système afin d’avertir l'infirmière ou le médecin, la présence de l'un des deux n'est pas indispensable tout le temps cela lui permet de s’occuper des autres malades par exemple.
+\end{enumerate}
+
+\section{Architecture générale de la solution}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-3/processus.png}
+	\caption{Architecture de la solution}
+	\label{fig:archgene}
+\end{figure}
+\newpage
+\subsection{Présentation de la solution}
+Une caméra est installée au dessus du lit de l'enfant malade, cette caméra est reliée avec un système de surveillance et d'alerte, cette dernière photographie cet enfant de temps en temps, elle envoie la photo prise au modèle qui va la traiter et donne la décision selon la température de l'enfant, si la température est élevée une alerte sera lancée à l'infirmière ou au médecin, ils le prennent en charge, si la température est normale il y aura aucune alerte.
+
+\subsection{Objectifs du processus général}
+\begin{itemize}
+	\item L’enfant sera surveillé et sous contrôle tout le temps.
+	\item Quant à l'infirmière, le fait de surveiller le malade tout le temps est très contraignant. Avec notre système on gagne du temps, d'efforts et précision.	
+	\item Notre solution permet une amélioration des soins et du confort de l'enfant qui ne sera pas dérangé si la température est normale.
+		\item Notre solution permet d'introduire les nouvelles technologies ainsi que l'intelligence artificiel dans les composants pour améliorer le travail des professionnels de santé.
+	\item Notre solution contribue dans l'amélioration du système de santé en Algérie.
+\end{itemize}
+
+\subsection{Description de chaque couche (figure \ref{fig:archgene})}
+\begin{enumerate}
+		\item La 1\textsuperscript{èr} couche: Le dispositif est posé sur la tête de lit du malade. 
+		\item La 2\textsuperscript{ème} couche: Système de surveillance et d'alerte qui contient  un modèle pour estimer la température et une base de données pour sauvegarder les données.
+		\item La 3\textsuperscript{ème} couche: L'application qui détecte les alertes lancées par notre système de surveillance, elle sera consultée par le professionnel de santé.
+\end{enumerate}
+
+\section{Architecture Détaillée de la solution}
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-3/architecturedetaillee.png}
+	\caption{Architecture détaillée de la solution}
+\end{figure}
+
+\subsection{Principe de fonctionnement}
+\begin{itemize}
+	\item \textbf{Étape 1}\\
+	Une caméra thermique qui prend l'image du visage de l'enfant, l'enfant doit être juste sous la caméra à une distance de 2 mètres, pour qu’elle puisse prendre une image claire de son visage, cette caméra est reliée avec le système de surveillance et d'alerte.
+	\item \textbf{Étape 2}\\
+	L'image collectée est envoyée au système de surveillance et d'alerte via un système de connectivité.
+	\item \textbf{Étape 3}\\
+	L'image sera envoyée  au système de surveillance et d'alerte, qui a l'aide du modèle déjà établit va traiter l'image de l’enfant et estimer la température, en cas de température élevée le système lance une alerte.\\
+	L'image, la décision et les coordonnées de l'enfant seront sauvegardées dans une base de données.
+\end{itemize}
+
+\subsection{Partie matérielle}
+\begin{itemize}
+	\item \textbf{Caméra thermique AMG8833} \cite{45} qui a comme fonction la prise des images thermiques.
+	%https://www.adafruit.com/product/3538
+	\begin{enumerate}
+	\item \textbf{Description}\\
+	\begin{itemize}
+	\item L'AMG8833 est la nouvelle génération de capteurs infrarouges thermiques 8x8 de Panasonic et offre des performances supérieures.
+	\item C'est comme des caméras thermiques sophistiquées, mais suffisamment compactes et simples pour une intégration facile.
+	\item Cette caméra mesurera des températures allant de 0 C\textdegree{} à 80 C\textdegree{} avec une précision de + - 2,5 C\textdegree{}. 
+	\item Elle peut détecter un être humain à une distance maximale de 7 mètres. Avec une fréquence d'images maximale de 10 Hz, elle est idéale pour créer des systèmes de détecteur humain.
+	\end{itemize}
+	\item \textbf{Détails techniques}\\
+	Dimensions du produit: $25.8mm \times 25.5mm \times 6.0mm / 1.0 " \times 1.0" \times 0.2 "$\\
+	Poids du produit: 2.9g / 0.1oz\\
+	
+	La AMG8833 est caractérisée qualitativement par sa courbe MRTD \footnote{Minimum resolvable temperature difference} qui correspond à l’évolution de la résolution thermique (plus petit objet visible) en fonction de la résolution spatiale (plus petit contraste de température perceptible).
+	\item \textbf{Prix}\\
+	Le prix de cette caméra thermique est  \$ 39.95  
+\end{enumerate}	 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=9cm,width=12cm]{img-Chapiter-3/ther.png}
+	\caption{Adafruit AMG8833 IR Thermal Camera}
+\end{figure}
+
+	\item \textbf{Raspberry Pi 2 Model B \cite{46}}
+	% https://thepihut.com/products/raspberry-pi-2-model-b?variant=18198528708
+	\begin{enumerate}
+		\item \textbf{Description}\\
+	Le Raspberry Pi est un ordinateur au format carte de crédit. Le Raspberry Pi 2 Model B est la deuxième génération de Raspberry Pi. Il est basé sur le système sur puce (SoC \footnote{Broadcom BCM2836}), qui comprend un processeur ARM Cortex-A7 à quatre cœurs et un puissant processeur graphique.\\
+		
+		Le Raspberry Pi 2 Model B est à un niveau totalement nouveau par rapport à ses prédécesseurs en étant 6 fois plus rapide que le Raspberry Pi Model B +.
+	\item \textbf{Spécifications techniques}\\
+		\begin{enumerate}
+			\item Ordinateur à carte unique alimenté par processeur Broadcom BCM2836 ARMv7 à quatre cœurs fonctionnant à 900 MHz.
+			\item 1 Go de RAM.
+			\item GPIO étendu à 40 broches.
+			\item 4 x ports USB.
+			\item Sortie stéréo 4 pôles et port vidéo composite.
+			\item HDMI pleine taille.
+			\item Port de caméra CSI pour connecter la caméra Raspberry Pi.
+			\item Port d’affichage DSI pour connecter l’écran tactile Raspberry Pi.
+			\item Port Micro SD pour le chargement de votre système d'exploitation et le stockage de données.
+			\item Source d'alimentation micro USB.
+\end{enumerate}
+	\item \textbf{Prix} \\
+	
+	Le prix de Raspberry Pi 2 Model B est \$ 43.32. \\
+	
+	\newpage
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=12cm]{img-Chapiter-3/raspbPi.jpg}
+		\caption{Raspberry Pi 2 Model B}
+	\end{figure}
+	
+	\end{enumerate}	
+	Un prototype d'une caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi est présenté par la figure \ref{fig:raspther}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{img-Chapiter-3/therPi.png}
+		\caption{Caméra thermique \textit{Adafruit AMG8833 IR} relie avec un Raspberry Pi }
+		\label{fig:raspther}
+	\end{figure}
+\end{itemize}
+
+\newpage
+\subsection{Partie logicielle}
+Nous avons pour ce projet proposé une 1\textsuperscript{èr} version de la solution afin de déterminer la température sur la base de l'image thermique de l'enfant.
+
+La figure \ref{fig:achdelasolu} présente cette architecture \textit{(version 1)} que l'on va implémenter en un 1\textsuperscript{èr} temps pour nous familiariser avec les concepts.
+
+Une 2\textsuperscript{ème} version sera présentée en un 2\textsuperscript{ème} temps basée sur l'apprentissage profond.\\
+
+\begin{enumerate}
+	\item \textbf{Solution version 1}\\
+	Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte  en quelques étapes:
+	\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-3/Picture1.png}
+	\caption{Architecture de système logiciel version 1}
+	\label{fig:achdelasolu}
+\end{figure}
+\begin{enumerate}
+	\item Collecte de l’image thermique de l’enfant périodiquement.
+	\item \' Elimination du bruit trouvé dans cette image.
+	\item Détection du visage de l’enfant c'est une classification de l’image prise.
+	\item Détection s’il s’agit  de face ou de profil c'est une classification de l’image.
+	\item Calcule de la température pour visage et profil. 
+	\item Si la température est élevée:
+	\begin{enumerate}
+		\item Une alerte est lancée à l’infirmière,
+	\end{enumerate}
+	\item L'image, la température corporelle et les coordonnées seront sauvegardées dans une base de données.
+\end{enumerate}
+
+\subsubsection{Algorithme d'élimination du bruit}
+Dans une image numérique on appelle bruit numérique toute information parasite ou dégradation que subit l'image de l'instant de son acquisition jusqu'à son enregistrement. 
+
+Le bruit numérique est une notion générale à tout type d'image numérique, et ce quel que soit le type du capteur à l'origine de son acquisition (appareil photo numérique, scanner, caméra thermique...etc). 
+
+Les sources de bruit numérique sont multiples, certaines sont physiques liées à la qualité de l’éclairage, de la scène, la température du capteur, la stabilité du capteur de l'image durant l'acquisition, d'autres apparaissent durant la numérisation de l'information \cite{48}.\\
+
+Un exemple de l'algorithme d'élimination du bruit est celui de gaussian blur.\\
+Gaussian blur (également appelé lissage gaussien) est un algorithme de résolution du flou d'une image par une fonction gaussienne. C'est un effet largement utilisé dans les logiciels graphiques, généralement pour réduire le bruit de l'image et les détails. L’effet visuel de cette technique de flou est un flou lisse ressemblant à celui de la visualisation de l’image à travers un écran translucide, produit par un objectif flou ou l’ombre d’un objet sous un éclairage habituel. 
+
+Le lissage gaussien est également utilisé comme étape de pré-traitement dans les algorithmes de vision par ordinateur afin d'améliorer les structures d'images à différentes échelles.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=11cm]{img-Chapiter-3/Blure.png}
+	\caption{Élimination des bruits d'une image avec l'algorithme Gaussian Blur}
+\end{figure}
+	\item \textbf{Solution version 2}\\
+	Nous présentons dans ce qui suit l'architecture du système de surveillance et d'alerte version 2 (CATT : Compute A Thermal Temperature)  en quelques étapes en utilisant un modèle basé sur l'apprentissage profond. 
+\end{enumerate}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-3/modele2.png}
+	\caption{Architecture de système logiciel $CATT$}
+	\label{fig:achdelasolu2}
+\end{figure}
+\begin{enumerate}
+	\item Collecte l'image thermique du malade périodiquement.
+	\item Le modèle traite l'image puis prédit la température.
+	\item Alerter l'infirmière si la température corporelle est élevée.
+	\item Sauvegarder les données dans une base de données.
+\end{enumerate}
+
+\newpage
+Pour l’entraînement du modèle ($CATT$), nous allons suivre les étapes suivantes:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm]{img-Chapiter-3/modele1.png}
+	\caption{Création du modèle du système CATT}
+	\label{fig:achdelasolu2}
+\end{figure}
+
+\begin{enumerate}
+	\item Le programme d’entraînement reçoit comme entré un ensemble de données qui contient plusieurs images thermiques.
+	\item Appliquer l'algorithme d'augmentation sur les image thermiques entrées.
+	\item Création du modèle par entraînement sur l'ensemble des images thermiques.
+	\item Enregistrement du modèle.
+\end{enumerate}
+
+\section{Conclusion}
+Les enfants cancéreux doivent être surveillés tout le temps, le processus dont on a parlé facilite cette tâche d’une manière rapide et sure. 
+
+Il faut noter que nous n'avons pas réalisé le prototype de la partie matérielle, car nous avons jugé bon de nous consacrer à l'élaboration du modèle et l'implémentation des différentes applications aussi la réalisation de ce type de prototype n'est pas chose difficile, elle fera l'objet d'un travail future.
+
+\newpage
+\rhead{}
+\addcontentsline{toc}{section}{Chapitre 4 : Implémentation des solutions proposées}  
+\section*{\Huge{Chapitre 4}}
+\subsection*{\huge{Implémentation des solutions proposées}}
+\newpage
+\rhead{\textsc{Chapitre 4 : Implémentation des solutions proposées}}
+\setcounter{section}{0}
+\section{Implémentation de la version 1 de la solution}
+Pour l'implémentation de la solution proposée en version 1 nous allons étudier quelques algorithmes et présenter ce qui a été réalisé.
+
+\subsection{Outils et plateformes utilisées}
+\textbf{Python} est un langage de programmation de haut niveau largement utilisé. Il a été initialement conçu par “Guido van Rossum en 1991” et développé par “Python Software Foundation”. Il a été principalement développé pour mettre l'accent sur la lisibilité du code et sa syntaxe permet aux programmeurs d'exprimer des concepts en moins de lignes de code. Python est un langage de programmation qui permet de travailler rapidement et d’intégrer les systèmes plus efficacement.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/Python_logo.png}
+	\caption{Logo python}
+\end{figure}
+
+\textbf{OpenCV} (pour Open Computer Vision) est une bibliothèque graphique libre, initialement développée par Intel, spécialisée dans le traitement d'images en temps réel. La société de robotique Willow Garage et la société ItSeez se sont succédé au support de cette bibliothèque. Depuis 2016 et le rachat de ItSeez par Intel, le support est de nouveau assuré par Intel. 
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=4cm]{img-Chapiter-4/open.png}
+	\caption{Logo OpenCV}
+\end{figure}
+
+\subsubsection{Implémentation}
+Ils existent plusieurs algorithmes pour le traitement d'image notamment l'élimination du bruit et la détection du visage.
+\subsubsection*{\' Elimination des bruits}
+\textbf{Élimination du bruit  d'une image thermique dans OpenCV}
+
+OpenCV fournit quatre variantes de cette technique :
+\begin{enumerate}
+	\item \textit{cv2.fastNlMeansDenoising()} fonctionne avec une seule image en niveaux de gris.
+	\item \textit{cv2.fastNlMeansDenoisingColored()} fonctionne avec une image couleur.
+	\item \textit{cv2.fastNlMeansDenoisingMulti()} fonctionne avec des séquences d'images capturées en peu de temps (images en niveaux de gris).
+	\item \textit{cv2.fastNlMeansDenoisingColoredMulti()} comme ci-dessus, mais pour les images en couleur.
+\end{enumerate}
+
+Nous utilisons la fonction \textit{cv2.fastNlMeansDenoisingColored()}, comme mentionné ci-dessus, il est utilisé pour supprimer le bruit des images en couleur. Il est implémenté par le pseudo code figure \ref{fig:pseudocodeelimination}:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/elimination.png}
+	\caption{Pseudo code de l'élimination du bruit}
+	\label{fig:pseudocodeelimination}
+\end{figure}
+
+Voici une capture présente comment on a éliminé les bruits d'une image.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{img-Chapiter-4/elicapture.png}
+	\caption{\' Elimination des bruits d'une image avec OpenCV}
+\end{figure}
+\subsubsection*{Détection de visage: Haar Cascade}
+Haar Cascade est fondamentalement un classificateur utilisé pour détecter l'objet pour lequel il a été formé, à partir de la source.
+
+La Haar Cascade est formée en superposant l'image positive sur un ensemble d'images négatives. La formation se fait généralement sur un serveur et à différentes étapes. De meilleurs résultats sont obtenus en utilisant des images de haute qualité et en augmentant le nombre d'étapes pour lesquelles le classificateur est formé.
+
+On peut également utiliser des cascades Haar prédéfinies, disponibles sur le site de partage de code source GitHub [16]
+%https://github.com/opencv/opencv/tree/master/data/haarcascades
+
+Voici une capture qui présente comment détecter le visage programmatiquement à partir d'une image thermique avec l'utilisation de algorithme de Haar cascade.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/detection.png}
+	\caption{Pseudo code pour détection du visage}
+\end{figure}
+
+La figure \ref{fig:res} montre le résultat de l'algorithme Haar Cascade implémenté.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{img-Chapiter-4/enfant.png}
+	\caption{Détection du visage thermique avec Haar Cascade}
+	\label{fig:res}
+\end{figure}
+
+\newpage
+
+\section{Implémentation de la version 2 de la solution}
+\subsection{Introduction}
+Après avoir parlé de l’apprentissage automatique, l’apprentissage profond et le traitement d’image dans le chapitre de l’état de l’art nous allons présenter dans cette partie une solution à notre problème on se basant sur ces techniques.
+
+\subsection{Outils et plateformes}
+\subsubsection*{Google Colaboratory}
+Google Colab est un service “Cloud” gratuit livré avec des infrastructures d’apprentissage automatique pré-installées, telles que “Tensorflow”, “Keras”, “OpenCV” et GPU gratuits, à exécuter sur Google. Le laboratoire propose actuellement les services informatiques d’un GPU Tesla K80 gratuitement. Le seul problème est que l'on peut utiliser les services informatiques pendant un maximum de 12 heures à la fois. 
+
+En règle générale, lorsque on entraîne les modèles dans le laboratoire, on est connecté à une machine virtuelle basée sur un processeur graphique, où on dispose de 12 heures maximum à la fois, après quoi on perd l'accès à cette instance de machine virtuelle particulière. Au bout de 12 heures, une autre machine virtuelle (gratuitement, bien sûr)  sera attribuée et le cycle se répète.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=7cm]{img-Chapiter-4/colab.png}
+	\caption{Logo de Google Colab}
+\end{figure}
+
+Le choix de “Google Colab” était une nécessité, d’abord l’accès à une vitesse de traitement rapide sachant que notre matériel (ordinateur) n’est pas équipé d’un processeur GPU donc le choix était vite fait, et que nous allons utiliser “Colab” comme service et on a plus l’accès aux autres services de Google en matière de stockage, rapidité et la gratuite du service.
+
+%Comme “Colab” python était une nécessité premièrement parce que dans “Colab” il n'y a que le langage Python ou les commandes “Shell”,  deuxièmement les package offerts  dans ce langage qui concernant notre domaine Apprentissage profond (Deep Learning) ainsi que dans les autres domaines mathématiques, web, etc , très intéressants et complètes,  troisièmement la facilité du langage, il ne faut pas avoir une bonne connaissance dans le domaine du développement pour bien le maîtriser.
+
+\subsubsection*{Keras}
+Est un API de haut niveau permettant de créer et de former des modèles d'apprentissage en profondeur. Il est utilisé pour le prototypage rapide, la recherche avancée et la production, avec trois avantages principaux:
+\begin{enumerate}
+	\item \textbf{Convivialité:} Keras dispose d'une interface simple, cohérente et optimisée pour les cas d'utilisation courants. Il fournit des commentaires clairs et exploitables pour les erreurs des utilisateurs.
+	\item \textbf{Modulaire et composable:} les modèles Keras sont fabriqués en reliant des blocs de construction configurables ensemble, avec peu de restrictions.
+	\item \textbf{Facile à étendre:} on peut écrire des blocs de construction personnalisés pour exprimer de nouvelles idées de recherche. On peut créer de nouvelles couches, des fonctions de perte et développer des modèles à la pointe de la technologie.
+\end{enumerate}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/keras.png}
+	\caption{Logo de Keras}
+\end{figure}
+
+\subsubsection*{Node}
+(Ou plus officiellement Node.js) Est un environnement d'exécution open source, multi-plate forme, qui permet aux développeurs de créer tout type d'outils et d'applications côté serveur en JavaScript. Le moteur d’exécution est conçu pour une utilisation en dehors du contexte du navigateur (c’est-à-dire s’exécutant directement sur un système d’exploitation ou serveur). En tant que tel, l'environnement omet les API JavaScript spécifiques au navigateur et ajoute la prise en charge des API de système d'exploitation plus traditionnelles, notamment HTTP et les bibliothèques de système de fichiers.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{img-Chapiter-4/nodejs.png}
+	\caption{Logo Node.js}
+\end{figure}
+
+Ceci  a motivé notre choix, mais aussi la maîtrise de l’outil et la facilite qu'il offre.
+%\subsubsection{Matériels}
+%\textbf{PC portable:} N’importe quelles pc fera l’affaire a condition qu’il a les %bon outils précédemment déclarer dans la partie outils.
+
+%\textbf{Raspberry Pi:}
+%Une des caractéristique d’un Raspberry Pi c’est qu’on peut le transformer on un %serveur portable d'où l’utilité de ce dernier mais dans un premier temps c’était un %matériel pour crée un ensemble de données (datasets) avec la camera infrarouge, %mais le manque de la camera infrarouge nous a conduit a improviser avec un %serveur portable pour une simulation de notre figure \ref{fig:archgene}.
+
+\subsection{Ensemble de données (Dataset)}
+Un ensemble de données est le résultat au niveau individuel d’une enquête, conceptualisée sous forme de tableau ou de matrice. Les lignes contiennent des valeurs pour les réponses codées de chaque individu. L’ensemble des données comprennent toutes les informations recueillies lors d'une enquête qui doit être analysée.
+
+Pour notre cas il a fallut commencer par deux ensembles de données, La première était une data-set déjà faite par d’autre \cite{47}, la deuxième on a pus collecter des images on recherchons sur internet et faire des captures.
+\begin{itemize}
+	\item \textbf{Premier ensemble} Dans ce cas on a utilisé cette ensembles de donnée \cite{47} qui comporte des image infrarouge avec des niveaux de gris la taille des image et comme suit: $320 \times 220 \times 1$, mais pour des besoin programmatique et manque de mémoire on a réduit la taille de ces images a $64 \times 64 \times 3$. Le problème avec cette data-set c’est qu’elle n’est pas de définie, plus clairement celle-ci n’a pas des valeurs de la température d’un individu dans chaque image.
+	\item \textbf{Deuxième ensemble} Dans cette partie le travail était plus manuel que automatique.\\
+	On trouvé quelques images sur internet au nombre de 10 images, on a utilisé aussi des vidéos sur les quelles on a fait des traitement que: des captures et des coupes de visages.\\
+	Enfin nous avons pu attendre le nombre de 220 images au total.\\  
+\end{itemize}
+
+La solution à ce problème était d’utiliser un plan qui consiste a classifier l’image en se basant sur l’œil humaine en cinq classes qui sont: hotter (très chaud), hot (chaud), normal (normal), cold (froid) et colder (très froid). Après cette classification on a fait des recherche sur la température normal d’un individu qui se trouve entre l’intervalle [36.8 - 37.6] de ceci on constate que l’intervalle est d’un écart de 0.8 donc on peut déduire approximativement l’intervalle des autre classes.
+
+Pour la classe hotter: [38.5 - 39.3], la classe hot: [37.7 - 38.5], la classe cold: [35.9 - 36.7] et la classe colder: [35.0 - 35.8]. D’ici on a presque un ensemble de données complet mais dans notre problème on veut prédire la température exacte de l’individu, on parle ici de régression, cela consiste à implémenter un script “Bash” qui va donner des valeurs (température) aléatoirement pour chaque classe et d’écrire dans un fichier “CSV (Comma-Separated Values)” comme fichier de sortie pour définir notre ensemble de données.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{img-Chapiter-4/batch.png}
+	\caption{Script Bash pour classifier le Dataset en 5 classes}
+\end{figure}
+
+La sortie de ce fichier “datasets.csv” est de la forme “ chemin de l’image ” et la “ température de l’image ” comme le montre la figure \ref{fig:dataset.csv}.
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-4/datasets.png}
+	\caption{Capture Dataset.csv}
+	\label{fig:dataset.csv}
+\end{figure}
+
+Ces deux colonnes séparées par une virgule sont indispensables pour l’entraînement de notre modèle.
+
+\subsection{Réalisation}
+Après avoir initialiser notre ensemble de données on peut commencer à écrire notre programme qui va prédire la température d’un individu on se basant sur son image thermique. Mais avant tout delà il faut d’abord créer notre modèle et l’entraîner, tout d’abord il a  connaissance du langage python et un prototype modèle pour extraire quelque notion de comment prédire une valeur exacte d’une image, j’ai choisie un prototype qui prédit le prix d’une maison on se basant sur image de l'intérieur d’une maison. Le principe et le même il y a quelque modification et de la configuration dans les couches cachées de notre ANN (Réseaux de Neurones Artificiels).
+
+\subsubsection*{Importation de l'ensemble de données}
+
+Nous avons commencé par importer notre ensemble de données et faire quelque pré-traitement qui consiste à redimensionner nos images à une largeur et une hauteur de $64 \times 64$ pixels par image.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/loaddataset.png}
+	\caption{Importation de l'ensemble de données}
+\end{figure}
+
+Après avoir importer notre ensemble de données et les images redimensionnées dans la mémoire de la machine (PC ou Colab) nous procédant à la création de notre modèle mais avant il faut faire des traitement sur les valeurs des pixels en divisions les images sur 255 (l’écart de chaque classe [0, 255]) pour ajuster les intensités des pixels de nos images à la plage [0, 1].
+
+\subsubsection*{Partitionnement des données}
+Pour cette partie nous allons proportionner les données en groupes d’entraînement et de test en utilisant 75\% des données pour l’entraînement et les 25\% restants pour le test, et on va faire comme on a fait pour les image on va diviser notre table de température à la valeur maximum des températures pour avoir un intervalle de [0, 1] ça nous conduit à un meilleur entraînement et à une bonne convergence, comme réaliser par le code présenté dans la figure \ref{fig:pretrai}.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/pretraitementimage.png}
+	\caption{Normalisation des données}
+	\label{fig:pretrai}
+\end{figure}
+
+\subsubsection*{Création du réseau de neurones de convolution CNN}
+
+Maintenant on va créer notre réseau de neurones de convolution “CNN”, dans cette partie on va déclarer nos couches cachées de notre réseau de neurones. Les configurations sont presque aléatoires on va changer les valeurs de la Conv2D et la densité de nos couches cachées. Voire la figure \ref{fig:CNN}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/createcnn.png}
+	\caption{Création du réseau CNN}
+	\label{fig:CNN}
+\end{figure}
+
+\subsubsection*{Compilation du modèle}
+
+Puis on a compilé le modèle en utilisant le pourcentage d'erreur absolu moyen (Mean Absolute Percentage Error) comme perte voire la figure \ref{fig:1002}, ce qui implique que nous cherchons à minimiser la différence en pourcentage absolu entre nos prédictions de température et la température réelle, et en utilisant l'optimiseur Adam (Adam est un algorithme d'optimisation qui peut être utilisé à la place de la procédure classique de descente de gradient stochastique pour mettre à jour les pondérations de réseau itératives en fonction des données d'apprentissage).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-4/loss.png}
+	\caption{La différences entre les pertes}
+	\label{fig:1002}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/training.png}
+	\caption{L'utilisation de l’optimiseur Adam}
+\end{figure}
+
+\subsubsection*{Entraînement du modèle}
+
+Après la compilation de notre modèle on va procéder a l’entraînement du modèle avec un “ batch\_size ” pour le nombre d'échantillons par mise à jour de gradient et on ajoute le nombre des époques pour former notre modèle. Une époque est une itération sur l'ensemble des données x et y fournies. Le modèle n'est pas formé pour un certain nombre d'itérations données par les époques, mais uniquement jusqu'à ce que les époques d'index soit atteinte.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/train.png}
+	\caption{Entraînement de modèle pour un nombre donné d’époques}
+\end{figure}
+
+
+\subsubsection*{Génération des prédictions du modèle}
+Maintenant que notre modèle est prêt on commence a faire les calcule de notre prédiction sur le modèle, tout d'abord on calcule la moyenne (mean calculer la moyenne arithmétique le long de l'axe spécifié) et l’écart (std calculer l'écart type le long de l'axe spécifié).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/predecting.png}
+	\caption{Génération des prédictions de sortie pour les échantillons d'entrée}
+\end{figure}
+
+\subsubsection*{Évaluation du modèle}
+
+On affiche l’évaluation de notre modèle, le calcule ce fait manuellement avec la bibliothèque “Keras”, on affiche la précision de notre modèle pour l’entraînement et pour les tests, comme le montre la figure \ref{fig:prédicting}.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{img-Chapiter-4/predicting_value.png}
+	\caption{Renvoie les valeurs de l’évaluation du modèle}
+	\label{fig:prédicting}
+\end{figure}
+
+Et pour conclure on affiche les résultats dans des courbes graphiques on utilisant la bibliothèque “Matplotlib”. Les modèle présentés sont la précision du modèle et les pertes du modèle les valeurs sont dans l’intervalle [0, 1].
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{img-Chapiter-4/modele10.png}
+	\caption{Capture d’écran après l’exécution}
+\end{figure}
+
+On a obtenus des mauvais résultats, la cause de ce échec c'est notre ensemble de données qui comporte que 220 images.
+
+On a décidé de faire une augmentation de notre ensemble d’image, On peut faire un travail manuel mais un travail automatique et plus facile et aléatoire. La bibliothèque “Keras ” a cette fonctionnalité intégrée pour les ensembles des données de petite taille.
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=17cm]{img-Chapiter-4/first_result.png}
+	\caption{Capture d’écran après l’exécution}
+\end{figure}
+
+
+\subsubsection*{Augmentation des données}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{img-Chapiter-4/imgen.png}
+	\caption{Augmentation des données}
+\end{figure}		
+L'augmentation de l'ensemble de données se base sur:
+\begin{itemize}
+	\item Rotation de l’image source en 45\textdegree{} degré.
+	\item Zoom de l'image.
+	\item Transformation de l'image (Horizontalement).
+	\item Tondre l'image.\\
+\end{itemize}
+Avec cette manipulation on a augmenté notre ensemble pour chaque image  de 20 fois c-à-d chaque image donne 20 autres images ayant les même caractéristiques.
+
+Après avoir augmenter notre ensemble de données. On a constaté une augmentation de la précision de notre modèle de 14.55\%. La chose qui reste à faire c’est de changer dans les paramètres des couches cachées pour avoir des meilleurs résultats.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=17cm]{img-Chapiter-4/output.png}
+	\caption{Deuxième exécution}
+\end{figure}
+
+On a constaté après les modifications apportées aux couches cachées et la densité que ce n'était pas un problème dans notre modèle mais dans notre ensemble de données qu’on n'a pas pu avoir des valeurs exactes de la température ce qui a mis notre réseau de neurones à faire des mauvaises prédictions.
+
+Dans un autre temps si on aura un bon ensemble de données et avec des valeurs exactes et non prédites alors on peut faire de bonnes prédictions avec ce modèle.
+
+\newpage
+\subsection{Scénario expérimental}
+
+Dans notre application on a mis au point une interface dans notre système de surveillance et d’alerte, qui est considéré comme un serveur et le cerveau de notre système, qui contient le modèle entraîné et une base de données pour sauvegarder les données collecter depuis l’interface graphique.
+
+\begin{figure}[h]
+	\centring
+	\includegraphics[width=17cm]{img-Chapiter-4/11111.png}
+	\caption{Interface graphique de l'application}
+	\label{fig:interface}
+\end{figure}
+
+Comme nous n'avons pas à disposition une caméra thermique, nous avons implémenté un module de test pour simuler la capture de l'image.
+
+Ce module se présente sous forme d'interface graphique structurée comme suit (Figure \ref{fig:interface}):
+\begin{itemize}
+	\item Nom et prénom du patient.
+	\item \^ Age.
+	\item Numéro du lit.
+	\item Fenêtre pour sélectionner une image thermique.
+\end{itemize}
+
+Ce module va permettre de faire entrer les informations du malade et entrer l'image thermique.
+
+Le système va ensuite prédire la température de l'image entrée et l'associer au malade à l'instant t.
+
+\newpage
+Dans la figure \ref{fig:1001} on a fait un test sur une autre image que notre système (CATT) a prédit la température du patient. La température prédite est élevée, elle sera affichée en rouge pour alerter l'infirmière.
+
+On a choisi les couleurs par rapport a un son pour ne pas déranger les malades.
+\begin{itemize}
+	\item La couleur rouge signifié que le malade doit être examiné.
+	\item La couleur verte signifié que la température du malade est normale.
+	\item La couleur bleu signifié que le malade doit être examiné. 
+\end{itemize}
+
+\begin{figure}[h]
+	\centring
+	\includegraphics[width=17cm]{img-Chapiter-4/22222.png}
+	\caption{Interface graphique de l'application}
+	\label{fig:1001}
+\end{figure}
+
+\newpage
+\section{Conclusion}
+Dans ce dernier chapitre nous avons présente deux implémentations de deux solutions différentes pour le même problème.
+
+La version 1 consiste l'implémentation des algorithmes classiques pour l'élimination du bruit et la classification.
+
+Nous avons décidé de passer à l'apprentissage profond et nous avons créé un modèle et nous l'avons intégré dans la solution CATT.
+
+Enfin une interface est ajoutée pour simuler la réception de l'image, les résultats obtenus  ne sont pas satisfaisantes cela et justifier par la qualité de l'ensemble de données, mais avec un bon ensemble de données défini on aura un bon modèle qui va prédire des températures justes avec un écart d’erreur minime.
+
+\newpage
+\rhead{\textsc{Conclusion générale}}
+\section{Conclusion générale}
+Dans ce projet, nous avons présenté un aperçu de plusieurs travaux de recherche proposant d'utiliser des techniques d'apprentissage profond pour détecter la température d’un patient.
+
+Les techniques basées sur l'apprentissage en profondeur peuvent potentiellement prédire la bonne valeur avec une bonne configuration et un grand ensemble de données.\\
+
+
+
+Nous avons proposé une nouvelle approche basée sur l’apprentissage profond qui répond à cet objectif. L’approche proposée permet de faire la prédiction des température du patient à base des images thermiques  en utilisant une technique d’apprentissage profond (Deep Learning), basée sur l’architecture Convolutional Neural Network (CNN).\\
+
+
+Finalement, ce travail étant encore préliminaire, nous avons identifié plusieurs perspectives à court terme d’évolution, telle que l’amélioration des performances de prédiction de notre modèle. Nous pensons également à utiliser les algorithmes de sélection de caractéristiques afin de filtrer et diminuer les redondances.
+
+\newpage
+\rhead{\textsc{Références}}
+\bibliographystyle{ieeetr}	
+\bibliography{References}
+	
+
+\end{document}
