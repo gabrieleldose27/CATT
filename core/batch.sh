@@ -20,7 +20,7 @@ for img in dsets/*; do
     prefix=$(cut -d'_' -f1 <<< $(basename "$img"))
     case "$prefix" in
         "hotter")
-            randomizer=$(seq 38.25 .1 39.3 | shuf | head -n1)
+            randomizer=$(seq 38.5 .1 39.3 | shuf | head -n1)
             outcsv $img $randomizer
             ;;
         "hot")

@@ -1,7 +1,8 @@
 import glob
 import os
 
-from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+from keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import array_to_img, img_to_array, load_img
 
 datagen = ImageDataGenerator(
         rotation_range=45,
@@ -21,4 +22,5 @@ for path in paths:
             save_to_dir='dsets', save_prefix=prefix, save_format='png'):
         i += 1
         if i > 20:
+            # to break our loop else it will loop forever.
             break

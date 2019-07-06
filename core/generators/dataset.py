@@ -13,12 +13,15 @@ def load_images(df, resize=(64, 64)):
     images = []
     for path in df["path"]:
         p = path.split("\"")[0]
-        if os.path.exists(os.getcwd()+'/core/'+p):
-            img = cv2.imread(os.getcwd()+'/core/'+p)
+        pa = os.getcwd()+'/core/'+p
+        if os.path.exists(pa):
+            img = cv2.imread(pa)
             img = cv2.resize(img, resize)
             if img is not None:
                 images.append(img)
-                sys.stdout.write("\r[ * ] Loading "+str(len(images) * 100 / df.shape[0])+"% images. Remain: "+str(df.shape[0]-len(images))+"...")
+                per = len(images) * 100 / df.shape[0]
+                rem = df.shape[0]-len(images)
+                sys.stdout.write("\r[ * ] Loading {}% images. Remain: {}...".format(per, rem))
                 sys.stdout.flush()
         else:
             print "[?] This '{0}' does not exist".format(p)
