@@ -36,6 +36,6 @@ app.get('/', patient.getAll);
 app.post('/', upload.single('photo'), patient.update);
 
 
-app.listen(31415, () => {
+app.listen(31415, '0.0.0.0', () => {
   console.log('Listning...')
 });

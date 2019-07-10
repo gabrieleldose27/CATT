@@ -13,7 +13,7 @@ def load_images(df, resize=(64, 64)):
     images = []
     for path in df["path"]:
         p = path.split("\"")[0]
-        pa = os.getcwd()+'/core/'+p
+        pa = os.getcwd()+'/'+p
         if os.path.exists(pa):
             img = cv2.imread(pa)
             img = cv2.resize(img, resize)

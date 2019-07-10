@@ -10,7 +10,7 @@ def load_df(path):
     return dataset.load_dataset(path)
 
 def test_split(df, images):
-    return train_test_split(df, images, test_size=.01, random_state=42)
+    return train_test_split(df, images, test_size=.25, random_state=42)
 
 def predicting(model, testX, testY):
     preds = model.predict(testX, verbose=1)
@@ -43,6 +43,7 @@ if __name__ == '__main__':
     (train_x, test_x, trainX, testX) = test_split(df, images)
 
     maxTempture = train_x["tempture"].max()
+    print maxTempture
     trainY = train_x["tempture"].astype(float) / maxTempture
     testY = test_x["tempture"].astype(float) / maxTempture
 
@@ -62,7 +63,8 @@ if __name__ == '__main__':
     print "[ * ] Testing Accuracy:  {:.4f}, Loss: {:.4f}".format(acc, loss)
 
     print "[ * ] Saving the model"
-    model.save(mdl, args.epochs, acc)
+    #model.save(mdl, args.epochs, acc)
+    mdl.save('h5/catt-{}-{:.2f}.h5'.format(args.epochs, acc))
     
     #stats.plot_metrics(history)
     stats.plot(history)
